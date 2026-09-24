@@ -84,7 +84,7 @@ function Gallery() {
             <button type="button" className={view === "cockpit" ? "bz-on" : ""} onClick={() => setView("cockpit")}>{ui.cockpit}</button>
             <button type="button" className={view === "modules" ? "bz-on" : ""} onClick={() => setView("modules")}>{ui.modules}</button>
           </div>
-          <a className="bz-button bz-ghost g-source" href="https://github.com/bazous/ui">{ui.source} ↗</a>
+          <a className="bz-button bz-ghost g-source" href="https://github.com/bazousdotcom/ui">{ui.source} ↗</a>
         </nav>
       </header>
 

@@ -2,7 +2,7 @@
 
 **Le kit d’interface open source de [Bazous](https://bazous.com).** Chaque question d’argent — *combien ai-je maintenant ? que dois-je payer avant le salaire ? jusqu’où puis-je descendre ?* — est un module indépendant, rendu en cinq langues à partir d’un contrat de données public. La communauté peut en ajouter, les améliorer ou les traduire sans jamais toucher à un compte, une clé ou une donnée réelle.
 
-[Galerie en ligne](https://bazous.github.io/ui/) · [Contribuer](CONTRIBUTING.md) · [English below](#english)
+[Galerie en ligne](https://bazousdotcom.github.io/ui/) · [Contribuer](CONTRIBUTING.md) · [English below](#english)
 
 ## Ce qu’il y a dedans
 
@@ -42,7 +42,7 @@
 ## Utiliser le kit
 
 ```bash
-npm install github:bazous/ui#v0.1.0
+npm install github:bazousdotcom/ui#v0.1.0
 ```
 
 ```tsx

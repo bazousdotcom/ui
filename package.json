@@ -6,9 +6,9 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bazous/ui.git"
+    "url": "git+https://github.com/bazousdotcom/ui.git"
   },
-  "homepage": "https://bazous.github.io/ui/",
+  "homepage": "https://bazousdotcom.github.io/ui/",
   "keywords": [
     "bazous",
     "cash-flow",
