@@ -1,0 +1,70 @@
+{
+  "name": "@bazous/ui",
+  "version": "0.1.0",
+  "description": "Bazous open UI kit — one module per money question, rendered from a public snapshot contract.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bazous/ui.git"
+  },
+  "homepage": "https://bazous.github.io/ui/",
+  "keywords": [
+    "bazous",
+    "cash-flow",
+    "personal-finance",
+    "react",
+    "ui-kit",
+    "i18n"
+  ],
+  "files": [
+    "dist",
+    "schema"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./canvas": {
+      "types": "./dist/canvas/index.d.ts",
+      "import": "./dist/canvas.js"
+    },
+    "./schema.json": "./schema/snapshot.schema.json"
+  },
+  "scripts": {
+    "dev": "vite --config gallery/vite.config.ts",
+    "build": "npm run build:lib && npm run build:gallery",
+    "build:lib": "vite build && tsc -p tsconfig.build.json",
+    "build:gallery": "vite build --config gallery/vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "prepare": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "jsdom": "^26.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

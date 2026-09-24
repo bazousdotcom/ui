@@ -1,0 +1,711 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bazous.com/schema/snapshot/v1.json",
+  "title": "Bazous household snapshot",
+  "description": "What GET /api/v1/cockpit returns. The only input of @bazous/ui. Amounts are decimal strings in the base currency unless named original_amount/amount; dates are ISO YYYY-MM-DD.",
+  "type": "object",
+  "$defs": {
+    "decimal": {
+      "type": "string",
+      "pattern": "^-?\\d+(\\.\\d+)?$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/date"
+        },
+        "label": {
+          "type": "string"
+        },
+        "amount": {
+          "$ref": "#/$defs/decimal"
+        },
+        "direction": {
+          "enum": [
+            "inflow",
+            "outflow"
+          ]
+        },
+        "original_amount": {
+          "$ref": "#/$defs/decimal"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "ref_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "date",
+        "label",
+        "amount",
+        "direction",
+        "original_amount",
+        "currency",
+        "kind",
+        "ref_id",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "overdue",
+                "due_today"
+              ]
+            },
+            "ref_id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/$defs/date"
+            },
+            "amount": {
+              "$ref": "#/$defs/decimal"
+            },
+            "currency": {
+              "$ref": "#/$defs/currency"
+            },
+            "amount_base": {
+              "$ref": "#/$defs/decimal"
+            }
+          },
+          "required": [
+            "type",
+            "ref_id",
+            "label",
+            "date",
+            "amount",
+            "currency",
+            "amount_base"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "plan"
+            },
+            "ref_id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "date": {
+              "$ref": "#/$defs/date"
+            },
+            "amount": {
+              "$ref": "#/$defs/decimal"
+            },
+            "currency": {
+              "$ref": "#/$defs/currency"
+            },
+            "amount_base": {
+              "$ref": "#/$defs/decimal"
+            },
+            "target": {
+              "$ref": "#/$defs/date"
+            }
+          },
+          "required": [
+            "type",
+            "ref_id",
+            "label",
+            "date",
+            "amount",
+            "currency",
+            "amount_base",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "needs_review"
+            },
+            "kind": {
+              "enum": [
+                "obligation",
+                "transaction"
+              ]
+            },
+            "ref_id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "date": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/date"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "amount": {
+              "$ref": "#/$defs/decimal"
+            },
+            "currency": {
+              "$ref": "#/$defs/currency"
+            },
+            "confidence": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/decimal"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "kind",
+            "ref_id",
+            "label",
+            "date",
+            "amount",
+            "currency",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "missing_amounts"
+            },
+            "label": {
+              "type": "string"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "type",
+            "label",
+            "items"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "properties": {
+    "as_of": {
+      "$ref": "#/$defs/date"
+    },
+    "horizon_end": {
+      "$ref": "#/$defs/date"
+    },
+    "next_income_date": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "second_income_date": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "base_currency": {
+      "$ref": "#/$defs/currency"
+    },
+    "fx_rates": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/decimal"
+      }
+    },
+    "opening_balance": {
+      "$ref": "#/$defs/decimal"
+    },
+    "due_before_next_income": {
+      "$ref": "#/$defs/decimal"
+    },
+    "gap_before_next_income": {
+      "$ref": "#/$defs/decimal"
+    },
+    "low_point": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/date"
+        },
+        "balance": {
+          "$ref": "#/$defs/decimal"
+        },
+        "days_from_now": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "date",
+        "balance",
+        "days_from_now"
+      ],
+      "additionalProperties": false
+    },
+    "end_of_horizon": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/date"
+        },
+        "balance": {
+          "$ref": "#/$defs/decimal"
+        }
+      },
+      "required": [
+        "date",
+        "balance"
+      ],
+      "additionalProperties": false
+    },
+    "main_cycle": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/date"
+        },
+        "end": {
+          "$ref": "#/$defs/date"
+        },
+        "total_out": {
+          "$ref": "#/$defs/decimal"
+        },
+        "total_in": {
+          "$ref": "#/$defs/decimal"
+        },
+        "drivers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "#/$defs/date"
+              },
+              "amount": {
+                "$ref": "#/$defs/decimal"
+              },
+              "share": {
+                "$ref": "#/$defs/decimal"
+              }
+            },
+            "required": [
+              "label",
+              "date",
+              "amount",
+              "share"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "total_out",
+        "total_in",
+        "drivers"
+      ],
+      "additionalProperties": false
+    },
+    "cycles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "start": {
+            "$ref": "#/$defs/date"
+          },
+          "end": {
+            "$ref": "#/$defs/date"
+          },
+          "total_out": {
+            "$ref": "#/$defs/decimal"
+          },
+          "total_in": {
+            "$ref": "#/$defs/decimal"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/event"
+            }
+          }
+        },
+        "required": [
+          "key",
+          "start",
+          "end",
+          "total_out",
+          "total_in",
+          "items"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "points": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "$ref": "#/$defs/date"
+          },
+          "inflows": {
+            "$ref": "#/$defs/decimal"
+          },
+          "outflows": {
+            "$ref": "#/$defs/decimal"
+          },
+          "closing_balance": {
+            "$ref": "#/$defs/decimal"
+          }
+        },
+        "required": [
+          "date",
+          "inflows",
+          "outflows",
+          "closing_balance"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "household": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "additionalProperties": true
+    },
+    "accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "account_type": {
+            "type": "string"
+          },
+          "currency": {
+            "$ref": "#/$defs/currency"
+          },
+          "institution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "balance": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/decimal"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "balance_base": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/decimal"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "observed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "account_type",
+          "currency",
+          "institution",
+          "balance",
+          "balance_base",
+          "observed_at"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "structure": {
+      "type": "object",
+      "properties": {
+        "fixed_monthly": {
+          "$ref": "#/$defs/decimal"
+        },
+        "income_monthly": {
+          "$ref": "#/$defs/decimal"
+        },
+        "fixed_ratio_percent": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decimal"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "structural_margin": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/decimal"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "by_category": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "amount": {
+                "$ref": "#/$defs/decimal"
+              }
+            },
+            "required": [
+              "category",
+              "amount"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "fixed_monthly",
+        "income_monthly",
+        "fixed_ratio_percent",
+        "structural_margin",
+        "by_category"
+      ],
+      "additionalProperties": false
+    },
+    "debts": {
+      "type": "object",
+      "properties": {
+        "total_base": {
+          "$ref": "#/$defs/decimal"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "principal": {
+                "$ref": "#/$defs/decimal"
+              },
+              "currency": {
+                "$ref": "#/$defs/currency"
+              },
+              "due_day": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "principal",
+              "currency",
+              "due_day"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "total_base",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/action"
+      }
+    },
+    "data_quality": {
+      "type": "object",
+      "properties": {
+        "last_transaction_date": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "days_since_last_transaction": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "accounts_without_balance": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fx_missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rules_without_amount": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "needs_review_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "last_transaction_date",
+        "days_since_last_transaction",
+        "accounts_without_balance",
+        "fx_missing",
+        "rules_without_amount",
+        "needs_review_count"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "as_of",
+    "horizon_end",
+    "next_income_date",
+    "second_income_date",
+    "base_currency",
+    "fx_rates",
+    "opening_balance",
+    "due_before_next_income",
+    "gap_before_next_income",
+    "low_point",
+    "end_of_horizon",
+    "main_cycle",
+    "cycles",
+    "points",
+    "events",
+    "household",
+    "accounts",
+    "structure",
+    "debts",
+    "actions",
+    "data_quality"
+  ],
+  "additionalProperties": true
+}

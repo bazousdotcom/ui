@@ -1,0 +1,908 @@
+{
+  "as_of": "2026-09-20",
+  "horizon_end": "2026-10-31",
+  "next_income_date": "2026-09-24",
+  "second_income_date": "2026-10-24",
+  "opening_balance": "1795.79",
+  "due_before_next_income": "2848.94",
+  "gap_before_next_income": "-1053.15",
+  "low_point": {
+    "date": "2026-10-20",
+    "balance": "-2574.51",
+    "days_from_now": 30
+  },
+  "end_of_horizon": {
+    "date": "2026-10-31",
+    "balance": "2354.62"
+  },
+  "main_cycle": {
+    "start": "2026-09-24",
+    "end": "2026-10-23",
+    "total_out": "10521.36",
+    "total_in": "9000.00",
+    "drivers": [
+      {
+        "label": "Carte de crédit solde",
+        "date": "2026-09-24",
+        "amount": "2764.90",
+        "share": "26.28"
+      },
+      {
+        "label": "Loyer",
+        "date": "2026-09-30",
+        "amount": "2440.00",
+        "share": "23.19"
+      },
+      {
+        "label": "Assurance maladie septembre",
+        "date": "2026-09-30",
+        "amount": "966.00",
+        "share": "9.18"
+      },
+      {
+        "label": "Assurance maladie octobre",
+        "date": "2026-10-01",
+        "amount": "966.00",
+        "share": "9.18"
+      },
+      {
+        "label": "Carte bancaire solde",
+        "date": "2026-10-07",
+        "amount": "832.45",
+        "share": "7.91"
+      }
+    ]
+  },
+  "cycles": [
+    {
+      "key": "before_income",
+      "start": "2026-09-20",
+      "end": "2026-09-23",
+      "total_out": "2848.94",
+      "total_in": "0.00",
+      "items": [
+        {
+          "date": "2026-09-20",
+          "label": "Carte revolving",
+          "amount": "2286.99",
+          "direction": "outflow",
+          "original_amount": "2419.58",
+          "currency": "EUR",
+          "kind": "obligation",
+          "ref_id": "revolving",
+          "status": "overdue"
+        },
+        {
+          "date": "2026-09-20",
+          "label": "Leasing voiture",
+          "amount": "561.95",
+          "direction": "outflow",
+          "original_amount": "561.95",
+          "currency": "CHF",
+          "kind": "obligation",
+          "ref_id": "leasing",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "key": "cycle_1",
+      "start": "2026-09-24",
+      "end": "2026-10-23",
+      "total_out": "10521.36",
+      "total_in": "9000.00",
+      "items": [
+        {
+          "date": "2026-09-24",
+          "label": "Salaire",
+          "amount": "9000.00",
+          "direction": "inflow",
+          "original_amount": "9000.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "salary",
+          "status": "open"
+        },
+        {
+          "date": "2026-09-24",
+          "label": "Carte de crédit solde",
+          "amount": "2764.90",
+          "direction": "outflow",
+          "original_amount": "2764.90",
+          "currency": "CHF",
+          "kind": "obligation",
+          "ref_id": "credit-card",
+          "status": "open"
+        },
+        {
+          "date": "2026-09-25",
+          "label": "Impôt France",
+          "amount": "605.87",
+          "direction": "outflow",
+          "original_amount": "641.00",
+          "currency": "EUR",
+          "kind": "obligation",
+          "ref_id": "tax-fr",
+          "status": "open"
+        },
+        {
+          "date": "2026-09-30",
+          "label": "Assurance maladie septembre",
+          "amount": "966.00",
+          "direction": "outflow",
+          "original_amount": "966.00",
+          "currency": "CHF",
+          "kind": "obligation",
+          "ref_id": "health-9",
+          "status": "open"
+        },
+        {
+          "date": "2026-09-30",
+          "label": "Loyer",
+          "amount": "2440.00",
+          "direction": "outflow",
+          "original_amount": "2440.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "rent",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-01",
+          "label": "Assurance maladie octobre",
+          "amount": "966.00",
+          "direction": "outflow",
+          "original_amount": "966.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "health-10",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-01",
+          "label": "Régie",
+          "amount": "479.94",
+          "direction": "outflow",
+          "original_amount": "507.77",
+          "currency": "EUR",
+          "kind": "recurrence",
+          "ref_id": "regie",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-05",
+          "label": "Prêt immobilier",
+          "amount": "606.76",
+          "direction": "outflow",
+          "original_amount": "641.94",
+          "currency": "EUR",
+          "kind": "recurrence",
+          "ref_id": "mortgage",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-07",
+          "label": "Carte bancaire solde",
+          "amount": "832.45",
+          "direction": "outflow",
+          "original_amount": "832.45",
+          "currency": "CHF",
+          "kind": "obligation",
+          "ref_id": "bank-card",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-08",
+          "label": "Internet",
+          "amount": "99.00",
+          "direction": "outflow",
+          "original_amount": "99.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "internet",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-13",
+          "label": "Tontine",
+          "amount": "198.49",
+          "direction": "outflow",
+          "original_amount": "210.00",
+          "currency": "EUR",
+          "kind": "recurrence",
+          "ref_id": "tontine-fr",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-20",
+          "label": "Leasing voiture",
+          "amount": "561.95",
+          "direction": "outflow",
+          "original_amount": "561.95",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "leasing-10",
+          "status": "open"
+        }
+      ]
+    },
+    {
+      "key": "cycle_2",
+      "start": "2026-10-24",
+      "end": "2026-10-31",
+      "total_out": "4070.87",
+      "total_in": "9000.00",
+      "items": [
+        {
+          "date": "2026-10-24",
+          "label": "Salaire",
+          "amount": "9000.00",
+          "direction": "inflow",
+          "original_amount": "9000.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "salary-10",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-26",
+          "label": "Impôt France",
+          "amount": "605.87",
+          "direction": "outflow",
+          "original_amount": "641.00",
+          "currency": "EUR",
+          "kind": "obligation",
+          "ref_id": "tax-fr-10",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-30",
+          "label": "Loyer",
+          "amount": "2440.00",
+          "direction": "outflow",
+          "original_amount": "2440.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "rent-10",
+          "status": "open"
+        },
+        {
+          "date": "2026-10-30",
+          "label": "Tontine",
+          "amount": "1025.00",
+          "direction": "outflow",
+          "original_amount": "1025.00",
+          "currency": "CHF",
+          "kind": "recurrence",
+          "ref_id": "tontine-ch",
+          "status": "open"
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "date": "2026-09-20",
+      "inflows": "0.00",
+      "outflows": "2848.94",
+      "closing_balance": "-1053.15"
+    },
+    {
+      "date": "2026-09-21",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1053.15"
+    },
+    {
+      "date": "2026-09-22",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1053.15"
+    },
+    {
+      "date": "2026-09-23",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1053.15"
+    },
+    {
+      "date": "2026-09-24",
+      "inflows": "9000.00",
+      "outflows": "2764.90",
+      "closing_balance": "5181.95"
+    },
+    {
+      "date": "2026-09-25",
+      "inflows": "0.00",
+      "outflows": "605.87",
+      "closing_balance": "4576.08"
+    },
+    {
+      "date": "2026-09-26",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "4576.08"
+    },
+    {
+      "date": "2026-09-27",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "4576.08"
+    },
+    {
+      "date": "2026-09-28",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "4576.08"
+    },
+    {
+      "date": "2026-09-29",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "4576.08"
+    },
+    {
+      "date": "2026-09-30",
+      "inflows": "0.00",
+      "outflows": "3406.00",
+      "closing_balance": "1170.08"
+    },
+    {
+      "date": "2026-10-01",
+      "inflows": "0.00",
+      "outflows": "1445.94",
+      "closing_balance": "-275.86"
+    },
+    {
+      "date": "2026-10-02",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-275.86"
+    },
+    {
+      "date": "2026-10-03",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-275.86"
+    },
+    {
+      "date": "2026-10-04",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-275.86"
+    },
+    {
+      "date": "2026-10-05",
+      "inflows": "0.00",
+      "outflows": "606.76",
+      "closing_balance": "-882.62"
+    },
+    {
+      "date": "2026-10-06",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-882.62"
+    },
+    {
+      "date": "2026-10-07",
+      "inflows": "0.00",
+      "outflows": "832.45",
+      "closing_balance": "-1715.07"
+    },
+    {
+      "date": "2026-10-08",
+      "inflows": "0.00",
+      "outflows": "99.00",
+      "closing_balance": "-1814.07"
+    },
+    {
+      "date": "2026-10-09",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1814.07"
+    },
+    {
+      "date": "2026-10-10",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1814.07"
+    },
+    {
+      "date": "2026-10-11",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1814.07"
+    },
+    {
+      "date": "2026-10-12",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-1814.07"
+    },
+    {
+      "date": "2026-10-13",
+      "inflows": "0.00",
+      "outflows": "198.49",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-14",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-15",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-16",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-17",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-18",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-19",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2012.56"
+    },
+    {
+      "date": "2026-10-20",
+      "inflows": "0.00",
+      "outflows": "561.95",
+      "closing_balance": "-2574.51"
+    },
+    {
+      "date": "2026-10-21",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2574.51"
+    },
+    {
+      "date": "2026-10-22",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2574.51"
+    },
+    {
+      "date": "2026-10-23",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "-2574.51"
+    },
+    {
+      "date": "2026-10-24",
+      "inflows": "9000.00",
+      "outflows": "0.00",
+      "closing_balance": "6425.49"
+    },
+    {
+      "date": "2026-10-25",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "6425.49"
+    },
+    {
+      "date": "2026-10-26",
+      "inflows": "0.00",
+      "outflows": "605.87",
+      "closing_balance": "5819.62"
+    },
+    {
+      "date": "2026-10-27",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "5819.62"
+    },
+    {
+      "date": "2026-10-28",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "5819.62"
+    },
+    {
+      "date": "2026-10-29",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "5819.62"
+    },
+    {
+      "date": "2026-10-30",
+      "inflows": "0.00",
+      "outflows": "3465.00",
+      "closing_balance": "2354.62"
+    },
+    {
+      "date": "2026-10-31",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "2354.62"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-09-20",
+      "label": "Carte revolving",
+      "amount": "2286.99",
+      "direction": "outflow",
+      "original_amount": "2419.58",
+      "currency": "EUR",
+      "kind": "obligation",
+      "ref_id": "revolving",
+      "status": "overdue"
+    },
+    {
+      "date": "2026-09-20",
+      "label": "Leasing voiture",
+      "amount": "561.95",
+      "direction": "outflow",
+      "original_amount": "561.95",
+      "currency": "CHF",
+      "kind": "obligation",
+      "ref_id": "leasing",
+      "status": "open"
+    },
+    {
+      "date": "2026-09-24",
+      "label": "Salaire",
+      "amount": "9000.00",
+      "direction": "inflow",
+      "original_amount": "9000.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "salary",
+      "status": "open"
+    },
+    {
+      "date": "2026-09-24",
+      "label": "Carte de crédit solde",
+      "amount": "2764.90",
+      "direction": "outflow",
+      "original_amount": "2764.90",
+      "currency": "CHF",
+      "kind": "obligation",
+      "ref_id": "credit-card",
+      "status": "open"
+    },
+    {
+      "date": "2026-09-25",
+      "label": "Impôt France",
+      "amount": "605.87",
+      "direction": "outflow",
+      "original_amount": "641.00",
+      "currency": "EUR",
+      "kind": "obligation",
+      "ref_id": "tax-fr",
+      "status": "open"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "Assurance maladie septembre",
+      "amount": "966.00",
+      "direction": "outflow",
+      "original_amount": "966.00",
+      "currency": "CHF",
+      "kind": "obligation",
+      "ref_id": "health-9",
+      "status": "open"
+    },
+    {
+      "date": "2026-09-30",
+      "label": "Loyer",
+      "amount": "2440.00",
+      "direction": "outflow",
+      "original_amount": "2440.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "rent",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "Assurance maladie octobre",
+      "amount": "966.00",
+      "direction": "outflow",
+      "original_amount": "966.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "health-10",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-01",
+      "label": "Régie",
+      "amount": "479.94",
+      "direction": "outflow",
+      "original_amount": "507.77",
+      "currency": "EUR",
+      "kind": "recurrence",
+      "ref_id": "regie",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-05",
+      "label": "Prêt immobilier",
+      "amount": "606.76",
+      "direction": "outflow",
+      "original_amount": "641.94",
+      "currency": "EUR",
+      "kind": "recurrence",
+      "ref_id": "mortgage",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-07",
+      "label": "Carte bancaire solde",
+      "amount": "832.45",
+      "direction": "outflow",
+      "original_amount": "832.45",
+      "currency": "CHF",
+      "kind": "obligation",
+      "ref_id": "bank-card",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-08",
+      "label": "Internet",
+      "amount": "99.00",
+      "direction": "outflow",
+      "original_amount": "99.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "internet",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-13",
+      "label": "Tontine",
+      "amount": "198.49",
+      "direction": "outflow",
+      "original_amount": "210.00",
+      "currency": "EUR",
+      "kind": "recurrence",
+      "ref_id": "tontine-fr",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-20",
+      "label": "Leasing voiture",
+      "amount": "561.95",
+      "direction": "outflow",
+      "original_amount": "561.95",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "leasing-10",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-24",
+      "label": "Salaire",
+      "amount": "9000.00",
+      "direction": "inflow",
+      "original_amount": "9000.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "salary-10",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-26",
+      "label": "Impôt France",
+      "amount": "605.87",
+      "direction": "outflow",
+      "original_amount": "641.00",
+      "currency": "EUR",
+      "kind": "obligation",
+      "ref_id": "tax-fr-10",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "Loyer",
+      "amount": "2440.00",
+      "direction": "outflow",
+      "original_amount": "2440.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "rent-10",
+      "status": "open"
+    },
+    {
+      "date": "2026-10-30",
+      "label": "Tontine",
+      "amount": "1025.00",
+      "direction": "outflow",
+      "original_amount": "1025.00",
+      "currency": "CHF",
+      "kind": "recurrence",
+      "ref_id": "tontine-ch",
+      "status": "open"
+    }
+  ],
+  "household": {
+    "id": "hh-tight",
+    "name": "Ménage Muster"
+  },
+  "base_currency": "CHF",
+  "fx_rates": {
+    "EUR": "0.9452"
+  },
+  "accounts": [
+    {
+      "id": "acc-1",
+      "name": "Carte prépayée",
+      "account_type": "prepaid",
+      "currency": "EUR",
+      "institution": "Prépayée exemple",
+      "balance": "1900.00",
+      "balance_base": "1795.79",
+      "observed_at": "2026-09-19T08:00:00+02:00"
+    },
+    {
+      "id": "acc-2",
+      "name": "Compte salaire",
+      "account_type": "bank",
+      "currency": "CHF",
+      "institution": "Banque exemple",
+      "balance": null,
+      "balance_base": null,
+      "observed_at": null
+    },
+    {
+      "id": "acc-3",
+      "name": "Compte France",
+      "account_type": "bank",
+      "currency": "EUR",
+      "institution": "Banque FR exemple",
+      "balance": null,
+      "balance_base": null,
+      "observed_at": null
+    }
+  ],
+  "structure": {
+    "fixed_monthly": "6982.97",
+    "income_monthly": "9000.00",
+    "fixed_ratio_percent": "77.59",
+    "structural_margin": "2017.03",
+    "by_category": [
+      {
+        "category": "Logement",
+        "amount": "3526.70"
+      },
+      {
+        "category": "Tontines",
+        "amount": "1223.48"
+      },
+      {
+        "category": "Santé",
+        "amount": "966.00"
+      },
+      {
+        "category": "Impôts",
+        "amount": "605.84"
+      },
+      {
+        "category": "Transport",
+        "amount": "561.95"
+      },
+      {
+        "category": "Télécom",
+        "amount": "99.00"
+      }
+    ]
+  },
+  "debts": {
+    "total_base": "5884.34",
+    "items": [
+      {
+        "id": "d1",
+        "name": "Carte de crédit",
+        "principal": "2764.90",
+        "currency": "CHF",
+        "due_day": 24
+      },
+      {
+        "id": "d2",
+        "name": "Carte revolving",
+        "principal": "2419.58",
+        "currency": "EUR",
+        "due_day": 20
+      },
+      {
+        "id": "d3",
+        "name": "Carte bancaire",
+        "principal": "832.45",
+        "currency": "CHF",
+        "due_day": 7
+      }
+    ]
+  },
+  "actions": [
+    {
+      "type": "overdue",
+      "ref_id": "revolving",
+      "label": "Carte revolving",
+      "date": "2026-09-19",
+      "amount": "2419.58",
+      "currency": "EUR",
+      "amount_base": "2286.99"
+    },
+    {
+      "type": "due_today",
+      "ref_id": "leasing",
+      "label": "Leasing voiture",
+      "date": "2026-09-20",
+      "amount": "561.95",
+      "currency": "CHF",
+      "amount_base": "561.95"
+    },
+    {
+      "type": "plan",
+      "ref_id": "bank-card",
+      "label": "Carte bancaire solde",
+      "date": "2026-10-07",
+      "amount": "832.45",
+      "currency": "CHF",
+      "amount_base": "832.45",
+      "target": "2026-09-24"
+    },
+    {
+      "type": "needs_review",
+      "kind": "obligation",
+      "ref_id": "ob-dup",
+      "label": "Internet",
+      "date": "2026-10-08",
+      "amount": "99.00",
+      "currency": "CHF",
+      "confidence": "0.55"
+    },
+    {
+      "type": "missing_amounts",
+      "label": "Récurrences sans montant",
+      "items": [
+        "Électricité",
+        "Téléphone",
+        "Assurance ménage",
+        "Streaming"
+      ]
+    }
+  ],
+  "data_quality": {
+    "last_transaction_date": "2026-07-31",
+    "days_since_last_transaction": 51,
+    "accounts_without_balance": [
+      "Compte salaire",
+      "Compte France"
+    ],
+    "fx_missing": [],
+    "rules_without_amount": [
+      "Électricité",
+      "Téléphone",
+      "Assurance ménage",
+      "Streaming"
+    ],
+    "needs_review_count": 1
+  },
+  "actual_vs_expected": {
+    "period_start": null,
+    "period_end": null,
+    "items": [],
+    "complete": false
+  },
+  "uncategorized": []
+}
