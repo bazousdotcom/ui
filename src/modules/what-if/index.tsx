@@ -198,7 +198,7 @@ export default defineModule<Model>({
                   onAction({
                     type: "save_scenario",
                     name: chosen.map(title).join(" + ").slice(0, 120),
-                    levers: chosen.map((l) => ({ id: l.id, kind: l.kind, ref_id: l.event.ref_id, target: l.target, amount: l.reserve ? String(l.reserve) : l.event.amount })),
+                    levers: chosen.map((l) => ({ id: l.id, kind: l.kind, label: title(l), ref_id: l.event.ref_id, target: l.target, amount: l.reserve ? String(l.reserve) : l.event.amount })),
                     low_before: String(base.low.balance),
                     low_after: String(scenario.low.balance),
                   })
@@ -226,7 +226,7 @@ function groupMarkers(s: Snapshot, num: (v: number) => string): { date: string; 
   const byDate = new Map<string, { labels: string[]; amount: number }>();
   for (const d of s.main_cycle.drivers) {
     const g = byDate.get(d.date) ?? { labels: [], amount: 0 };
-    g.labels.push(d.label.length <= 20 ? d.label : d.label.split(/\s+/).slice(0, 2).join(" "));
+    g.labels.push(shorten(d.label));
     g.amount += toNumber(d.amount);
     byDate.set(d.date, g);
   }
@@ -234,4 +234,16 @@ function groupMarkers(s: Snapshot, num: (v: number) => string): { date: string; 
     date,
     label: `${g.labels.length <= 2 ? g.labels.join(" + ") : `${g.labels[0]} +${g.labels.length - 1}`} −${num(g.amount)}`,
   }));
+}
+
+/** Keep whole words up to 18 characters: "Carte de crédit solde" → "Carte de crédit". */
+function shorten(label: string): string {
+  if (label.length <= 18) return label;
+  let out = "";
+  for (const word of label.split(/\s+/)) {
+    const next = out ? `${out} ${word}` : word;
+    if (next.length > 18) break;
+    out = next;
+  }
+  return out || label.slice(0, 18);
 }

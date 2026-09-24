@@ -44,26 +44,26 @@ export type Cycle = {
 
 export type Driver = { label: string; date: IsoDate; amount: Decimal; share: Decimal };
 
+/**
+ * The decision queue. Open bills are classified by the engine:
+ * `overdue` (before today), `due_today`, `before_income` (on or before the next income),
+ * `plan` (after it: `target` is the income date to pay on), `undated` (no due date yet).
+ */
+export type BillAction = {
+  type: "overdue" | "due_today" | "before_income" | "plan" | "undated";
+  ref_id: string;
+  label: string;
+  description?: string | null;
+  date: IsoDate | null;
+  amount: Decimal;
+  currency: string;
+  amount_base: Decimal;
+  confidence?: Decimal | null;
+  target?: IsoDate | null;
+};
+
 export type Action =
-  | {
-      type: "overdue" | "due_today";
-      ref_id: string;
-      label: string;
-      date: IsoDate;
-      amount: Decimal;
-      currency: string;
-      amount_base: Decimal;
-    }
-  | {
-      type: "plan";
-      ref_id: string;
-      label: string;
-      date: IsoDate;
-      amount: Decimal;
-      currency: string;
-      amount_base: Decimal;
-      target: IsoDate;
-    }
+  | BillAction
   | {
       type: "needs_review";
       kind: "obligation" | "transaction";
@@ -118,6 +118,14 @@ export type Snapshot = {
     items: { id: string; name: string; principal: Decimal; currency: string; due_day: number | null }[];
   };
   actions: Action[];
+  /** Last full month of imported transactions, by category. */
+  actual_vs_expected?: {
+    period_start: IsoDate | null;
+    period_end: IsoDate | null;
+    complete: boolean;
+    items: { category: string; expected: Decimal | null; actual: Decimal; delta: Decimal | null }[];
+  };
+  uncategorized?: { id: string; label: string; amount: Decimal; currency: string; booking_date: IsoDate; suggested_category: string | null }[];
   data_quality: {
     last_transaction_date: IsoDate | null;
     days_since_last_transaction: number | null;

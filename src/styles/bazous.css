@@ -90,6 +90,10 @@
 .bz *,
 .bz *::before,
 .bz *::after { box-sizing: border-box; }
+/* Hosts often style bare buttons and headings globally: the kit sets what it relies on. */
+.bz button { margin: 0; letter-spacing: normal; text-transform: none; box-shadow: none; }
+.bz h2,
+.bz h3 { margin: 0; }
 .bz p { margin: 0; }
 
 /* layout */
@@ -185,7 +189,7 @@
 .bz-late .bz-date,
 .bz-late .bz-amount { color: var(--bz-negative); }
 .bz-action { padding: 14px 0; flex-wrap: wrap; }
-.bz-row-button { width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--bz-line-2); border-radius: 0; color: inherit; font: inherit; cursor: pointer; }
+.bz-row-button { width: 100%; height: auto; min-height: 0; margin: 0; padding: 11px 0; text-align: left; background: none; border: 0; border-top: 1px solid var(--bz-line-2); border-radius: 0; box-shadow: none; color: inherit; font: inherit; cursor: pointer; }
 .bz-row-button:hover .bz-row-body strong { text-decoration: underline; text-decoration-color: var(--bz-accent); }
 .bz-warn-row,
 .bz-warn-row .bz-date,
@@ -274,3 +278,7 @@
   .bz-lever { transition: background-color 0.15s ease, border-color 0.15s ease; }
 }
 .bz-chart-box { width: 100%; min-width: 0; }
+.bz-group { display: flex; flex-direction: column; }
+.bz-group + .bz-group { margin-top: 10px; }
+.bz-group-title { margin: 6px 0 2px; font: 600 11px var(--bz-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--bz-muted); display: flex; gap: 8px; align-items: center; }
+.bz-group-title span { color: var(--bz-accent); }

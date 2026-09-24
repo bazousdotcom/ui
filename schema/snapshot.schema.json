@@ -78,7 +78,10 @@
             "type": {
               "enum": [
                 "overdue",
-                "due_today"
+                "due_today",
+                "before_income",
+                "plan",
+                "undated"
               ]
             },
             "ref_id": {
@@ -87,8 +90,21 @@
             "label": {
               "type": "string"
             },
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
             "date": {
-              "$ref": "#/$defs/date"
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/date"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             },
             "amount": {
               "$ref": "#/$defs/decimal"
@@ -98,6 +114,26 @@
             },
             "amount_base": {
               "$ref": "#/$defs/decimal"
+            },
+            "confidence": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/decimal"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "target": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/date"
+                },
+                {
+                  "type": "null"
+                }
+              ]
             }
           },
           "required": [
@@ -108,46 +144,6 @@
             "amount",
             "currency",
             "amount_base"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "const": "plan"
-            },
-            "ref_id": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "date": {
-              "$ref": "#/$defs/date"
-            },
-            "amount": {
-              "$ref": "#/$defs/decimal"
-            },
-            "currency": {
-              "$ref": "#/$defs/currency"
-            },
-            "amount_base": {
-              "$ref": "#/$defs/decimal"
-            },
-            "target": {
-              "$ref": "#/$defs/date"
-            }
-          },
-          "required": [
-            "type",
-            "ref_id",
-            "label",
-            "date",
-            "amount",
-            "currency",
-            "amount_base",
-            "target"
           ],
           "additionalProperties": false
         },
@@ -682,6 +678,120 @@
         "needs_review_count"
       ],
       "additionalProperties": true
+    },
+    "actual_vs_expected": {
+      "type": "object",
+      "properties": {
+        "period_start": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "period_end": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "expected": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/decimal"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actual": {
+                "$ref": "#/$defs/decimal"
+              },
+              "delta": {
+                "anyOf": [
+                  {
+                    "$ref": "#/$defs/decimal"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "category",
+              "expected",
+              "actual",
+              "delta"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "period_start",
+        "period_end",
+        "complete",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "uncategorized": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "amount": {
+            "$ref": "#/$defs/decimal"
+          },
+          "currency": {
+            "$ref": "#/$defs/currency"
+          },
+          "booking_date": {
+            "$ref": "#/$defs/date"
+          },
+          "suggested_category": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "amount",
+          "currency",
+          "booking_date",
+          "suggested_category"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [

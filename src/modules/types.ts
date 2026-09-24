@@ -18,7 +18,7 @@ export type ModuleAction =
   | {
       type: "save_scenario";
       name: string;
-      levers: { id: string; kind: string; ref_id: string | null; target: IsoDate; amount: Decimal }[];
+      levers: { id: string; kind: "split" | "defer" | "reserve"; label: string; ref_id: string | null; target: IsoDate; amount: Decimal }[];
       low_before: Decimal;
       low_after: Decimal;
     };

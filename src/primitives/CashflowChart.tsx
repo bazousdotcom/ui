@@ -82,12 +82,21 @@ function Drawing({ base, scenario, today, incomes, markers, labels, W }: Props &
           <text x={PAD.left - 8} y={y(t) + 4} textAnchor="end" className={t === 0 ? "bz-chart-tick bz-strong" : "bz-chart-tick"}>{num(t)}</text>
         </g>
       ))}
-      {incomes.map((d) => idx(d) >= 0 && (
+      {incomes.map((d) => {
+        if (idx(d) < 0) return null;
+        // On a phone the two payday captions would touch: the dashed green line already says "payday".
+        const text = compact ? shortDate(d) : labels.payday(shortDate(d));
+        const flip = x(idx(d)) + text.length * 6.5 > W - PAD.right;
+        return (
         <g key={d}>
           <line x1={x(idx(d))} x2={x(idx(d))} y1={PAD.top} y2={bottom} className="bz-chart-income" />
-          <text x={x(idx(d)) + 4} y={PAD.top - 10} className="bz-chart-label bz-income">{labels.payday(shortDate(d))}</text>
+          {/* ~6.5 px per character at 11 px: flip the label left of its line near the right edge. */}
+          <text x={x(idx(d)) + (flip ? -4 : 4)} y={PAD.top - 10} textAnchor={flip ? "end" : "start"} className="bz-chart-label bz-income">
+            {text}
+          </text>
         </g>
-      ))}
+        );
+      })}
       {idx(today) >= 0 && (
         <g>
           <line x1={todayX} x2={todayX} y1={PAD.top} y2={bottom} className="bz-chart-today" />

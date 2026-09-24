@@ -160,7 +160,14 @@ export function groupCycle(items: CashEvent[]): Group[] {
   return out;
 }
 
-const shortLabel = (label: string) => {
-  const words = label.split(/\s+/);
-  return words.length > 2 ? words.slice(0, 2).join(" ") : label;
-};
+/** Keep whole words up to 18 characters: "Carte de crédit solde" → "Carte de crédit". */
+function shortLabel(label: string): string {
+  if (label.length <= 18) return label;
+  let out = "";
+  for (const word of label.split(/\s+/)) {
+    const next = out ? `${out} ${word}` : word;
+    if (next.length > 18) break;
+    out = next;
+  }
+  return out || label.slice(0, 18);
+}
