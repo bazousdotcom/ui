@@ -1,0 +1,3657 @@
+{
+ "fr": {
+  "as_of": "2026-09-20",
+  "currency": "CHF",
+  "language": "fr",
+  "headline": "7 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Que dois-je payer avant le salaire ?",
+    "answer": "561.95 CHF à payer avant le salaire du 24.09 : il manque 261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "561.95",
+     "available": "300.00",
+     "gap": "-261.95",
+     "next_income_date": "2026-09-24"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-09-20",
+     "payday": "2026-09-24",
+     "available": "300.00",
+     "due": "561.95",
+     "gap": "-261.95",
+     "bills": [
+      {
+       "label": "Leasing voiture",
+       "amount": "561.95",
+       "date": "2026-09-22"
+      }
+     ],
+     "short_days": 2,
+     "caption": "Il te manque 261.95 CHF pendant 2 jour(s), jusqu’au salaire du 24.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Jusqu’où puis-je descendre ?",
+    "answer": "Point bas −1’901.95 CHF le 30.09 : tu passes sous zéro, 24 jour(s) avant le revenu du 24.10.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-1901.95",
+     "date": "2026-09-30",
+     "days_from_now": 10
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "low": {
+      "date": "2026-09-30",
+      "balance": "-1901.95"
+     },
+     "days_below_zero": 26,
+     "incomes": [
+      "2026-09-24",
+      "2026-10-24"
+     ],
+     "caption": "26 jour(s) sous zéro dans les 42 prochains jours ; le fond : −1’901.95 CHF le 30.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Et si je décale un paiement ?",
+    "answer": "Le meilleur geste : reporter Loyer (2’440.00 CHF) du 30.09 au 24.10, jour de paie. Ton point bas passe de −1’901.95 CHF à −261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Reportée après le salaire, cette facture ne pèse plus sur les jours les plus bas, si le créancier accepte ce délai.",
+    "figures": {
+     "ref_id": "Loyer-2026-09-30",
+     "label": "Loyer",
+     "amount": "2440.00",
+     "from": "2026-09-30",
+     "target": "2026-10-24",
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "low_after_date": "2026-09-22"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "after": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "538.05"
+      ],
+      [
+       "2026-10-01",
+       "538.05"
+      ],
+      [
+       "2026-10-02",
+       "538.05"
+      ],
+      [
+       "2026-10-03",
+       "538.05"
+      ],
+      [
+       "2026-10-04",
+       "538.05"
+      ],
+      [
+       "2026-10-05",
+       "538.05"
+      ],
+      [
+       "2026-10-06",
+       "538.05"
+      ],
+      [
+       "2026-10-07",
+       "538.05"
+      ],
+      [
+       "2026-10-08",
+       "538.05"
+      ],
+      [
+       "2026-10-09",
+       "538.05"
+      ],
+      [
+       "2026-10-10",
+       "538.05"
+      ],
+      [
+       "2026-10-11",
+       "538.05"
+      ],
+      [
+       "2026-10-12",
+       "538.05"
+      ],
+      [
+       "2026-10-13",
+       "538.05"
+      ],
+      [
+       "2026-10-14",
+       "538.05"
+      ],
+      [
+       "2026-10-15",
+       "538.05"
+      ],
+      [
+       "2026-10-16",
+       "538.05"
+      ],
+      [
+       "2026-10-17",
+       "538.05"
+      ],
+      [
+       "2026-10-18",
+       "538.05"
+      ],
+      [
+       "2026-10-19",
+       "538.05"
+      ],
+      [
+       "2026-10-20",
+       "538.05"
+      ],
+      [
+       "2026-10-21",
+       "538.05"
+      ],
+      [
+       "2026-10-22",
+       "538.05"
+      ],
+      [
+       "2026-10-23",
+       "538.05"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "move": {
+      "label": "Loyer",
+      "amount": "2440.00",
+      "from": "2026-09-30",
+      "to": "2026-10-24"
+     },
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "caption": "Décale Loyer au 24.10 : ton fond remonte de 1’640.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Combien de temps tiendrais-je sans revenu ?",
+    "answer": "Ton disponible couvre 0.1 mois de charges fixes (4’880.00 CHF par mois). Pour atteindre 3 mois, il manque 14’340.00 CHF, soit 1’195.00 CHF par mois pendant un an.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "L’usage recommande de pouvoir couvrir 3 mois de charges en cas d’imprévu.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "4880",
+     "target_months": 3,
+     "gap": "14340.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 1,
+     "target": 90,
+     "balance": "300.00",
+     "caption": "Sans salaire, ton argent paie tes charges fixes 1 jour(s) sur les 90 conseillés."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Qu’est-ce qui tombe à chaque salaire ?",
+    "answer": "Du 24.09 au 23.10, 10’640.00 CHF sortent pour 9’000.00 CHF entrés : ce cycle puise 1’640.00 CHF dans tes réserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "total_out": "10640.00",
+     "total_in": "9000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "9000.00",
+     "out": "10640.00",
+     "gap": "1640.00",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "caption": "Ce cycle laisse un trou de 1’640.00 CHF : 10’640.00 CHF sortent pour 9’000.00 CHF qui entrent."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Ma prime d’assurance maladie augmente-t-elle, et puis-je changer ?",
+    "answer": "Ta prime passe de 412.30 CHF à 438.10 CHF par mois en 2027, soit 309.60 CHF de plus par an. Tu peux changer de caisse jusqu’au 30.11 : compare sur priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La résiliation doit parvenir à la caisse au plus tard le dernier jour ouvrable de novembre : c’est la date de réception qui compte.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "309.60",
+     "monthly_premium": "412.30",
+     "next_year_monthly_premium": "438.10"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 71,
+     "window_days": 71,
+     "current": "412.30",
+     "next": "438.10",
+     "increase_per_year": "309.60",
+     "caption": "Il te reste 71 jour(s) pour changer de caisse ; la hausse te coûte 309.60 CHF par an."
+    }
+   },
+   {
+    "needs": [
+     "taxes.last_annual_bill"
+    ],
+    "id": "tax-provision",
+    "question": "Ai-je mis de côté pour mes impôts ?",
+    "answer": "Donne le montant de ton dernier bordereau d’impôts : Bazous te dira combien mettre de côté chaque mois.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Le bordereau arrive en une fois : réparti sur l’année, il ne crée plus de trou.",
+    "figures": {}
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Combien ai-je maintenant ?",
+    "short": "300.00 CHF disponibles"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Que me restera-t-il ?",
+    "short": "7’098.05 CHF restants au 31.10"
+   },
+   {
+    "id": "next-actions",
+    "question": "Que faire ensuite ?",
+    "short": "rien à décider"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Combien me coûte un mois ?",
+    "short": "charges fixes à 54 % des revenus"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Quelle grosse dépense de l’année arrive bientôt ?",
+    "short": "aucune grosse dépense annuelle dans les 90 jours"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Est-ce que je paie des frais évitables ?",
+    "short": "aucun frais bancaire récurrent repéré"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "de": {
+  "as_of": "2026-09-20",
+  "currency": "CHF",
+  "language": "de",
+  "headline": "Heute 7 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Was muss ich vor dem Lohn bezahlen?",
+    "answer": "561.95 CHF vor dem Lohn vom 24.09 zu bezahlen: Es fehlen 261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "561.95",
+     "available": "300.00",
+     "gap": "-261.95",
+     "next_income_date": "2026-09-24"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-09-20",
+     "payday": "2026-09-24",
+     "available": "300.00",
+     "due": "561.95",
+     "gap": "-261.95",
+     "bills": [
+      {
+       "label": "Leasing voiture",
+       "amount": "561.95",
+       "date": "2026-09-22"
+      }
+     ],
+     "short_days": 2,
+     "caption": "Dir fehlen 261.95 CHF während 2 Tag(en), bis zum Lohn vom 24.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Wie tief sinkt mein Saldo?",
+    "answer": "Tiefpunkt −1’901.95 CHF am 30.09: Du rutschst unter null, 24 Tag(e) vor dem Einkommen vom 24.10.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-1901.95",
+     "date": "2026-09-30",
+     "days_from_now": 10
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "low": {
+      "date": "2026-09-30",
+      "balance": "-1901.95"
+     },
+     "days_below_zero": 26,
+     "incomes": [
+      "2026-09-24",
+      "2026-10-24"
+     ],
+     "caption": "26 Tag(e) unter null in den nächsten 42 Tagen; der Tiefpunkt: −1’901.95 CHF am 30.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Und wenn ich eine Zahlung verschiebe?",
+    "answer": "Der beste Schritt: Loyer (2’440.00 CHF) vom 30.09 auf den 24.10, den Zahltag, verschieben. Dein Tiefpunkt steigt von −1’901.95 CHF auf −261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Nach dem Lohn bezahlt, belastet die Rechnung die tiefsten Tage nicht mehr, sofern der Gläubiger den Aufschub akzeptiert.",
+    "figures": {
+     "ref_id": "Loyer-2026-09-30",
+     "label": "Loyer",
+     "amount": "2440.00",
+     "from": "2026-09-30",
+     "target": "2026-10-24",
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "low_after_date": "2026-09-22"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "after": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "538.05"
+      ],
+      [
+       "2026-10-01",
+       "538.05"
+      ],
+      [
+       "2026-10-02",
+       "538.05"
+      ],
+      [
+       "2026-10-03",
+       "538.05"
+      ],
+      [
+       "2026-10-04",
+       "538.05"
+      ],
+      [
+       "2026-10-05",
+       "538.05"
+      ],
+      [
+       "2026-10-06",
+       "538.05"
+      ],
+      [
+       "2026-10-07",
+       "538.05"
+      ],
+      [
+       "2026-10-08",
+       "538.05"
+      ],
+      [
+       "2026-10-09",
+       "538.05"
+      ],
+      [
+       "2026-10-10",
+       "538.05"
+      ],
+      [
+       "2026-10-11",
+       "538.05"
+      ],
+      [
+       "2026-10-12",
+       "538.05"
+      ],
+      [
+       "2026-10-13",
+       "538.05"
+      ],
+      [
+       "2026-10-14",
+       "538.05"
+      ],
+      [
+       "2026-10-15",
+       "538.05"
+      ],
+      [
+       "2026-10-16",
+       "538.05"
+      ],
+      [
+       "2026-10-17",
+       "538.05"
+      ],
+      [
+       "2026-10-18",
+       "538.05"
+      ],
+      [
+       "2026-10-19",
+       "538.05"
+      ],
+      [
+       "2026-10-20",
+       "538.05"
+      ],
+      [
+       "2026-10-21",
+       "538.05"
+      ],
+      [
+       "2026-10-22",
+       "538.05"
+      ],
+      [
+       "2026-10-23",
+       "538.05"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "move": {
+      "label": "Loyer",
+      "amount": "2440.00",
+      "from": "2026-09-30",
+      "to": "2026-10-24"
+     },
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "caption": "Verschieb Loyer auf den 24.10: Dein Tiefpunkt steigt um 1’640.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Wie lange käme ich ohne Einkommen aus?",
+    "answer": "Dein verfügbares Geld deckt 0.1 Monate Fixkosten (4’880.00 CHF pro Monat). Für 3 Monate fehlen 14’340.00 CHF, also 1’195.00 CHF pro Monat während eines Jahres.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Üblich ist eine Reserve für 3 Monate Fixkosten für Unvorhergesehenes.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "4880",
+     "target_months": 3,
+     "gap": "14340.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 1,
+     "target": 90,
+     "balance": "300.00",
+     "caption": "Ohne Lohn zahlt dein Geld deine Fixkosten 1 Tag(e) von den empfohlenen 90."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Was fällt in jeder Lohnperiode an?",
+    "answer": "Vom 24.09 bis 23.10 gehen 10’640.00 CHF hinaus, 9’000.00 CHF kommen herein: Diese Periode zehrt 1’640.00 CHF von deinen Reserven.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "total_out": "10640.00",
+     "total_in": "9000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "9000.00",
+     "out": "10640.00",
+     "gap": "1640.00",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "caption": "Dieser Zyklus hinterlässt ein Loch von 1’640.00 CHF: 10’640.00 CHF gehen raus, 9’000.00 CHF kommen rein."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Steigt meine Krankenkassenprämie, und kann ich wechseln?",
+    "answer": "Deine Prämie steigt 2027 von 412.30 CHF auf 438.10 CHF pro Monat, also 309.60 CHF mehr pro Jahr. Du kannst die Kasse bis 30.11 wechseln: vergleiche auf priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Die Kündigung muss spätestens am letzten Arbeitstag im November bei der Kasse eintreffen: Es zählt das Empfangsdatum.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "309.60",
+     "monthly_premium": "412.30",
+     "next_year_monthly_premium": "438.10"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 71,
+     "window_days": 71,
+     "current": "412.30",
+     "next": "438.10",
+     "increase_per_year": "309.60",
+     "caption": "Dir bleiben 71 Tag(e), um die Kasse zu wechseln; der Aufschlag kostet dich 309.60 CHF pro Jahr."
+    }
+   },
+   {
+    "needs": [
+     "taxes.last_annual_bill"
+    ],
+    "id": "tax-provision",
+    "question": "Habe ich für meine Steuern vorgesorgt?",
+    "answer": "Gib den Betrag deiner letzten Steuerrechnung an: Bazous sagt dir, wie viel du monatlich zurücklegen solltest.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Die Steuerrechnung kommt auf einmal: übers Jahr verteilt, reisst sie kein Loch.",
+    "figures": {}
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Wie viel habe ich jetzt?",
+    "short": "300.00 CHF verfügbar"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Was bleibt mir?",
+    "short": "7’098.05 CHF übrig am 31.10"
+   },
+   {
+    "id": "next-actions",
+    "question": "Was kommt als Nächstes?",
+    "short": "nichts zu entscheiden"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Was kostet mich ein Monat?",
+    "short": "Fixkosten bei 54 % des Einkommens"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Welche grosse Jahresausgabe steht bald an?",
+    "short": "keine grosse Jahresausgabe in den nächsten 90 Tagen"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Zahle ich vermeidbare Gebühren?",
+    "short": "keine wiederkehrenden Bankgebühren gefunden"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "it": {
+  "as_of": "2026-09-20",
+  "currency": "CHF",
+  "language": "it",
+  "headline": "Oggi 7 punto/i da guardare; il resto è in ordine.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Cosa devo pagare prima dello stipendio?",
+    "answer": "561.95 CHF da pagare prima dello stipendio del 24.09: mancano 261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "561.95",
+     "available": "300.00",
+     "gap": "-261.95",
+     "next_income_date": "2026-09-24"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-09-20",
+     "payday": "2026-09-24",
+     "available": "300.00",
+     "due": "561.95",
+     "gap": "-261.95",
+     "bills": [
+      {
+       "label": "Leasing voiture",
+       "amount": "561.95",
+       "date": "2026-09-22"
+      }
+     ],
+     "short_days": 2,
+     "caption": "Ti mancano 261.95 CHF per 2 giorno/i, fino allo stipendio del 24.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quanto scenderà il saldo?",
+    "answer": "Minimo −1’901.95 CHF il 30.09: scendi sotto zero, 24 giorno/i prima del reddito del 24.10.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-1901.95",
+     "date": "2026-09-30",
+     "days_from_now": 10
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "low": {
+      "date": "2026-09-30",
+      "balance": "-1901.95"
+     },
+     "days_below_zero": 26,
+     "incomes": [
+      "2026-09-24",
+      "2026-10-24"
+     ],
+     "caption": "26 giorno/i sotto zero nei prossimi 42 giorni; il fondo: −1’901.95 CHF il 30.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E se sposto un pagamento?",
+    "answer": "Il gesto migliore: rinviare Loyer (2’440.00 CHF) dal 30.09 al 24.10, giorno di paga. Il minimo passa da −1’901.95 CHF a −261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Pagata dopo lo stipendio, la fattura non pesa più sui giorni più bassi, se il creditore accetta il rinvio.",
+    "figures": {
+     "ref_id": "Loyer-2026-09-30",
+     "label": "Loyer",
+     "amount": "2440.00",
+     "from": "2026-09-30",
+     "target": "2026-10-24",
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "low_after_date": "2026-09-22"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "after": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "538.05"
+      ],
+      [
+       "2026-10-01",
+       "538.05"
+      ],
+      [
+       "2026-10-02",
+       "538.05"
+      ],
+      [
+       "2026-10-03",
+       "538.05"
+      ],
+      [
+       "2026-10-04",
+       "538.05"
+      ],
+      [
+       "2026-10-05",
+       "538.05"
+      ],
+      [
+       "2026-10-06",
+       "538.05"
+      ],
+      [
+       "2026-10-07",
+       "538.05"
+      ],
+      [
+       "2026-10-08",
+       "538.05"
+      ],
+      [
+       "2026-10-09",
+       "538.05"
+      ],
+      [
+       "2026-10-10",
+       "538.05"
+      ],
+      [
+       "2026-10-11",
+       "538.05"
+      ],
+      [
+       "2026-10-12",
+       "538.05"
+      ],
+      [
+       "2026-10-13",
+       "538.05"
+      ],
+      [
+       "2026-10-14",
+       "538.05"
+      ],
+      [
+       "2026-10-15",
+       "538.05"
+      ],
+      [
+       "2026-10-16",
+       "538.05"
+      ],
+      [
+       "2026-10-17",
+       "538.05"
+      ],
+      [
+       "2026-10-18",
+       "538.05"
+      ],
+      [
+       "2026-10-19",
+       "538.05"
+      ],
+      [
+       "2026-10-20",
+       "538.05"
+      ],
+      [
+       "2026-10-21",
+       "538.05"
+      ],
+      [
+       "2026-10-22",
+       "538.05"
+      ],
+      [
+       "2026-10-23",
+       "538.05"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "move": {
+      "label": "Loyer",
+      "amount": "2440.00",
+      "from": "2026-09-30",
+      "to": "2026-10-24"
+     },
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "caption": "Sposta Loyer al 24.10: il tuo punto più basso risale di 1’640.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quanto resisterei senza reddito?",
+    "answer": "La tua disponibilità copre 0.1 mesi di spese fisse (4’880.00 CHF al mese). Per arrivare a 3 mesi mancano 14’340.00 CHF, cioè 1’195.00 CHF al mese per un anno.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "È consigliato poter coprire 3 mesi di spese in caso di imprevisti.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "4880",
+     "target_months": 3,
+     "gap": "14340.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 1,
+     "target": 90,
+     "balance": "300.00",
+     "caption": "Senza stipendio, i tuoi soldi pagano le spese fisse per 1 giorno/i sui 90 consigliati."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Cosa scade in ogni periodo di paga?",
+    "answer": "Dal 24.09 al 23.10 escono 10’640.00 CHF per 9’000.00 CHF in entrata: questo periodo attinge 1’640.00 CHF dalle tue riserve.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "total_out": "10640.00",
+     "total_in": "9000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "9000.00",
+     "out": "10640.00",
+     "gap": "1640.00",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "caption": "Questo ciclo lascia un buco di 1’640.00 CHF: escono 10’640.00 CHF per 9’000.00 CHF che entrano."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Il mio premio della cassa malati aumenta, e posso cambiare?",
+    "answer": "Il premio passa da 412.30 CHF a 438.10 CHF al mese nel 2027, cioè 309.60 CHF in più all’anno. Puoi cambiare cassa fino al 30.11: confronta su priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La disdetta deve arrivare alla cassa entro l’ultimo giorno lavorativo di novembre: conta la data di ricezione.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "309.60",
+     "monthly_premium": "412.30",
+     "next_year_monthly_premium": "438.10"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 71,
+     "window_days": 71,
+     "current": "412.30",
+     "next": "438.10",
+     "increase_per_year": "309.60",
+     "caption": "Ti restano 71 giorno/i per cambiare cassa; l’aumento ti costa 309.60 CHF all’anno."
+    }
+   },
+   {
+    "needs": [
+     "taxes.last_annual_bill"
+    ],
+    "id": "tax-provision",
+    "question": "Ho messo da parte per le imposte?",
+    "answer": "Indica l’importo dell’ultima notifica di tassazione: Bazous ti dirà quanto mettere da parte ogni mese.",
+    "source": "expert",
+    "tone": "info",
+    "because": "La notifica arriva in una volta: ripartita sull’anno, non crea più buchi.",
+    "figures": {}
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quanto ho adesso?",
+    "short": "300.00 CHF disponibili"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Cosa mi resterà?",
+    "short": "7’098.05 CHF restanti al 31.10"
+   },
+   {
+    "id": "next-actions",
+    "question": "Cosa faccio dopo?",
+    "short": "niente da decidere"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Quanto mi costa un mese?",
+    "short": "spese fisse al 54 % del reddito"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Quale grande spesa annuale arriva presto?",
+    "short": "nessuna grande spesa annuale nei prossimi 90 giorni"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Pago commissioni evitabili?",
+    "short": "nessuna commissione bancaria ricorrente trovata"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "rm": {
+  "as_of": "2026-09-20",
+  "currency": "CHF",
+  "language": "rm",
+  "headline": "Oz 7 punct(s) da guardar; il rest è en urden.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Tge stoss jau pajar avant il salari?",
+    "answer": "561.95 CHF da pajar avant il salari dals 24.09: i mancan 261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "561.95",
+     "available": "300.00",
+     "gap": "-261.95",
+     "next_income_date": "2026-09-24"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-09-20",
+     "payday": "2026-09-24",
+     "available": "300.00",
+     "due": "561.95",
+     "gap": "-261.95",
+     "bills": [
+      {
+       "label": "Leasing voiture",
+       "amount": "561.95",
+       "date": "2026-09-22"
+      }
+     ],
+     "short_days": 2,
+     "caption": "Ta mancan 261.95 CHF durant 2 di(s), fin a la paja dals 24.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quant bass vegn il saldo?",
+    "answer": "Punct bass −1’901.95 CHF ils 30.09: ti crodas sut nulla, 24 di(s) avant l’entrada dals 24.10.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-1901.95",
+     "date": "2026-09-30",
+     "days_from_now": 10
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "low": {
+      "date": "2026-09-30",
+      "balance": "-1901.95"
+     },
+     "days_below_zero": 26,
+     "incomes": [
+      "2026-09-24",
+      "2026-10-24"
+     ],
+     "caption": "26 di(s) sut nulla ils proxims 42 dis; il fund: −1’901.95 CHF ils 30.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E sche jau spustel in pajament?",
+    "answer": "Il meglier pass: spustar Loyer (2’440.00 CHF) dals 30.09 sin ils 24.10, di da paja. Tes punct bass va da −1’901.95 CHF a −261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Pajà suenter il salari, na charg’il quint betg pli ils dis ils pli bass, sch’il creditur accepta il termin.",
+    "figures": {
+     "ref_id": "Loyer-2026-09-30",
+     "label": "Loyer",
+     "amount": "2440.00",
+     "from": "2026-09-30",
+     "target": "2026-10-24",
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "low_after_date": "2026-09-22"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "after": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "538.05"
+      ],
+      [
+       "2026-10-01",
+       "538.05"
+      ],
+      [
+       "2026-10-02",
+       "538.05"
+      ],
+      [
+       "2026-10-03",
+       "538.05"
+      ],
+      [
+       "2026-10-04",
+       "538.05"
+      ],
+      [
+       "2026-10-05",
+       "538.05"
+      ],
+      [
+       "2026-10-06",
+       "538.05"
+      ],
+      [
+       "2026-10-07",
+       "538.05"
+      ],
+      [
+       "2026-10-08",
+       "538.05"
+      ],
+      [
+       "2026-10-09",
+       "538.05"
+      ],
+      [
+       "2026-10-10",
+       "538.05"
+      ],
+      [
+       "2026-10-11",
+       "538.05"
+      ],
+      [
+       "2026-10-12",
+       "538.05"
+      ],
+      [
+       "2026-10-13",
+       "538.05"
+      ],
+      [
+       "2026-10-14",
+       "538.05"
+      ],
+      [
+       "2026-10-15",
+       "538.05"
+      ],
+      [
+       "2026-10-16",
+       "538.05"
+      ],
+      [
+       "2026-10-17",
+       "538.05"
+      ],
+      [
+       "2026-10-18",
+       "538.05"
+      ],
+      [
+       "2026-10-19",
+       "538.05"
+      ],
+      [
+       "2026-10-20",
+       "538.05"
+      ],
+      [
+       "2026-10-21",
+       "538.05"
+      ],
+      [
+       "2026-10-22",
+       "538.05"
+      ],
+      [
+       "2026-10-23",
+       "538.05"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "move": {
+      "label": "Loyer",
+      "amount": "2440.00",
+      "from": "2026-09-30",
+      "to": "2026-10-24"
+     },
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "caption": "Spustescha Loyer sin ils 24.10: tes punct il pli bass s’auza per 1’640.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quant ditg tegniss jau senza entrada?",
+    "answer": "Tes disponibel cuvra 0.1 mais custs fixs (4’880.00 CHF per mais). Per cuntanscher 3 mais mancan 14’340.00 CHF, quai èn 1’195.00 CHF per mais durant in onn.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "I vegn recumandà da pudair cuvrir 3 mais custs en cas nunspetgà.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "4880",
+     "target_months": 3,
+     "gap": "14340.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 1,
+     "target": 90,
+     "balance": "300.00",
+     "caption": "Senza paja pajan tes daners tes custs fixs 1 di(s) dals 90 recumandads."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Tge croda en mintga perioda da salari?",
+    "answer": "Dals 24.09 fin ils 23.10 van 10’640.00 CHF ora e vegnan 9’000.00 CHF en: questa perioda prenda 1’640.00 CHF da tias reservas.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "total_out": "10640.00",
+     "total_in": "9000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "9000.00",
+     "out": "10640.00",
+     "gap": "1640.00",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "caption": "Quest ciclus lascha ina foppa da 1’640.00 CHF: 10’640.00 CHF van ora, 9’000.00 CHF vegnan en."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Crescha mia premia da la cassa da malsauns, e poss jau midar?",
+    "answer": "Tia premia crescha dal 2027 da 412.30 CHF sin 438.10 CHF per mais, quai èn 309.60 CHF dapli per onn. Ti pos midar la cassa fin ils 30.11: cumpareglia sin priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La disdetga sto arrivar tar la cassa il pli tard l’ultim di da lavur da november: la data da retschavida decida.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "309.60",
+     "monthly_premium": "412.30",
+     "next_year_monthly_premium": "438.10"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 71,
+     "window_days": 71,
+     "current": "412.30",
+     "next": "438.10",
+     "increase_per_year": "309.60",
+     "caption": "Ta restan 71 di(s) per midar la cassa; l’augment ta custa 309.60 CHF per onn."
+    }
+   },
+   {
+    "needs": [
+     "taxes.last_annual_bill"
+    ],
+    "id": "tax-provision",
+    "question": "Hai jau mess da la vart per las taglias?",
+    "answer": "Inditgescha la summa da tes ultim quint da taglia: Bazous at di quant metter da la vart mintga mais.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Il quint da taglia vegn en ina giada: repartì sin l’onn na fa el nagina fora.",
+    "figures": {}
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quant hai jau ussa?",
+    "short": "300.00 CHF disponibel"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Tge ma resta?",
+    "short": "7’098.05 CHF restan ils 31.10"
+   },
+   {
+    "id": "next-actions",
+    "question": "Tge vegn suenter?",
+    "short": "nagut da decider"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Quant ma custa in mais?",
+    "short": "custs fixs a 54 % da las entradas"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Tge gronda expensa annuala vegn prest?",
+    "short": "nagina gronda expensa annuala en ils proxims 90 dis"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Pai jau taxas evitablas?",
+    "short": "naginas taxas bancaras regularas chattadas"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "en": {
+  "as_of": "2026-09-20",
+  "currency": "CHF",
+  "language": "en",
+  "headline": "7 point(s) to look at today; the rest is in order.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "What do I owe before payday?",
+    "answer": "561.95 CHF to pay before the 24.09 payday: 261.95 CHF is missing.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "561.95",
+     "available": "300.00",
+     "gap": "-261.95",
+     "next_income_date": "2026-09-24"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-09-20",
+     "payday": "2026-09-24",
+     "available": "300.00",
+     "due": "561.95",
+     "gap": "-261.95",
+     "bills": [
+      {
+       "label": "Leasing voiture",
+       "amount": "561.95",
+       "date": "2026-09-22"
+      }
+     ],
+     "short_days": 2,
+     "caption": "You are 261.95 CHF short for 2 day(s), until payday on 24.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "How low might I go?",
+    "answer": "Low point −1’901.95 CHF on 30.09: you go below zero, 24 day(s) before the 24.10 income.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-1901.95",
+     "date": "2026-09-30",
+     "days_from_now": 10
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "low": {
+      "date": "2026-09-30",
+      "balance": "-1901.95"
+     },
+     "days_below_zero": 26,
+     "incomes": [
+      "2026-09-24",
+      "2026-10-24"
+     ],
+     "caption": "26 day(s) below zero in the next 42 days; the bottom: −1’901.95 CHF on 30.09."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "What if I move a payment?",
+    "answer": "The best move: postpone Loyer (2’440.00 CHF) from 30.09 to 24.10, payday. Your low point goes from −1’901.95 CHF to −261.95 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Paid after payday, the bill no longer weighs on the lowest days, if the creditor accepts the delay.",
+    "figures": {
+     "ref_id": "Loyer-2026-09-30",
+     "label": "Loyer",
+     "amount": "2440.00",
+     "from": "2026-09-30",
+     "target": "2026-10-24",
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "low_after_date": "2026-09-22"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "-1901.95"
+      ],
+      [
+       "2026-10-01",
+       "-1901.95"
+      ],
+      [
+       "2026-10-02",
+       "-1901.95"
+      ],
+      [
+       "2026-10-03",
+       "-1901.95"
+      ],
+      [
+       "2026-10-04",
+       "-1901.95"
+      ],
+      [
+       "2026-10-05",
+       "-1901.95"
+      ],
+      [
+       "2026-10-06",
+       "-1901.95"
+      ],
+      [
+       "2026-10-07",
+       "-1901.95"
+      ],
+      [
+       "2026-10-08",
+       "-1901.95"
+      ],
+      [
+       "2026-10-09",
+       "-1901.95"
+      ],
+      [
+       "2026-10-10",
+       "-1901.95"
+      ],
+      [
+       "2026-10-11",
+       "-1901.95"
+      ],
+      [
+       "2026-10-12",
+       "-1901.95"
+      ],
+      [
+       "2026-10-13",
+       "-1901.95"
+      ],
+      [
+       "2026-10-14",
+       "-1901.95"
+      ],
+      [
+       "2026-10-15",
+       "-1901.95"
+      ],
+      [
+       "2026-10-16",
+       "-1901.95"
+      ],
+      [
+       "2026-10-17",
+       "-1901.95"
+      ],
+      [
+       "2026-10-18",
+       "-1901.95"
+      ],
+      [
+       "2026-10-19",
+       "-1901.95"
+      ],
+      [
+       "2026-10-20",
+       "-1901.95"
+      ],
+      [
+       "2026-10-21",
+       "-1901.95"
+      ],
+      [
+       "2026-10-22",
+       "-1901.95"
+      ],
+      [
+       "2026-10-23",
+       "-1901.95"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "after": [
+      [
+       "2026-09-20",
+       "300.00"
+      ],
+      [
+       "2026-09-21",
+       "300.00"
+      ],
+      [
+       "2026-09-22",
+       "-261.95"
+      ],
+      [
+       "2026-09-23",
+       "-261.95"
+      ],
+      [
+       "2026-09-24",
+       "8738.05"
+      ],
+      [
+       "2026-09-25",
+       "8738.05"
+      ],
+      [
+       "2026-09-26",
+       "538.05"
+      ],
+      [
+       "2026-09-27",
+       "538.05"
+      ],
+      [
+       "2026-09-28",
+       "538.05"
+      ],
+      [
+       "2026-09-29",
+       "538.05"
+      ],
+      [
+       "2026-09-30",
+       "538.05"
+      ],
+      [
+       "2026-10-01",
+       "538.05"
+      ],
+      [
+       "2026-10-02",
+       "538.05"
+      ],
+      [
+       "2026-10-03",
+       "538.05"
+      ],
+      [
+       "2026-10-04",
+       "538.05"
+      ],
+      [
+       "2026-10-05",
+       "538.05"
+      ],
+      [
+       "2026-10-06",
+       "538.05"
+      ],
+      [
+       "2026-10-07",
+       "538.05"
+      ],
+      [
+       "2026-10-08",
+       "538.05"
+      ],
+      [
+       "2026-10-09",
+       "538.05"
+      ],
+      [
+       "2026-10-10",
+       "538.05"
+      ],
+      [
+       "2026-10-11",
+       "538.05"
+      ],
+      [
+       "2026-10-12",
+       "538.05"
+      ],
+      [
+       "2026-10-13",
+       "538.05"
+      ],
+      [
+       "2026-10-14",
+       "538.05"
+      ],
+      [
+       "2026-10-15",
+       "538.05"
+      ],
+      [
+       "2026-10-16",
+       "538.05"
+      ],
+      [
+       "2026-10-17",
+       "538.05"
+      ],
+      [
+       "2026-10-18",
+       "538.05"
+      ],
+      [
+       "2026-10-19",
+       "538.05"
+      ],
+      [
+       "2026-10-20",
+       "538.05"
+      ],
+      [
+       "2026-10-21",
+       "538.05"
+      ],
+      [
+       "2026-10-22",
+       "538.05"
+      ],
+      [
+       "2026-10-23",
+       "538.05"
+      ],
+      [
+       "2026-10-24",
+       "7098.05"
+      ],
+      [
+       "2026-10-25",
+       "7098.05"
+      ],
+      [
+       "2026-10-26",
+       "7098.05"
+      ],
+      [
+       "2026-10-27",
+       "7098.05"
+      ],
+      [
+       "2026-10-28",
+       "7098.05"
+      ],
+      [
+       "2026-10-29",
+       "7098.05"
+      ],
+      [
+       "2026-10-30",
+       "7098.05"
+      ],
+      [
+       "2026-10-31",
+       "7098.05"
+      ]
+     ],
+     "move": {
+      "label": "Loyer",
+      "amount": "2440.00",
+      "from": "2026-09-30",
+      "to": "2026-10-24"
+     },
+     "low_before": "-1901.95",
+     "low_after": "-261.95",
+     "caption": "Move Loyer to 24.10: your low point rises by 1’640.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "How long could I last without income?",
+    "answer": "Your available money covers 0.1 months of fixed costs (4’880.00 CHF a month). Reaching 3 months takes 14’340.00 CHF more, that is 1’195.00 CHF a month for a year.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "The usual advice is to be able to cover 3 months of costs if something happens.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "4880",
+     "target_months": 3,
+     "gap": "14340.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 1,
+     "target": 90,
+     "balance": "300.00",
+     "caption": "Without a salary, your money pays your fixed costs for 1 day(s) out of the 90 advised."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "What falls due each pay cycle?",
+    "answer": "From 24.09 to 23.10, 10’640.00 CHF goes out for 9’000.00 CHF coming in: this cycle draws 1’640.00 CHF from your reserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "total_out": "10640.00",
+     "total_in": "9000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "9000.00",
+     "out": "10640.00",
+     "gap": "1640.00",
+     "start": "2026-09-24",
+     "end": "2026-10-23",
+     "caption": "This cycle leaves a 1’640.00 CHF hole: 10’640.00 CHF goes out for 9’000.00 CHF coming in."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Is my health insurance premium going up, and can I switch?",
+    "answer": "Your premium goes from 412.30 CHF to 438.10 CHF a month in 2027, that is 309.60 CHF more a year. You can switch insurer until 30.11: compare on priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "The cancellation must reach the insurer by the last working day of November: the date of receipt is what counts.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "309.60",
+     "monthly_premium": "412.30",
+     "next_year_monthly_premium": "438.10"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 71,
+     "window_days": 71,
+     "current": "412.30",
+     "next": "438.10",
+     "increase_per_year": "309.60",
+     "caption": "You have 71 day(s) left to switch insurer; the increase costs you 309.60 CHF a year."
+    }
+   },
+   {
+    "needs": [
+     "taxes.last_annual_bill"
+    ],
+    "id": "tax-provision",
+    "question": "Have I set aside enough for my taxes?",
+    "answer": "Give the amount of your last tax bill: Bazous will tell you how much to set aside each month.",
+    "source": "expert",
+    "tone": "info",
+    "because": "The tax bill comes all at once: spread over the year, it no longer leaves a hole.",
+    "figures": {}
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "How much do I have now?",
+    "short": "300.00 CHF available"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "What will be left?",
+    "short": "7’098.05 CHF left on 31.10"
+   },
+   {
+    "id": "next-actions",
+    "question": "What next?",
+    "short": "nothing to decide"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "What does a month cost me?",
+    "short": "fixed costs at 54 % of income"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Which big yearly expense is coming soon?",
+    "short": "no big yearly expense in the next 90 days"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Am I paying avoidable fees?",
+    "short": "no recurring bank fee found"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ }
+}

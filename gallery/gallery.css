@@ -19,3 +19,9 @@ body[data-theme="light"] { background: #f5f3ed; }
 .g-log code { display: block; white-space: pre-wrap; word-break: break-all; color: var(--bz-text-2); }
 @media (max-width: 1100px) { .g-modules { grid-template-columns: repeat(2, minmax(0, 1fr)); } .g-narrow { grid-column: 1 / -1; } }
 @media (max-width: 640px) { .g-shell { padding: 16px 16px 48px; } .g-modules { grid-template-columns: 1fr; } }
+.g-answers { display: grid; gap: 28px; }
+.g-household { display: grid; gap: 14px; }
+.g-answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.g-answer { display: grid; gap: 10px; align-content: start; border-left: 3px solid var(--bz-muted); }
+.g-answer.g-risk { border-left-color: var(--bz-negative); } .g-answer.g-warn { border-left-color: var(--bz-warning); } .g-answer.g-info { border-left-color: var(--bz-accent); }
+.g-caption { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.45; }

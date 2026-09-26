@@ -4,7 +4,10 @@ import { createRoot } from "react-dom/client";
 import demo from "../fixtures/demo.json";
 import empty from "../fixtures/empty.json";
 import tight from "../fixtures/tight.json";
+import answersOverdrawn from "../fixtures/answers-overdrawn.json";
+import answersTight from "../fixtures/answers-tight.json";
 import {
+  AnswerPicture,
   Dashboard,
   LOCALE_NAMES,
   LOCALES,
@@ -16,18 +19,21 @@ import {
   type Horizon,
   type Locale,
   type ModuleAction,
+  type Answers,
   type Snapshot,
 } from "../src";
 import "./gallery.css";
 
+// Answers with their pictures, produced by the Bazous engine for two fictional households.
+const ANSWERS = { tight: answersTight, overdrawn: answersOverdrawn } as unknown as Record<string, Record<Locale, Answers>>;
 const FIXTURES: Record<string, Snapshot> = { demo: demo as Snapshot, tight: tight as Snapshot, empty: empty as Snapshot };
 
 const UI = {
-  fr: { title: "Galerie des modules", intro: "Chaque carte répond à une question d’argent. Toutes les données sont fictives ; rien ne quitte cette page.", cockpit: "Cockpit", modules: "Modules", data: "Données", reads: "Lit", log: "Intentions émises", logEmpty: "Cliquez un bouton : l’intention apparaît ici au lieu d’être envoyée.", source: "Code source" },
-  de: { title: "Modulgalerie", intro: "Jede Karte beantwortet eine Geldfrage. Alle Daten sind fiktiv; nichts verlässt diese Seite.", cockpit: "Cockpit", modules: "Module", data: "Daten", reads: "Liest", log: "Ausgelöste Absichten", logEmpty: "Klicken Sie eine Schaltfläche: die Absicht erscheint hier, statt gesendet zu werden.", source: "Quellcode" },
-  it: { title: "Galleria dei moduli", intro: "Ogni scheda risponde a una domanda sul denaro. Tutti i dati sono fittizi; nulla lascia questa pagina.", cockpit: "Cockpit", modules: "Moduli", data: "Dati", reads: "Legge", log: "Intenzioni emesse", logEmpty: "Clicca un pulsante: l’intenzione appare qui invece di essere inviata.", source: "Codice sorgente" },
-  rm: { title: "Galaria dals moduls", intro: "Mintga carta respunda ina dumonda da daners. Tut las datas èn fictivas; nagut na banduna questa pagina.", cockpit: "Cockpit", modules: "Moduls", data: "Datas", reads: "Legia", log: "Intenziuns emessas", logEmpty: "Cliccai in buttun: l’intenziun cumpara qua empè da vegnir tramessa.", source: "Code da funtauna" },
-  en: { title: "Module gallery", intro: "Each card answers one money question. All data is fictitious; nothing leaves this page.", cockpit: "Cockpit", modules: "Modules", data: "Data", reads: "Reads", log: "Emitted intents", logEmpty: "Click a button: the intent shows up here instead of being sent.", source: "Source code" },
+  fr: { answers: "Réponses", "household.tight": "Mois serré", "household.overdrawn": "À découvert", answersIntro: "Chaque réponse a son dessin : les chiffres et la légende viennent du moteur, le kit ne fait que dessiner. Le même code dessine sur bazous.com, dans Claude et dans ChatGPT.", title: "Galerie des modules", intro: "Chaque carte répond à une question d’argent. Toutes les données sont fictives ; rien ne quitte cette page.", cockpit: "Cockpit", modules: "Modules", data: "Données", reads: "Lit", log: "Intentions émises", logEmpty: "Cliquez un bouton : l’intention apparaît ici au lieu d’être envoyée.", source: "Code source" },
+  de: { answers: "Antworten", "household.tight": "Knapper Monat", "household.overdrawn": "Im Minus", answersIntro: "Jede Antwort hat ihr Bild: Zahlen und Bildlegende kommen vom Rechenkern, das Kit zeichnet nur. Derselbe Code zeichnet auf bazous.com, in Claude und in ChatGPT.", title: "Modulgalerie", intro: "Jede Karte beantwortet eine Geldfrage. Alle Daten sind fiktiv; nichts verlässt diese Seite.", cockpit: "Cockpit", modules: "Module", data: "Daten", reads: "Liest", log: "Ausgelöste Absichten", logEmpty: "Klicken Sie eine Schaltfläche: die Absicht erscheint hier, statt gesendet zu werden.", source: "Quellcode" },
+  it: { answers: "Risposte", "household.tight": "Mese stretto", "household.overdrawn": "In rosso", answersIntro: "Ogni risposta ha il suo disegno: cifre e didascalia vengono dal motore, il kit disegna soltanto. Lo stesso codice disegna su bazous.com, in Claude e in ChatGPT.", title: "Galleria dei moduli", intro: "Ogni scheda risponde a una domanda sul denaro. Tutti i dati sono fittizi; nulla lascia questa pagina.", cockpit: "Cockpit", modules: "Moduli", data: "Dati", reads: "Legge", log: "Intenzioni emesse", logEmpty: "Clicca un pulsante: l’intenzione appare qui invece di essere inviata.", source: "Codice sorgente" },
+  rm: { answers: "Respostas", "household.tight": "Mais stretg", "household.overdrawn": "En il minus", answersIntro: "Mintga resposta ha ses dissegn: las cifras e la legenda vegnan dal motor, il kit dissegna mo. Il medem code dissegna sin bazous.com, en Claude ed en ChatGPT.", title: "Galaria dals moduls", intro: "Mintga carta respunda ina dumonda da daners. Tut las datas èn fictivas; nagut na banduna questa pagina.", cockpit: "Cockpit", modules: "Moduls", data: "Datas", reads: "Legia", log: "Intenziuns emessas", logEmpty: "Cliccai in buttun: l’intenziun cumpara qua empè da vegnir tramessa.", source: "Code da funtauna" },
+  en: { answers: "Answers", "household.tight": "Tight month", "household.overdrawn": "Overdrawn", answersIntro: "Each answer has its picture: the figures and the caption come from the engine, the kit only draws. The same code draws on bazous.com, in Claude and in ChatGPT.", title: "Module gallery", intro: "Each card answers one money question. All data is fictitious; nothing leaves this page.", cockpit: "Cockpit", modules: "Modules", data: "Data", reads: "Reads", log: "Emitted intents", logEmpty: "Click a button: the intent shows up here instead of being sent.", source: "Source code" },
 } satisfies Record<Locale, Record<string, string>>;
 
 function read<T extends string>(key: string, allowed: readonly T[], fallback: T): T {
@@ -39,7 +45,7 @@ function Gallery() {
   const [locale, setLocale] = useState<Locale>(() => read("lang", LOCALES, pickLocale(navigator.languages)));
   const [theme, setTheme] = useState<"dark" | "light">(() => read("theme", ["dark", "light"] as const, "dark"));
   const [fixture, setFixture] = useState<string>(() => read("data", Object.keys(FIXTURES), "demo"));
-  const [view, setView] = useState<"cockpit" | "modules">(() => read("view", ["cockpit", "modules"] as const, "cockpit"));
+  const [view, setView] = useState<"cockpit" | "modules" | "answers">(() => read("view", ["cockpit", "modules", "answers"] as const, "cockpit"));
   const [horizon, setHorizon] = useState<Horizon>("cycles");
   const [log, setLog] = useState<ModuleAction[]>([]);
   const t = useMemo(() => createT(locale, sharedMessages), [locale]);
@@ -83,6 +89,7 @@ function Gallery() {
           <div className="bz-seg" role="group" aria-label="Vue">
             <button type="button" className={view === "cockpit" ? "bz-on" : ""} onClick={() => setView("cockpit")}>{ui.cockpit}</button>
             <button type="button" className={view === "modules" ? "bz-on" : ""} onClick={() => setView("modules")}>{ui.modules}</button>
+            <button type="button" className={view === "answers" ? "bz-on" : ""} onClick={() => setView("answers")}>{ui.answers}</button>
           </div>
           <a className="bz-button bz-ghost g-source" href="https://github.com/bazousdotcom/ui">{ui.source} ↗</a>
         </nav>
@@ -94,7 +101,27 @@ function Gallery() {
         <p className="bz-body">{ui.intro}</p>
       </section>
 
-      {view === "cockpit" ? (
+      {view === "answers" ? (
+        <div className="g-answers">
+          <p className="bz-body">{ui.answersIntro}</p>
+          {Object.entries(ANSWERS).map(([name, byLocale]) => (
+            <section key={name} className="g-household">
+              <h2 className="bz-title">{ui[`household.${name}` as keyof typeof ui]}</h2>
+              <div className="g-answer-grid">
+                {byLocale[locale].answers.filter((a) => a.visual).map((a) => (
+                  <article key={a.id} className={`bz-card g-answer g-${a.tone}`}>
+                    <div className="g-module-head"><code>{a.id}</code><span className="bz-note">{a.visual!.kind}</span></div>
+                    <p className="bz-eyebrow">{a.question}</p>
+                    <AnswerPicture visual={a.visual} locale={locale} />
+                    <p className="g-caption">{a.visual!.caption}</p>
+                    <p className="bz-body">{a.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ) : view === "cockpit" ? (
         <Dashboard modules={MODULES} snapshot={snapshot} locale={locale} horizon={horizon} theme={theme} onAction={onAction} />
       ) : (
         <div className="g-modules">

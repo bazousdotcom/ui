@@ -20,7 +20,8 @@ describe("the kit stays a pure view layer", () => {
       expect(code, `${file} uses ${banned}`).not.toContain(banned);
     }
     const urls = code.match(/https?:\/\/[^\s"'`)]+/g) ?? [];
-    const allowed = urls.filter((u) => !/^https:\/\/fonts\.(googleapis|gstatic)\.com/.test(u));
+    // The SVG namespace is an XML name, never fetched; every other address is forbidden.
+    const allowed = urls.filter((u) => !/^https:\/\/fonts\.(googleapis|gstatic)\.com/.test(u) && u !== "http://www.w3.org/2000/svg");
     expect(allowed, file).toEqual([]);
   });
 });

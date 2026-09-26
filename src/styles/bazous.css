@@ -282,3 +282,8 @@
 .bz-group + .bz-group { margin-top: 10px; }
 .bz-group-title { margin: 6px 0 2px; font: 600 11px var(--bz-sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--bz-muted); display: flex; gap: 8px; align-items: center; }
 .bz-group-title span { color: var(--bz-accent); }
+
+/* Answer pictures (src/answers): the SVG takes the width of its card and the kit's fonts. */
+.bz-answer-picture { display: block; width: 100%; }
+.bz-answer-visual { display: block; width: 100%; height: auto; max-height: 190px; overflow: visible; }
+.bz-answer-visual text { font-family: var(--bz-sans); font-variant-numeric: tabular-nums; }
