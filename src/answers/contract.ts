@@ -58,9 +58,43 @@ export type CountdownVisual = Visual<"countdown", {
   increase_per_year?: Decimal | null;
 }>;
 
-export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual;
+/** « Que me restera-t-il ? » — the curve to the end of the period, and where it finishes. */
+export type HorizonVisual = Visual<"horizon", {
+  series: BalancePoint[];
+  end: { date: IsoDate; balance: Decimal };
+  /** When the end is below zero: how many days of fixed costs the hole represents. */
+  days_of_fixed_costs: number | null;
+}>;
+
+/** « Quelle grosse dépense de l’année arrive bientôt ? » — the next 90 days and the yearly bills in them. */
+export type CalendarVisual = Visual<"calendar", {
+  today: IsoDate;
+  until: IsoDate;
+  items: { label: string; amount: Decimal; date: IsoDate; days: number; per_month: Decimal }[];
+}>;
+
+/** « Est-ce que je paie des frais évitables ? » — what the fees add up to, year after year. */
+export type LeakVisual = Visual<"leak", { per_year: Decimal; years: number; total: Decimal; items: { label: string }[] }>;
+
+/** « Ai-je mis de côté pour mes impôts ? » — twelve months to fill before the bill. */
+export type JarVisual = Visual<"jar", { bill: Decimal; needed_per_month: Decimal; set_aside_per_month: Decimal; per_day: Decimal }>;
+
+/** « Puis-je encore verser sur mon 3e pilier ? » — paid and still possible, up to the legal limit, until 31.12. */
+export type GaugeVisual = Visual<"gauge", {
+  year: number; limit: Decimal; paid: Decimal; left: Decimal; deadline: IsoDate; days_left: number;
+}>;
+
+/** « Un contrat doit-il être résilié bientôt ? » — today, the day the letter must arrive, the renewal. */
+export type DeadlineVisual = Visual<"deadline", {
+  today: IsoDate;
+  contracts: { name: string; ends_on: IsoDate; cancel_before: IsoDate; days_left: number }[];
+}>;
+
+export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual
+  | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual;
 export type VisualKind = AnswerVisual["kind"];
-export const VISUAL_KINDS = ["runway", "valley", "shift", "days", "balance", "countdown"] as const satisfies readonly VisualKind[];
+export const VISUAL_KINDS = ["runway", "valley", "shift", "days", "balance", "countdown",
+  "horizon", "calendar", "leak", "jar", "gauge", "deadline"] as const satisfies readonly VisualKind[];
 
 export type AnswerTone = "risk" | "warn" | "info";
 

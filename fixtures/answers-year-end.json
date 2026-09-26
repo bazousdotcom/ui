@@ -1,0 +1,3557 @@
+{
+ "fr": {
+  "as_of": "2026-10-15",
+  "currency": "CHF",
+  "language": "fr",
+  "headline": "11 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Jusqu’où puis-je descendre ?",
+    "answer": "Point bas −3’360.00 CHF le 01.12 : tu passes sous zéro.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-01",
+     "days_from_now": 47
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-12-01",
+      "balance": "-3360.00"
+     },
+     "days_below_zero": 27,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "27 jour(s) sous zéro dans les 49 prochains jours ; le fond : −3’360.00 CHF le 01.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Que me restera-t-il ?",
+    "answer": "Il manquera 3’360.00 CHF au 02.12, après toutes les échéances connues.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-02",
+     "rules_without_amount": []
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3360.00"
+     },
+     "days_of_fixed_costs": 18,
+     "caption": "Au 02.12, il te manquera 3’360.00 CHF : l’équivalent de 18 jour(s) de charges fixes."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Combien de temps tiendrais-je sans revenu ?",
+    "answer": "Ton disponible couvre 0.1 mois de charges fixes (5’400.00 CHF par mois). Pour atteindre 3 mois, il manque 15’560.00 CHF, soit 1’296.67 CHF par mois pendant un an.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "L’usage recommande de pouvoir couvrir 3 mois de charges en cas d’imprévu.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "5400.00",
+     "target_months": 3,
+     "gap": "15560.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 3,
+     "target": 90,
+     "balance": "640.00",
+     "caption": "Sans salaire, ton argent paie tes charges fixes 3 jour(s) sur les 90 conseillés."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Qu’est-ce qui tombe à chaque salaire ?",
+    "answer": "Du 25.11 au 02.12, 11’400.00 CHF sortent pour 8’200.00 CHF entrés : ce cycle puise 3’200.00 CHF dans tes réserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_2",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "total_out": "11400.00",
+     "total_in": "8200.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "8200.00",
+     "out": "11400.00",
+     "gap": "3200.00",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "caption": "Ce cycle laisse un trou de 3’200.00 CHF : 11’400.00 CHF sortent pour 8’200.00 CHF qui entrent."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Est-ce que je paie des frais évitables ?",
+    "answer": "Frais récurrents : 138.24 CHF par an (Frais de tenue de compte). Une offre sans frais de tenue de compte pourrait les supprimer.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "138.24",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "11.52",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "138.24",
+     "years": 10,
+     "total": "1382.40",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      }
+     ],
+     "caption": "Ces frais te coûtent 138.24 CHF par an, soit 1’382.40 CHF en 10 ans."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Ai-je mis de côté pour mes impôts ?",
+    "answer": "Ton dernier bordereau : 8’400.00 CHF par an. Aucune provision n’est prévue : mettre 700.00 CHF de côté par mois couvre le prochain.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Le bordereau arrive en une fois : réparti sur l’année, il ne crée plus de trou.",
+    "figures": {
+     "last_annual_bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "23.01",
+     "caption": "Pour le prochain bordereau (8’400.00 CHF), mets 700.00 CHF de côté chaque mois : 23.01 CHF par jour."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Et si je décale un paiement ?",
+    "answer": "Aucun paiement déplaçable ne suffit à éviter le point bas : c’est l’arrivée d’argent ou une dépense à réduire qui compte.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {}
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Quelle grosse dépense de l’année arrive bientôt ?",
+    "answer": "À venir : Assurance voiture 1’140.00 CHF le 20.12 (soit 570.00 CHF par mois d’ici là).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Mise de côté chaque mois, une grosse facture annuelle ne crée plus de trou dans le budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-20"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-15",
+     "until": "2027-01-13",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "date": "2026-12-20",
+       "days": 66,
+       "per_month": "570.00"
+      }
+     ],
+     "caption": "Dans 66 jour(s) : Assurance voiture, 1’140.00 CHF. Mettre 570.00 CHF de côté par mois d’ici là suffit."
+    }
+   },
+   {
+    "needs": [
+     "health_insurance.monthly_premium"
+    ],
+    "id": "health-insurance",
+    "question": "Ma prime d’assurance maladie augmente-t-elle, et puis-je changer ?",
+    "answer": "Les caisses envoient la prime 2027 d’ici le 31.10, et tu peux changer jusqu’au 30.11. Donne ta prime mensuelle actuelle (tout le foyer) : Bazous te dira ce que la hausse te coûte.",
+    "source": "expert",
+    "tone": "info",
+    "because": "La résiliation doit parvenir à la caisse au plus tard le dernier jour ouvrable de novembre : c’est la date de réception qui compte.",
+    "figures": {
+     "deadline": "2026-11-30"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 46,
+     "window_days": 71,
+     "current": null,
+     "next": null,
+     "increase_per_year": null,
+     "caption": "Il te reste 46 jour(s) pour changer de caisse."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Puis-je encore verser sur mon 3e pilier cette année ?",
+    "answer": "Il te reste 4’258.00 CHF de versements possibles sur le 3e pilier en 2026 (plafond 7’258.00 CHF par personne, affiliée à une caisse de pension), déductibles de ton revenu imposable. Verse avant le 31.12, souvent plus tôt selon l’établissement.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous donne le plafond légal ; il ne recommande aucun placement.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "3000.00",
+     "left": "4258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "3000.00",
+     "left": "4258.00",
+     "deadline": "2026-12-31",
+     "days_left": 77,
+     "caption": "Il te reste 4’258.00 CHF à verser sur ton 3e pilier d’ici le 31.12, dans 77 jour(s)."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Un contrat doit-il être résilié bientôt ?",
+    "answer": "Pour résilier Assurance ménage (fin le 31.12), ta lettre doit arriver avant le 30.11 (1 mois de préavis).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Passé ce délai, le contrat se renouvelle en général pour une année.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "notice_months": 1,
+       "cancel_before": "2026-11-30"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-15",
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-11-30",
+       "days_left": 46
+      }
+     ],
+     "caption": "Il te reste 46 jour(s) pour que ta résiliation « Assurance ménage » arrive, avant le 30.11 ; sinon le contrat se renouvelle après le 31.12."
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Combien ai-je maintenant ?",
+    "short": "640.00 CHF disponibles"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Que dois-je payer avant le salaire ?",
+    "short": "factures avant le 25.10 couvertes"
+   },
+   {
+    "id": "next-actions",
+    "question": "Que faire ensuite ?",
+    "short": "rien à décider"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Combien me coûte un mois ?",
+    "short": "charges fixes à 66 % des revenus"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "de": {
+  "as_of": "2026-10-15",
+  "currency": "CHF",
+  "language": "de",
+  "headline": "Heute 11 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Wie tief sinkt mein Saldo?",
+    "answer": "Tiefpunkt −3’360.00 CHF am 01.12: Du rutschst unter null.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-01",
+     "days_from_now": 47
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-12-01",
+      "balance": "-3360.00"
+     },
+     "days_below_zero": 27,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "27 Tag(e) unter null in den nächsten 49 Tagen; der Tiefpunkt: −3’360.00 CHF am 01.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Was bleibt mir?",
+    "answer": "Am 02.12 fehlen 3’360.00 CHF, nach allen bekannten Zahlungen.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-02",
+     "rules_without_amount": []
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3360.00"
+     },
+     "days_of_fixed_costs": 18,
+     "caption": "Am 02.12 fehlen dir 3’360.00 CHF: so viel wie 18 Tag(e) Fixkosten."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Wie lange käme ich ohne Einkommen aus?",
+    "answer": "Dein verfügbares Geld deckt 0.1 Monate Fixkosten (5’400.00 CHF pro Monat). Für 3 Monate fehlen 15’560.00 CHF, also 1’296.67 CHF pro Monat während eines Jahres.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Üblich ist eine Reserve für 3 Monate Fixkosten für Unvorhergesehenes.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "5400.00",
+     "target_months": 3,
+     "gap": "15560.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 3,
+     "target": 90,
+     "balance": "640.00",
+     "caption": "Ohne Lohn zahlt dein Geld deine Fixkosten 3 Tag(e) von den empfohlenen 90."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Was fällt in jeder Lohnperiode an?",
+    "answer": "Vom 25.11 bis 02.12 gehen 11’400.00 CHF hinaus, 8’200.00 CHF kommen herein: Diese Periode zehrt 3’200.00 CHF von deinen Reserven.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_2",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "total_out": "11400.00",
+     "total_in": "8200.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "8200.00",
+     "out": "11400.00",
+     "gap": "3200.00",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "caption": "Dieser Zyklus hinterlässt ein Loch von 3’200.00 CHF: 11’400.00 CHF gehen raus, 8’200.00 CHF kommen rein."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Zahle ich vermeidbare Gebühren?",
+    "answer": "Wiederkehrende Gebühren: 138.24 CHF pro Jahr (Frais de tenue de compte). Ein Angebot ohne Kontoführungsgebühren könnte sie vermeiden.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "138.24",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "11.52",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "138.24",
+     "years": 10,
+     "total": "1382.40",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      }
+     ],
+     "caption": "Diese Gebühren kosten dich 138.24 CHF pro Jahr, also 1’382.40 CHF in 10 Jahren."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Habe ich für meine Steuern vorgesorgt?",
+    "answer": "Deine letzte Steuerrechnung: 8’400.00 CHF pro Jahr. Es ist keine Rückstellung vorgesehen: 700.00 CHF pro Monat decken die nächste.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Die Steuerrechnung kommt auf einmal: übers Jahr verteilt, reisst sie kein Loch.",
+    "figures": {
+     "last_annual_bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "23.01",
+     "caption": "Für die nächste Steuerrechnung (8’400.00 CHF) leg jeden Monat 700.00 CHF zurück: 23.01 CHF pro Tag."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Und wenn ich eine Zahlung verschiebe?",
+    "answer": "Keine verschiebbare Zahlung reicht, um den Tiefpunkt zu vermeiden: Entscheidend sind Einnahmen oder eine kleinere Ausgabe.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {}
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Welche grosse Jahresausgabe steht bald an?",
+    "answer": "Demnächst: Assurance voiture 1’140.00 CHF am 20.12 (also 570.00 CHF pro Monat bis dahin).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Monatlich zurückgelegt, reisst eine grosse Jahresrechnung kein Loch ins Budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-20"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-15",
+     "until": "2027-01-13",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "date": "2026-12-20",
+       "days": 66,
+       "per_month": "570.00"
+      }
+     ],
+     "caption": "In 66 Tag(en): Assurance voiture, 1’140.00 CHF. Wenn du bis dahin 570.00 CHF pro Monat zurücklegst, reicht es."
+    }
+   },
+   {
+    "needs": [
+     "health_insurance.monthly_premium"
+    ],
+    "id": "health-insurance",
+    "question": "Steigt meine Krankenkassenprämie, und kann ich wechseln?",
+    "answer": "Die Kassen verschicken die Prämie 2027 bis 31.10., und du kannst bis 30.11 wechseln. Gib deine aktuelle Monatsprämie an (ganzer Haushalt): Bazous sagt dir, was der Aufschlag kostet.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Die Kündigung muss spätestens am letzten Arbeitstag im November bei der Kasse eintreffen: Es zählt das Empfangsdatum.",
+    "figures": {
+     "deadline": "2026-11-30"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 46,
+     "window_days": 71,
+     "current": null,
+     "next": null,
+     "increase_per_year": null,
+     "caption": "Dir bleiben 46 Tag(e), um die Kasse zu wechseln."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Kann ich dieses Jahr noch in die Säule 3a einzahlen?",
+    "answer": "Du kannst 2026 noch 4’258.00 CHF in die Säule 3a einzahlen (Höchstbetrag 7’258.00 CHF pro Person mit Pensionskasse), abzugsfähig vom steuerbaren Einkommen. Zahl vor dem 31.12. ein, je nach Anbieter früher.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous nennt den gesetzlichen Höchstbetrag; es empfiehlt keine Anlage.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "3000.00",
+     "left": "4258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "3000.00",
+     "left": "4258.00",
+     "deadline": "2026-12-31",
+     "days_left": 77,
+     "caption": "Du kannst bis zum 31.12 noch 4’258.00 CHF in deine Säule 3a einzahlen, in 77 Tag(en)."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Muss bald ein Vertrag gekündigt werden?",
+    "answer": "Um Assurance ménage (Ende 31.12) zu kündigen, muss dein Brief vor dem 30.11 eintreffen (1 Monate Kündigungsfrist).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Nach dieser Frist verlängert sich der Vertrag meist um ein Jahr.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "notice_months": 1,
+       "cancel_before": "2026-11-30"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-15",
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-11-30",
+       "days_left": 46
+      }
+     ],
+     "caption": "Dir bleiben 46 Tag(e), damit deine Kündigung «Assurance ménage» vor dem 30.11 ankommt; sonst verlängert sich der Vertrag nach dem 31.12."
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Wie viel habe ich jetzt?",
+    "short": "640.00 CHF verfügbar"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Was muss ich vor dem Lohn bezahlen?",
+    "short": "Rechnungen vor dem 25.10 gedeckt"
+   },
+   {
+    "id": "next-actions",
+    "question": "Was kommt als Nächstes?",
+    "short": "nichts zu entscheiden"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Was kostet mich ein Monat?",
+    "short": "Fixkosten bei 66 % des Einkommens"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "it": {
+  "as_of": "2026-10-15",
+  "currency": "CHF",
+  "language": "it",
+  "headline": "Oggi 11 punto/i da guardare; il resto è in ordine.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quanto scenderà il saldo?",
+    "answer": "Minimo −3’360.00 CHF il 01.12: scendi sotto zero.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-01",
+     "days_from_now": 47
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-12-01",
+      "balance": "-3360.00"
+     },
+     "days_below_zero": 27,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "27 giorno/i sotto zero nei prossimi 49 giorni; il fondo: −3’360.00 CHF il 01.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Cosa mi resterà?",
+    "answer": "Il 02.12 mancheranno 3’360.00 CHF, dopo tutte le scadenze note.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-02",
+     "rules_without_amount": []
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3360.00"
+     },
+     "days_of_fixed_costs": 18,
+     "caption": "Al 02.12 ti mancheranno 3’360.00 CHF: l’equivalente di 18 giorno/i di spese fisse."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quanto resisterei senza reddito?",
+    "answer": "La tua disponibilità copre 0.1 mesi di spese fisse (5’400.00 CHF al mese). Per arrivare a 3 mesi mancano 15’560.00 CHF, cioè 1’296.67 CHF al mese per un anno.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "È consigliato poter coprire 3 mesi di spese in caso di imprevisti.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "5400.00",
+     "target_months": 3,
+     "gap": "15560.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 3,
+     "target": 90,
+     "balance": "640.00",
+     "caption": "Senza stipendio, i tuoi soldi pagano le spese fisse per 3 giorno/i sui 90 consigliati."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Cosa scade in ogni periodo di paga?",
+    "answer": "Dal 25.11 al 02.12 escono 11’400.00 CHF per 8’200.00 CHF in entrata: questo periodo attinge 3’200.00 CHF dalle tue riserve.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_2",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "total_out": "11400.00",
+     "total_in": "8200.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "8200.00",
+     "out": "11400.00",
+     "gap": "3200.00",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "caption": "Questo ciclo lascia un buco di 3’200.00 CHF: escono 11’400.00 CHF per 8’200.00 CHF che entrano."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Pago commissioni evitabili?",
+    "answer": "Commissioni ricorrenti: 138.24 CHF all’anno (Frais de tenue de compte). Un’offerta senza spese di tenuta conto potrebbe eliminarle.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "138.24",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "11.52",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "138.24",
+     "years": 10,
+     "total": "1382.40",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      }
+     ],
+     "caption": "Queste spese ti costano 138.24 CHF all’anno, cioè 1’382.40 CHF in 10 anni."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Ho messo da parte per le imposte?",
+    "answer": "Ultima notifica: 8’400.00 CHF all’anno. Nessun accantonamento previsto: mettere da parte 700.00 CHF al mese copre la prossima.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La notifica arriva in una volta: ripartita sull’anno, non crea più buchi.",
+    "figures": {
+     "last_annual_bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "23.01",
+     "caption": "Per la prossima notifica (8’400.00 CHF), metti da parte 700.00 CHF ogni mese: 23.01 CHF al giorno."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E se sposto un pagamento?",
+    "answer": "Nessun pagamento spostabile basta a evitare il minimo: contano un’entrata o una spesa ridotta.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {}
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Quale grande spesa annuale arriva presto?",
+    "answer": "In arrivo: Assurance voiture 1’140.00 CHF il 20.12 (cioè 570.00 CHF al mese fino ad allora).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Messa da parte ogni mese, una grande fattura annuale non crea più un buco nel budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-20"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-15",
+     "until": "2027-01-13",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "date": "2026-12-20",
+       "days": 66,
+       "per_month": "570.00"
+      }
+     ],
+     "caption": "Tra 66 giorno/i: Assurance voiture, 1’140.00 CHF. Mettere da parte 570.00 CHF al mese fino ad allora basta."
+    }
+   },
+   {
+    "needs": [
+     "health_insurance.monthly_premium"
+    ],
+    "id": "health-insurance",
+    "question": "Il mio premio della cassa malati aumenta, e posso cambiare?",
+    "answer": "Le casse inviano il premio 2027 entro il 31.10 e puoi cambiare fino al 30.11. Indica il premio mensile attuale (tutta l’economia domestica): Bazous ti dirà quanto costa l’aumento.",
+    "source": "expert",
+    "tone": "info",
+    "because": "La disdetta deve arrivare alla cassa entro l’ultimo giorno lavorativo di novembre: conta la data di ricezione.",
+    "figures": {
+     "deadline": "2026-11-30"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 46,
+     "window_days": 71,
+     "current": null,
+     "next": null,
+     "increase_per_year": null,
+     "caption": "Ti restano 46 giorno/i per cambiare cassa."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Posso ancora versare nel pilastro 3a quest’anno?",
+    "answer": "Puoi ancora versare 4’258.00 CHF nel pilastro 3a nel 2026 (massimo 7’258.00 CHF per persona affiliata a una cassa pensione), deducibili dal reddito imponibile. Versa prima del 31.12, spesso prima secondo l’istituto.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous indica il massimo legale; non raccomanda alcun investimento.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "3000.00",
+     "left": "4258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "3000.00",
+     "left": "4258.00",
+     "deadline": "2026-12-31",
+     "days_left": 77,
+     "caption": "Puoi ancora versare 4’258.00 CHF nel tuo pilastro 3a entro il 31.12, tra 77 giorno/i."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Devo disdire presto un contratto?",
+    "answer": "Per disdire Assurance ménage (scadenza 31.12), la lettera deve arrivare prima del 30.11 (1 mesi di preavviso).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Dopo questo termine, il contratto di solito si rinnova per un anno.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "notice_months": 1,
+       "cancel_before": "2026-11-30"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-15",
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-11-30",
+       "days_left": 46
+      }
+     ],
+     "caption": "Ti restano 46 giorno/i perché la disdetta «Assurance ménage» arrivi prima del 30.11; altrimenti il contratto si rinnova dopo il 31.12."
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quanto ho adesso?",
+    "short": "640.00 CHF disponibili"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Cosa devo pagare prima dello stipendio?",
+    "short": "fatture prima del 25.10 coperte"
+   },
+   {
+    "id": "next-actions",
+    "question": "Cosa faccio dopo?",
+    "short": "niente da decidere"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Quanto mi costa un mese?",
+    "short": "spese fisse al 66 % del reddito"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "rm": {
+  "as_of": "2026-10-15",
+  "currency": "CHF",
+  "language": "rm",
+  "headline": "Oz 11 punct(s) da guardar; il rest è en urden.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quant bass vegn il saldo?",
+    "answer": "Punct bass −3’360.00 CHF ils 01.12: ti crodas sut nulla.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-01",
+     "days_from_now": 47
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-12-01",
+      "balance": "-3360.00"
+     },
+     "days_below_zero": 27,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "27 di(s) sut nulla ils proxims 49 dis; il fund: −3’360.00 CHF ils 01.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Tge ma resta?",
+    "answer": "Ils 02.12 mancan 3’360.00 CHF, suenter tut ils pajaments enconuschents.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-02",
+     "rules_without_amount": []
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3360.00"
+     },
+     "days_of_fixed_costs": 18,
+     "caption": "Ils 02.12 ta mancan 3’360.00 CHF: tant sco 18 di(s) custs fixs."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quant ditg tegniss jau senza entrada?",
+    "answer": "Tes disponibel cuvra 0.1 mais custs fixs (5’400.00 CHF per mais). Per cuntanscher 3 mais mancan 15’560.00 CHF, quai èn 1’296.67 CHF per mais durant in onn.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "I vegn recumandà da pudair cuvrir 3 mais custs en cas nunspetgà.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "5400.00",
+     "target_months": 3,
+     "gap": "15560.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 3,
+     "target": 90,
+     "balance": "640.00",
+     "caption": "Senza paja pajan tes daners tes custs fixs 3 di(s) dals 90 recumandads."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Tge croda en mintga perioda da salari?",
+    "answer": "Dals 25.11 fin ils 02.12 van 11’400.00 CHF ora e vegnan 8’200.00 CHF en: questa perioda prenda 3’200.00 CHF da tias reservas.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_2",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "total_out": "11400.00",
+     "total_in": "8200.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "8200.00",
+     "out": "11400.00",
+     "gap": "3200.00",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "caption": "Quest ciclus lascha ina foppa da 3’200.00 CHF: 11’400.00 CHF van ora, 8’200.00 CHF vegnan en."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Pai jau taxas evitablas?",
+    "answer": "Taxas regularas: 138.24 CHF per onn (Frais de tenue de compte). Ina offerta senza taxas da conto las pudess evitar.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "138.24",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "11.52",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "138.24",
+     "years": 10,
+     "total": "1382.40",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      }
+     ],
+     "caption": "Questas taxas ta custan 138.24 CHF per onn, quai èn 1’382.40 CHF en 10 onns."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Hai jau mess da la vart per las taglias?",
+    "answer": "Tes ultim quint da taglia: 8’400.00 CHF per onn. I n’è previs nagin daners da la vart: 700.00 CHF per mais cuvran il proxim.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Il quint da taglia vegn en ina giada: repartì sin l’onn na fa el nagina fora.",
+    "figures": {
+     "last_annual_bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "23.01",
+     "caption": "Per il proxim quint da taglia (8’400.00 CHF), metta da la vart 700.00 CHF mintga mais: 23.01 CHF per di."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E sche jau spustel in pajament?",
+    "answer": "Nagin pajament spustabel na basta per evitar il punct bass: decisivas èn ina entrada u ina expensa pli pitschna.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {}
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Tge gronda expensa annuala vegn prest?",
+    "answer": "Prest: Assurance voiture 1’140.00 CHF ils 20.12 (quai èn 570.00 CHF per mais fin lura).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Mess da la vart mintga mais, na fa in grond quint annual nagin fora en il budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-20"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-15",
+     "until": "2027-01-13",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "date": "2026-12-20",
+       "days": 66,
+       "per_month": "570.00"
+      }
+     ],
+     "caption": "En 66 di(s): Assurance voiture, 1’140.00 CHF. Metter da la vart 570.00 CHF per mais fin lura tanscha."
+    }
+   },
+   {
+    "needs": [
+     "health_insurance.monthly_premium"
+    ],
+    "id": "health-insurance",
+    "question": "Crescha mia premia da la cassa da malsauns, e poss jau midar?",
+    "answer": "Las cassas tramettan la premia 2027 fin ils 31.10, e ti pos midar fin ils 30.11. Inditgescha tia premia mensila actuala (tut la chasada): Bazous at di quant che l’augment custa.",
+    "source": "expert",
+    "tone": "info",
+    "because": "La disdetga sto arrivar tar la cassa il pli tard l’ultim di da lavur da november: la data da retschavida decida.",
+    "figures": {
+     "deadline": "2026-11-30"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 46,
+     "window_days": 71,
+     "current": null,
+     "next": null,
+     "increase_per_year": null,
+     "caption": "Ta restan 46 di(s) per midar la cassa."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Poss jau anc pajar en mia 3. pitga quest onn?",
+    "answer": "Ti pos anc pajar 4’258.00 CHF en la 3. pitga dal 2026 (maximum 7’258.00 CHF per persuna cun cassa da pensiun), deducibel da l’entrada taxabla. Paja avant ils 31.12, savens pli baud tenor l’institut.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous inditgescha il maximum legal; el na recumonda nagina investiziun.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "3000.00",
+     "left": "4258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "3000.00",
+     "left": "4258.00",
+     "deadline": "2026-12-31",
+     "days_left": 77,
+     "caption": "Ti pos anc pajar 4’258.00 CHF en tia 3. pitga fin ils 31.12, en 77 di(s)."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Sto in contract vegnir disditg prest?",
+    "answer": "Per disdir Assurance ménage (fin ils 31.12), sto tia brev arrivar avant ils 30.11 (1 mais termin da disdetga).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Suenter quest termin sa renovescha il contract per ordinari per in onn.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "notice_months": 1,
+       "cancel_before": "2026-11-30"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-15",
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-11-30",
+       "days_left": 46
+      }
+     ],
+     "caption": "Ta restan 46 di(s) per che tia disdetga «Assurance ménage» arrivia avant ils 30.11; uschiglio sa renovescha il contract suenter ils 31.12."
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quant hai jau ussa?",
+    "short": "640.00 CHF disponibel"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Tge stoss jau pajar avant il salari?",
+    "short": "quints avant ils 25.10 cuvrids"
+   },
+   {
+    "id": "next-actions",
+    "question": "Tge vegn suenter?",
+    "short": "nagut da decider"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "Quant ma custa in mais?",
+    "short": "custs fixs a 66 % da las entradas"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "en": {
+  "as_of": "2026-10-15",
+  "currency": "CHF",
+  "language": "en",
+  "headline": "11 point(s) to look at today; the rest is in order.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "How low might I go?",
+    "answer": "Low point −3’360.00 CHF on 01.12: you go below zero.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-01",
+     "days_from_now": 47
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-12-01",
+      "balance": "-3360.00"
+     },
+     "days_below_zero": 27,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "27 day(s) below zero in the next 49 days; the bottom: −3’360.00 CHF on 01.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "What will be left?",
+    "answer": "3’360.00 CHF will be missing on 02.12, after every known payment.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3360.00",
+     "date": "2026-12-02",
+     "rules_without_amount": []
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-15",
+       "640.00"
+      ],
+      [
+       "2026-10-16",
+       "640.00"
+      ],
+      [
+       "2026-10-17",
+       "640.00"
+      ],
+      [
+       "2026-10-18",
+       "640.00"
+      ],
+      [
+       "2026-10-19",
+       "640.00"
+      ],
+      [
+       "2026-10-20",
+       "640.00"
+      ],
+      [
+       "2026-10-21",
+       "640.00"
+      ],
+      [
+       "2026-10-22",
+       "640.00"
+      ],
+      [
+       "2026-10-23",
+       "640.00"
+      ],
+      [
+       "2026-10-24",
+       "640.00"
+      ],
+      [
+       "2026-10-25",
+       "8840.00"
+      ],
+      [
+       "2026-10-26",
+       "1940.00"
+      ],
+      [
+       "2026-10-27",
+       "1940.00"
+      ],
+      [
+       "2026-10-28",
+       "1940.00"
+      ],
+      [
+       "2026-10-29",
+       "1940.00"
+      ],
+      [
+       "2026-10-30",
+       "1940.00"
+      ],
+      [
+       "2026-10-31",
+       "-160.00"
+      ],
+      [
+       "2026-11-01",
+       "-160.00"
+      ],
+      [
+       "2026-11-02",
+       "-160.00"
+      ],
+      [
+       "2026-11-03",
+       "-160.00"
+      ],
+      [
+       "2026-11-04",
+       "-160.00"
+      ],
+      [
+       "2026-11-05",
+       "-160.00"
+      ],
+      [
+       "2026-11-06",
+       "-160.00"
+      ],
+      [
+       "2026-11-07",
+       "-160.00"
+      ],
+      [
+       "2026-11-08",
+       "-160.00"
+      ],
+      [
+       "2026-11-09",
+       "-160.00"
+      ],
+      [
+       "2026-11-10",
+       "-160.00"
+      ],
+      [
+       "2026-11-11",
+       "-160.00"
+      ],
+      [
+       "2026-11-12",
+       "-160.00"
+      ],
+      [
+       "2026-11-13",
+       "-160.00"
+      ],
+      [
+       "2026-11-14",
+       "-160.00"
+      ],
+      [
+       "2026-11-15",
+       "-160.00"
+      ],
+      [
+       "2026-11-16",
+       "-160.00"
+      ],
+      [
+       "2026-11-17",
+       "-160.00"
+      ],
+      [
+       "2026-11-18",
+       "-160.00"
+      ],
+      [
+       "2026-11-19",
+       "-160.00"
+      ],
+      [
+       "2026-11-20",
+       "-160.00"
+      ],
+      [
+       "2026-11-21",
+       "-160.00"
+      ],
+      [
+       "2026-11-22",
+       "-160.00"
+      ],
+      [
+       "2026-11-23",
+       "-160.00"
+      ],
+      [
+       "2026-11-24",
+       "-160.00"
+      ],
+      [
+       "2026-11-25",
+       "8040.00"
+      ],
+      [
+       "2026-11-26",
+       "8040.00"
+      ],
+      [
+       "2026-11-27",
+       "8040.00"
+      ],
+      [
+       "2026-11-28",
+       "8040.00"
+      ],
+      [
+       "2026-11-29",
+       "8040.00"
+      ],
+      [
+       "2026-11-30",
+       "5940.00"
+      ],
+      [
+       "2026-12-01",
+       "-3360.00"
+      ],
+      [
+       "2026-12-02",
+       "-3360.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3360.00"
+     },
+     "days_of_fixed_costs": 18,
+     "caption": "On 02.12 you will be 3’360.00 CHF short: as much as 18 day(s) of fixed costs."
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "How long could I last without income?",
+    "answer": "Your available money covers 0.1 months of fixed costs (5’400.00 CHF a month). Reaching 3 months takes 15’560.00 CHF more, that is 1’296.67 CHF a month for a year.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "The usual advice is to be able to cover 3 months of costs if something happens.",
+    "figures": {
+     "months": "0.1",
+     "fixed_monthly": "5400.00",
+     "target_months": 3,
+     "gap": "15560.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 3,
+     "target": 90,
+     "balance": "640.00",
+     "caption": "Without a salary, your money pays your fixed costs for 3 day(s) out of the 90 advised."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "What falls due each pay cycle?",
+    "answer": "From 25.11 to 02.12, 11’400.00 CHF goes out for 8’200.00 CHF coming in: this cycle draws 3’200.00 CHF from your reserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_2",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "total_out": "11400.00",
+     "total_in": "8200.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "8200.00",
+     "out": "11400.00",
+     "gap": "3200.00",
+     "start": "2026-11-25",
+     "end": "2026-12-02",
+     "caption": "This cycle leaves a 3’200.00 CHF hole: 11’400.00 CHF goes out for 8’200.00 CHF coming in."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Am I paying avoidable fees?",
+    "answer": "Recurring fees: 138.24 CHF a year (Frais de tenue de compte). An account with no maintenance fee could remove them.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "138.24",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "11.52",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "138.24",
+     "years": 10,
+     "total": "1382.40",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      }
+     ],
+     "caption": "These fees cost you 138.24 CHF a year, that is 1’382.40 CHF in 10 years."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Have I set aside enough for my taxes?",
+    "answer": "Your last tax bill: 8’400.00 CHF a year. Nothing is set aside: 700.00 CHF a month covers the next one.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "The tax bill comes all at once: spread over the year, it no longer leaves a hole.",
+    "figures": {
+     "last_annual_bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "8400.00",
+     "needed_per_month": "700.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "23.01",
+     "caption": "For the next tax bill (8’400.00 CHF), set 700.00 CHF aside every month: 23.01 CHF a day."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "What if I move a payment?",
+    "answer": "No movable payment is enough to avoid the low point: income or a smaller expense is what matters.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {}
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Which big yearly expense is coming soon?",
+    "answer": "Coming up: Assurance voiture 1’140.00 CHF on 20.12 (that is 570.00 CHF a month until then).",
+    "source": "expert",
+    "tone": "info",
+    "because": "Set aside month by month, a big yearly bill no longer leaves a hole in the budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-20"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-15",
+     "until": "2027-01-13",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1140.00",
+       "date": "2026-12-20",
+       "days": 66,
+       "per_month": "570.00"
+      }
+     ],
+     "caption": "In 66 day(s): Assurance voiture, 1’140.00 CHF. Setting 570.00 CHF aside each month until then is enough."
+    }
+   },
+   {
+    "needs": [
+     "health_insurance.monthly_premium"
+    ],
+    "id": "health-insurance",
+    "question": "Is my health insurance premium going up, and can I switch?",
+    "answer": "Insurers send the 2027 premium by 31.10, and you can switch until 30.11. Give your current monthly premium (whole household): Bazous will tell you what the increase costs.",
+    "source": "expert",
+    "tone": "info",
+    "because": "The cancellation must reach the insurer by the last working day of November: the date of receipt is what counts.",
+    "figures": {
+     "deadline": "2026-11-30"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 46,
+     "window_days": 71,
+     "current": null,
+     "next": null,
+     "increase_per_year": null,
+     "caption": "You have 46 day(s) left to switch insurer."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Can I still pay into my pillar 3a this year?",
+    "answer": "You can still pay 4’258.00 CHF into pillar 3a in 2026 (limit 7’258.00 CHF per person with a pension fund), deductible from taxable income. Pay before 31.12, often earlier depending on the provider.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous gives the legal limit; it recommends no investment.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "3000.00",
+     "left": "4258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "3000.00",
+     "left": "4258.00",
+     "deadline": "2026-12-31",
+     "days_left": 77,
+     "caption": "You can still pay 4’258.00 CHF into your pillar 3a by 31.12, in 77 day(s)."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Does a contract need cancelling soon?",
+    "answer": "To cancel Assurance ménage (ends 31.12), your letter must arrive before 30.11 (1 months' notice).",
+    "source": "expert",
+    "tone": "info",
+    "because": "After this deadline, the contract usually renews for a year.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "notice_months": 1,
+       "cancel_before": "2026-11-30"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-15",
+     "contracts": [
+      {
+       "name": "Assurance ménage",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-11-30",
+       "days_left": 46
+      }
+     ],
+     "caption": "You have 46 day(s) left for your cancellation of “Assurance ménage” to arrive before 30.11; otherwise the contract renews after 31.12."
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "How much do I have now?",
+    "short": "640.00 CHF available"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "What do I owe before payday?",
+    "short": "bills before 25.10 covered"
+   },
+   {
+    "id": "next-actions",
+    "question": "What next?",
+    "short": "nothing to decide"
+   },
+   {
+    "id": "monthly-structure",
+    "question": "What does a month cost me?",
+    "short": "fixed costs at 66 % of income"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ }
+}

@@ -1,6 +1,9 @@
 import { num, shortDate } from "../format";
 import { createT, type Locale, type Translate } from "../i18n";
-import type { AnswerVisual, BalancePoint, BalanceVisual, CountdownVisual, DaysVisual, RunwayVisual, ShiftVisual, ValleyVisual } from "./contract";
+import type {
+  AnswerVisual, BalancePoint, BalanceVisual, CalendarVisual, CountdownVisual, DaysVisual, DeadlineVisual, GaugeVisual, HorizonVisual,
+  JarVisual, LeakVisual, RunwayVisual, ShiftVisual, ValleyVisual,
+} from "./contract";
 import { answerMessages } from "./messages";
 
 /**
@@ -146,9 +149,13 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
     const tag = Math.min(label.length * 6 + 14, 120);
     const tagX = Math.max(4, Math.min(fx - tag / 2, tx - tag - 12, W - 4 - tag));
     const arrow = tagX + tag + 8 < tx - 4;
-    // The before/after legend goes to the side the target date leaves free.
-    const before = `- - ${t("vis.before")}`, after = `— ${t("vis.after")}`, width = (before.length + after.length) * 6.4 + 12;
-    const lx = tx - 26 > width + 8 ? 8 : W - 8 - width;
+    // The before/after legend goes to the side the target date leaves free; with no room on either side,
+    // the date moves up next to the arrow. Widths are estimated generously (7px a character at 11px).
+    const before = t("vis.before"), after = t("vis.after"), sw = 14, cw = 7;
+    const width = sw + 4 + before.length * cw + 12 + sw + 4 + after.length * cw;
+    const dateBox = 26, leftFits = 8 + width < tx - dateBox, rightFits = W - 8 - width > tx + dateBox;
+    const lx = leftFits || !rightFits ? 8 : W - 8 - width, dateUp = !leftFits && !rightFits;
+    const ax = lx + sw + 4 + before.length * cw + 12;
     // The move is drawn in its own band above the curves, so it never sits on them.
     return frame(s.caption,
       sv("defs", {}, sv("marker", { id: "bz-arrowhead", viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto" },
@@ -160,8 +167,13 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
       zeroLine(zero),
       sv("polyline", { points: points(s.before, sc), fill: "none", stroke: C.muted, "stroke-width": 1.5, "stroke-dasharray": "4 3" }),
       sv("polyline", { points: points(s.after, sc), fill: "none", stroke: C.accent, "stroke-width": 2.5, "stroke-linejoin": "round" }),
-      txt(lx, H - 6, before), txt(lx + before.length * 6.4 + 12, H - 6, after, { fill: C.accent, "font-weight": 600 }),
-      txt(Math.min(Math.max(tx, 22), W - 22), H - 6, shortDate(s.move.to), { "text-anchor": "middle", fill: C.accent, "font-weight": 600 }));
+      sv("line", { x1: lx, x2: lx + sw, y1: H - 10, y2: H - 10, stroke: C.muted, "stroke-width": 1.5, "stroke-dasharray": "4 3" }),
+      txt(lx + sw + 4, H - 6, before),
+      sv("line", { x1: ax, x2: ax + sw, y1: H - 10, y2: H - 10, stroke: C.accent, "stroke-width": 2.5 }),
+      txt(ax + sw + 4, H - 6, after, { fill: C.accent, "font-weight": 600 }),
+      dateUp
+        ? txt(tx + 6 < W - 40 ? tx + 6 : tx - 6, 30, shortDate(s.move.to), { "text-anchor": tx + 6 < W - 40 ? "start" : "end", fill: C.accent, "font-weight": 600 })
+        : txt(Math.min(Math.max(tx, 22), W - 22), H - 6, shortDate(s.move.to), { "text-anchor": "middle", fill: C.accent, "font-weight": 600 }));
   };
 
   const days = (d: DaysVisual) => {
@@ -204,6 +216,103 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
       ]);
   };
 
+  const horizon = (h: HorizonVisual) => {
+    const sc = scale([h.series], W), zero = sc.y(0);
+    const last = h.series.length - 1, ex = sc.x(last), ey = sc.y(n(h.end.balance)), below = n(h.end.balance) < 0;
+    const color = below ? C.negative : C.positive;
+    return frame(h.caption,
+      zeroLine(zero),
+      sv("polyline", { points: points(h.series, sc), fill: "none", stroke: C.muted, "stroke-width": 1.5, "stroke-linejoin": "round" }),
+      peaks(h.series, sc),
+      // The finish line: from zero to where the period ends.
+      sv("line", { x1: ex, x2: ex, y1: zero, y2: ey, stroke: color, "stroke-width": 4, "stroke-linecap": "round" }),
+      sv("circle", { cx: ex, cy: ey, r: 6, fill: color }),
+      txt(ex - 12, Math.min(Math.max(ey + 4, 26), H - 26), `${amount(h.end.balance)} · ${shortDate(h.end.date)}`,
+        { "text-anchor": "end", fill: color, "font-weight": 600 }),
+      h.days_of_fixed_costs != null && txt(W - 8, H - 6, t("vis.fixedDays", { days: h.days_of_fixed_costs }), { "text-anchor": "end", fill: color }),
+      txt(8, H - 6, shortDate(h.series[0]![0])));
+  };
+
+  const calendar = (c: CalendarVisual) => {
+    const t0 = Date.parse(c.today), span = Math.max(Date.parse(c.until) - t0, 1), L = 10, R = W - 10;
+    const x = (iso: string) => L + ((Date.parse(iso) - t0) * (R - L)) / span;
+    const days = Math.round(span / 86_400_000);
+    const ticks = Array.from({ length: Math.floor(days / 7) + 1 }, (_, i) =>
+      sv("line", { x1: L + (i * 7 * (R - L)) / days, x2: L + (i * 7 * (R - L)) / days, y1: 72, y2: 84, stroke: C.line }));
+    const first = c.items[0]!, fx = x(first.date), right = fx > W * 0.6;
+    return frame(c.caption,
+      sv("line", { x1: L, x2: R, y1: 84, y2: 84, stroke: C.line, "stroke-width": 2 }), ticks,
+      sv("circle", { cx: L, cy: 84, r: 5, fill: C.ink }),
+      c.items.slice(1).map((it) => sv("rect", { x: x(it.date) - 4, y: 60, width: 8, height: 24, rx: 2, fill: C.warning })),
+      sv("rect", { x: fx - 6, y: 38, width: 12, height: 46, rx: 3, fill: C.accent }),
+      txt(fx + (right ? -10 : 10), 46, `${shorten(first.label, 20)} · ${amount(first.amount)}`, { "text-anchor": right ? "end" : "start", fill: C.ink, "font-weight": 600 }),
+      txt(fx + (right ? -10 : 10), 62, t("vis.inDays", { days: first.days }), { "text-anchor": right ? "end" : "start", fill: C.accent }),
+      c.items.length > 1 && txt(W - 8, 14, t("vis.more", { n: c.items.length - 1 }), { "text-anchor": "end" }),
+      txt(L, H - 14, t("vis.today")), txt(R, H - 14, shortDate(c.until), { "text-anchor": "end" }));
+  };
+
+  const leak = (l: LeakVisual) => {
+    const years = Math.max(l.years, 1), gap = 6, L = 8, R = W - 8, bw = (R - L - gap * (years - 1)) / years, base = H - 26, top = 30;
+    const bars = Array.from({ length: years }, (_, i) => {
+      const hgt = ((i + 1) / years) * (base - top);
+      return sv("rect", { x: L + i * (bw + gap), y: base - hgt, width: bw, height: hgt, rx: 2,
+        fill: C.negative, "fill-opacity": i === years - 1 ? 1 : 0.25 + (0.5 * i) / years });
+    });
+    return frame(l.caption, bars,
+      txt(R, top - 8, amount(l.total), { "text-anchor": "end", fill: C.negative, "font-weight": 600 }),
+      txt(L, base - (base - top) / years - 6, `${amount(l.per_year)} ${t("vis.perYear")}`, { fill: C.ink }),
+      txt(L, H - 8, t("vis.years", { n: 1 })), txt(R, H - 8, t("vis.years", { n: years }), { "text-anchor": "end" }));
+  };
+
+  const jar = (j: JarVisual) => {
+    const needed = n(j.needed_per_month), aside = n(j.set_aside_per_month), ratio = needed > 0 ? Math.min(aside / needed, 1) : 1;
+    const gap = 5, L = 8, R = W - 8, jw = (R - L - gap * 11) / 12, top = 34, base = 96;
+    const jars = Array.from({ length: 12 }, (_, i) => {
+      const x = L + i * (jw + gap);
+      return [
+        sv("rect", { x, y: top, width: jw, height: base - top, rx: 4, fill: "none", stroke: C.accent, "stroke-width": 1.2 }),
+        ratio > 0 && sv("rect", { x: x + 1.5, y: base - ratio * (base - top) + 1.5, width: jw - 3, height: Math.max(ratio * (base - top) - 3, 0), rx: 3, fill: C.accent }),
+      ];
+    });
+    return frame(j.caption, jars,
+      txt(L, 20, `${t("vis.bill")} ${amount(j.bill)}`, { fill: C.ink, "font-weight": 600 }),
+      txt(R, 20, `${t("vis.months")} × ${amount(j.needed_per_month)}`, { "text-anchor": "end", fill: C.accent }),
+      txt(L, H - 8, `${amount(j.set_aside_per_month)} ${t("vis.perMonth")}`, { fill: ratio < 1 ? C.negative : C.positive }),
+      txt(R, H - 8, `${amount(j.per_day)} ${t("vis.perDay")}`, { "text-anchor": "end" }));
+  };
+
+  const gauge = (g: GaugeVisual) => {
+    const limit = n(g.limit) || 1, paid = Math.min(n(g.paid), limit), L = 8, R = W - 8, len = (v: number) => (v * (R - L)) / limit;
+    return frame(g.caption,
+      txt(R, 24, `${t("vis.limit")} ${amount(g.limit)}`, { "text-anchor": "end" }),
+      sv("rect", { x: L, y: 36, width: R - L, height: 26, rx: 4, fill: "none", stroke: C.accent, "stroke-dasharray": "4 3" }),
+      paid > 0 && sv("rect", { x: L, y: 36, width: len(paid), height: 26, rx: 4, fill: C.positive }),
+      txt(L, 80, `${t("vis.paid")} ${amount(g.paid)}`, { fill: C.positive, "font-weight": 600 }),
+      txt(R, 80, `${t("vis.left")} ${amount(g.left)}`, { "text-anchor": "end", fill: C.accent, "font-weight": 600 }),
+      sv("line", { x1: L, x2: R, y1: 104, y2: 104, stroke: C.line, "stroke-width": 2 }),
+      sv("circle", { cx: L, cy: 104, r: 4, fill: C.ink }), sv("circle", { cx: R, cy: 104, r: 5, fill: C.accent }),
+      txt(L, H - 6, t("vis.today")), txt(R, H - 6, `${g.days_left} ${t("vis.dayUnit")} → ${shortDate(g.deadline)}`, { "text-anchor": "end", fill: C.accent }));
+  };
+
+  const deadline = (d: DeadlineVisual) => {
+    const c = d.contracts[0]!, t0 = Date.parse(d.today), t1 = Date.parse(c.ends_on), span = Math.max(t1 - t0, 1), L = 14, R = W - 52;
+    const x = (iso: string) => L + ((Date.parse(iso) - t0) * (R - L)) / span, cx = x(c.cancel_before);
+    return frame(d.caption,
+      txt(8, 16, shorten(c.name, 26), { fill: C.ink, "font-weight": 600 }),
+      d.contracts.length > 1 && txt(W - 8, 16, t("vis.more", { n: d.contracts.length - 1 }), { "text-anchor": "end" }),
+      sv("line", { x1: L, x2: cx, y1: 66, y2: 66, stroke: C.accent, "stroke-width": 6, "stroke-linecap": "round" }),
+      sv("line", { x1: cx, x2: R, y1: 66, y2: 66, stroke: C.line, "stroke-width": 2 }),
+      sv("line", { x1: R, x2: W - 8, y1: 66, y2: 66, stroke: C.negative, "stroke-width": 2, "stroke-dasharray": "3 3" }),
+      sv("circle", { cx: L, cy: 66, r: 5, fill: C.ink }),
+      sv("rect", { x: cx - 9, y: 57, width: 18, height: 18, rx: 3, fill: C.accent }),
+      sv("circle", { cx: R, cy: 66, r: 5, fill: C.negative }),
+      txt(Math.max(cx, 40), 44, `${c.days_left} ${t("vis.dayUnit")}`, { "text-anchor": "middle", fill: C.accent, "font-size": 18, "font-weight": 600 }),
+      txt(L - 6, 96, t("vis.today")),
+      txt(Math.min(Math.max(cx, 70), W - 110), 96, `${t("vis.letter")} ${shortDate(c.cancel_before)}`, { "text-anchor": "middle", fill: C.accent }),
+      txt(W - 8, 96, `${t("vis.ends")} ${shortDate(c.ends_on)}`, { "text-anchor": "end", fill: C.negative }),
+      txt(W - 8, H - 8, t("vis.renewal"), { "text-anchor": "end", fill: C.negative }));
+  };
+
   switch (v.kind) {
     case "runway": return runway(v);
     case "valley": return valley(v);
@@ -211,6 +320,12 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
     case "days": return days(v);
     case "balance": return balance(v);
     case "countdown": return countdown(v);
+    case "horizon": return horizon(v);
+    case "calendar": return calendar(v);
+    case "leak": return leak(v);
+    case "jar": return jar(v);
+    case "gauge": return gauge(v);
+    case "deadline": return deadline(v);
     default: return null;
   }
 }

@@ -441,6 +441,277 @@
               ]
             }
           }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "series",
+            "end",
+            "days_of_fixed_costs"
+          ],
+          "properties": {
+            "kind": {
+              "const": "horizon"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "series": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/point"
+              },
+              "minItems": 2
+            },
+            "end": {
+              "type": "object",
+              "required": [
+                "date",
+                "balance"
+              ],
+              "properties": {
+                "date": {
+                  "$ref": "#/$defs/date"
+                },
+                "balance": {
+                  "$ref": "#/$defs/decimal"
+                }
+              }
+            },
+            "days_of_fixed_costs": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "today",
+            "until",
+            "items"
+          ],
+          "properties": {
+            "kind": {
+              "const": "calendar"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "today": {
+              "$ref": "#/$defs/date"
+            },
+            "until": {
+              "$ref": "#/$defs/date"
+            },
+            "items": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "label",
+                  "amount",
+                  "date",
+                  "days",
+                  "per_month"
+                ],
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "$ref": "#/$defs/decimal"
+                  },
+                  "date": {
+                    "$ref": "#/$defs/date"
+                  },
+                  "days": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "per_month": {
+                    "$ref": "#/$defs/decimal"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "per_year",
+            "years",
+            "total",
+            "items"
+          ],
+          "properties": {
+            "kind": {
+              "const": "leak"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "per_year": {
+              "$ref": "#/$defs/decimal"
+            },
+            "years": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "total": {
+              "$ref": "#/$defs/decimal"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "label"
+                ],
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "bill",
+            "needed_per_month",
+            "set_aside_per_month",
+            "per_day"
+          ],
+          "properties": {
+            "kind": {
+              "const": "jar"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "bill": {
+              "$ref": "#/$defs/decimal"
+            },
+            "needed_per_month": {
+              "$ref": "#/$defs/decimal"
+            },
+            "set_aside_per_month": {
+              "$ref": "#/$defs/decimal"
+            },
+            "per_day": {
+              "$ref": "#/$defs/decimal"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "year",
+            "limit",
+            "paid",
+            "left",
+            "deadline",
+            "days_left"
+          ],
+          "properties": {
+            "kind": {
+              "const": "gauge"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "year": {
+              "type": "integer"
+            },
+            "limit": {
+              "$ref": "#/$defs/decimal"
+            },
+            "paid": {
+              "$ref": "#/$defs/decimal"
+            },
+            "left": {
+              "$ref": "#/$defs/decimal"
+            },
+            "deadline": {
+              "$ref": "#/$defs/date"
+            },
+            "days_left": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "today",
+            "contracts"
+          ],
+          "properties": {
+            "kind": {
+              "const": "deadline"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "today": {
+              "$ref": "#/$defs/date"
+            },
+            "contracts": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "ends_on",
+                  "cancel_before",
+                  "days_left"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "ends_on": {
+                    "$ref": "#/$defs/date"
+                  },
+                  "cancel_before": {
+                    "$ref": "#/$defs/date"
+                  },
+                  "days_left": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     }

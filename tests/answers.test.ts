@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import overdrawn from "../fixtures/answers-overdrawn.json";
 import tight from "../fixtures/answers-tight.json";
+import yearEnd from "../fixtures/answers-year-end.json";
 import schema from "../schema/answers.schema.json";
 import { VISUAL_KINDS, answerMessages, drawVisual, shorten, type AnswerVisual, type Answers } from "../src/answers";
 import { LOCALES } from "../src/i18n";
@@ -12,7 +13,7 @@ import type { Answer as RootAnswer, AnswerVisual as RootVisual, Answers as RootA
 export type RootTypes = [RootAnswer, RootVisual, RootAnswers];
 
 const validate = new Ajv2020({ allErrors: true, strict: false }).compile(schema);
-const FIXTURES = { tight, overdrawn } as unknown as Record<string, Record<string, Answers>>;
+const FIXTURES = { tight, overdrawn, yearEnd } as unknown as Record<string, Record<string, Answers>>;
 const pictures = (answers: Answers) => answers.answers.filter((a) => a.visual).map((a) => a.visual as AnswerVisual);
 
 describe("answers contract", () => {
@@ -30,8 +31,9 @@ describe("answers contract", () => {
     expect(validate(answers)).toBe(false);
   });
 
-  it("the tight month has all six kinds of picture", () => {
-    expect(pictures(FIXTURES.tight!.fr!).map((v) => v.kind).sort()).toEqual([...VISUAL_KINDS].sort());
+  it("the fictional households show every kind of picture", () => {
+    const kinds = new Set(Object.values(FIXTURES).flatMap((byLang) => pictures(byLang.fr!).map((v) => v.kind)));
+    expect([...kinds].sort()).toEqual([...VISUAL_KINDS].sort());
   });
 });
 
@@ -100,5 +102,32 @@ describe("pictures on a phone", () => {
     const visual = all[0]!;
     expect(drawVisual(visual, "fr", document, { width: 200 })!.getAttribute("viewBox")).toBe("0 0 260 130");
     expect(drawVisual(visual, "fr", document, { width: 900 })!.getAttribute("viewBox")).toBe("0 0 320 130");
+  });
+});
+
+describe("year-end pictures", () => {
+  const drawn = (kind: string, locale: "fr" | "de" = "fr") =>
+    drawVisual(pictures(FIXTURES.yearEnd![locale]!).find((v) => v.kind === kind)!, locale)!.textContent;
+
+  it("say the engine figures in the kit's words", () => {
+    expect(drawn("horizon")).toContain("−3’360.00 · 02.12");
+    expect(drawn("horizon")).toContain("= 18 j de charges fixes");
+    expect(drawn("calendar")).toContain("Assurance voiture · 1’140.00");
+    expect(drawn("calendar")).toContain("dans 66 j");
+    expect(drawn("leak")).toContain("1’382.40");
+    expect(drawn("leak")).toContain("10 ans");
+    expect(drawn("jar")).toContain("bordereau 8’400.00");
+    expect(drawn("jar")).toContain("23.01 / jour");
+    expect(drawn("gauge")).toContain("reste 4’258.00");
+    expect(drawn("gauge")).toContain("77 j → 31.12");
+    expect(drawn("deadline")).toContain("lettre avant le 30.11");
+    expect(drawn("deadline", "de")).toContain("Brief vor dem 30.11");
+  });
+
+  it("the jar shows twelve months, filled as far as the provision goes", () => {
+    const visual = pictures(FIXTURES.yearEnd!.fr!).find((v) => v.kind === "jar")!;
+    const svg = drawVisual(visual, "fr")!;
+    expect(svg.querySelectorAll('rect[fill="none"]').length).toBe(12);
+    expect(svg.querySelectorAll('rect[fill="var(--bz-accent)"]').length).toBe(0); // nothing set aside yet
   });
 });
