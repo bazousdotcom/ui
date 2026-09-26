@@ -32,7 +32,7 @@ export default defineModule<Model>({
       "g.late": "En retard", "g.beforePayday": "À payer avant le prochain salaire", "g.toConfirm": "Sans date ou à confirmer", "g.toPlan": "À planifier",
       overdue: "{label} · échu depuis le {date}", dueToday: "{label} · échu aujourd’hui", beforePayday: "{label} · à payer avant le salaire · {date}", undated: "{label} · date à confirmer",
       markPaid: "Marquer payé", planOn: "Planifier le {date}",
-      plan: "{label} · {amount} avant le {date}", planBody: "Après le salaire : la payer le jour de paie évite qu’elle tombe sur le point bas.",
+      plan: "{label} · {amount} avant le {date}", planBody: "Échéance après le salaire : rien à faire avant, prévoyez-la dans le prochain cycle.",
       review: "{label} · à qualifier", reviewTx: "Transaction du {date} · {amount}", reviewOb: "Échéance du {date} · {amount}", confidence: "confiance {p} %",
       internal: "Transfert interne", expense: "Dépense", accept: "Valider", cancel: "Annuler",
       "missing.one": "{n} récurrence sans montant", "missing.other": "{n} récurrences sans montant", missingBody: "{items} · la marge finale est fausse tant qu’elles manquent", complete: "Compléter",
@@ -42,7 +42,7 @@ export default defineModule<Model>({
       "g.late": "Überfällig", "g.beforePayday": "Vor dem nächsten Lohn zu bezahlen", "g.toConfirm": "Ohne Datum oder zu bestätigen", "g.toPlan": "Zu planen",
       overdue: "{label} · überfällig seit {date}", dueToday: "{label} · heute fällig", beforePayday: "{label} · vor dem Lohn fällig · {date}", undated: "{label} · Datum zu bestätigen",
       markPaid: "Als bezahlt markieren", planOn: "Auf {date} planen",
-      plan: "{label} · {amount} bis {date}", planBody: "Nach dem Lohn fällig: am Zahltag bezahlt, fällt sie nicht auf den Tiefpunkt.",
+      plan: "{label} · {amount} bis {date}", planBody: "Nach dem Lohn fällig: vorher ist nichts zu tun, planen Sie sie im nächsten Zyklus ein.",
       review: "{label} · zu prüfen", reviewTx: "Transaktion vom {date} · {amount}", reviewOb: "Fälligkeit vom {date} · {amount}", confidence: "Sicherheit {p} %",
       internal: "Interne Überweisung", expense: "Ausgabe", accept: "Bestätigen", cancel: "Stornieren",
       "missing.one": "{n} wiederkehrender Posten ohne Betrag", "missing.other": "{n} wiederkehrende Posten ohne Betrag", missingBody: "{items} · der Spielraum stimmt erst, wenn sie erfasst sind", complete: "Ergänzen",
@@ -52,7 +52,7 @@ export default defineModule<Model>({
       "g.late": "In ritardo", "g.beforePayday": "Da pagare prima del prossimo stipendio", "g.toConfirm": "Senza data o da confermare", "g.toPlan": "Da pianificare",
       overdue: "{label} · scaduto dal {date}", dueToday: "{label} · scade oggi", beforePayday: "{label} · da pagare prima dello stipendio · {date}", undated: "{label} · data da confermare",
       markPaid: "Segna come pagato", planOn: "Pianifica il {date}",
-      plan: "{label} · {amount} entro il {date}", planBody: "Dopo lo stipendio: pagarla il giorno di paga evita che cada sul minimo.",
+      plan: "{label} · {amount} entro il {date}", planBody: "Scade dopo lo stipendio: niente da fare prima, la preveda nel prossimo ciclo.",
       review: "{label} · da verificare", reviewTx: "Transazione del {date} · {amount}", reviewOb: "Scadenza del {date} · {amount}", confidence: "affidabilità {p} %",
       internal: "Trasferimento interno", expense: "Spesa", accept: "Conferma", cancel: "Annulla",
       "missing.one": "{n} ricorrenza senza importo", "missing.other": "{n} ricorrenze senza importo", missingBody: "{items} · il margine finale è sbagliato finché mancano", complete: "Completa",
@@ -62,7 +62,7 @@ export default defineModule<Model>({
       "g.late": "Retardà", "g.beforePayday": "Da pajar avant il proxim salari", "g.toConfirm": "Senza data u da confermar", "g.toPlan": "Da planisar",
       overdue: "{label} · scadì dapi ils {date}", dueToday: "{label} · scada oz", beforePayday: "{label} · da pajar avant il salari · {date}", undated: "{label} · data da confermar",
       markPaid: "Marcar sco pajà", planOn: "Planisar ils {date}",
-      plan: "{label} · {amount} fin ils {date}", planBody: "Suenter il salari: pajada il di da paja na croda ella betg sin il punct bass.",
+      plan: "{label} · {amount} fin ils {date}", planBody: "Scadenza suenter il salari: nagut da far avant, planisai ella en il proxim ciclus.",
       review: "{label} · da controllar", reviewTx: "Transacziun dals {date} · {amount}", reviewOb: "Termin dals {date} · {amount}", confidence: "fidanza {p} %",
       internal: "Transfer intern", expense: "Expensa", accept: "Confermar", cancel: "Annullar",
       "missing.one": "{n} repetiziun senza summa", "missing.other": "{n} repetiziuns senza summa", missingBody: "{items} · il margin final è fauss uschè ditg ch’ellas mancan", complete: "Cumplettar",
@@ -72,7 +72,7 @@ export default defineModule<Model>({
       "g.late": "Overdue", "g.beforePayday": "Due before next payday", "g.toConfirm": "No date or to confirm", "g.toPlan": "To schedule",
       overdue: "{label} · overdue since {date}", dueToday: "{label} · due today", beforePayday: "{label} · due before payday · {date}", undated: "{label} · date to confirm",
       markPaid: "Mark paid", planOn: "Schedule on {date}",
-      plan: "{label} · {amount} by {date}", planBody: "After payday: paying it on payday keeps it off the low point.",
+      plan: "{label} · {amount} by {date}", planBody: "Due after payday: nothing to do before then, plan it in the next cycle.",
       review: "{label} · to review", reviewTx: "Transaction on {date} · {amount}", reviewOb: "Bill due {date} · {amount}", confidence: "confidence {p}%",
       internal: "Internal transfer", expense: "Expense", accept: "Confirm", cancel: "Cancel",
       "missing.one": "{n} recurring item without an amount", "missing.other": "{n} recurring items without an amount", missingBody: "{items} · the final margin is wrong until they are filled in", complete: "Fill in",
@@ -149,8 +149,9 @@ function BillRow({ a, currency, payday, conf, t, fmt, onAction }: { a: BillActio
     : a.type === "undated" ? t("undated", { label: a.label })
     : t("plan", { label: a.label, amount: fmt.money(a.amount, a.currency), date });
   const detail = a.type === "plan" ? (a.description || t("planBody")) : [amount, a.description].filter(Boolean).join(" · ");
-  // A late bill can still be moved to the next payday; a planned one to its target income.
-  const moveTo = a.type === "plan" ? a.target ?? null : a.type === "overdue" || a.type === "due_today" ? (payday && a.date && payday > a.date ? payday : null) : null;
+  // A late bill can still be postponed to the next payday. A bill due after payday is never
+  // moved earlier: paying sooner cannot lift a later low point and can create a new one.
+  const moveTo = a.type === "overdue" || a.type === "due_today" ? (payday && a.date && payday > a.date ? payday : null) : null;
   const tone = a.type === "overdue" || a.type === "due_today" ? "danger" : a.type === "plan" ? "muted" : "warn";
   return (
     <div className="bz-row bz-action">
