@@ -51,6 +51,12 @@ Bazous répond aussi en phrases (`GET /api/v1/answers`, et l’outil MCP `get_ho
 | `days` | Combien de temps tiendrais-je sans revenu ? | Les jours de charges fixes couverts, sur les 90 conseillés |
 | `balance` | Qu’est-ce qui tombe à chaque salaire ? | Ce qui entre face à ce qui sort, et le trou |
 | `countdown` | Ma prime d’assurance maladie augmente-t-elle ? | Le compte à rebours jusqu’à l’échéance, la marche de la prime |
+| `horizon` | Que me restera-t-il ? | La courbe jusqu’à la fin de la période, la ligne d’arrivée et ce qu’elle représente en jours de charges fixes |
+| `calendar` | Quelle grosse dépense de l’année arrive bientôt ? | Les 90 prochains jours et les factures annuelles qui y tombent |
+| `leak` | Est-ce que je paie des frais évitables ? | Ce que les frais font sur 10 ans |
+| `jar` | Ai-je mis de côté pour mes impôts ? | Douze mois à remplir face au bordereau, ce que cela fait par jour |
+| `gauge` | Puis-je encore verser sur mon 3e pilier ? | Versé et encore possible jusqu’au plafond, et les jours jusqu’au 31.12 |
+| `deadline` | Un contrat doit-il être résilié bientôt ? | Aujourd’hui, le jour où la lettre doit arriver, le renouvellement |
 
 ```tsx
 import { AnswerPicture, type Answers } from "@bazous/ui";
@@ -69,7 +75,7 @@ function Answer({ answer, locale }: { answer: Answers["answers"][number]; locale
 
 Sans React (une page statique, la carte des assistants) : `import { drawVisual } from "@bazous/ui/answers"` renvoie un `SVGSVGElement`, ou `null` quand il n’y a rien à dessiner. Le dessin suit le thème par les jetons `--bz-*`.
 
-Les questions encore sans dessin (impôts, 3e pilier, factures annuelles, frais, contrats, marge…) sont ouvertes aux contributions : ouvrez une issue avec votre angle.
+Les questions encore sans dessin (« Combien ai-je maintenant ? », « Que faire ensuite ? », « Combien me coûte un mois ? », « Et si l’un des revenus manquait ? ») sont ouvertes aux contributions : ouvrez une issue avec votre angle.
 
 ## Les règles qui ne bougent pas
 
@@ -82,7 +88,7 @@ Les questions encore sans dessin (impôts, 3e pilier, factures annuelles, frais,
 ## Utiliser le kit
 
 ```bash
-npm install github:bazousdotcom/ui#v0.2.0
+npm install github:bazousdotcom/ui#v0.3.0
 ```
 
 ```tsx
@@ -140,4 +146,4 @@ Next (0.2): make the answer part of the contract (a one-sentence verdict with a 
 
 ### Answers with pictures
 
-Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_household_answers` for Claude and ChatGPT). An answer may carry a `visual` block: the kind of picture (`runway`, `valley`, `shift`, `days`, `balance`, `countdown`), the figures to draw and a caption that says the same answer from another angle. The engine computes everything; the kit draws it, with `<AnswerPicture>` in React or `drawVisual()` from `@bazous/ui/answers` anywhere else. The contract is `schema/answers.schema.json`. Questions without a picture yet (taxes, pillar 3a, yearly bills, fees, contracts, margin…) are open for contributions.
+Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_household_answers` for Claude and ChatGPT). An answer may carry a `visual` block: the kind of picture (`runway`, `valley`, `shift`, `days`, `balance`, `countdown`, `horizon`, `calendar`, `leak`, `jar`, `gauge`, `deadline`), the figures to draw and a caption that says the same answer from another angle. The engine computes everything; the kit draws it, with `<AnswerPicture>` in React or `drawVisual()` from `@bazous/ui/answers` anywhere else. The contract is `schema/answers.schema.json`. Questions without a picture yet (available now, next actions, monthly structure, income loss) are open for contributions.
