@@ -16,7 +16,7 @@
 | `src/engine/scenario.ts` | Le seul calcul du kit : rejouer les échéances quand on active un levier « et si ». |
 | `src/canvas/` | Le CSS et le pont du canevas Capture (iframe isolée, aucune requête réseau). |
 | `fixtures/` | Trois ménages fictifs produits par le vrai moteur Bazous, et leurs réponses (`answers-*.json`). |
-| `src/answers/` | Les dessins des réponses : une fonction `drawVisual()` sans React, et le composant `<AnswerVisual>`. |
+| `src/answers/` | Les dessins des réponses : une fonction `drawVisual()` sans React, et le composant `<AnswerPicture>`. |
 | `schema/answers.schema.json` | Le contrat des réponses et de leur bloc `visual`. |
 | `gallery/` | La galerie publique : tous les modules, cinq langues, deux thèmes. |
 
@@ -53,13 +53,13 @@ Bazous répond aussi en phrases (`GET /api/v1/answers`, et l’outil MCP `get_ho
 | `countdown` | Ma prime d’assurance maladie augmente-t-elle ? | Le compte à rebours jusqu’à l’échéance, la marche de la prime |
 
 ```tsx
-import { AnswerVisual, type Answers } from "@bazous/ui";
+import { AnswerPicture, type Answers } from "@bazous/ui";
 
 function Answer({ answer, locale }: { answer: Answers["answers"][number]; locale: "fr" }) {
   return (
     <article>
       <p>{answer.question}</p>
-      <AnswerVisual visual={answer.visual} locale={locale} />
+      <AnswerPicture visual={answer.visual} locale={locale} />
       {answer.visual && <p>{answer.visual.caption}</p>}
       <p>{answer.answer}</p>
     </article>
@@ -140,4 +140,4 @@ Next (0.2): make the answer part of the contract (a one-sentence verdict with a 
 
 ### Answers with pictures
 
-Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_household_answers` for Claude and ChatGPT). An answer may carry a `visual` block: the kind of picture (`runway`, `valley`, `shift`, `days`, `balance`, `countdown`), the figures to draw and a caption that says the same answer from another angle. The engine computes everything; the kit draws it, with `<AnswerVisual>` in React or `drawVisual()` from `@bazous/ui/answers` anywhere else. The contract is `schema/answers.schema.json`. Questions without a picture yet (taxes, pillar 3a, yearly bills, fees, contracts, margin…) are open for contributions.
+Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_household_answers` for Claude and ChatGPT). An answer may carry a `visual` block: the kind of picture (`runway`, `valley`, `shift`, `days`, `balance`, `countdown`), the figures to draw and a caption that says the same answer from another angle. The engine computes everything; the kit draws it, with `<AnswerPicture>` in React or `drawVisual()` from `@bazous/ui/answers` anywhere else. The contract is `schema/answers.schema.json`. Questions without a picture yet (taxes, pillar 3a, yearly bills, fees, contracts, margin…) are open for contributions.

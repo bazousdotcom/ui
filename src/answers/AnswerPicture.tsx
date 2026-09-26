@@ -1,13 +1,13 @@
 import { useLayoutEffect, useRef } from "react";
 
 import type { Locale } from "../i18n";
-import type { AnswerVisual as Visual } from "./contract";
+import type { AnswerVisual } from "./contract";
 import { drawVisual } from "./draw";
 
-export type AnswerVisualProps = { visual: Visual | null | undefined; locale: Locale; className?: string };
+export type AnswerPictureProps = { visual: AnswerVisual | null | undefined; locale: Locale; className?: string };
 
 /** The picture of an answer, drawn by the same code as in the assistants' card. Nothing when there is none. */
-export function AnswerVisual({ visual, locale, className }: AnswerVisualProps) {
+export function AnswerPicture({ visual, locale, className }: AnswerPictureProps) {
   const host = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     const node = host.current;

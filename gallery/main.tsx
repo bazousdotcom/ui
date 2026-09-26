@@ -7,7 +7,7 @@ import tight from "../fixtures/tight.json";
 import answersOverdrawn from "../fixtures/answers-overdrawn.json";
 import answersTight from "../fixtures/answers-tight.json";
 import {
-  AnswerVisual,
+  AnswerPicture,
   Dashboard,
   LOCALE_NAMES,
   LOCALES,
@@ -112,7 +112,7 @@ function Gallery() {
                   <article key={a.id} className={`bz-card g-answer g-${a.tone}`}>
                     <div className="g-module-head"><code>{a.id}</code><span className="bz-note">{a.visual!.kind}</span></div>
                     <p className="bz-eyebrow">{a.question}</p>
-                    <AnswerVisual visual={a.visual} locale={locale} />
+                    <AnswerPicture visual={a.visual} locale={locale} />
                     <p className="g-caption">{a.visual!.caption}</p>
                     <p className="bz-body">{a.answer}</p>
                   </article>
