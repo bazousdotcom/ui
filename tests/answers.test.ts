@@ -6,6 +6,10 @@ import tight from "../fixtures/answers-tight.json";
 import schema from "../schema/answers.schema.json";
 import { VISUAL_KINDS, answerMessages, drawVisual, shorten, type AnswerVisual, type Answers } from "../src/answers";
 import { LOCALES } from "../src/i18n";
+import type { Answer as RootAnswer, AnswerVisual as RootVisual, Answers as RootAnswers } from "../src";
+
+// The answer types are reachable from the package root (a compile-time check).
+export type RootTypes = [RootAnswer, RootVisual, RootAnswers];
 
 const validate = new Ajv2020({ allErrors: true, strict: false }).compile(schema);
 const FIXTURES = { tight, overdrawn } as unknown as Record<string, Record<string, Answers>>;

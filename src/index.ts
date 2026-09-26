@@ -15,6 +15,8 @@ export type { Horizon, ModuleAction, ModuleContext, ModuleSize, QuestionModule, 
 export { MODULES, findModule } from "./modules/registry";
 export { Dashboard, Question } from "./modules/Question";
 export type { DashboardProps, QuestionProps } from "./modules/Question";
+// `export type *` is not carried through a second `export *`: the answer types are re-exported by name.
+export type * from "./answers/contract";
 export * from "./answers";
 export { AnswerPicture } from "./answers/AnswerPicture";
 export type { AnswerPictureProps } from "./answers/AnswerPicture";
