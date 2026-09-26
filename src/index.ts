@@ -15,3 +15,6 @@ export type { Horizon, ModuleAction, ModuleContext, ModuleSize, QuestionModule, 
 export { MODULES, findModule } from "./modules/registry";
 export { Dashboard, Question } from "./modules/Question";
 export type { DashboardProps, QuestionProps } from "./modules/Question";
+export * from "./answers";
+export { AnswerVisual } from "./answers/AnswerVisual";
+export type { AnswerVisualProps } from "./answers/AnswerVisual";

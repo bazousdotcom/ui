@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: { index: "src/index.ts", canvas: "src/canvas/index.ts" },
+      entry: { index: "src/index.ts", canvas: "src/canvas/index.ts", answers: "src/answers/index.ts" },
       formats: ["es"],
       cssFileName: "styles",
     },

@@ -15,7 +15,9 @@
 | `src/i18n/`, `src/format/` | Cinq langues (FR, DE, IT, RM, EN) et les chiffres suisses : `3’420.50` partout. |
 | `src/engine/scenario.ts` | Le seul calcul du kit : rejouer les échéances quand on active un levier « et si ». |
 | `src/canvas/` | Le CSS et le pont du canevas Capture (iframe isolée, aucune requête réseau). |
-| `fixtures/` | Trois ménages fictifs produits par le vrai moteur Bazous. |
+| `fixtures/` | Trois ménages fictifs produits par le vrai moteur Bazous, et leurs réponses (`answers-*.json`). |
+| `src/answers/` | Les dessins des réponses : une fonction `drawVisual()` sans React, et le composant `<AnswerVisual>`. |
+| `schema/answers.schema.json` | Le contrat des réponses et de leur bloc `visual`. |
 | `gallery/` | La galerie publique : tous les modules, cinq langues, deux thèmes. |
 
 ## Les modules
@@ -37,6 +39,38 @@
 
 **Prochaine étape (0.2) :** rendre la réponse obligatoire dans le contrat — chaque module fournira un verdict d’une phrase avec sa tonalité, testé dans les cinq langues — puis donner un verdict à `monthly-structure` et `pay-cycles`, et faire de `what-if` « le meilleur geste », recommandation d’abord. Les contributions sur ces trois modules sont les bienvenues.
 
+## Les réponses dessinées
+
+Bazous répond aussi en phrases (`GET /api/v1/answers`, et l’outil MCP `get_household_answers` pour Claude et ChatGPT). Une réponse peut porter un bloc `visual` : la forme du dessin, les chiffres à dessiner et une légende qui dit la même réponse sous un autre angle. Tout est calculé par le moteur ; le kit dessine.
+
+| `kind` | Question | Ce que le dessin montre |
+| --- | --- | --- |
+| `runway` | Que dois-je payer avant le salaire ? | La piste jusqu’au jour de paie, les factures en chemin, le disponible face à ce qui est dû |
+| `valley` | Jusqu’où puis-je descendre ? | La vallée du solde, la zone sous zéro, le point bas |
+| `shift` | Et si je décale un paiement ? | Avant / après : la facture déplacée au jour de paie, les deux courbes rejouées par le moteur |
+| `days` | Combien de temps tiendrais-je sans revenu ? | Les jours de charges fixes couverts, sur les 90 conseillés |
+| `balance` | Qu’est-ce qui tombe à chaque salaire ? | Ce qui entre face à ce qui sort, et le trou |
+| `countdown` | Ma prime d’assurance maladie augmente-t-elle ? | Le compte à rebours jusqu’à l’échéance, la marche de la prime |
+
+```tsx
+import { AnswerVisual, type Answers } from "@bazous/ui";
+
+function Answer({ answer, locale }: { answer: Answers["answers"][number]; locale: "fr" }) {
+  return (
+    <article>
+      <p>{answer.question}</p>
+      <AnswerVisual visual={answer.visual} locale={locale} />
+      {answer.visual && <p>{answer.visual.caption}</p>}
+      <p>{answer.answer}</p>
+    </article>
+  );
+}
+```
+
+Sans React (une page statique, la carte des assistants) : `import { drawVisual } from "@bazous/ui/answers"` renvoie un `SVGSVGElement`, ou `null` quand il n’y a rien à dessiner. Le dessin suit le thème par les jetons `--bz-*`.
+
+Les questions encore sans dessin (impôts, 3e pilier, factures annuelles, frais, contrats, marge…) sont ouvertes aux contributions : ouvrez une issue avec votre angle.
+
 ## Les règles qui ne bougent pas
 
 1. **Aucun réseau.** Un module ne fait ni requête, ni stockage, ni cookie. Il émet une intention (`mark_paid`, `reschedule`, `open`…) que l’application exécute. Un test parcourt `src/` et échoue sinon.
@@ -48,7 +82,7 @@
 ## Utiliser le kit
 
 ```bash
-npm install github:bazousdotcom/ui#v0.1.0
+npm install github:bazousdotcom/ui#v0.2.0
 ```
 
 ```tsx
@@ -103,3 +137,7 @@ One question, one expert answer: people should not have to know what to ask. Eac
 | `what-if` | What if I move a payment? | ❌ asks the person to explore | Lead with the best lever |
 
 Next (0.2): make the answer part of the contract (a one-sentence verdict with a tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict and turn `what-if` into "the best move". Contributions on these three modules are welcome.
+
+### Answers with pictures
+
+Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_household_answers` for Claude and ChatGPT). An answer may carry a `visual` block: the kind of picture (`runway`, `valley`, `shift`, `days`, `balance`, `countdown`), the figures to draw and a caption that says the same answer from another angle. The engine computes everything; the kit draws it, with `<AnswerVisual>` in React or `drawVisual()` from `@bazous/ui/answers` anywhere else. The contract is `schema/answers.schema.json`. Questions without a picture yet (taxes, pillar 3a, yearly bills, fees, contracts, margin…) are open for contributions.

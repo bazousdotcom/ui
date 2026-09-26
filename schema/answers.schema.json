@@ -1,0 +1,448 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bazousdotcom/ui/schema/answers.schema.json",
+  "title": "Bazous answers",
+  "description": "What Bazous answers for one household (GET /api/v1/answers, MCP get_household_answers), as the kit reads it. Amounts are decimal strings in the household currency, dates ISO. The `visual` block is computed by the engine; the kit only draws it.",
+  "type": "object",
+  "required": [
+    "as_of",
+    "currency",
+    "language",
+    "headline",
+    "answers",
+    "all_clear"
+  ],
+  "properties": {
+    "as_of": {
+      "$ref": "#/$defs/date"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "language": {
+      "enum": [
+        "fr",
+        "de",
+        "it",
+        "rm",
+        "en"
+      ]
+    },
+    "headline": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/answer"
+      }
+    },
+    "all_clear": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "question",
+          "short"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "short": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "decimal": {
+      "type": "string",
+      "pattern": "^-?\\d+(\\.\\d+)?$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "point": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/date"
+        },
+        {
+          "$ref": "#/$defs/decimal"
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "answer": {
+      "type": "object",
+      "required": [
+        "id",
+        "question",
+        "answer",
+        "tone",
+        "source",
+        "needs"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        },
+        "tone": {
+          "enum": [
+            "risk",
+            "warn",
+            "info"
+          ]
+        },
+        "because": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "enum": [
+            "kit",
+            "expert"
+          ]
+        },
+        "figures": {
+          "type": "object"
+        },
+        "needs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        }
+      }
+    },
+    "visual": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "today",
+            "payday",
+            "available",
+            "due",
+            "gap",
+            "bills",
+            "short_days"
+          ],
+          "properties": {
+            "kind": {
+              "const": "runway"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "today": {
+              "$ref": "#/$defs/date"
+            },
+            "payday": {
+              "$ref": "#/$defs/date"
+            },
+            "available": {
+              "$ref": "#/$defs/decimal"
+            },
+            "due": {
+              "$ref": "#/$defs/decimal"
+            },
+            "gap": {
+              "$ref": "#/$defs/decimal"
+            },
+            "short_days": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bills": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "label",
+                  "amount",
+                  "date"
+                ],
+                "properties": {
+                  "label": {
+                    "type": "string"
+                  },
+                  "amount": {
+                    "$ref": "#/$defs/decimal"
+                  },
+                  "date": {
+                    "$ref": "#/$defs/date"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "series",
+            "low",
+            "days_below_zero",
+            "incomes"
+          ],
+          "properties": {
+            "kind": {
+              "const": "valley"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "series": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/point"
+              },
+              "minItems": 2
+            },
+            "low": {
+              "type": "object",
+              "required": [
+                "date",
+                "balance"
+              ],
+              "properties": {
+                "date": {
+                  "$ref": "#/$defs/date"
+                },
+                "balance": {
+                  "$ref": "#/$defs/decimal"
+                }
+              }
+            },
+            "days_below_zero": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "incomes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/date"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "before",
+            "after",
+            "move",
+            "low_before",
+            "low_after"
+          ],
+          "properties": {
+            "kind": {
+              "const": "shift"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "before": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/point"
+              },
+              "minItems": 2
+            },
+            "after": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/point"
+              },
+              "minItems": 2
+            },
+            "low_before": {
+              "$ref": "#/$defs/decimal"
+            },
+            "low_after": {
+              "$ref": "#/$defs/decimal"
+            },
+            "move": {
+              "type": "object",
+              "required": [
+                "label",
+                "amount",
+                "from",
+                "to"
+              ],
+              "properties": {
+                "label": {
+                  "type": "string"
+                },
+                "amount": {
+                  "$ref": "#/$defs/decimal"
+                },
+                "from": {
+                  "$ref": "#/$defs/date"
+                },
+                "to": {
+                  "$ref": "#/$defs/date"
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "covered",
+            "target"
+          ],
+          "properties": {
+            "kind": {
+              "const": "days"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "covered": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "target": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "balance": {
+              "$ref": "#/$defs/decimal"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "in",
+            "out",
+            "gap",
+            "start",
+            "end"
+          ],
+          "properties": {
+            "kind": {
+              "const": "balance"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "in": {
+              "$ref": "#/$defs/decimal"
+            },
+            "out": {
+              "$ref": "#/$defs/decimal"
+            },
+            "gap": {
+              "$ref": "#/$defs/decimal"
+            },
+            "start": {
+              "$ref": "#/$defs/date"
+            },
+            "end": {
+              "$ref": "#/$defs/date"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "caption",
+            "deadline",
+            "days_left",
+            "window_days"
+          ],
+          "properties": {
+            "kind": {
+              "const": "countdown"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "deadline": {
+              "$ref": "#/$defs/date"
+            },
+            "days_left": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "window_days": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "current": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/decimal"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "next": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/decimal"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "increase_per_year": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/decimal"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
