@@ -14,8 +14,13 @@ import { answerMessages } from "./messages";
  */
 
 const SVGNS = "http://www.w3.org/2000/svg";
-const W = 320;
 const H = 130;
+/**
+ * The picture is laid out at the width it is shown (one unit = one pixel), so its 11px labels stay
+ * 11px on a phone instead of being shrunk with the drawing. Below 260 it is scaled down, above 320 up.
+ */
+export const MIN_WIDTH = 260;
+export const MAX_WIDTH = 320;
 
 const C = {
   ink: "var(--bz-text)",
@@ -38,7 +43,7 @@ const amount = (v: string | number) => num(v, 2);
 /** Long labels are shortened so they never leave the picture. */
 export const shorten = (label: string, max = 18) => (label.length > max ? `${label.slice(0, max - 1).trimEnd()}…` : label);
 
-function tools(doc: Document) {
+function tools(doc: Document, W: number) {
   const sv: Svg = (tag, attrs = {}, ...children) => {
     const node = doc.createElementNS(SVGNS, tag);
     for (const [k, v] of Object.entries(attrs)) if (v !== null && v !== undefined) node.setAttribute(k, String(v));
@@ -57,7 +62,7 @@ function tools(doc: Document) {
 
 type Scale = { n: number; top: number; hi: number; x: (i: number) => number; y: (v: number) => number };
 
-function scale(list: BalancePoint[][]): Scale {
+function scale(list: BalancePoint[][], W: number): Scale {
   const values = list.flat().map(([, b]) => n(b));
   const lo = Math.min(0, ...values);
   let hi = Math.max(0, ...values);
@@ -73,8 +78,8 @@ function scale(list: BalancePoint[][]): Scale {
 const points = (series: BalancePoint[], sc: Scale, f = (b: number) => b) =>
   series.map(([, b], i) => `${sc.x(i).toFixed(1)},${sc.y(f(n(b))).toFixed(1)}`).join(" ");
 
-function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | null {
-  const { sv, txt, frame } = tools(doc);
+function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGElement | null {
+  const { sv, txt, frame } = tools(doc, W);
   const zeroLine = (y: number) => [
     sv("line", { x1: 8, x2: W - 8, y1: y, y2: y, stroke: C.line, "stroke-dasharray": "3 3" }),
     txt(W - 8, y - 4, "0", { "text-anchor": "end" }),
@@ -119,7 +124,7 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
   };
 
   const valley = (v2: ValleyVisual) => {
-    const sc = scale([v2.series]), zero = sc.y(0);
+    const sc = scale([v2.series], W), zero = sc.y(0);
     const li = Math.max(0, v2.series.findIndex(([d]) => d === v2.low.date));
     const lx = sc.x(li), ly = sc.y(n(v2.low.balance)), right = lx > W * 0.6;
     return frame(v2.caption,
@@ -135,7 +140,7 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
   };
 
   const shift = (s: ShiftVisual) => {
-    const sc = scale([s.before, s.after]), zero = sc.y(0);
+    const sc = scale([s.before, s.after], W), zero = sc.y(0);
     const at = (iso: string) => { const i = s.before.findIndex(([d]) => d === iso); return sc.x(i < 0 ? sc.n - 1 : i); };
     const fx = at(s.move.from), tx = at(s.move.to), label = shorten(s.move.label, 16);
     const tag = Math.min(label.length * 6 + 14, 120);
@@ -160,10 +165,10 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
   };
 
   const days = (d: DaysVisual) => {
-    const per = 18, lit = Math.min(d.covered, d.target), rows = Math.ceil(d.target / per);
+    const per = 18, pitch = (W - 16) / per, lit = Math.min(d.covered, d.target), rows = Math.ceil(d.target / per);
     const color = d.covered < d.target / 3 ? C.negative : d.covered < d.target ? C.warning : C.positive;
     const cells = Array.from({ length: d.target }, (_, i) => sv("rect", {
-      x: 8 + (i % per) * 17.3, y: 6 + Math.floor(i / per) * 19, width: 13, height: 15, rx: 2,
+      x: 8 + (i % per) * pitch, y: 6 + Math.floor(i / per) * 19, width: pitch * 0.75, height: 15, rx: 2,
       fill: i < lit ? color : "none", stroke: i < lit ? null : C.line }));
     return frame(d.caption, cells,
       txt(8, 6 + rows * 19 + 14, t("vis.days", { covered: d.covered, target: d.target }), { fill: color, "font-weight": 600, "font-size": 12 }));
@@ -184,6 +189,7 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
   const countdown = (c: CountdownVisual) => {
     const r = 38, circ = 2 * Math.PI * r, frac = Math.min(c.window_days ? c.days_left / c.window_days : 1, 1);
     const both = c.current != null && c.next != null, up = both && n(c.next) > n(c.current);
+    const x0 = 118, x2 = W - 8, xm = (x0 + x2) / 2;
     return frame(c.caption,
       sv("circle", { cx: 56, cy: 52, r, fill: "none", stroke: C.line, "stroke-width": 9 }),
       sv("circle", { cx: 56, cy: 52, r, fill: "none", stroke: C.accent, "stroke-width": 9, "stroke-linecap": "round",
@@ -191,10 +197,10 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
       txt(56, 59, `${c.days_left} ${t("vis.dayUnit")}`, { "text-anchor": "middle", fill: C.ink, "font-size": 20, "font-weight": 600 }),
       txt(56, H - 6, `${t("vis.until")} ${shortDate(c.deadline)}`, { "text-anchor": "middle" }),
       both && [
-        sv("polyline", { points: `128,${up ? 96 : 56} 208,${up ? 96 : 56} 208,${up ? 56 : 96} 312,${up ? 56 : 96}`, fill: "none",
+        sv("polyline", { points: `${x0},${up ? 96 : 56} ${xm},${up ? 96 : 56} ${xm},${up ? 56 : 96} ${x2},${up ? 56 : 96}`, fill: "none",
           stroke: up ? C.negative : C.positive, "stroke-width": 2.5 }),
-        txt(128, up ? 114 : 48, `${amount(c.current!)} ${t("vis.perMonth")}`),
-        txt(312, up ? 48 : 114, amount(c.next!), { "text-anchor": "end", fill: up ? C.negative : C.positive, "font-weight": 600 }),
+        txt(x0, up ? 114 : 48, `${amount(c.current!)} ${t("vis.perMonth")}`),
+        txt(x2, up ? 48 : 114, amount(c.next!), { "text-anchor": "end", fill: up ? C.negative : C.positive, "font-weight": 600 }),
       ]);
   };
 
@@ -209,11 +215,18 @@ function draw(v: AnswerVisual, t: Translate, doc: Document): SVGSVGElement | nul
   }
 }
 
+export type DrawOptions = {
+  /** The width the picture is shown at, in CSS pixels (its container's width). 320 by default. */
+  width?: number;
+};
+
 /** The picture of one answer, or null when there is none (or it cannot be drawn). */
-export function drawVisual(visual: AnswerVisual | null | undefined, locale: Locale, doc: Document = document): SVGSVGElement | null {
+export function drawVisual(visual: AnswerVisual | null | undefined, locale: Locale, doc: Document = document,
+  options: DrawOptions = {}): SVGSVGElement | null {
   if (!visual) return null;
+  const width = Math.round(Math.min(Math.max(options.width ?? MAX_WIDTH, MIN_WIDTH), MAX_WIDTH));
   try {
-    return draw(visual, createT(locale, answerMessages), doc);
+    return draw(visual, createT(locale, answerMessages), doc, width);
   } catch {
     return null; // a picture never breaks the answer
   }

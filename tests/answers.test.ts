@@ -82,3 +82,23 @@ describe("answer pictures", () => {
     for (const l of LOCALES) expect(Object.keys(answerMessages[l]).sort()).toEqual(keys);
   });
 });
+
+describe("pictures on a phone", () => {
+  const all = Object.values(FIXTURES).flatMap((byLang) => pictures(byLang.fr!));
+  const coords = (svg: SVGSVGElement) => [...svg.querySelectorAll("*")].flatMap((el) =>
+    ["x", "x1", "x2", "cx"].map((a) => el.getAttribute(a)).filter((v): v is string => v !== null).map(Number));
+
+  it.each([260, 281, 300, 320])("at %ipx the picture is laid out one unit per pixel, and stays inside", (width) => {
+    for (const visual of all) {
+      const svg = drawVisual(visual, "fr", document, { width })!;
+      expect(svg.getAttribute("viewBox"), visual.kind).toBe(`0 0 ${width} 130`);
+      for (const x of coords(svg)) expect(x, `${visual.kind} at ${width}px`).toBeLessThanOrEqual(width);
+    }
+  });
+
+  it("narrower than 260px or wider than 320px, the picture is scaled", () => {
+    const visual = all[0]!;
+    expect(drawVisual(visual, "fr", document, { width: 200 })!.getAttribute("viewBox")).toBe("0 0 260 130");
+    expect(drawVisual(visual, "fr", document, { width: 900 })!.getAttribute("viewBox")).toBe("0 0 320 130");
+  });
+});
