@@ -1,7 +1,7 @@
-# Code de conduite
+# Code of conduct
 
-Bazous parle d’argent, un sujet où chacun arrive avec sa situation. Dans ce dépôt, on reste respectueux, on critique le code et pas les personnes, et on ne publie jamais de données financières réelles, les siennes comme celles des autres.
+Bazous is about money, a topic everyone comes to with their own situation. In this repository we stay respectful, we criticise code and not people, and we never publish real financial data, our own or anyone else's.
 
-Sont exclus : le harcèlement, les propos discriminatoires, la divulgation d’informations privées, et toute tentative d’utiliser une issue ou une PR pour collecter des données personnelles.
+Not allowed: harassment, discriminatory language, disclosing private information, and any attempt to use an issue or a pull request to collect personal data.
 
-Pour signaler un comportement : contact@bazous.com. Les signalements sont traités de manière confidentielle ; les mainteneurs peuvent retirer un contenu ou exclure un participant.
+To report behaviour: contact@bazous.com. Reports are handled confidentially; maintainers may remove content or exclude a participant.
