@@ -1,0 +1,32 @@
+name: Deprecate
+# Marks one published version of @bazous/ui as deprecated on npm (run by hand).
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to deprecate (for example 0.3.2)"
+        required: true
+      message:
+        description: "What npm shows to people installing it"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Deprecate
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          VERSION: ${{ inputs.version }}
+          MESSAGE: ${{ inputs.message }}
+        run: |
+          npm view "@bazous/ui@$VERSION" version
+          npm deprecate "@bazous/ui@$VERSION" "$MESSAGE"
+          npm view "@bazous/ui@$VERSION" deprecated
