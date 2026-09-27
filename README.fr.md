@@ -2,7 +2,7 @@
 
 **Le kit d’interface open source de [Bazous](https://bazous.com).** Chaque question d’argent — *combien ai-je maintenant ? que dois-je payer avant le salaire ? jusqu’où puis-je descendre ?* — est un module indépendant, rendu en cinq langues à partir d’un contrat de données public. Tout le monde peut en ajouter, les améliorer ou les traduire sans jamais toucher à un compte, une clé ou une donnée réelle.
 
-[![npm](https://img.shields.io/npm/v/@bazous/ui)](https://www.npmjs.com/package/@bazous/ui) [Galerie en ligne](https://bazousdotcom.github.io/ui/) · [La matrice des questions](docs/matrix.md) · [Contribuer](CONTRIBUTING.md) (en anglais) · [English](README.md)
+[![npm](https://img.shields.io/npm/v/@bazous/ui)](https://www.npmjs.com/package/@bazous/ui) [▶ Démo](https://bazous.com/fr/demo) · [Galerie en ligne](https://bazousdotcom.github.io/ui/) · [La matrice des questions](docs/matrix.md) · [Contribuer](CONTRIBUTING.md) (en anglais) · [English](README.md)
 
 ## Ce qu’il y a dedans
 

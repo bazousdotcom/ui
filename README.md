@@ -2,7 +2,7 @@
 
 **The open-source interface kit of [Bazous](https://bazous.com).** Every money question (*how much do I have now? what do I owe before payday? how low might I go?*) is a self-contained module, rendered in five languages from a public data contract. Anyone can add, improve or translate one without ever touching an account, a key or real data.
 
-[![npm](https://img.shields.io/npm/v/@bazous/ui)](https://www.npmjs.com/package/@bazous/ui) [Live gallery](https://bazousdotcom.github.io/ui/) · [Question matrix](docs/matrix.md) · [Contributing](CONTRIBUTING.md) · [Français](README.fr.md)
+[![npm](https://img.shields.io/npm/v/@bazous/ui)](https://www.npmjs.com/package/@bazous/ui) [▶ Demo](https://bazous.com/demo) · [Live gallery](https://bazousdotcom.github.io/ui/) · [Question matrix](docs/matrix.md) · [Contributing](CONTRIBUTING.md) · [Français](README.fr.md)
 
 ## What is inside
 
