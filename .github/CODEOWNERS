@@ -1,0 +1,9 @@
+# The contract, the shared building blocks and the canvas are reviewed by the maintainers.
+/schema/            @nkap360
+/src/contract/      @nkap360
+/src/canvas/        @nkap360
+/src/primitives/    @nkap360
+/src/engine/        @nkap360
+/src/styles/        @nkap360
+/.github/           @nkap360
+# Modules and translations are open: any maintainer approval is enough.

@@ -1,0 +1,1067 @@
+{
+ "fr": {
+  "as_of": "2027-01-04",
+  "currency": "CHF",
+  "language": "fr",
+  "headline": "4 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Combien de temps tiendrais-je sans revenu ?",
+    "answer": "Ton disponible couvre 0.4 mois de charges fixes (4’800.00 CHF par mois). Pour atteindre 3 mois, il manque 12’400.00 CHF, soit 1’033.33 CHF par mois pendant un an.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "L’usage recommande de pouvoir couvrir 3 mois de charges en cas d’imprévu.",
+    "figures": {
+     "months": "0.4",
+     "fixed_monthly": "4800",
+     "target_months": 3,
+     "gap": "12400.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 12,
+     "target": 90,
+     "balance": "2000.00",
+     "caption": "Sans salaire, ton argent paie tes charges fixes 12 jour(s) sur les 90 conseillés."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Que faire ensuite ?",
+    "answer": "9 décision(s) : Loyer (1’800.00 CHF) à payer d’ici le 25.01 ; Épargne impôts (500.00 CHF) à payer d’ici le 25.01 ; Leasing voiture (500.00 CHF) le 26.01, après le salaire ; et 6 autre(s).",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "count": 9,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2027-01-25",
+       "label": "Loyer",
+       "date": "2027-01-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "épargne-impôts-2027-01-25",
+       "label": "Épargne impôts",
+       "date": "2027-01-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-01-26",
+       "label": "Leasing voiture",
+       "date": "2027-01-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-01-27",
+       "label": "Crèche",
+       "date": "2027-01-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2027-02-01",
+       "label": "Assurance maladie",
+       "date": "2027-02-01",
+       "amount": "800",
+       "currency": "CHF",
+       "amount_base": "800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2027-02-25",
+       "label": "Loyer",
+       "date": "2027-02-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "épargne-impôts-2027-02-25",
+       "label": "Épargne impôts",
+       "date": "2027-02-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-02-26",
+       "label": "Leasing voiture",
+       "date": "2027-02-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-02-27",
+       "label": "Crèche",
+       "date": "2027-02-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Combien me coûte un mois ?",
+    "answer": "Tes charges fixes prennent 80 % de tes revenus : il reste environ 1’200.00 CHF par mois.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Au-delà de 70 %, un imprévu suffit à déséquilibrer le mois.",
+    "figures": {
+     "fixed_monthly": "4800",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "80.0",
+     "structural_margin": "1200"
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "Et si l’un des revenus manquait ?",
+    "answer": "Sans « Salaire Léa », ton solde passerait sous zéro le 27.01 (point bas −3’800.00 CHF).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Un coussin de sécurité protège contre ce scénario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "below_zero_on": "2027-01-27",
+     "low_point": {
+      "date": "2027-02-27",
+      "balance": "-3800.00",
+      "days_from_now": 54
+     }
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Combien ai-je maintenant ?",
+    "short": "2’000.00 CHF disponibles"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Que dois-je payer avant le salaire ?",
+    "short": "factures avant le 25.01 couvertes"
+   },
+   {
+    "id": "low-point",
+    "question": "Jusqu’où puis-je descendre ?",
+    "short": "jamais sous zéro (point bas 2’000.00 CHF le 04.01)"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Que me restera-t-il ?",
+    "short": "4’200.00 CHF restants au 04.03"
+   },
+   {
+    "id": "what-if",
+    "question": "Et si je décale un paiement ?",
+    "short": "aucun paiement à déplacer"
+   },
+   {
+    "id": "pay-cycles",
+    "question": "Qu’est-ce qui tombe à chaque salaire ?",
+    "short": "chaque cycle couvre ses sorties"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Quelle grosse dépense de l’année arrive bientôt ?",
+    "short": "aucune grosse dépense annuelle dans les 90 jours"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Est-ce que je paie des frais évitables ?",
+    "short": "aucun frais bancaire récurrent repéré"
+   },
+   {
+    "id": "tax-provision",
+    "question": "Ai-je mis de côté pour mes impôts ?",
+    "short": "provision impôts de 500.00 CHF par mois"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "de": {
+  "as_of": "2027-01-04",
+  "currency": "CHF",
+  "language": "de",
+  "headline": "Heute 4 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Wie lange käme ich ohne Einkommen aus?",
+    "answer": "Dein verfügbares Geld deckt 0.4 Monate Fixkosten (4’800.00 CHF pro Monat). Für 3 Monate fehlen 12’400.00 CHF, also 1’033.33 CHF pro Monat während eines Jahres.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Üblich ist eine Reserve für 3 Monate Fixkosten für Unvorhergesehenes.",
+    "figures": {
+     "months": "0.4",
+     "fixed_monthly": "4800",
+     "target_months": 3,
+     "gap": "12400.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 12,
+     "target": 90,
+     "balance": "2000.00",
+     "caption": "Ohne Lohn zahlt dein Geld deine Fixkosten 12 Tag(e) von den empfohlenen 90."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Was kommt als Nächstes?",
+    "answer": "9 Entscheidung(en): Loyer (1’800.00 CHF) bis 25.01 zu bezahlen; Épargne impôts (500.00 CHF) bis 25.01 zu bezahlen; Leasing voiture (500.00 CHF) am 26.01, nach dem Lohn; und 6 weitere.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "count": 9,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2027-01-25",
+       "label": "Loyer",
+       "date": "2027-01-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "épargne-impôts-2027-01-25",
+       "label": "Épargne impôts",
+       "date": "2027-01-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-01-26",
+       "label": "Leasing voiture",
+       "date": "2027-01-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-01-27",
+       "label": "Crèche",
+       "date": "2027-01-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2027-02-01",
+       "label": "Assurance maladie",
+       "date": "2027-02-01",
+       "amount": "800",
+       "currency": "CHF",
+       "amount_base": "800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2027-02-25",
+       "label": "Loyer",
+       "date": "2027-02-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "épargne-impôts-2027-02-25",
+       "label": "Épargne impôts",
+       "date": "2027-02-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-02-26",
+       "label": "Leasing voiture",
+       "date": "2027-02-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-02-27",
+       "label": "Crèche",
+       "date": "2027-02-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Was kostet mich ein Monat?",
+    "answer": "Deine Fixkosten beanspruchen 80 % deines Einkommens: Es bleiben etwa 1’200.00 CHF pro Monat.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Über 70 % bringt eine einzige unerwartete Ausgabe den Monat aus dem Gleichgewicht.",
+    "figures": {
+     "fixed_monthly": "4800",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "80.0",
+     "structural_margin": "1200"
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "Und wenn eines der Einkommen ausfiele?",
+    "answer": "Ohne «Salaire Léa» fiele dein Saldo am 27.01 unter null (Tiefpunkt −3’800.00 CHF).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Eine Sicherheitsreserve schützt vor diesem Szenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "below_zero_on": "2027-01-27",
+     "low_point": {
+      "date": "2027-02-27",
+      "balance": "-3800.00",
+      "days_from_now": 54
+     }
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Wie viel habe ich jetzt?",
+    "short": "2’000.00 CHF verfügbar"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Was muss ich vor dem Lohn bezahlen?",
+    "short": "Rechnungen vor dem 25.01 gedeckt"
+   },
+   {
+    "id": "low-point",
+    "question": "Wie tief sinkt mein Saldo?",
+    "short": "nie unter null (Tiefpunkt 2’000.00 CHF am 04.01)"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Was bleibt mir?",
+    "short": "4’200.00 CHF übrig am 04.03"
+   },
+   {
+    "id": "what-if",
+    "question": "Und wenn ich eine Zahlung verschiebe?",
+    "short": "keine Zahlung zu verschieben"
+   },
+   {
+    "id": "pay-cycles",
+    "question": "Was fällt in jeder Lohnperiode an?",
+    "short": "jede Periode deckt ihre Ausgaben"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Welche grosse Jahresausgabe steht bald an?",
+    "short": "keine grosse Jahresausgabe in den nächsten 90 Tagen"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Zahle ich vermeidbare Gebühren?",
+    "short": "keine wiederkehrenden Bankgebühren gefunden"
+   },
+   {
+    "id": "tax-provision",
+    "question": "Habe ich für meine Steuern vorgesorgt?",
+    "short": "Steuerrückstellung von 500.00 CHF pro Monat"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "it": {
+  "as_of": "2027-01-04",
+  "currency": "CHF",
+  "language": "it",
+  "headline": "Oggi 4 punto/i da guardare; il resto è in ordine.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quanto resisterei senza reddito?",
+    "answer": "La tua disponibilità copre 0.4 mesi di spese fisse (4’800.00 CHF al mese). Per arrivare a 3 mesi mancano 12’400.00 CHF, cioè 1’033.33 CHF al mese per un anno.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "È consigliato poter coprire 3 mesi di spese in caso di imprevisti.",
+    "figures": {
+     "months": "0.4",
+     "fixed_monthly": "4800",
+     "target_months": 3,
+     "gap": "12400.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 12,
+     "target": 90,
+     "balance": "2000.00",
+     "caption": "Senza stipendio, i tuoi soldi pagano le spese fisse per 12 giorno/i sui 90 consigliati."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Cosa faccio dopo?",
+    "answer": "9 decisione/i: Loyer (1’800.00 CHF) da pagare entro il 25.01; Épargne impôts (500.00 CHF) da pagare entro il 25.01; Leasing voiture (500.00 CHF) il 26.01, dopo lo stipendio; e 6 altra/e.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "count": 9,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2027-01-25",
+       "label": "Loyer",
+       "date": "2027-01-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "épargne-impôts-2027-01-25",
+       "label": "Épargne impôts",
+       "date": "2027-01-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-01-26",
+       "label": "Leasing voiture",
+       "date": "2027-01-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-01-27",
+       "label": "Crèche",
+       "date": "2027-01-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2027-02-01",
+       "label": "Assurance maladie",
+       "date": "2027-02-01",
+       "amount": "800",
+       "currency": "CHF",
+       "amount_base": "800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2027-02-25",
+       "label": "Loyer",
+       "date": "2027-02-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "épargne-impôts-2027-02-25",
+       "label": "Épargne impôts",
+       "date": "2027-02-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-02-26",
+       "label": "Leasing voiture",
+       "date": "2027-02-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-02-27",
+       "label": "Crèche",
+       "date": "2027-02-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Quanto mi costa un mese?",
+    "answer": "Le spese fisse assorbono il 80 % del reddito: restano circa 1’200.00 CHF al mese.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Oltre il 70 %, basta un imprevisto per squilibrare il mese.",
+    "figures": {
+     "fixed_monthly": "4800",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "80.0",
+     "structural_margin": "1200"
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "E se venisse a mancare uno dei redditi?",
+    "answer": "Senza «Salaire Léa», il saldo scenderebbe sotto zero il 27.01 (minimo −3’800.00 CHF).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Una riserva di sicurezza protegge da questo scenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "below_zero_on": "2027-01-27",
+     "low_point": {
+      "date": "2027-02-27",
+      "balance": "-3800.00",
+      "days_from_now": 54
+     }
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quanto ho adesso?",
+    "short": "2’000.00 CHF disponibili"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Cosa devo pagare prima dello stipendio?",
+    "short": "fatture prima del 25.01 coperte"
+   },
+   {
+    "id": "low-point",
+    "question": "Quanto scenderà il saldo?",
+    "short": "mai sotto zero (minimo 2’000.00 CHF il 04.01)"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Cosa mi resterà?",
+    "short": "4’200.00 CHF restanti al 04.03"
+   },
+   {
+    "id": "what-if",
+    "question": "E se sposto un pagamento?",
+    "short": "nessun pagamento da spostare"
+   },
+   {
+    "id": "pay-cycles",
+    "question": "Cosa scade in ogni periodo di paga?",
+    "short": "ogni periodo copre le sue uscite"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Quale grande spesa annuale arriva presto?",
+    "short": "nessuna grande spesa annuale nei prossimi 90 giorni"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Pago commissioni evitabili?",
+    "short": "nessuna commissione bancaria ricorrente trovata"
+   },
+   {
+    "id": "tax-provision",
+    "question": "Ho messo da parte per le imposte?",
+    "short": "accantonamento imposte di 500.00 CHF al mese"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "rm": {
+  "as_of": "2027-01-04",
+  "currency": "CHF",
+  "language": "rm",
+  "headline": "Oz 4 punct(s) da guardar; il rest è en urden.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quant ditg tegniss jau senza entrada?",
+    "answer": "Tes disponibel cuvra 0.4 mais custs fixs (4’800.00 CHF per mais). Per cuntanscher 3 mais mancan 12’400.00 CHF, quai èn 1’033.33 CHF per mais durant in onn.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "I vegn recumandà da pudair cuvrir 3 mais custs en cas nunspetgà.",
+    "figures": {
+     "months": "0.4",
+     "fixed_monthly": "4800",
+     "target_months": 3,
+     "gap": "12400.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 12,
+     "target": 90,
+     "balance": "2000.00",
+     "caption": "Senza paja pajan tes daners tes custs fixs 12 di(s) dals 90 recumandads."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Tge vegn suenter?",
+    "answer": "9 decisiun(s): Loyer (1’800.00 CHF) da pajar fin ils 25.01; Épargne impôts (500.00 CHF) da pajar fin ils 25.01; Leasing voiture (500.00 CHF) ils 26.01, suenter il salari; ed 6 autra(s).",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "count": 9,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2027-01-25",
+       "label": "Loyer",
+       "date": "2027-01-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "épargne-impôts-2027-01-25",
+       "label": "Épargne impôts",
+       "date": "2027-01-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-01-26",
+       "label": "Leasing voiture",
+       "date": "2027-01-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-01-27",
+       "label": "Crèche",
+       "date": "2027-01-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2027-02-01",
+       "label": "Assurance maladie",
+       "date": "2027-02-01",
+       "amount": "800",
+       "currency": "CHF",
+       "amount_base": "800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2027-02-25",
+       "label": "Loyer",
+       "date": "2027-02-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "épargne-impôts-2027-02-25",
+       "label": "Épargne impôts",
+       "date": "2027-02-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-02-26",
+       "label": "Leasing voiture",
+       "date": "2027-02-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-02-27",
+       "label": "Crèche",
+       "date": "2027-02-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Quant ma custa in mais?",
+    "answer": "Tes custs fixs prendan 80 % da tias entradas: i restan var 1’200.00 CHF per mais.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Sur 70 % basta ina expensa nunspetgada per metter il mais or d’equiliber.",
+    "figures": {
+     "fixed_monthly": "4800",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "80.0",
+     "structural_margin": "1200"
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "E sch’ina da las entradas mancass?",
+    "answer": "Senza «Salaire Léa» crudass tes saldo sut nulla ils 27.01 (punct bass −3’800.00 CHF).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Ina reserva da segirezza protegia cunter quest scenari.",
+    "figures": {
+     "income": "Salaire Léa",
+     "below_zero_on": "2027-01-27",
+     "low_point": {
+      "date": "2027-02-27",
+      "balance": "-3800.00",
+      "days_from_now": 54
+     }
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "Quant hai jau ussa?",
+    "short": "2’000.00 CHF disponibel"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "Tge stoss jau pajar avant il salari?",
+    "short": "quints avant ils 25.01 cuvrids"
+   },
+   {
+    "id": "low-point",
+    "question": "Quant bass vegn il saldo?",
+    "short": "mai sut nulla (punct bass 2’000.00 CHF ils 04.01)"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "Tge ma resta?",
+    "short": "4’200.00 CHF restan ils 04.03"
+   },
+   {
+    "id": "what-if",
+    "question": "E sche jau spustel in pajament?",
+    "short": "nagin pajament da spustar"
+   },
+   {
+    "id": "pay-cycles",
+    "question": "Tge croda en mintga perioda da salari?",
+    "short": "mintga perioda cuvra sias sortidas"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Tge gronda expensa annuala vegn prest?",
+    "short": "nagina gronda expensa annuala en ils proxims 90 dis"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Pai jau taxas evitablas?",
+    "short": "naginas taxas bancaras regularas chattadas"
+   },
+   {
+    "id": "tax-provision",
+    "question": "Hai jau mess da la vart per las taglias?",
+    "short": "daners da la vart per las taglias: 500.00 CHF per mais"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "en": {
+  "as_of": "2027-01-04",
+  "currency": "CHF",
+  "language": "en",
+  "headline": "4 point(s) to look at today; the rest is in order.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "How long could I last without income?",
+    "answer": "Your available money covers 0.4 months of fixed costs (4’800.00 CHF a month). Reaching 3 months takes 12’400.00 CHF more, that is 1’033.33 CHF a month for a year.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "The usual advice is to be able to cover 3 months of costs if something happens.",
+    "figures": {
+     "months": "0.4",
+     "fixed_monthly": "4800",
+     "target_months": 3,
+     "gap": "12400.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 12,
+     "target": 90,
+     "balance": "2000.00",
+     "caption": "Without a salary, your money pays your fixed costs for 12 day(s) out of the 90 advised."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "What next?",
+    "answer": "9 decision(s): Loyer (1’800.00 CHF) to pay by 25.01; Épargne impôts (500.00 CHF) to pay by 25.01; Leasing voiture (500.00 CHF) on 26.01, after payday; and 6 more.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "count": 9,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2027-01-25",
+       "label": "Loyer",
+       "date": "2027-01-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "épargne-impôts-2027-01-25",
+       "label": "Épargne impôts",
+       "date": "2027-01-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-01-26",
+       "label": "Leasing voiture",
+       "date": "2027-01-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-01-27",
+       "label": "Crèche",
+       "date": "2027-01-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2027-02-01",
+       "label": "Assurance maladie",
+       "date": "2027-02-01",
+       "amount": "800",
+       "currency": "CHF",
+       "amount_base": "800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2027-02-25",
+       "label": "Loyer",
+       "date": "2027-02-25",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "épargne-impôts-2027-02-25",
+       "label": "Épargne impôts",
+       "date": "2027-02-25",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2027-02-26",
+       "label": "Leasing voiture",
+       "date": "2027-02-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2027-02-27",
+       "label": "Crèche",
+       "date": "2027-02-27",
+       "amount": "1700",
+       "currency": "CHF",
+       "amount_base": "1700"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "What does a month cost me?",
+    "answer": "Your fixed costs take 80 % of your income: about 1’200.00 CHF a month is left.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Above 70 %, one unexpected expense is enough to unbalance the month.",
+    "figures": {
+     "fixed_monthly": "4800",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "80.0",
+     "structural_margin": "1200"
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "What if one of the incomes stopped?",
+    "answer": "Without “Salaire Léa”, your balance would go below zero on 27.01 (low point −3’800.00 CHF).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "A safety cushion protects against this scenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "below_zero_on": "2027-01-27",
+     "low_point": {
+      "date": "2027-02-27",
+      "balance": "-3800.00",
+      "days_from_now": 54
+     }
+    }
+   }
+  ],
+  "all_clear": [
+   {
+    "id": "available-now",
+    "question": "How much do I have now?",
+    "short": "2’000.00 CHF available"
+   },
+   {
+    "id": "due-before-payday",
+    "question": "What do I owe before payday?",
+    "short": "bills before 25.01 covered"
+   },
+   {
+    "id": "low-point",
+    "question": "How low might I go?",
+    "short": "never below zero (low point 2’000.00 CHF on 04.01)"
+   },
+   {
+    "id": "margin-after-payday",
+    "question": "What will be left?",
+    "short": "4’200.00 CHF left on 04.03"
+   },
+   {
+    "id": "what-if",
+    "question": "What if I move a payment?",
+    "short": "no payment to move"
+   },
+   {
+    "id": "pay-cycles",
+    "question": "What falls due each pay cycle?",
+    "short": "every cycle covers its outgoings"
+   },
+   {
+    "id": "annual-bills",
+    "question": "Which big yearly expense is coming soon?",
+    "short": "no big yearly expense in the next 90 days"
+   },
+   {
+    "id": "avoidable-fees",
+    "question": "Am I paying avoidable fees?",
+    "short": "no recurring bank fee found"
+   },
+   {
+    "id": "tax-provision",
+    "question": "Have I set aside enough for my taxes?",
+    "short": "500.00 CHF a month set aside for taxes"
+   }
+  ],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ }
+}

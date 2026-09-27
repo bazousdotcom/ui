@@ -1,0 +1,1191 @@
+{
+ "as_of": "2026-10-01",
+ "horizon_end": "2026-12-02",
+ "next_income_date": "2026-10-25",
+ "second_income_date": "2026-11-25",
+ "opening_balance": "-500.00",
+ "due_before_next_income": "3000.00",
+ "gap_before_next_income": "-3500.00",
+ "low_point": {
+  "date": "2026-11-10",
+  "balance": "-6000.00",
+  "days_from_now": 40
+ },
+ "end_of_horizon": {
+  "date": "2026-12-02",
+  "balance": "-3300.00"
+ },
+ "main_cycle": {
+  "start": "2026-10-25",
+  "end": "2026-11-24",
+  "total_out": "8500.00",
+  "total_in": "6000.00",
+  "drivers": [
+   {
+    "label": "Facture dentiste",
+    "date": "2026-11-03",
+    "amount": "2000.00",
+    "share": "23.53"
+   },
+   {
+    "label": "Crèche",
+    "date": "2026-10-27",
+    "amount": "1800.00",
+    "share": "21.18"
+   },
+   {
+    "label": "Loyer",
+    "date": "2026-11-05",
+    "amount": "1800.00",
+    "share": "21.18"
+   },
+   {
+    "label": "Prêt personnel",
+    "date": "2026-10-28",
+    "amount": "980.00",
+    "share": "11.53"
+   },
+   {
+    "label": "Assurance maladie",
+    "date": "2026-11-01",
+    "amount": "900.00",
+    "share": "10.59"
+   }
+  ]
+ },
+ "cycles": [
+  {
+   "key": "before_income",
+   "start": "2026-10-01",
+   "end": "2026-10-24",
+   "total_out": "3000.00",
+   "total_in": "0.00",
+   "items": [
+    {
+     "date": "2026-10-01",
+     "label": "Assurance maladie",
+     "amount": "900.00",
+     "direction": "outflow",
+     "original_amount": "900.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "assurance-maladie-2026-10-01",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-05",
+     "label": "Loyer",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "loyer-2026-10-05",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-10",
+     "label": "Carte de crédit",
+     "amount": "300.00",
+     "direction": "outflow",
+     "original_amount": "300.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "carte-de-crédit-2026-10-10",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "key": "cycle_1",
+   "start": "2026-10-25",
+   "end": "2026-11-24",
+   "total_out": "8500.00",
+   "total_in": "6000.00",
+   "items": [
+    {
+     "date": "2026-10-25",
+     "label": "Salaire Léa",
+     "amount": "4000.00",
+     "direction": "inflow",
+     "original_amount": "4000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-léa-2026-10-25",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-25",
+     "label": "Salaire Sam",
+     "amount": "2000.00",
+     "direction": "inflow",
+     "original_amount": "2000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-sam-2026-10-25",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-26",
+     "label": "Leasing voiture",
+     "amount": "500.00",
+     "direction": "outflow",
+     "original_amount": "500.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "leasing-voiture-2026-10-26",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-27",
+     "label": "Crèche",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "crèche-2026-10-27",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-28",
+     "label": "Prêt personnel",
+     "amount": "980.00",
+     "direction": "outflow",
+     "original_amount": "980.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "prêt-personnel-2026-10-28",
+     "status": "open"
+    },
+    {
+     "date": "2026-10-30",
+     "label": "Frais bancaires",
+     "amount": "20.00",
+     "direction": "outflow",
+     "original_amount": "20.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "frais-bancaires-2026-10-30",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-01",
+     "label": "Assurance maladie",
+     "amount": "900.00",
+     "direction": "outflow",
+     "original_amount": "900.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "assurance-maladie-2026-11-01",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "direction": "outflow",
+     "original_amount": "2000.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "facture-dentiste-2026-11-03",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-05",
+     "label": "Loyer",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "loyer-2026-11-05",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-07",
+     "label": "Cadeau d’anniversaire",
+     "amount": "200.00",
+     "direction": "outflow",
+     "original_amount": "200.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "cadeau-d’anniversaire-2026-11-07",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-10",
+     "label": "Carte de crédit",
+     "amount": "300.00",
+     "direction": "outflow",
+     "original_amount": "300.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "carte-de-crédit-2026-11-10",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "key": "cycle_2",
+   "start": "2026-11-25",
+   "end": "2026-12-02",
+   "total_out": "3300.00",
+   "total_in": "6000.00",
+   "items": [
+    {
+     "date": "2026-11-25",
+     "label": "Salaire Léa",
+     "amount": "4000.00",
+     "direction": "inflow",
+     "original_amount": "4000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-léa-2026-11-25",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-25",
+     "label": "Salaire Sam",
+     "amount": "2000.00",
+     "direction": "inflow",
+     "original_amount": "2000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-sam-2026-11-25",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-26",
+     "label": "Leasing voiture",
+     "amount": "500.00",
+     "direction": "outflow",
+     "original_amount": "500.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "leasing-voiture-2026-11-26",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-27",
+     "label": "Crèche",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "crèche-2026-11-27",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-28",
+     "label": "Prêt personnel",
+     "amount": "980.00",
+     "direction": "outflow",
+     "original_amount": "980.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "prêt-personnel-2026-11-28",
+     "status": "open"
+    },
+    {
+     "date": "2026-11-30",
+     "label": "Frais bancaires",
+     "amount": "20.00",
+     "direction": "outflow",
+     "original_amount": "20.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "frais-bancaires-2026-11-30",
+     "status": "open"
+    }
+   ]
+  }
+ ],
+ "points": [
+  {
+   "date": "2026-10-01",
+   "inflows": "0.00",
+   "outflows": "900.00",
+   "closing_balance": "-1400.00"
+  },
+  {
+   "date": "2026-10-02",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-1400.00"
+  },
+  {
+   "date": "2026-10-03",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-1400.00"
+  },
+  {
+   "date": "2026-10-04",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-1400.00"
+  },
+  {
+   "date": "2026-10-05",
+   "inflows": "0.00",
+   "outflows": "1800.00",
+   "closing_balance": "-3200.00"
+  },
+  {
+   "date": "2026-10-06",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3200.00"
+  },
+  {
+   "date": "2026-10-07",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3200.00"
+  },
+  {
+   "date": "2026-10-08",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3200.00"
+  },
+  {
+   "date": "2026-10-09",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3200.00"
+  },
+  {
+   "date": "2026-10-10",
+   "inflows": "0.00",
+   "outflows": "300.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-11",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-12",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-13",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-14",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-15",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-16",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-17",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-18",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-19",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-20",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-21",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-22",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-23",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-24",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3500.00"
+  },
+  {
+   "date": "2026-10-25",
+   "inflows": "6000.00",
+   "outflows": "0.00",
+   "closing_balance": "2500.00"
+  },
+  {
+   "date": "2026-10-26",
+   "inflows": "0.00",
+   "outflows": "500.00",
+   "closing_balance": "2000.00"
+  },
+  {
+   "date": "2026-10-27",
+   "inflows": "0.00",
+   "outflows": "1800.00",
+   "closing_balance": "200.00"
+  },
+  {
+   "date": "2026-10-28",
+   "inflows": "0.00",
+   "outflows": "980.00",
+   "closing_balance": "-780.00"
+  },
+  {
+   "date": "2026-10-29",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-780.00"
+  },
+  {
+   "date": "2026-10-30",
+   "inflows": "0.00",
+   "outflows": "20.00",
+   "closing_balance": "-800.00"
+  },
+  {
+   "date": "2026-10-31",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-800.00"
+  },
+  {
+   "date": "2026-11-01",
+   "inflows": "0.00",
+   "outflows": "900.00",
+   "closing_balance": "-1700.00"
+  },
+  {
+   "date": "2026-11-02",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-1700.00"
+  },
+  {
+   "date": "2026-11-03",
+   "inflows": "0.00",
+   "outflows": "2000.00",
+   "closing_balance": "-3700.00"
+  },
+  {
+   "date": "2026-11-04",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3700.00"
+  },
+  {
+   "date": "2026-11-05",
+   "inflows": "0.00",
+   "outflows": "1800.00",
+   "closing_balance": "-5500.00"
+  },
+  {
+   "date": "2026-11-06",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-5500.00"
+  },
+  {
+   "date": "2026-11-07",
+   "inflows": "0.00",
+   "outflows": "200.00",
+   "closing_balance": "-5700.00"
+  },
+  {
+   "date": "2026-11-08",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-5700.00"
+  },
+  {
+   "date": "2026-11-09",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-5700.00"
+  },
+  {
+   "date": "2026-11-10",
+   "inflows": "0.00",
+   "outflows": "300.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-11",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-12",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-13",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-14",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-15",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-16",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-17",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-18",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-19",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-20",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-21",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-22",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-23",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-24",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-6000.00"
+  },
+  {
+   "date": "2026-11-25",
+   "inflows": "6000.00",
+   "outflows": "0.00",
+   "closing_balance": "0.00"
+  },
+  {
+   "date": "2026-11-26",
+   "inflows": "0.00",
+   "outflows": "500.00",
+   "closing_balance": "-500.00"
+  },
+  {
+   "date": "2026-11-27",
+   "inflows": "0.00",
+   "outflows": "1800.00",
+   "closing_balance": "-2300.00"
+  },
+  {
+   "date": "2026-11-28",
+   "inflows": "0.00",
+   "outflows": "980.00",
+   "closing_balance": "-3280.00"
+  },
+  {
+   "date": "2026-11-29",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3280.00"
+  },
+  {
+   "date": "2026-11-30",
+   "inflows": "0.00",
+   "outflows": "20.00",
+   "closing_balance": "-3300.00"
+  },
+  {
+   "date": "2026-12-01",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3300.00"
+  },
+  {
+   "date": "2026-12-02",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "-3300.00"
+  }
+ ],
+ "events": [
+  {
+   "date": "2026-10-01",
+   "label": "Assurance maladie",
+   "amount": "900.00",
+   "direction": "outflow",
+   "original_amount": "900.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "assurance-maladie-2026-10-01",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-05",
+   "label": "Loyer",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "loyer-2026-10-05",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-10",
+   "label": "Carte de crédit",
+   "amount": "300.00",
+   "direction": "outflow",
+   "original_amount": "300.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "carte-de-crédit-2026-10-10",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-25",
+   "label": "Salaire Léa",
+   "amount": "4000.00",
+   "direction": "inflow",
+   "original_amount": "4000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-léa-2026-10-25",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-25",
+   "label": "Salaire Sam",
+   "amount": "2000.00",
+   "direction": "inflow",
+   "original_amount": "2000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-sam-2026-10-25",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-26",
+   "label": "Leasing voiture",
+   "amount": "500.00",
+   "direction": "outflow",
+   "original_amount": "500.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "leasing-voiture-2026-10-26",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-27",
+   "label": "Crèche",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "crèche-2026-10-27",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-28",
+   "label": "Prêt personnel",
+   "amount": "980.00",
+   "direction": "outflow",
+   "original_amount": "980.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "prêt-personnel-2026-10-28",
+   "status": "open"
+  },
+  {
+   "date": "2026-10-30",
+   "label": "Frais bancaires",
+   "amount": "20.00",
+   "direction": "outflow",
+   "original_amount": "20.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "frais-bancaires-2026-10-30",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-01",
+   "label": "Assurance maladie",
+   "amount": "900.00",
+   "direction": "outflow",
+   "original_amount": "900.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "assurance-maladie-2026-11-01",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-03",
+   "label": "Facture dentiste",
+   "amount": "2000.00",
+   "direction": "outflow",
+   "original_amount": "2000.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "facture-dentiste-2026-11-03",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-05",
+   "label": "Loyer",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "loyer-2026-11-05",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-07",
+   "label": "Cadeau d’anniversaire",
+   "amount": "200.00",
+   "direction": "outflow",
+   "original_amount": "200.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "cadeau-d’anniversaire-2026-11-07",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-10",
+   "label": "Carte de crédit",
+   "amount": "300.00",
+   "direction": "outflow",
+   "original_amount": "300.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "carte-de-crédit-2026-11-10",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-25",
+   "label": "Salaire Léa",
+   "amount": "4000.00",
+   "direction": "inflow",
+   "original_amount": "4000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-léa-2026-11-25",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-25",
+   "label": "Salaire Sam",
+   "amount": "2000.00",
+   "direction": "inflow",
+   "original_amount": "2000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-sam-2026-11-25",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-26",
+   "label": "Leasing voiture",
+   "amount": "500.00",
+   "direction": "outflow",
+   "original_amount": "500.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "leasing-voiture-2026-11-26",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-27",
+   "label": "Crèche",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "crèche-2026-11-27",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-28",
+   "label": "Prêt personnel",
+   "amount": "980.00",
+   "direction": "outflow",
+   "original_amount": "980.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "prêt-personnel-2026-11-28",
+   "status": "open"
+  },
+  {
+   "date": "2026-11-30",
+   "label": "Frais bancaires",
+   "amount": "20.00",
+   "direction": "outflow",
+   "original_amount": "20.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "frais-bancaires-2026-11-30",
+   "status": "open"
+  }
+ ],
+ "base_currency": "CHF",
+ "fx_rates": {
+  "EUR": "0.95"
+ },
+ "household": {
+  "id": "hh-before",
+  "name": "Léa & Sam"
+ },
+ "accounts": [
+  {
+   "id": "acc-1",
+   "name": "Compte commun",
+   "account_type": "bank",
+   "currency": "CHF",
+   "institution": "Banque exemple",
+   "balance": "-500",
+   "balance_base": "-500",
+   "observed_at": "2026-10-01T08:00:00+02:00"
+  }
+ ],
+ "structure": {
+  "fixed_monthly": "6000",
+  "income_monthly": "6000",
+  "fixed_ratio_percent": "100.0",
+  "structural_margin": "0",
+  "by_category": [
+   {
+    "category": "Logement",
+    "amount": "1800"
+   },
+   {
+    "category": "Enfants",
+    "amount": "1800"
+   },
+   {
+    "category": "Dettes",
+    "amount": "980"
+   },
+   {
+    "category": "Santé",
+    "amount": "900"
+   },
+   {
+    "category": "Transport",
+    "amount": "500"
+   },
+   {
+    "category": "Frais bancaires",
+    "amount": "20"
+   }
+  ]
+ },
+ "debts": {
+  "total_base": "0",
+  "items": []
+ },
+ "actions": [
+  {
+   "type": "due_today",
+   "ref_id": "assurance-maladie-2026-10-01",
+   "label": "Assurance maladie",
+   "description": null,
+   "date": "2026-10-01",
+   "amount": "900",
+   "currency": "CHF",
+   "amount_base": "900",
+   "confidence": null,
+   "target": null
+  },
+  {
+   "type": "before_income",
+   "ref_id": "loyer-2026-10-05",
+   "label": "Loyer",
+   "description": null,
+   "date": "2026-10-05",
+   "amount": "1800",
+   "currency": "CHF",
+   "amount_base": "1800",
+   "confidence": null,
+   "target": null
+  },
+  {
+   "type": "before_income",
+   "ref_id": "carte-de-crédit-2026-10-10",
+   "label": "Carte de crédit",
+   "description": null,
+   "date": "2026-10-10",
+   "amount": "300",
+   "currency": "CHF",
+   "amount_base": "300",
+   "confidence": null,
+   "target": null
+  },
+  {
+   "type": "plan",
+   "ref_id": "leasing-voiture-2026-10-26",
+   "label": "Leasing voiture",
+   "description": null,
+   "date": "2026-10-26",
+   "amount": "500",
+   "currency": "CHF",
+   "amount_base": "500",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "crèche-2026-10-27",
+   "label": "Crèche",
+   "description": null,
+   "date": "2026-10-27",
+   "amount": "1800",
+   "currency": "CHF",
+   "amount_base": "1800",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "prêt-personnel-2026-10-28",
+   "label": "Prêt personnel",
+   "description": null,
+   "date": "2026-10-28",
+   "amount": "980",
+   "currency": "CHF",
+   "amount_base": "980",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "frais-bancaires-2026-10-30",
+   "label": "Frais bancaires",
+   "description": null,
+   "date": "2026-10-30",
+   "amount": "20",
+   "currency": "CHF",
+   "amount_base": "20",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "assurance-maladie-2026-11-01",
+   "label": "Assurance maladie",
+   "description": null,
+   "date": "2026-11-01",
+   "amount": "900",
+   "currency": "CHF",
+   "amount_base": "900",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "facture-dentiste-2026-11-03",
+   "label": "Facture dentiste",
+   "description": null,
+   "date": "2026-11-03",
+   "amount": "2000",
+   "currency": "CHF",
+   "amount_base": "2000",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "loyer-2026-11-05",
+   "label": "Loyer",
+   "description": null,
+   "date": "2026-11-05",
+   "amount": "1800",
+   "currency": "CHF",
+   "amount_base": "1800",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "cadeau-d’anniversaire-2026-11-07",
+   "label": "Cadeau d’anniversaire",
+   "description": null,
+   "date": "2026-11-07",
+   "amount": "200",
+   "currency": "CHF",
+   "amount_base": "200",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "carte-de-crédit-2026-11-10",
+   "label": "Carte de crédit",
+   "description": null,
+   "date": "2026-11-10",
+   "amount": "300",
+   "currency": "CHF",
+   "amount_base": "300",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "leasing-voiture-2026-11-26",
+   "label": "Leasing voiture",
+   "description": null,
+   "date": "2026-11-26",
+   "amount": "500",
+   "currency": "CHF",
+   "amount_base": "500",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "crèche-2026-11-27",
+   "label": "Crèche",
+   "description": null,
+   "date": "2026-11-27",
+   "amount": "1800",
+   "currency": "CHF",
+   "amount_base": "1800",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "prêt-personnel-2026-11-28",
+   "label": "Prêt personnel",
+   "description": null,
+   "date": "2026-11-28",
+   "amount": "980",
+   "currency": "CHF",
+   "amount_base": "980",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "plan",
+   "ref_id": "frais-bancaires-2026-11-30",
+   "label": "Frais bancaires",
+   "description": null,
+   "date": "2026-11-30",
+   "amount": "20",
+   "currency": "CHF",
+   "amount_base": "20",
+   "confidence": null,
+   "target": "2026-10-25"
+  },
+  {
+   "type": "needs_review",
+   "kind": "transaction",
+   "ref_id": "tx-1",
+   "label": "Virement Sam → Léa",
+   "date": "2026-09-28",
+   "amount": "500.00",
+   "currency": "CHF",
+   "confidence": "0.64"
+  },
+  {
+   "type": "missing_amounts",
+   "label": "Récurrences sans montant",
+   "items": [
+    "Électricité"
+   ]
+  }
+ ],
+ "actual_vs_expected": {
+  "period_start": null,
+  "period_end": null,
+  "items": [],
+  "complete": false
+ },
+ "uncategorized": [],
+ "data_quality": {
+  "last_transaction_date": "2026-10-01",
+  "days_since_last_transaction": 0,
+  "accounts_without_balance": [],
+  "fx_missing": [],
+  "rules_without_amount": [
+   "Électricité"
+  ],
+  "needs_review_count": 0
+ }
+}

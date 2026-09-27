@@ -1,0 +1,8052 @@
+{
+ "fr": {
+  "as_of": "2026-10-01",
+  "currency": "CHF",
+  "language": "fr",
+  "headline": "16 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "available-now",
+    "question": "Combien ai-je maintenant ?",
+    "answer": "−500.00 CHF disponibles maintenant.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "amount": "-500.00",
+     "accounts_without_balance": []
+    }
+   },
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Que dois-je payer avant le salaire ?",
+    "answer": "3’000.00 CHF à payer avant le salaire du 25.10 : il manque 3’500.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "3000.00",
+     "available": "-500.00",
+     "gap": "-3500.00",
+     "next_income_date": "2026-10-25"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-10-01",
+     "payday": "2026-10-25",
+     "available": "-500.00",
+     "due": "3000.00",
+     "gap": "-3500.00",
+     "bills": [
+      {
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "date": "2026-10-01"
+      },
+      {
+       "label": "Loyer",
+       "amount": "1800.00",
+       "date": "2026-10-05"
+      },
+      {
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "date": "2026-10-10"
+      }
+     ],
+     "short_days": 24,
+     "caption": "Il te manque 3’500.00 CHF pendant 24 jour(s), jusqu’au salaire du 25.10."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Jusqu’où puis-je descendre ?",
+    "answer": "Point bas −6’000.00 CHF le 10.11 : tu passes sous zéro, 15 jour(s) avant le revenu du 25.11.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-6000.00",
+     "date": "2026-11-10",
+     "days_from_now": 40
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-11-10",
+      "balance": "-6000.00"
+     },
+     "days_below_zero": 59,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "59 jour(s) sous zéro dans les 63 prochains jours ; le fond : −6’000.00 CHF le 10.11."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Que me restera-t-il ?",
+    "answer": "Il manquera 3’300.00 CHF au 02.12, après toutes les échéances connues.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3300.00",
+     "date": "2026-12-02",
+     "rules_without_amount": [
+      "Électricité"
+     ]
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3300.00"
+     },
+     "days_of_fixed_costs": 16,
+     "caption": "Au 02.12, il te manquera 3’300.00 CHF : l’équivalent de 16 jour(s) de charges fixes."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Et si je décale un paiement ?",
+    "answer": "Le meilleur geste : reporter Facture dentiste (2’000.00 CHF) du 03.11 au 25.11, jour de paie. Ton point bas passe de −6’000.00 CHF à −4’000.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Reportée après le salaire, cette facture ne pèse plus sur les jours les plus bas, si le créancier accepte ce délai.",
+    "figures": {
+     "ref_id": "facture-dentiste-2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "from": "2026-11-03",
+     "target": "2026-11-25",
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "low_after_date": "2026-11-10"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "after": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-1700.00"
+      ],
+      [
+       "2026-11-04",
+       "-1700.00"
+      ],
+      [
+       "2026-11-05",
+       "-3500.00"
+      ],
+      [
+       "2026-11-06",
+       "-3500.00"
+      ],
+      [
+       "2026-11-07",
+       "-3700.00"
+      ],
+      [
+       "2026-11-08",
+       "-3700.00"
+      ],
+      [
+       "2026-11-09",
+       "-3700.00"
+      ],
+      [
+       "2026-11-10",
+       "-4000.00"
+      ],
+      [
+       "2026-11-11",
+       "-4000.00"
+      ],
+      [
+       "2026-11-12",
+       "-4000.00"
+      ],
+      [
+       "2026-11-13",
+       "-4000.00"
+      ],
+      [
+       "2026-11-14",
+       "-4000.00"
+      ],
+      [
+       "2026-11-15",
+       "-4000.00"
+      ],
+      [
+       "2026-11-16",
+       "-4000.00"
+      ],
+      [
+       "2026-11-17",
+       "-4000.00"
+      ],
+      [
+       "2026-11-18",
+       "-4000.00"
+      ],
+      [
+       "2026-11-19",
+       "-4000.00"
+      ],
+      [
+       "2026-11-20",
+       "-4000.00"
+      ],
+      [
+       "2026-11-21",
+       "-4000.00"
+      ],
+      [
+       "2026-11-22",
+       "-4000.00"
+      ],
+      [
+       "2026-11-23",
+       "-4000.00"
+      ],
+      [
+       "2026-11-24",
+       "-4000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "move": {
+      "label": "Facture dentiste",
+      "amount": "2000.00",
+      "from": "2026-11-03",
+      "to": "2026-11-25"
+     },
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "caption": "Décale Facture dentiste au 25.11 : ton fond remonte de 2’000.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Que faire ensuite ?",
+    "answer": "18 décision(s) : Assurance maladie (900.00 CHF) dû aujourd’hui ; Loyer (1’800.00 CHF) à payer d’ici le 05.10 ; Carte de crédit (300.00 CHF) à payer d’ici le 10.10 ; et 15 autre(s).",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "count": 18,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "due_today",
+       "ref_id": "assurance-maladie-2026-10-01",
+       "label": "Assurance maladie",
+       "date": "2026-10-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2026-10-05",
+       "label": "Loyer",
+       "date": "2026-10-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "carte-de-crédit-2026-10-10",
+       "label": "Carte de crédit",
+       "date": "2026-10-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "needs_review",
+       "ref_id": "tx-1",
+       "label": "Virement Sam → Léa",
+       "date": "2026-09-28",
+       "amount": "500.00",
+       "currency": "CHF",
+       "amount_base": null
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-10-26",
+       "label": "Leasing voiture",
+       "date": "2026-10-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-10-27",
+       "label": "Crèche",
+       "date": "2026-10-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-10-28",
+       "label": "Prêt personnel",
+       "date": "2026-10-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-10-30",
+       "label": "Frais bancaires",
+       "date": "2026-10-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2026-11-01",
+       "label": "Assurance maladie",
+       "date": "2026-11-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "plan",
+       "ref_id": "facture-dentiste-2026-11-03",
+       "label": "Facture dentiste",
+       "date": "2026-11-03",
+       "amount": "2000",
+       "currency": "CHF",
+       "amount_base": "2000"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2026-11-05",
+       "label": "Loyer",
+       "date": "2026-11-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "cadeau-d’anniversaire-2026-11-07",
+       "label": "Cadeau d’anniversaire",
+       "date": "2026-11-07",
+       "amount": "200",
+       "currency": "CHF",
+       "amount_base": "200"
+      },
+      {
+       "type": "plan",
+       "ref_id": "carte-de-crédit-2026-11-10",
+       "label": "Carte de crédit",
+       "date": "2026-11-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-11-26",
+       "label": "Leasing voiture",
+       "date": "2026-11-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-11-27",
+       "label": "Crèche",
+       "date": "2026-11-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-11-28",
+       "label": "Prêt personnel",
+       "date": "2026-11-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-11-30",
+       "label": "Frais bancaires",
+       "date": "2026-11-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "missing_amounts",
+       "ref_id": null,
+       "label": "Récurrences sans montant",
+       "date": null,
+       "amount": null,
+       "currency": null,
+       "amount_base": null
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Combien de temps tiendrais-je sans revenu ?",
+    "answer": "Ton disponible couvre 0.0 mois de charges fixes (6’000.00 CHF par mois). Pour atteindre 3 mois, il manque 18’000.00 CHF, soit 1’500.00 CHF par mois pendant un an.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "L’usage recommande de pouvoir couvrir 3 mois de charges en cas d’imprévu.",
+    "figures": {
+     "months": "0.0",
+     "fixed_monthly": "6000",
+     "target_months": 3,
+     "gap": "18000.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 0,
+     "target": 90,
+     "balance": "-500.00",
+     "caption": "Sans salaire, tu n’as aucun jour d’avance : ton solde est déjà à −500.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "Et si l’un des revenus manquait ?",
+    "answer": "Sans « Salaire Léa », ton point bas passerait de −6’000.00 CHF à −11’300.00 CHF.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Un coussin de sécurité protège contre ce scénario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "low_point_before": "-6000.00",
+     "low_point": {
+      "date": "2026-11-30",
+      "balance": "-11300.00",
+      "days_from_now": 60
+     }
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Combien me coûte un mois ?",
+    "answer": "Tes charges fixes prennent 100 % de tes revenus : il reste environ 0.00 CHF par mois.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Au-delà de 70 %, un imprévu suffit à déséquilibrer le mois.",
+    "figures": {
+     "fixed_monthly": "6000",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "100.0",
+     "structural_margin": "0"
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Qu’est-ce qui tombe à chaque salaire ?",
+    "answer": "Du 25.10 au 24.11, 8’500.00 CHF sortent pour 6’000.00 CHF entrés : ce cycle puise 2’500.00 CHF dans tes réserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "total_out": "8500.00",
+     "total_in": "6000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "6000.00",
+     "out": "8500.00",
+     "gap": "2500.00",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "caption": "Ce cycle laisse un trou de 2’500.00 CHF : 8’500.00 CHF sortent pour 6’000.00 CHF qui entrent."
+    }
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Quelle grosse dépense de l’année arrive bientôt ?",
+    "answer": "À venir : Assurance voiture 1’200.00 CHF le 01.12 (soit 600.00 CHF par mois d’ici là).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Mise de côté chaque mois, une grosse facture annuelle ne crée plus de trou dans le budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-01"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-01",
+     "until": "2026-12-30",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "date": "2026-12-01",
+       "days": 61,
+       "per_month": "600.00"
+      }
+     ],
+     "caption": "Dans 61 jour(s) : Assurance voiture, 1’200.00 CHF. Mettre 600.00 CHF de côté par mois d’ici là suffit."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Est-ce que je paie des frais évitables ?",
+    "answer": "Frais récurrents : 240.00 CHF par an (Frais de tenue de compte, Intérêts de découvert). Une offre sans frais de tenue de compte pourrait les supprimer.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "240.00",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "10.00",
+       "frequency": "monthly"
+      },
+      {
+       "id": "r-od",
+       "label": "Intérêts de découvert",
+       "amount": "10.00",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "240.00",
+     "years": 10,
+     "total": "2400.00",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      },
+      {
+       "label": "Intérêts de découvert"
+      }
+     ],
+     "caption": "Ces frais te coûtent 240.00 CHF par an, soit 2’400.00 CHF en 10 ans."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Ma prime d’assurance maladie augmente-t-elle, et puis-je changer ?",
+    "answer": "Ta prime passe de 900.00 CHF à 975.00 CHF par mois en 2027, soit 900.00 CHF de plus par an. Tu peux changer de caisse jusqu’au 30.11 : compare sur priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La résiliation doit parvenir à la caisse au plus tard le dernier jour ouvrable de novembre : c’est la date de réception qui compte.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "900.00",
+     "monthly_premium": "900.00",
+     "next_year_monthly_premium": "975.00"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 60,
+     "window_days": 71,
+     "current": "900.00",
+     "next": "975.00",
+     "increase_per_year": "900.00",
+     "caption": "Il te reste 60 jour(s) pour changer de caisse ; la hausse te coûte 900.00 CHF par an."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Ai-je mis de côté pour mes impôts ?",
+    "answer": "Ton dernier bordereau : 6’000.00 CHF par an. Aucune provision n’est prévue : mettre 500.00 CHF de côté par mois couvre le prochain.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Le bordereau arrive en une fois : réparti sur l’année, il ne crée plus de trou.",
+    "figures": {
+     "last_annual_bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "16.44",
+     "caption": "Pour le prochain bordereau (6’000.00 CHF), mets 500.00 CHF de côté chaque mois : 16.44 CHF par jour."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Un contrat doit-il être résilié bientôt ?",
+    "answer": "Pour résilier Salle de sport (fin le 31.12), ta lettre doit arriver avant le 31.10 (2 mois de préavis).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Passé ce délai, le contrat se renouvelle en général pour une année.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "notice_months": 2,
+       "cancel_before": "2026-10-31"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-01",
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-10-31",
+       "days_left": 30
+      }
+     ],
+     "caption": "Il te reste 30 jour(s) pour que ta résiliation « Salle de sport » arrive, avant le 31.10 ; sinon le contrat se renouvelle après le 31.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Puis-je encore verser sur mon 3e pilier cette année ?",
+    "answer": "Il te reste 7’258.00 CHF de versements possibles sur le 3e pilier en 2026 (plafond 7’258.00 CHF par personne, affiliée à une caisse de pension), déductibles de ton revenu imposable. Verse avant le 31.12, souvent plus tôt selon l’établissement.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous donne le plafond légal ; il ne recommande aucun placement.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "0",
+     "left": "7258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "0",
+     "left": "7258.00",
+     "deadline": "2026-12-31",
+     "days_left": 91,
+     "caption": "Il te reste 7’258.00 CHF à verser sur ton 3e pilier d’ici le 31.12, dans 91 jour(s)."
+    }
+   }
+  ],
+  "all_clear": [],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [
+    "Électricité"
+   ],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "de": {
+  "as_of": "2026-10-01",
+  "currency": "CHF",
+  "language": "de",
+  "headline": "Heute 16 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "available-now",
+    "question": "Wie viel habe ich jetzt?",
+    "answer": "−500.00 CHF jetzt verfügbar.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "amount": "-500.00",
+     "accounts_without_balance": []
+    }
+   },
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Was muss ich vor dem Lohn bezahlen?",
+    "answer": "3’000.00 CHF vor dem Lohn vom 25.10 zu bezahlen: Es fehlen 3’500.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "3000.00",
+     "available": "-500.00",
+     "gap": "-3500.00",
+     "next_income_date": "2026-10-25"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-10-01",
+     "payday": "2026-10-25",
+     "available": "-500.00",
+     "due": "3000.00",
+     "gap": "-3500.00",
+     "bills": [
+      {
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "date": "2026-10-01"
+      },
+      {
+       "label": "Loyer",
+       "amount": "1800.00",
+       "date": "2026-10-05"
+      },
+      {
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "date": "2026-10-10"
+      }
+     ],
+     "short_days": 24,
+     "caption": "Dir fehlen 3’500.00 CHF während 24 Tag(en), bis zum Lohn vom 25.10."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Wie tief sinkt mein Saldo?",
+    "answer": "Tiefpunkt −6’000.00 CHF am 10.11: Du rutschst unter null, 15 Tag(e) vor dem Einkommen vom 25.11.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-6000.00",
+     "date": "2026-11-10",
+     "days_from_now": 40
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-11-10",
+      "balance": "-6000.00"
+     },
+     "days_below_zero": 59,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "59 Tag(e) unter null in den nächsten 63 Tagen; der Tiefpunkt: −6’000.00 CHF am 10.11."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Was bleibt mir?",
+    "answer": "Am 02.12 fehlen 3’300.00 CHF, nach allen bekannten Zahlungen.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3300.00",
+     "date": "2026-12-02",
+     "rules_without_amount": [
+      "Électricité"
+     ]
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3300.00"
+     },
+     "days_of_fixed_costs": 16,
+     "caption": "Am 02.12 fehlen dir 3’300.00 CHF: so viel wie 16 Tag(e) Fixkosten."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "Und wenn ich eine Zahlung verschiebe?",
+    "answer": "Der beste Schritt: Facture dentiste (2’000.00 CHF) vom 03.11 auf den 25.11, den Zahltag, verschieben. Dein Tiefpunkt steigt von −6’000.00 CHF auf −4’000.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Nach dem Lohn bezahlt, belastet die Rechnung die tiefsten Tage nicht mehr, sofern der Gläubiger den Aufschub akzeptiert.",
+    "figures": {
+     "ref_id": "facture-dentiste-2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "from": "2026-11-03",
+     "target": "2026-11-25",
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "low_after_date": "2026-11-10"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "after": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-1700.00"
+      ],
+      [
+       "2026-11-04",
+       "-1700.00"
+      ],
+      [
+       "2026-11-05",
+       "-3500.00"
+      ],
+      [
+       "2026-11-06",
+       "-3500.00"
+      ],
+      [
+       "2026-11-07",
+       "-3700.00"
+      ],
+      [
+       "2026-11-08",
+       "-3700.00"
+      ],
+      [
+       "2026-11-09",
+       "-3700.00"
+      ],
+      [
+       "2026-11-10",
+       "-4000.00"
+      ],
+      [
+       "2026-11-11",
+       "-4000.00"
+      ],
+      [
+       "2026-11-12",
+       "-4000.00"
+      ],
+      [
+       "2026-11-13",
+       "-4000.00"
+      ],
+      [
+       "2026-11-14",
+       "-4000.00"
+      ],
+      [
+       "2026-11-15",
+       "-4000.00"
+      ],
+      [
+       "2026-11-16",
+       "-4000.00"
+      ],
+      [
+       "2026-11-17",
+       "-4000.00"
+      ],
+      [
+       "2026-11-18",
+       "-4000.00"
+      ],
+      [
+       "2026-11-19",
+       "-4000.00"
+      ],
+      [
+       "2026-11-20",
+       "-4000.00"
+      ],
+      [
+       "2026-11-21",
+       "-4000.00"
+      ],
+      [
+       "2026-11-22",
+       "-4000.00"
+      ],
+      [
+       "2026-11-23",
+       "-4000.00"
+      ],
+      [
+       "2026-11-24",
+       "-4000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "move": {
+      "label": "Facture dentiste",
+      "amount": "2000.00",
+      "from": "2026-11-03",
+      "to": "2026-11-25"
+     },
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "caption": "Verschieb Facture dentiste auf den 25.11: Dein Tiefpunkt steigt um 2’000.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Was kommt als Nächstes?",
+    "answer": "18 Entscheidung(en): Assurance maladie (900.00 CHF) heute fällig; Loyer (1’800.00 CHF) bis 05.10 zu bezahlen; Carte de crédit (300.00 CHF) bis 10.10 zu bezahlen; und 15 weitere.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "count": 18,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "due_today",
+       "ref_id": "assurance-maladie-2026-10-01",
+       "label": "Assurance maladie",
+       "date": "2026-10-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2026-10-05",
+       "label": "Loyer",
+       "date": "2026-10-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "carte-de-crédit-2026-10-10",
+       "label": "Carte de crédit",
+       "date": "2026-10-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "needs_review",
+       "ref_id": "tx-1",
+       "label": "Virement Sam → Léa",
+       "date": "2026-09-28",
+       "amount": "500.00",
+       "currency": "CHF",
+       "amount_base": null
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-10-26",
+       "label": "Leasing voiture",
+       "date": "2026-10-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-10-27",
+       "label": "Crèche",
+       "date": "2026-10-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-10-28",
+       "label": "Prêt personnel",
+       "date": "2026-10-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-10-30",
+       "label": "Frais bancaires",
+       "date": "2026-10-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2026-11-01",
+       "label": "Assurance maladie",
+       "date": "2026-11-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "plan",
+       "ref_id": "facture-dentiste-2026-11-03",
+       "label": "Facture dentiste",
+       "date": "2026-11-03",
+       "amount": "2000",
+       "currency": "CHF",
+       "amount_base": "2000"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2026-11-05",
+       "label": "Loyer",
+       "date": "2026-11-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "cadeau-d’anniversaire-2026-11-07",
+       "label": "Cadeau d’anniversaire",
+       "date": "2026-11-07",
+       "amount": "200",
+       "currency": "CHF",
+       "amount_base": "200"
+      },
+      {
+       "type": "plan",
+       "ref_id": "carte-de-crédit-2026-11-10",
+       "label": "Carte de crédit",
+       "date": "2026-11-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-11-26",
+       "label": "Leasing voiture",
+       "date": "2026-11-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-11-27",
+       "label": "Crèche",
+       "date": "2026-11-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-11-28",
+       "label": "Prêt personnel",
+       "date": "2026-11-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-11-30",
+       "label": "Frais bancaires",
+       "date": "2026-11-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "missing_amounts",
+       "ref_id": null,
+       "label": "Récurrences sans montant",
+       "date": null,
+       "amount": null,
+       "currency": null,
+       "amount_base": null
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Wie lange käme ich ohne Einkommen aus?",
+    "answer": "Dein verfügbares Geld deckt 0.0 Monate Fixkosten (6’000.00 CHF pro Monat). Für 3 Monate fehlen 18’000.00 CHF, also 1’500.00 CHF pro Monat während eines Jahres.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Üblich ist eine Reserve für 3 Monate Fixkosten für Unvorhergesehenes.",
+    "figures": {
+     "months": "0.0",
+     "fixed_monthly": "6000",
+     "target_months": 3,
+     "gap": "18000.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 0,
+     "target": 90,
+     "balance": "-500.00",
+     "caption": "Ohne Lohn hast du keinen einzigen Tag Reserve: Dein Saldo steht schon bei −500.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "Und wenn eines der Einkommen ausfiele?",
+    "answer": "Ohne «Salaire Léa» sänke dein Tiefpunkt von −6’000.00 CHF auf −11’300.00 CHF.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Eine Sicherheitsreserve schützt vor diesem Szenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "low_point_before": "-6000.00",
+     "low_point": {
+      "date": "2026-11-30",
+      "balance": "-11300.00",
+      "days_from_now": 60
+     }
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Was kostet mich ein Monat?",
+    "answer": "Deine Fixkosten beanspruchen 100 % deines Einkommens: Es bleiben etwa 0.00 CHF pro Monat.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Über 70 % bringt eine einzige unerwartete Ausgabe den Monat aus dem Gleichgewicht.",
+    "figures": {
+     "fixed_monthly": "6000",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "100.0",
+     "structural_margin": "0"
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Was fällt in jeder Lohnperiode an?",
+    "answer": "Vom 25.10 bis 24.11 gehen 8’500.00 CHF hinaus, 6’000.00 CHF kommen herein: Diese Periode zehrt 2’500.00 CHF von deinen Reserven.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "total_out": "8500.00",
+     "total_in": "6000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "6000.00",
+     "out": "8500.00",
+     "gap": "2500.00",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "caption": "Dieser Zyklus hinterlässt ein Loch von 2’500.00 CHF: 8’500.00 CHF gehen raus, 6’000.00 CHF kommen rein."
+    }
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Welche grosse Jahresausgabe steht bald an?",
+    "answer": "Demnächst: Assurance voiture 1’200.00 CHF am 01.12 (also 600.00 CHF pro Monat bis dahin).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Monatlich zurückgelegt, reisst eine grosse Jahresrechnung kein Loch ins Budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-01"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-01",
+     "until": "2026-12-30",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "date": "2026-12-01",
+       "days": 61,
+       "per_month": "600.00"
+      }
+     ],
+     "caption": "In 61 Tag(en): Assurance voiture, 1’200.00 CHF. Wenn du bis dahin 600.00 CHF pro Monat zurücklegst, reicht es."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Zahle ich vermeidbare Gebühren?",
+    "answer": "Wiederkehrende Gebühren: 240.00 CHF pro Jahr (Frais de tenue de compte, Intérêts de découvert). Ein Angebot ohne Kontoführungsgebühren könnte sie vermeiden.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "240.00",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "10.00",
+       "frequency": "monthly"
+      },
+      {
+       "id": "r-od",
+       "label": "Intérêts de découvert",
+       "amount": "10.00",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "240.00",
+     "years": 10,
+     "total": "2400.00",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      },
+      {
+       "label": "Intérêts de découvert"
+      }
+     ],
+     "caption": "Diese Gebühren kosten dich 240.00 CHF pro Jahr, also 2’400.00 CHF in 10 Jahren."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Steigt meine Krankenkassenprämie, und kann ich wechseln?",
+    "answer": "Deine Prämie steigt 2027 von 900.00 CHF auf 975.00 CHF pro Monat, also 900.00 CHF mehr pro Jahr. Du kannst die Kasse bis 30.11 wechseln: vergleiche auf priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Die Kündigung muss spätestens am letzten Arbeitstag im November bei der Kasse eintreffen: Es zählt das Empfangsdatum.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "900.00",
+     "monthly_premium": "900.00",
+     "next_year_monthly_premium": "975.00"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 60,
+     "window_days": 71,
+     "current": "900.00",
+     "next": "975.00",
+     "increase_per_year": "900.00",
+     "caption": "Dir bleiben 60 Tag(e), um die Kasse zu wechseln; der Aufschlag kostet dich 900.00 CHF pro Jahr."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Habe ich für meine Steuern vorgesorgt?",
+    "answer": "Deine letzte Steuerrechnung: 6’000.00 CHF pro Jahr. Es ist keine Rückstellung vorgesehen: 500.00 CHF pro Monat decken die nächste.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Die Steuerrechnung kommt auf einmal: übers Jahr verteilt, reisst sie kein Loch.",
+    "figures": {
+     "last_annual_bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "16.44",
+     "caption": "Für die nächste Steuerrechnung (6’000.00 CHF) leg jeden Monat 500.00 CHF zurück: 16.44 CHF pro Tag."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Muss bald ein Vertrag gekündigt werden?",
+    "answer": "Um Salle de sport (Ende 31.12) zu kündigen, muss dein Brief vor dem 31.10 eintreffen (2 Monate Kündigungsfrist).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Nach dieser Frist verlängert sich der Vertrag meist um ein Jahr.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "notice_months": 2,
+       "cancel_before": "2026-10-31"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-01",
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-10-31",
+       "days_left": 30
+      }
+     ],
+     "caption": "Dir bleiben 30 Tag(e), damit deine Kündigung «Salle de sport» vor dem 31.10 ankommt; sonst verlängert sich der Vertrag nach dem 31.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Kann ich dieses Jahr noch in die Säule 3a einzahlen?",
+    "answer": "Du kannst 2026 noch 7’258.00 CHF in die Säule 3a einzahlen (Höchstbetrag 7’258.00 CHF pro Person mit Pensionskasse), abzugsfähig vom steuerbaren Einkommen. Zahl vor dem 31.12. ein, je nach Anbieter früher.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous nennt den gesetzlichen Höchstbetrag; es empfiehlt keine Anlage.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "0",
+     "left": "7258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "0",
+     "left": "7258.00",
+     "deadline": "2026-12-31",
+     "days_left": 91,
+     "caption": "Du kannst bis zum 31.12 noch 7’258.00 CHF in deine Säule 3a einzahlen, in 91 Tag(en)."
+    }
+   }
+  ],
+  "all_clear": [],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [
+    "Électricité"
+   ],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "it": {
+  "as_of": "2026-10-01",
+  "currency": "CHF",
+  "language": "it",
+  "headline": "Oggi 16 punto/i da guardare; il resto è in ordine.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "available-now",
+    "question": "Quanto ho adesso?",
+    "answer": "−500.00 CHF disponibili ora.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "amount": "-500.00",
+     "accounts_without_balance": []
+    }
+   },
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Cosa devo pagare prima dello stipendio?",
+    "answer": "3’000.00 CHF da pagare prima dello stipendio del 25.10: mancano 3’500.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "3000.00",
+     "available": "-500.00",
+     "gap": "-3500.00",
+     "next_income_date": "2026-10-25"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-10-01",
+     "payday": "2026-10-25",
+     "available": "-500.00",
+     "due": "3000.00",
+     "gap": "-3500.00",
+     "bills": [
+      {
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "date": "2026-10-01"
+      },
+      {
+       "label": "Loyer",
+       "amount": "1800.00",
+       "date": "2026-10-05"
+      },
+      {
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "date": "2026-10-10"
+      }
+     ],
+     "short_days": 24,
+     "caption": "Ti mancano 3’500.00 CHF per 24 giorno/i, fino allo stipendio del 25.10."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quanto scenderà il saldo?",
+    "answer": "Minimo −6’000.00 CHF il 10.11: scendi sotto zero, 15 giorno/i prima del reddito del 25.11.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-6000.00",
+     "date": "2026-11-10",
+     "days_from_now": 40
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-11-10",
+      "balance": "-6000.00"
+     },
+     "days_below_zero": 59,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "59 giorno/i sotto zero nei prossimi 63 giorni; il fondo: −6’000.00 CHF il 10.11."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Cosa mi resterà?",
+    "answer": "Il 02.12 mancheranno 3’300.00 CHF, dopo tutte le scadenze note.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3300.00",
+     "date": "2026-12-02",
+     "rules_without_amount": [
+      "Électricité"
+     ]
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3300.00"
+     },
+     "days_of_fixed_costs": 16,
+     "caption": "Al 02.12 ti mancheranno 3’300.00 CHF: l’equivalente di 16 giorno/i di spese fisse."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E se sposto un pagamento?",
+    "answer": "Il gesto migliore: rinviare Facture dentiste (2’000.00 CHF) dal 03.11 al 25.11, giorno di paga. Il minimo passa da −6’000.00 CHF a −4’000.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Pagata dopo lo stipendio, la fattura non pesa più sui giorni più bassi, se il creditore accetta il rinvio.",
+    "figures": {
+     "ref_id": "facture-dentiste-2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "from": "2026-11-03",
+     "target": "2026-11-25",
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "low_after_date": "2026-11-10"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "after": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-1700.00"
+      ],
+      [
+       "2026-11-04",
+       "-1700.00"
+      ],
+      [
+       "2026-11-05",
+       "-3500.00"
+      ],
+      [
+       "2026-11-06",
+       "-3500.00"
+      ],
+      [
+       "2026-11-07",
+       "-3700.00"
+      ],
+      [
+       "2026-11-08",
+       "-3700.00"
+      ],
+      [
+       "2026-11-09",
+       "-3700.00"
+      ],
+      [
+       "2026-11-10",
+       "-4000.00"
+      ],
+      [
+       "2026-11-11",
+       "-4000.00"
+      ],
+      [
+       "2026-11-12",
+       "-4000.00"
+      ],
+      [
+       "2026-11-13",
+       "-4000.00"
+      ],
+      [
+       "2026-11-14",
+       "-4000.00"
+      ],
+      [
+       "2026-11-15",
+       "-4000.00"
+      ],
+      [
+       "2026-11-16",
+       "-4000.00"
+      ],
+      [
+       "2026-11-17",
+       "-4000.00"
+      ],
+      [
+       "2026-11-18",
+       "-4000.00"
+      ],
+      [
+       "2026-11-19",
+       "-4000.00"
+      ],
+      [
+       "2026-11-20",
+       "-4000.00"
+      ],
+      [
+       "2026-11-21",
+       "-4000.00"
+      ],
+      [
+       "2026-11-22",
+       "-4000.00"
+      ],
+      [
+       "2026-11-23",
+       "-4000.00"
+      ],
+      [
+       "2026-11-24",
+       "-4000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "move": {
+      "label": "Facture dentiste",
+      "amount": "2000.00",
+      "from": "2026-11-03",
+      "to": "2026-11-25"
+     },
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "caption": "Sposta Facture dentiste al 25.11: il tuo punto più basso risale di 2’000.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Cosa faccio dopo?",
+    "answer": "18 decisione/i: Assurance maladie (900.00 CHF) in scadenza oggi; Loyer (1’800.00 CHF) da pagare entro il 05.10; Carte de crédit (300.00 CHF) da pagare entro il 10.10; e 15 altra/e.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "count": 18,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "due_today",
+       "ref_id": "assurance-maladie-2026-10-01",
+       "label": "Assurance maladie",
+       "date": "2026-10-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2026-10-05",
+       "label": "Loyer",
+       "date": "2026-10-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "carte-de-crédit-2026-10-10",
+       "label": "Carte de crédit",
+       "date": "2026-10-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "needs_review",
+       "ref_id": "tx-1",
+       "label": "Virement Sam → Léa",
+       "date": "2026-09-28",
+       "amount": "500.00",
+       "currency": "CHF",
+       "amount_base": null
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-10-26",
+       "label": "Leasing voiture",
+       "date": "2026-10-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-10-27",
+       "label": "Crèche",
+       "date": "2026-10-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-10-28",
+       "label": "Prêt personnel",
+       "date": "2026-10-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-10-30",
+       "label": "Frais bancaires",
+       "date": "2026-10-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2026-11-01",
+       "label": "Assurance maladie",
+       "date": "2026-11-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "plan",
+       "ref_id": "facture-dentiste-2026-11-03",
+       "label": "Facture dentiste",
+       "date": "2026-11-03",
+       "amount": "2000",
+       "currency": "CHF",
+       "amount_base": "2000"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2026-11-05",
+       "label": "Loyer",
+       "date": "2026-11-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "cadeau-d’anniversaire-2026-11-07",
+       "label": "Cadeau d’anniversaire",
+       "date": "2026-11-07",
+       "amount": "200",
+       "currency": "CHF",
+       "amount_base": "200"
+      },
+      {
+       "type": "plan",
+       "ref_id": "carte-de-crédit-2026-11-10",
+       "label": "Carte de crédit",
+       "date": "2026-11-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-11-26",
+       "label": "Leasing voiture",
+       "date": "2026-11-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-11-27",
+       "label": "Crèche",
+       "date": "2026-11-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-11-28",
+       "label": "Prêt personnel",
+       "date": "2026-11-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-11-30",
+       "label": "Frais bancaires",
+       "date": "2026-11-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "missing_amounts",
+       "ref_id": null,
+       "label": "Récurrences sans montant",
+       "date": null,
+       "amount": null,
+       "currency": null,
+       "amount_base": null
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quanto resisterei senza reddito?",
+    "answer": "La tua disponibilità copre 0.0 mesi di spese fisse (6’000.00 CHF al mese). Per arrivare a 3 mesi mancano 18’000.00 CHF, cioè 1’500.00 CHF al mese per un anno.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "È consigliato poter coprire 3 mesi di spese in caso di imprevisti.",
+    "figures": {
+     "months": "0.0",
+     "fixed_monthly": "6000",
+     "target_months": 3,
+     "gap": "18000.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 0,
+     "target": 90,
+     "balance": "-500.00",
+     "caption": "Senza stipendio non hai nemmeno un giorno di margine: il tuo saldo è già a −500.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "E se venisse a mancare uno dei redditi?",
+    "answer": "Senza «Salaire Léa», il minimo passerebbe da −6’000.00 CHF a −11’300.00 CHF.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Una riserva di sicurezza protegge da questo scenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "low_point_before": "-6000.00",
+     "low_point": {
+      "date": "2026-11-30",
+      "balance": "-11300.00",
+      "days_from_now": 60
+     }
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Quanto mi costa un mese?",
+    "answer": "Le spese fisse assorbono il 100 % del reddito: restano circa 0.00 CHF al mese.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Oltre il 70 %, basta un imprevisto per squilibrare il mese.",
+    "figures": {
+     "fixed_monthly": "6000",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "100.0",
+     "structural_margin": "0"
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Cosa scade in ogni periodo di paga?",
+    "answer": "Dal 25.10 al 24.11 escono 8’500.00 CHF per 6’000.00 CHF in entrata: questo periodo attinge 2’500.00 CHF dalle tue riserve.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "total_out": "8500.00",
+     "total_in": "6000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "6000.00",
+     "out": "8500.00",
+     "gap": "2500.00",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "caption": "Questo ciclo lascia un buco di 2’500.00 CHF: escono 8’500.00 CHF per 6’000.00 CHF che entrano."
+    }
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Quale grande spesa annuale arriva presto?",
+    "answer": "In arrivo: Assurance voiture 1’200.00 CHF il 01.12 (cioè 600.00 CHF al mese fino ad allora).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Messa da parte ogni mese, una grande fattura annuale non crea più un buco nel budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-01"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-01",
+     "until": "2026-12-30",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "date": "2026-12-01",
+       "days": 61,
+       "per_month": "600.00"
+      }
+     ],
+     "caption": "Tra 61 giorno/i: Assurance voiture, 1’200.00 CHF. Mettere da parte 600.00 CHF al mese fino ad allora basta."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Pago commissioni evitabili?",
+    "answer": "Commissioni ricorrenti: 240.00 CHF all’anno (Frais de tenue de compte, Intérêts de découvert). Un’offerta senza spese di tenuta conto potrebbe eliminarle.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "240.00",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "10.00",
+       "frequency": "monthly"
+      },
+      {
+       "id": "r-od",
+       "label": "Intérêts de découvert",
+       "amount": "10.00",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "240.00",
+     "years": 10,
+     "total": "2400.00",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      },
+      {
+       "label": "Intérêts de découvert"
+      }
+     ],
+     "caption": "Queste spese ti costano 240.00 CHF all’anno, cioè 2’400.00 CHF in 10 anni."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Il mio premio della cassa malati aumenta, e posso cambiare?",
+    "answer": "Il premio passa da 900.00 CHF a 975.00 CHF al mese nel 2027, cioè 900.00 CHF in più all’anno. Puoi cambiare cassa fino al 30.11: confronta su priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La disdetta deve arrivare alla cassa entro l’ultimo giorno lavorativo di novembre: conta la data di ricezione.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "900.00",
+     "monthly_premium": "900.00",
+     "next_year_monthly_premium": "975.00"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 60,
+     "window_days": 71,
+     "current": "900.00",
+     "next": "975.00",
+     "increase_per_year": "900.00",
+     "caption": "Ti restano 60 giorno/i per cambiare cassa; l’aumento ti costa 900.00 CHF all’anno."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Ho messo da parte per le imposte?",
+    "answer": "Ultima notifica: 6’000.00 CHF all’anno. Nessun accantonamento previsto: mettere da parte 500.00 CHF al mese copre la prossima.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La notifica arriva in una volta: ripartita sull’anno, non crea più buchi.",
+    "figures": {
+     "last_annual_bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "16.44",
+     "caption": "Per la prossima notifica (6’000.00 CHF), metti da parte 500.00 CHF ogni mese: 16.44 CHF al giorno."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Devo disdire presto un contratto?",
+    "answer": "Per disdire Salle de sport (scadenza 31.12), la lettera deve arrivare prima del 31.10 (2 mesi di preavviso).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Dopo questo termine, il contratto di solito si rinnova per un anno.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "notice_months": 2,
+       "cancel_before": "2026-10-31"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-01",
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-10-31",
+       "days_left": 30
+      }
+     ],
+     "caption": "Ti restano 30 giorno/i perché la disdetta «Salle de sport» arrivi prima del 31.10; altrimenti il contratto si rinnova dopo il 31.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Posso ancora versare nel pilastro 3a quest’anno?",
+    "answer": "Puoi ancora versare 7’258.00 CHF nel pilastro 3a nel 2026 (massimo 7’258.00 CHF per persona affiliata a una cassa pensione), deducibili dal reddito imponibile. Versa prima del 31.12, spesso prima secondo l’istituto.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous indica il massimo legale; non raccomanda alcun investimento.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "0",
+     "left": "7258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "0",
+     "left": "7258.00",
+     "deadline": "2026-12-31",
+     "days_left": 91,
+     "caption": "Puoi ancora versare 7’258.00 CHF nel tuo pilastro 3a entro il 31.12, tra 91 giorno/i."
+    }
+   }
+  ],
+  "all_clear": [],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [
+    "Électricité"
+   ],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "rm": {
+  "as_of": "2026-10-01",
+  "currency": "CHF",
+  "language": "rm",
+  "headline": "Oz 16 punct(s) da guardar; il rest è en urden.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "available-now",
+    "question": "Quant hai jau ussa?",
+    "answer": "−500.00 CHF disponibel ussa.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "amount": "-500.00",
+     "accounts_without_balance": []
+    }
+   },
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "Tge stoss jau pajar avant il salari?",
+    "answer": "3’000.00 CHF da pajar avant il salari dals 25.10: i mancan 3’500.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "3000.00",
+     "available": "-500.00",
+     "gap": "-3500.00",
+     "next_income_date": "2026-10-25"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-10-01",
+     "payday": "2026-10-25",
+     "available": "-500.00",
+     "due": "3000.00",
+     "gap": "-3500.00",
+     "bills": [
+      {
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "date": "2026-10-01"
+      },
+      {
+       "label": "Loyer",
+       "amount": "1800.00",
+       "date": "2026-10-05"
+      },
+      {
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "date": "2026-10-10"
+      }
+     ],
+     "short_days": 24,
+     "caption": "Ta mancan 3’500.00 CHF durant 24 di(s), fin a la paja dals 25.10."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "Quant bass vegn il saldo?",
+    "answer": "Punct bass −6’000.00 CHF ils 10.11: ti crodas sut nulla, 15 di(s) avant l’entrada dals 25.11.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-6000.00",
+     "date": "2026-11-10",
+     "days_from_now": 40
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-11-10",
+      "balance": "-6000.00"
+     },
+     "days_below_zero": 59,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "59 di(s) sut nulla ils proxims 63 dis; il fund: −6’000.00 CHF ils 10.11."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "Tge ma resta?",
+    "answer": "Ils 02.12 mancan 3’300.00 CHF, suenter tut ils pajaments enconuschents.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3300.00",
+     "date": "2026-12-02",
+     "rules_without_amount": [
+      "Électricité"
+     ]
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3300.00"
+     },
+     "days_of_fixed_costs": 16,
+     "caption": "Ils 02.12 ta mancan 3’300.00 CHF: tant sco 16 di(s) custs fixs."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "E sche jau spustel in pajament?",
+    "answer": "Il meglier pass: spustar Facture dentiste (2’000.00 CHF) dals 03.11 sin ils 25.11, di da paja. Tes punct bass va da −6’000.00 CHF a −4’000.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Pajà suenter il salari, na charg’il quint betg pli ils dis ils pli bass, sch’il creditur accepta il termin.",
+    "figures": {
+     "ref_id": "facture-dentiste-2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "from": "2026-11-03",
+     "target": "2026-11-25",
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "low_after_date": "2026-11-10"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "after": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-1700.00"
+      ],
+      [
+       "2026-11-04",
+       "-1700.00"
+      ],
+      [
+       "2026-11-05",
+       "-3500.00"
+      ],
+      [
+       "2026-11-06",
+       "-3500.00"
+      ],
+      [
+       "2026-11-07",
+       "-3700.00"
+      ],
+      [
+       "2026-11-08",
+       "-3700.00"
+      ],
+      [
+       "2026-11-09",
+       "-3700.00"
+      ],
+      [
+       "2026-11-10",
+       "-4000.00"
+      ],
+      [
+       "2026-11-11",
+       "-4000.00"
+      ],
+      [
+       "2026-11-12",
+       "-4000.00"
+      ],
+      [
+       "2026-11-13",
+       "-4000.00"
+      ],
+      [
+       "2026-11-14",
+       "-4000.00"
+      ],
+      [
+       "2026-11-15",
+       "-4000.00"
+      ],
+      [
+       "2026-11-16",
+       "-4000.00"
+      ],
+      [
+       "2026-11-17",
+       "-4000.00"
+      ],
+      [
+       "2026-11-18",
+       "-4000.00"
+      ],
+      [
+       "2026-11-19",
+       "-4000.00"
+      ],
+      [
+       "2026-11-20",
+       "-4000.00"
+      ],
+      [
+       "2026-11-21",
+       "-4000.00"
+      ],
+      [
+       "2026-11-22",
+       "-4000.00"
+      ],
+      [
+       "2026-11-23",
+       "-4000.00"
+      ],
+      [
+       "2026-11-24",
+       "-4000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "move": {
+      "label": "Facture dentiste",
+      "amount": "2000.00",
+      "from": "2026-11-03",
+      "to": "2026-11-25"
+     },
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "caption": "Spustescha Facture dentiste sin ils 25.11: tes punct il pli bass s’auza per 2’000.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "Tge vegn suenter?",
+    "answer": "18 decisiun(s): Assurance maladie (900.00 CHF) da pajar oz; Loyer (1’800.00 CHF) da pajar fin ils 05.10; Carte de crédit (300.00 CHF) da pajar fin ils 10.10; ed 15 autra(s).",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "count": 18,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "due_today",
+       "ref_id": "assurance-maladie-2026-10-01",
+       "label": "Assurance maladie",
+       "date": "2026-10-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2026-10-05",
+       "label": "Loyer",
+       "date": "2026-10-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "carte-de-crédit-2026-10-10",
+       "label": "Carte de crédit",
+       "date": "2026-10-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "needs_review",
+       "ref_id": "tx-1",
+       "label": "Virement Sam → Léa",
+       "date": "2026-09-28",
+       "amount": "500.00",
+       "currency": "CHF",
+       "amount_base": null
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-10-26",
+       "label": "Leasing voiture",
+       "date": "2026-10-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-10-27",
+       "label": "Crèche",
+       "date": "2026-10-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-10-28",
+       "label": "Prêt personnel",
+       "date": "2026-10-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-10-30",
+       "label": "Frais bancaires",
+       "date": "2026-10-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2026-11-01",
+       "label": "Assurance maladie",
+       "date": "2026-11-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "plan",
+       "ref_id": "facture-dentiste-2026-11-03",
+       "label": "Facture dentiste",
+       "date": "2026-11-03",
+       "amount": "2000",
+       "currency": "CHF",
+       "amount_base": "2000"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2026-11-05",
+       "label": "Loyer",
+       "date": "2026-11-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "cadeau-d’anniversaire-2026-11-07",
+       "label": "Cadeau d’anniversaire",
+       "date": "2026-11-07",
+       "amount": "200",
+       "currency": "CHF",
+       "amount_base": "200"
+      },
+      {
+       "type": "plan",
+       "ref_id": "carte-de-crédit-2026-11-10",
+       "label": "Carte de crédit",
+       "date": "2026-11-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-11-26",
+       "label": "Leasing voiture",
+       "date": "2026-11-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-11-27",
+       "label": "Crèche",
+       "date": "2026-11-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-11-28",
+       "label": "Prêt personnel",
+       "date": "2026-11-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-11-30",
+       "label": "Frais bancaires",
+       "date": "2026-11-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "missing_amounts",
+       "ref_id": null,
+       "label": "Récurrences sans montant",
+       "date": null,
+       "amount": null,
+       "currency": null,
+       "amount_base": null
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "Quant ditg tegniss jau senza entrada?",
+    "answer": "Tes disponibel cuvra 0.0 mais custs fixs (6’000.00 CHF per mais). Per cuntanscher 3 mais mancan 18’000.00 CHF, quai èn 1’500.00 CHF per mais durant in onn.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "I vegn recumandà da pudair cuvrir 3 mais custs en cas nunspetgà.",
+    "figures": {
+     "months": "0.0",
+     "fixed_monthly": "6000",
+     "target_months": 3,
+     "gap": "18000.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 0,
+     "target": 90,
+     "balance": "-500.00",
+     "caption": "Senza paja n’has ti nagin di reserva: tes saldo è gia −500.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "E sch’ina da las entradas mancass?",
+    "answer": "Senza «Salaire Léa» sbassass tes punct bass da −6’000.00 CHF a −11’300.00 CHF.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "Ina reserva da segirezza protegia cunter quest scenari.",
+    "figures": {
+     "income": "Salaire Léa",
+     "low_point_before": "-6000.00",
+     "low_point": {
+      "date": "2026-11-30",
+      "balance": "-11300.00",
+      "days_from_now": 60
+     }
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "Quant ma custa in mais?",
+    "answer": "Tes custs fixs prendan 100 % da tias entradas: i restan var 0.00 CHF per mais.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Sur 70 % basta ina expensa nunspetgada per metter il mais or d’equiliber.",
+    "figures": {
+     "fixed_monthly": "6000",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "100.0",
+     "structural_margin": "0"
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "Tge croda en mintga perioda da salari?",
+    "answer": "Dals 25.10 fin ils 24.11 van 8’500.00 CHF ora e vegnan 6’000.00 CHF en: questa perioda prenda 2’500.00 CHF da tias reservas.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "total_out": "8500.00",
+     "total_in": "6000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "6000.00",
+     "out": "8500.00",
+     "gap": "2500.00",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "caption": "Quest ciclus lascha ina foppa da 2’500.00 CHF: 8’500.00 CHF van ora, 6’000.00 CHF vegnan en."
+    }
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Tge gronda expensa annuala vegn prest?",
+    "answer": "Prest: Assurance voiture 1’200.00 CHF ils 01.12 (quai èn 600.00 CHF per mais fin lura).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Mess da la vart mintga mais, na fa in grond quint annual nagin fora en il budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-01"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-01",
+     "until": "2026-12-30",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "date": "2026-12-01",
+       "days": 61,
+       "per_month": "600.00"
+      }
+     ],
+     "caption": "En 61 di(s): Assurance voiture, 1’200.00 CHF. Metter da la vart 600.00 CHF per mais fin lura tanscha."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Pai jau taxas evitablas?",
+    "answer": "Taxas regularas: 240.00 CHF per onn (Frais de tenue de compte, Intérêts de découvert). Ina offerta senza taxas da conto las pudess evitar.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "240.00",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "10.00",
+       "frequency": "monthly"
+      },
+      {
+       "id": "r-od",
+       "label": "Intérêts de découvert",
+       "amount": "10.00",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "240.00",
+     "years": 10,
+     "total": "2400.00",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      },
+      {
+       "label": "Intérêts de découvert"
+      }
+     ],
+     "caption": "Questas taxas ta custan 240.00 CHF per onn, quai èn 2’400.00 CHF en 10 onns."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Crescha mia premia da la cassa da malsauns, e poss jau midar?",
+    "answer": "Tia premia crescha dal 2027 da 900.00 CHF sin 975.00 CHF per mais, quai èn 900.00 CHF dapli per onn. Ti pos midar la cassa fin ils 30.11: cumpareglia sin priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "La disdetga sto arrivar tar la cassa il pli tard l’ultim di da lavur da november: la data da retschavida decida.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "900.00",
+     "monthly_premium": "900.00",
+     "next_year_monthly_premium": "975.00"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 60,
+     "window_days": 71,
+     "current": "900.00",
+     "next": "975.00",
+     "increase_per_year": "900.00",
+     "caption": "Ta restan 60 di(s) per midar la cassa; l’augment ta custa 900.00 CHF per onn."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Hai jau mess da la vart per las taglias?",
+    "answer": "Tes ultim quint da taglia: 6’000.00 CHF per onn. I n’è previs nagin daners da la vart: 500.00 CHF per mais cuvran il proxim.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Il quint da taglia vegn en ina giada: repartì sin l’onn na fa el nagina fora.",
+    "figures": {
+     "last_annual_bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "16.44",
+     "caption": "Per il proxim quint da taglia (6’000.00 CHF), metta da la vart 500.00 CHF mintga mais: 16.44 CHF per di."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Sto in contract vegnir disditg prest?",
+    "answer": "Per disdir Salle de sport (fin ils 31.12), sto tia brev arrivar avant ils 31.10 (2 mais termin da disdetga).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Suenter quest termin sa renovescha il contract per ordinari per in onn.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "notice_months": 2,
+       "cancel_before": "2026-10-31"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-01",
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-10-31",
+       "days_left": 30
+      }
+     ],
+     "caption": "Ta restan 30 di(s) per che tia disdetga «Salle de sport» arrivia avant ils 31.10; uschiglio sa renovescha il contract suenter ils 31.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Poss jau anc pajar en mia 3. pitga quest onn?",
+    "answer": "Ti pos anc pajar 7’258.00 CHF en la 3. pitga dal 2026 (maximum 7’258.00 CHF per persuna cun cassa da pensiun), deducibel da l’entrada taxabla. Paja avant ils 31.12, savens pli baud tenor l’institut.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous inditgescha il maximum legal; el na recumonda nagina investiziun.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "0",
+     "left": "7258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "0",
+     "left": "7258.00",
+     "deadline": "2026-12-31",
+     "days_left": 91,
+     "caption": "Ti pos anc pajar 7’258.00 CHF en tia 3. pitga fin ils 31.12, en 91 di(s)."
+    }
+   }
+  ],
+  "all_clear": [],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [
+    "Électricité"
+   ],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ },
+ "en": {
+  "as_of": "2026-10-01",
+  "currency": "CHF",
+  "language": "en",
+  "headline": "16 point(s) to look at today; the rest is in order.",
+  "answers": [
+   {
+    "needs": [],
+    "id": "available-now",
+    "question": "How much do I have now?",
+    "answer": "−500.00 CHF available now.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "amount": "-500.00",
+     "accounts_without_balance": []
+    }
+   },
+   {
+    "needs": [],
+    "id": "due-before-payday",
+    "question": "What do I owe before payday?",
+    "answer": "3’000.00 CHF to pay before the 25.10 payday: 3’500.00 CHF is missing.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "due": "3000.00",
+     "available": "-500.00",
+     "gap": "-3500.00",
+     "next_income_date": "2026-10-25"
+    },
+    "visual": {
+     "kind": "runway",
+     "today": "2026-10-01",
+     "payday": "2026-10-25",
+     "available": "-500.00",
+     "due": "3000.00",
+     "gap": "-3500.00",
+     "bills": [
+      {
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "date": "2026-10-01"
+      },
+      {
+       "label": "Loyer",
+       "amount": "1800.00",
+       "date": "2026-10-05"
+      },
+      {
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "date": "2026-10-10"
+      }
+     ],
+     "short_days": 24,
+     "caption": "You are 3’500.00 CHF short for 24 day(s), until payday on 25.10."
+    }
+   },
+   {
+    "needs": [],
+    "id": "low-point",
+    "question": "How low might I go?",
+    "answer": "Low point −6’000.00 CHF on 10.11: you go below zero, 15 day(s) before the 25.11 income.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-6000.00",
+     "date": "2026-11-10",
+     "days_from_now": 40
+    },
+    "visual": {
+     "kind": "valley",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "low": {
+      "date": "2026-11-10",
+      "balance": "-6000.00"
+     },
+     "days_below_zero": 59,
+     "incomes": [
+      "2026-10-25",
+      "2026-11-25"
+     ],
+     "caption": "59 day(s) below zero in the next 63 days; the bottom: −6’000.00 CHF on 10.11."
+    }
+   },
+   {
+    "needs": [],
+    "id": "margin-after-payday",
+    "question": "What will be left?",
+    "answer": "3’300.00 CHF will be missing on 02.12, after every known payment.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "balance": "-3300.00",
+     "date": "2026-12-02",
+     "rules_without_amount": [
+      "Électricité"
+     ]
+    },
+    "visual": {
+     "kind": "horizon",
+     "series": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "end": {
+      "date": "2026-12-02",
+      "balance": "-3300.00"
+     },
+     "days_of_fixed_costs": 16,
+     "caption": "On 02.12 you will be 3’300.00 CHF short: as much as 16 day(s) of fixed costs."
+    }
+   },
+   {
+    "needs": [],
+    "id": "what-if",
+    "question": "What if I move a payment?",
+    "answer": "The best move: postpone Facture dentiste (2’000.00 CHF) from 03.11 to 25.11, payday. Your low point goes from −6’000.00 CHF to −4’000.00 CHF.",
+    "source": "kit",
+    "tone": "risk",
+    "because": "Paid after payday, the bill no longer weighs on the lowest days, if the creditor accepts the delay.",
+    "figures": {
+     "ref_id": "facture-dentiste-2026-11-03",
+     "label": "Facture dentiste",
+     "amount": "2000.00",
+     "from": "2026-11-03",
+     "target": "2026-11-25",
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "low_after_date": "2026-11-10"
+    },
+    "visual": {
+     "kind": "shift",
+     "before": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-3700.00"
+      ],
+      [
+       "2026-11-04",
+       "-3700.00"
+      ],
+      [
+       "2026-11-05",
+       "-5500.00"
+      ],
+      [
+       "2026-11-06",
+       "-5500.00"
+      ],
+      [
+       "2026-11-07",
+       "-5700.00"
+      ],
+      [
+       "2026-11-08",
+       "-5700.00"
+      ],
+      [
+       "2026-11-09",
+       "-5700.00"
+      ],
+      [
+       "2026-11-10",
+       "-6000.00"
+      ],
+      [
+       "2026-11-11",
+       "-6000.00"
+      ],
+      [
+       "2026-11-12",
+       "-6000.00"
+      ],
+      [
+       "2026-11-13",
+       "-6000.00"
+      ],
+      [
+       "2026-11-14",
+       "-6000.00"
+      ],
+      [
+       "2026-11-15",
+       "-6000.00"
+      ],
+      [
+       "2026-11-16",
+       "-6000.00"
+      ],
+      [
+       "2026-11-17",
+       "-6000.00"
+      ],
+      [
+       "2026-11-18",
+       "-6000.00"
+      ],
+      [
+       "2026-11-19",
+       "-6000.00"
+      ],
+      [
+       "2026-11-20",
+       "-6000.00"
+      ],
+      [
+       "2026-11-21",
+       "-6000.00"
+      ],
+      [
+       "2026-11-22",
+       "-6000.00"
+      ],
+      [
+       "2026-11-23",
+       "-6000.00"
+      ],
+      [
+       "2026-11-24",
+       "-6000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "after": [
+      [
+       "2026-10-01",
+       "-1400.00"
+      ],
+      [
+       "2026-10-02",
+       "-1400.00"
+      ],
+      [
+       "2026-10-03",
+       "-1400.00"
+      ],
+      [
+       "2026-10-04",
+       "-1400.00"
+      ],
+      [
+       "2026-10-05",
+       "-3200.00"
+      ],
+      [
+       "2026-10-06",
+       "-3200.00"
+      ],
+      [
+       "2026-10-07",
+       "-3200.00"
+      ],
+      [
+       "2026-10-08",
+       "-3200.00"
+      ],
+      [
+       "2026-10-09",
+       "-3200.00"
+      ],
+      [
+       "2026-10-10",
+       "-3500.00"
+      ],
+      [
+       "2026-10-11",
+       "-3500.00"
+      ],
+      [
+       "2026-10-12",
+       "-3500.00"
+      ],
+      [
+       "2026-10-13",
+       "-3500.00"
+      ],
+      [
+       "2026-10-14",
+       "-3500.00"
+      ],
+      [
+       "2026-10-15",
+       "-3500.00"
+      ],
+      [
+       "2026-10-16",
+       "-3500.00"
+      ],
+      [
+       "2026-10-17",
+       "-3500.00"
+      ],
+      [
+       "2026-10-18",
+       "-3500.00"
+      ],
+      [
+       "2026-10-19",
+       "-3500.00"
+      ],
+      [
+       "2026-10-20",
+       "-3500.00"
+      ],
+      [
+       "2026-10-21",
+       "-3500.00"
+      ],
+      [
+       "2026-10-22",
+       "-3500.00"
+      ],
+      [
+       "2026-10-23",
+       "-3500.00"
+      ],
+      [
+       "2026-10-24",
+       "-3500.00"
+      ],
+      [
+       "2026-10-25",
+       "2500.00"
+      ],
+      [
+       "2026-10-26",
+       "2000.00"
+      ],
+      [
+       "2026-10-27",
+       "200.00"
+      ],
+      [
+       "2026-10-28",
+       "-780.00"
+      ],
+      [
+       "2026-10-29",
+       "-780.00"
+      ],
+      [
+       "2026-10-30",
+       "-800.00"
+      ],
+      [
+       "2026-10-31",
+       "-800.00"
+      ],
+      [
+       "2026-11-01",
+       "-1700.00"
+      ],
+      [
+       "2026-11-02",
+       "-1700.00"
+      ],
+      [
+       "2026-11-03",
+       "-1700.00"
+      ],
+      [
+       "2026-11-04",
+       "-1700.00"
+      ],
+      [
+       "2026-11-05",
+       "-3500.00"
+      ],
+      [
+       "2026-11-06",
+       "-3500.00"
+      ],
+      [
+       "2026-11-07",
+       "-3700.00"
+      ],
+      [
+       "2026-11-08",
+       "-3700.00"
+      ],
+      [
+       "2026-11-09",
+       "-3700.00"
+      ],
+      [
+       "2026-11-10",
+       "-4000.00"
+      ],
+      [
+       "2026-11-11",
+       "-4000.00"
+      ],
+      [
+       "2026-11-12",
+       "-4000.00"
+      ],
+      [
+       "2026-11-13",
+       "-4000.00"
+      ],
+      [
+       "2026-11-14",
+       "-4000.00"
+      ],
+      [
+       "2026-11-15",
+       "-4000.00"
+      ],
+      [
+       "2026-11-16",
+       "-4000.00"
+      ],
+      [
+       "2026-11-17",
+       "-4000.00"
+      ],
+      [
+       "2026-11-18",
+       "-4000.00"
+      ],
+      [
+       "2026-11-19",
+       "-4000.00"
+      ],
+      [
+       "2026-11-20",
+       "-4000.00"
+      ],
+      [
+       "2026-11-21",
+       "-4000.00"
+      ],
+      [
+       "2026-11-22",
+       "-4000.00"
+      ],
+      [
+       "2026-11-23",
+       "-4000.00"
+      ],
+      [
+       "2026-11-24",
+       "-4000.00"
+      ],
+      [
+       "2026-11-25",
+       "0.00"
+      ],
+      [
+       "2026-11-26",
+       "-500.00"
+      ],
+      [
+       "2026-11-27",
+       "-2300.00"
+      ],
+      [
+       "2026-11-28",
+       "-3280.00"
+      ],
+      [
+       "2026-11-29",
+       "-3280.00"
+      ],
+      [
+       "2026-11-30",
+       "-3300.00"
+      ],
+      [
+       "2026-12-01",
+       "-3300.00"
+      ],
+      [
+       "2026-12-02",
+       "-3300.00"
+      ]
+     ],
+     "move": {
+      "label": "Facture dentiste",
+      "amount": "2000.00",
+      "from": "2026-11-03",
+      "to": "2026-11-25"
+     },
+     "low_before": "-6000.00",
+     "low_after": "-4000.00",
+     "caption": "Move Facture dentiste to 25.11: your low point rises by 2’000.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "next-actions",
+    "question": "What next?",
+    "answer": "18 decision(s): Assurance maladie (900.00 CHF) due today; Loyer (1’800.00 CHF) to pay by 05.10; Carte de crédit (300.00 CHF) to pay by 10.10; and 15 more.",
+    "source": "kit",
+    "tone": "risk",
+    "because": null,
+    "figures": {
+     "count": 18,
+     "overdue": 0,
+     "items": [
+      {
+       "type": "due_today",
+       "ref_id": "assurance-maladie-2026-10-01",
+       "label": "Assurance maladie",
+       "date": "2026-10-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "loyer-2026-10-05",
+       "label": "Loyer",
+       "date": "2026-10-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "before_income",
+       "ref_id": "carte-de-crédit-2026-10-10",
+       "label": "Carte de crédit",
+       "date": "2026-10-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "needs_review",
+       "ref_id": "tx-1",
+       "label": "Virement Sam → Léa",
+       "date": "2026-09-28",
+       "amount": "500.00",
+       "currency": "CHF",
+       "amount_base": null
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-10-26",
+       "label": "Leasing voiture",
+       "date": "2026-10-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-10-27",
+       "label": "Crèche",
+       "date": "2026-10-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-10-28",
+       "label": "Prêt personnel",
+       "date": "2026-10-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-10-30",
+       "label": "Frais bancaires",
+       "date": "2026-10-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "plan",
+       "ref_id": "assurance-maladie-2026-11-01",
+       "label": "Assurance maladie",
+       "date": "2026-11-01",
+       "amount": "900",
+       "currency": "CHF",
+       "amount_base": "900"
+      },
+      {
+       "type": "plan",
+       "ref_id": "facture-dentiste-2026-11-03",
+       "label": "Facture dentiste",
+       "date": "2026-11-03",
+       "amount": "2000",
+       "currency": "CHF",
+       "amount_base": "2000"
+      },
+      {
+       "type": "plan",
+       "ref_id": "loyer-2026-11-05",
+       "label": "Loyer",
+       "date": "2026-11-05",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "cadeau-d’anniversaire-2026-11-07",
+       "label": "Cadeau d’anniversaire",
+       "date": "2026-11-07",
+       "amount": "200",
+       "currency": "CHF",
+       "amount_base": "200"
+      },
+      {
+       "type": "plan",
+       "ref_id": "carte-de-crédit-2026-11-10",
+       "label": "Carte de crédit",
+       "date": "2026-11-10",
+       "amount": "300",
+       "currency": "CHF",
+       "amount_base": "300"
+      },
+      {
+       "type": "plan",
+       "ref_id": "leasing-voiture-2026-11-26",
+       "label": "Leasing voiture",
+       "date": "2026-11-26",
+       "amount": "500",
+       "currency": "CHF",
+       "amount_base": "500"
+      },
+      {
+       "type": "plan",
+       "ref_id": "crèche-2026-11-27",
+       "label": "Crèche",
+       "date": "2026-11-27",
+       "amount": "1800",
+       "currency": "CHF",
+       "amount_base": "1800"
+      },
+      {
+       "type": "plan",
+       "ref_id": "prêt-personnel-2026-11-28",
+       "label": "Prêt personnel",
+       "date": "2026-11-28",
+       "amount": "980",
+       "currency": "CHF",
+       "amount_base": "980"
+      },
+      {
+       "type": "plan",
+       "ref_id": "frais-bancaires-2026-11-30",
+       "label": "Frais bancaires",
+       "date": "2026-11-30",
+       "amount": "20",
+       "currency": "CHF",
+       "amount_base": "20"
+      },
+      {
+       "type": "missing_amounts",
+       "ref_id": null,
+       "label": "Récurrences sans montant",
+       "date": null,
+       "amount": null,
+       "currency": null,
+       "amount_base": null
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "safety-cushion",
+    "question": "How long could I last without income?",
+    "answer": "Your available money covers 0.0 months of fixed costs (6’000.00 CHF a month). Reaching 3 months takes 18’000.00 CHF more, that is 1’500.00 CHF a month for a year.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "The usual advice is to be able to cover 3 months of costs if something happens.",
+    "figures": {
+     "months": "0.0",
+     "fixed_monthly": "6000",
+     "target_months": 3,
+     "gap": "18000.00"
+    },
+    "visual": {
+     "kind": "days",
+     "covered": 0,
+     "target": 90,
+     "balance": "-500.00",
+     "caption": "Without a salary you have no day in hand: your balance is already −500.00 CHF."
+    }
+   },
+   {
+    "needs": [],
+    "id": "income-loss",
+    "question": "What if one of the incomes stopped?",
+    "answer": "Without “Salaire Léa”, your low point would go from −6’000.00 CHF to −11’300.00 CHF.",
+    "source": "expert",
+    "tone": "risk",
+    "because": "A safety cushion protects against this scenario.",
+    "figures": {
+     "income": "Salaire Léa",
+     "low_point_before": "-6000.00",
+     "low_point": {
+      "date": "2026-11-30",
+      "balance": "-11300.00",
+      "days_from_now": 60
+     }
+    }
+   },
+   {
+    "needs": [],
+    "id": "monthly-structure",
+    "question": "What does a month cost me?",
+    "answer": "Your fixed costs take 100 % of your income: about 0.00 CHF a month is left.",
+    "source": "kit",
+    "tone": "warn",
+    "because": "Above 70 %, one unexpected expense is enough to unbalance the month.",
+    "figures": {
+     "fixed_monthly": "6000",
+     "income_monthly": "6000",
+     "fixed_ratio_percent": "100.0",
+     "structural_margin": "0"
+    }
+   },
+   {
+    "needs": [],
+    "id": "pay-cycles",
+    "question": "What falls due each pay cycle?",
+    "answer": "From 25.10 to 24.11, 8’500.00 CHF goes out for 6’000.00 CHF coming in: this cycle draws 2’500.00 CHF from your reserves.",
+    "source": "kit",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "key": "cycle_1",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "total_out": "8500.00",
+     "total_in": "6000.00"
+    },
+    "visual": {
+     "kind": "balance",
+     "in": "6000.00",
+     "out": "8500.00",
+     "gap": "2500.00",
+     "start": "2026-10-25",
+     "end": "2026-11-24",
+     "caption": "This cycle leaves a 2’500.00 CHF hole: 8’500.00 CHF goes out for 6’000.00 CHF coming in."
+    }
+   },
+   {
+    "needs": [],
+    "id": "annual-bills",
+    "question": "Which big yearly expense is coming soon?",
+    "answer": "Coming up: Assurance voiture 1’200.00 CHF on 01.12 (that is 600.00 CHF a month until then).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "Set aside month by month, a big yearly bill no longer leaves a hole in the budget.",
+    "figures": {
+     "items": [
+      {
+       "id": "r-car",
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "frequency": "yearly",
+       "next_date": "2026-12-01"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "calendar",
+     "today": "2026-10-01",
+     "until": "2026-12-30",
+     "items": [
+      {
+       "label": "Assurance voiture",
+       "amount": "1200.00",
+       "date": "2026-12-01",
+       "days": 61,
+       "per_month": "600.00"
+      }
+     ],
+     "caption": "In 61 day(s): Assurance voiture, 1’200.00 CHF. Setting 600.00 CHF aside each month until then is enough."
+    }
+   },
+   {
+    "needs": [],
+    "id": "avoidable-fees",
+    "question": "Am I paying avoidable fees?",
+    "answer": "Recurring fees: 240.00 CHF a year (Frais de tenue de compte, Intérêts de découvert). An account with no maintenance fee could remove them.",
+    "source": "expert",
+    "tone": "warn",
+    "because": null,
+    "figures": {
+     "per_year": "240.00",
+     "items": [
+      {
+       "id": "r-fee",
+       "label": "Frais de tenue de compte",
+       "amount": "10.00",
+       "frequency": "monthly"
+      },
+      {
+       "id": "r-od",
+       "label": "Intérêts de découvert",
+       "amount": "10.00",
+       "frequency": "monthly"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "leak",
+     "per_year": "240.00",
+     "years": 10,
+     "total": "2400.00",
+     "items": [
+      {
+       "label": "Frais de tenue de compte"
+      },
+      {
+       "label": "Intérêts de découvert"
+      }
+     ],
+     "caption": "These fees cost you 240.00 CHF a year, that is 2’400.00 CHF in 10 years."
+    }
+   },
+   {
+    "needs": [],
+    "id": "health-insurance",
+    "question": "Is my health insurance premium going up, and can I switch?",
+    "answer": "Your premium goes from 900.00 CHF to 975.00 CHF a month in 2027, that is 900.00 CHF more a year. You can switch insurer until 30.11: compare on priminfo.admin.ch.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "The cancellation must reach the insurer by the last working day of November: the date of receipt is what counts.",
+    "figures": {
+     "deadline": "2026-11-30",
+     "increase_per_year": "900.00",
+     "monthly_premium": "900.00",
+     "next_year_monthly_premium": "975.00"
+    },
+    "visual": {
+     "kind": "countdown",
+     "deadline": "2026-11-30",
+     "days_left": 60,
+     "window_days": 71,
+     "current": "900.00",
+     "next": "975.00",
+     "increase_per_year": "900.00",
+     "caption": "You have 60 day(s) left to switch insurer; the increase costs you 900.00 CHF a year."
+    }
+   },
+   {
+    "needs": [],
+    "id": "tax-provision",
+    "question": "Have I set aside enough for my taxes?",
+    "answer": "Your last tax bill: 6’000.00 CHF a year. Nothing is set aside: 500.00 CHF a month covers the next one.",
+    "source": "expert",
+    "tone": "warn",
+    "because": "The tax bill comes all at once: spread over the year, it no longer leaves a hole.",
+    "figures": {
+     "last_annual_bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00"
+    },
+    "visual": {
+     "kind": "jar",
+     "bill": "6000.00",
+     "needed_per_month": "500.00",
+     "set_aside_per_month": "0.00",
+     "per_day": "16.44",
+     "caption": "For the next tax bill (6’000.00 CHF), set 500.00 CHF aside every month: 16.44 CHF a day."
+    }
+   },
+   {
+    "needs": [],
+    "id": "contract-notice",
+    "question": "Does a contract need cancelling soon?",
+    "answer": "To cancel Salle de sport (ends 31.12), your letter must arrive before 31.10 (2 months' notice).",
+    "source": "expert",
+    "tone": "warn",
+    "because": "After this deadline, the contract usually renews for a year.",
+    "figures": {
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "notice_months": 2,
+       "cancel_before": "2026-10-31"
+      }
+     ]
+    },
+    "visual": {
+     "kind": "deadline",
+     "today": "2026-10-01",
+     "contracts": [
+      {
+       "name": "Salle de sport",
+       "ends_on": "2026-12-31",
+       "cancel_before": "2026-10-31",
+       "days_left": 30
+      }
+     ],
+     "caption": "You have 30 day(s) left for your cancellation of “Salle de sport” to arrive before 31.10; otherwise the contract renews after 31.12."
+    }
+   },
+   {
+    "needs": [],
+    "id": "pillar-3a",
+    "question": "Can I still pay into my pillar 3a this year?",
+    "answer": "You can still pay 7’258.00 CHF into pillar 3a in 2026 (limit 7’258.00 CHF per person with a pension fund), deductible from taxable income. Pay before 31.12, often earlier depending on the provider.",
+    "source": "expert",
+    "tone": "info",
+    "because": "Bazous gives the legal limit; it recommends no investment.",
+    "figures": {
+     "year": 2026,
+     "limit_per_person": "7258",
+     "people": 1,
+     "paid_this_year": "0",
+     "left": "7258.00"
+    },
+    "visual": {
+     "kind": "gauge",
+     "year": 2026,
+     "limit": "7258.00",
+     "paid": "0",
+     "left": "7258.00",
+     "deadline": "2026-12-31",
+     "days_left": 91,
+     "caption": "You can still pay 7’258.00 CHF into your pillar 3a by 31.12, in 91 day(s)."
+    }
+   }
+  ],
+  "all_clear": [],
+  "missing_data": {
+   "accounts_without_balance": [],
+   "recurring_items_without_amount": [
+    "Électricité"
+   ],
+   "missing_exchange_rates": [],
+   "no_fixed_costs_recorded": false
+  },
+  "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
+ }
+}

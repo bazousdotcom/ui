@@ -1,0 +1,23 @@
+name: Nouvelle question
+description: Proposer une question d’argent à laquelle Bazous devrait répondre
+labels: ["module"]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: La question, telle qu’un ménage la poserait
+      placeholder: "Combien puis-je mettre de côté ce mois-ci ?"
+    validations:
+      required: true
+  - type: textarea
+    id: fields
+    attributes:
+      label: Champs du snapshot nécessaires
+      description: Voir schema/snapshot.schema.json. S’il en manque, dites lesquels.
+    validations:
+      required: true
+  - type: textarea
+    id: answer
+    attributes:
+      label: À quoi ressemble la réponse
+      description: Un chiffre, une liste, une courbe ? Avec des données fictives uniquement.
