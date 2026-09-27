@@ -21,24 +21,24 @@ légendes en 5 langues                                 aucun appel réseau      
 
 Les réponses citées sont celles de **Léa et Sam**, une famille inventée que la galerie raconte en deux actes :
 
-- **Avant**, le 1er octobre (thème sombre) : −500 sur le compte, 59 jours sur 63 sous zéro, un point bas à −6’000, des charges fixes à 100 % du revenu, 240 de frais par an (2’400 en 10 ans), une prime maladie qui prend 900 de plus par an. Bazous relève 16 points.
+- **Avant**, le 1er octobre (thème sombre) : 2’200 sur le compte, mais le loyer et l’assurance maladie tombent le jour même et le salaire n’arrive que le 30. Résultat : 58 jours sur 68 sous zéro, un fond à −6’000, des charges fixes à 95 % du revenu, 240 de frais par an (2’400 en 10 ans), une prime maladie qui prend 900 de plus par an. Bazous relève 15 points.
 - **Après**, trois mois plus tard (thème clair) : le loyer payé le jour du salaire, la carte et le prêt soldés, une caisse moins chère, un compte sans frais, 500 par mois de côté pour les impôts. Il reste 4 points ; 9 réponses sont au vert.
 
 Les chiffres viennent toujours du moteur ; un module ou un dessin ne les recalcule jamais.
 
 | id | Question | Source | Ce que Bazous répond (exemple) | Chiffres fournis | Dessin | Dans le kit |
 | --- | --- | --- | --- | --- | --- | --- |
-| `available-now` | Combien ai-je maintenant ? | communauté | « −500.00 CHF disponibles maintenant. » | `amount`, `accounts_without_balance` | 🎨 à créer | [module](../src/modules/available-now) |
-| `due-before-payday` | Que dois-je payer avant le salaire ? | communauté | « Il te manque 3’500.00 CHF pendant 24 jours, jusqu’au salaire du 25.10. » | `due`, `available`, `gap`, `next_income_date` | `runway` | [module](../src/modules/due-before-payday) |
-| `low-point` | Jusqu’où puis-je descendre ? | communauté | « 59 jours sous zéro dans les 63 prochains jours ; le fond : −6’000.00 CHF le 10.11. » | `balance`, `date`, `days_from_now` | `valley` | [module](../src/modules/low-point) |
-| `margin-after-payday` | Que me restera-t-il ? | communauté | « Au 02.12, il te manquera 3’300.00 CHF : l’équivalent de 16 jours de charges fixes. » | `balance`, `date` | `horizon` | [module](../src/modules/margin-after-payday) |
-| `what-if` | Et si je décale un paiement ? | communauté | « Décale Facture dentiste au 25.11 : ton fond remonte de 2’000.00 CHF. » | `label`, `amount`, `from`, `target`, `low_before`, `low_after` | `shift` | [module](../src/modules/what-if) |
-| `next-actions` | Que faire ensuite ? | communauté | « 18 décisions, dont une aujourd’hui : Assurance maladie (900.00 CHF). » | `count`, `overdue` | 🎨 à créer | [module](../src/modules/next-actions) |
-| `monthly-structure` | Combien me coûte un mois ? | communauté | « Tes charges fixes prennent 100 % de tes revenus : il reste environ 0.00 CHF par mois. » | `fixed_monthly`, `income_monthly`, `ratio` | 🎨 à créer | [module](../src/modules/monthly-structure) |
-| `pay-cycles` | Qu’est-ce qui tombe à chaque salaire ? | communauté | « Ce cycle laisse un trou de 2’500.00 CHF : 8’500.00 CHF sortent pour 6’000.00 CHF qui entrent. » | `start`, `end`, `total_out`, `total_in` | `balance` | [module](../src/modules/pay-cycles) |
+| `available-now` | Combien ai-je maintenant ? | communauté | « 2’200.00 CHF disponibles, mais loyer et assurance maladie tombent aujourd’hui. » | `amount`, `accounts_without_balance` | 🎨 à créer | [module](../src/modules/available-now) |
+| `due-before-payday` | Que dois-je payer avant le salaire ? | communauté | « Il te manque 3’800.00 CHF pendant 29 jours, jusqu’au salaire du 30.10. » | `due`, `available`, `gap`, `next_income_date` | `runway` | [module](../src/modules/due-before-payday) |
+| `low-point` | Jusqu’où puis-je descendre ? | communauté | « 58 jours sous zéro dans les 68 prochains jours ; le fond : −6’000.00 CHF le 28.11. » | `balance`, `date`, `days_from_now` | `valley` | [module](../src/modules/low-point) |
+| `margin-after-payday` | Que me restera-t-il ? | communauté | « Il te restera 0.00 CHF au 07.12, et une récurrence sans montant le rendra plus bas. » | `balance`, `date` | `horizon` | [module](../src/modules/margin-after-payday) |
+| `what-if` | Et si je décale un paiement ? | communauté | « Décale Facture dentiste au 30.11 : ton fond remonte de 2’000.00 CHF. » | `label`, `amount`, `from`, `target`, `low_before`, `low_after` | `shift` | [module](../src/modules/what-if) |
+| `next-actions` | Que faire ensuite ? | communauté | « 18 décisions, dont deux aujourd’hui : Loyer (1’800.00 CHF) et Assurance maladie (900.00 CHF). » | `count`, `overdue` | 🎨 à créer | [module](../src/modules/next-actions) |
+| `monthly-structure` | Combien me coûte un mois ? | communauté | « Tes charges fixes prennent 95 % de tes revenus : il reste environ 300.00 CHF par mois. » | `fixed_monthly`, `income_monthly`, `ratio` | 🎨 à créer | [module](../src/modules/monthly-structure) |
+| `pay-cycles` | Qu’est-ce qui tombe à chaque salaire ? | communauté | « Ce cycle laisse un trou de 2’200.00 CHF : 8’200.00 CHF sortent pour 6’000.00 CHF qui entrent. » | `start`, `end`, `total_out`, `total_in` | `balance` | [module](../src/modules/pay-cycles) |
 | `annual-bills` | Quelle grosse dépense de l’année arrive bientôt ? | expert | « Dans 61 jours : Assurance voiture, 1’200.00 CHF. Mettre 600.00 CHF de côté par mois d’ici là suffit. » | `items: label, amount, next_date` | `calendar` | réponse du moteur |
-| `safety-cushion` | Combien de temps tiendrais-je sans revenu ? | expert | « Sans salaire, tu n’as aucun jour d’avance : ton solde est déjà à −500.00 CHF. » | `months`, `fixed_monthly`, `target_months`, `gap` | `days` | réponse du moteur |
-| `income-loss` | Et si l’un des revenus manquait ? | expert | « Sans « Salaire Léa », ton point bas passerait de −6’000.00 à −11’300.00 CHF. » | `income`, `low_point_before`, `low_point` | 🎨 à créer | réponse du moteur |
+| `safety-cushion` | Combien de temps tiendrais-je sans revenu ? | expert | « Sans salaire, ton argent paie tes charges fixes 11 jours sur les 90 conseillés. » | `months`, `fixed_monthly`, `target_months`, `gap` | `days` | réponse du moteur |
+| `income-loss` | Et si l’un des revenus manquait ? | expert | « Sans « Salaire Léa », ton point bas passerait de −6’000.00 à −10’000.00 CHF. » | `income`, `low_point_before`, `low_point` | 🎨 à créer | réponse du moteur |
 | `avoidable-fees` | Est-ce que je paie des frais évitables ? | expert | « Ces frais te coûtent 240.00 CHF par an, soit 2’400.00 CHF en 10 ans. » | `per_year`, `items` | `leak` | réponse du moteur |
 | `health-insurance` | Ma prime d’assurance maladie augmente-t-elle, et puis-je changer ? | expert | « Il te reste 60 jours pour changer de caisse ; la hausse te coûte 900.00 CHF par an. » | `deadline`, `monthly_premium`, `next_year_monthly_premium`, `increase_per_year` | `countdown` | réponse du moteur |
 | `tax-provision` | Ai-je mis de côté pour mes impôts ? | expert | « Pour le prochain bordereau (6’000.00 CHF), mets 500.00 CHF de côté chaque mois : 16.44 CHF par jour. » | `last_annual_bill`, `needed_per_month`, `set_aside_per_month` | `jar` | réponse du moteur |
@@ -72,21 +72,21 @@ Un exemple de réponse avec son dessin :
 {
   "id": "safety-cushion",
   "question": "Combien de temps tiendrais-je sans revenu ?",
-  "answer": "Ton disponible couvre 0.0 mois de charges fixes (6’000.00 CHF par mois). Pour atteindre 3 mois, il manque 18’000.00 CHF, soit 1’500.00 CHF par mois pendant un an.",
+  "answer": "Ton disponible couvre 0.4 mois de charges fixes (5’700.00 CHF par mois). Pour atteindre 3 mois, il manque 14’900.00 CHF, soit 1’241.67 CHF par mois pendant un an.",
   "tone": "risk",
   "source": "expert",
   "figures": {
-    "months": "0.0",
-    "fixed_monthly": "6000",
+    "months": "0.4",
+    "fixed_monthly": "5700",
     "target_months": 3,
-    "gap": "18000.00"
+    "gap": "14900.00"
   },
   "visual": {
     "kind": "days",
-    "covered": 0,
+    "covered": 11,
     "target": 90,
-    "balance": "-500.00",
-    "caption": "Sans salaire, tu n’as aucun jour d’avance : ton solde est déjà à −500.00 CHF."
+    "balance": "2200.00",
+    "caption": "Sans salaire, ton argent paie tes charges fixes 11 jour(s) sur les 90 conseillés."
   }
 }
 ```
@@ -112,7 +112,7 @@ npm install @bazous/ui
 
 ## English
 
-**The money questions nobody thinks of asking.** The examples follow Léa and Sam, an invented family: overdrawn on 1 October (−6’000 low point, 59 days out of 63 below zero, 16 points to look at), then three months after following the diagnosis (never below zero, 9 answers all clear). For each household, Bazous answers the questions the community and experts consider important, before anyone thinks of asking them. The private engine computes; this MIT kit shows the answer on bazous.com and inside Claude and ChatGPT (MCP server `https://bazous.com/mcp`), from the same code.
+**The money questions nobody thinks of asking.** The examples follow Léa and Sam, an invented family: below zero from 1 October until the salary lands at month end (−6’000 low point, 58 days out of 68 below zero, 15 points to look at), then three months after following the diagnosis (never below zero, 9 answers all clear). For each household, Bazous answers the questions the community and experts consider important, before anyone thinks of asking them. The private engine computes; this MIT kit shows the answer on bazous.com and inside Claude and ChatGPT (MCP server `https://bazous.com/mcp`), from the same code.
 
 | id | Question | Source | Picture |
 | --- | --- | --- | --- |

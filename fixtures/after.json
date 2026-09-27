@@ -1,35 +1,35 @@
 {
  "as_of": "2027-01-04",
- "horizon_end": "2027-03-04",
- "next_income_date": "2027-01-25",
- "second_income_date": "2027-02-25",
- "opening_balance": "2000.00",
- "due_before_next_income": "0.00",
- "gap_before_next_income": "2000.00",
+ "horizon_end": "2027-03-05",
+ "next_income_date": "2027-01-29",
+ "second_income_date": "2027-02-26",
+ "opening_balance": "3000.00",
+ "due_before_next_income": "2200.00",
+ "gap_before_next_income": "800.00",
  "low_point": {
-  "date": "2027-01-04",
-  "balance": "2000.00",
-  "days_from_now": 0
+  "date": "2027-01-20",
+  "balance": "800.00",
+  "days_from_now": 16
  },
  "end_of_horizon": {
-  "date": "2027-03-04",
-  "balance": "4200.00"
+  "date": "2027-03-05",
+  "balance": "5200.00"
  },
  "main_cycle": {
-  "start": "2027-01-25",
-  "end": "2027-02-24",
+  "start": "2027-01-29",
+  "end": "2027-02-25",
   "total_out": "5300.00",
   "total_in": "6000.00",
   "drivers": [
    {
     "label": "Loyer",
-    "date": "2027-01-25",
+    "date": "2027-01-29",
     "amount": "1800.00",
     "share": "33.96"
    },
    {
     "label": "Crèche",
-    "date": "2027-01-27",
+    "date": "2027-02-20",
     "amount": "1700.00",
     "share": "32.08"
    },
@@ -41,13 +41,13 @@
    },
    {
     "label": "Épargne impôts",
-    "date": "2027-01-25",
+    "date": "2027-01-29",
     "amount": "500.00",
     "share": "9.43"
    },
    {
     "label": "Leasing voiture",
-    "date": "2027-01-26",
+    "date": "2027-02-15",
     "amount": "500.00",
     "share": "9.43"
    }
@@ -57,82 +57,83 @@
   {
    "key": "before_income",
    "start": "2027-01-04",
-   "end": "2027-01-24",
-   "total_out": "0.00",
+   "end": "2027-01-28",
+   "total_out": "2200.00",
    "total_in": "0.00",
-   "items": []
-  },
-  {
-   "key": "cycle_1",
-   "start": "2027-01-25",
-   "end": "2027-02-24",
-   "total_out": "5300.00",
-   "total_in": "6000.00",
    "items": [
     {
-     "date": "2027-01-25",
-     "label": "Salaire Léa",
-     "amount": "4000.00",
-     "direction": "inflow",
-     "original_amount": "4000.00",
-     "currency": "CHF",
-     "kind": "recurrence",
-     "ref_id": "salaire-léa-2027-01-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-01-25",
-     "label": "Salaire Sam",
-     "amount": "2000.00",
-     "direction": "inflow",
-     "original_amount": "2000.00",
-     "currency": "CHF",
-     "kind": "recurrence",
-     "ref_id": "salaire-sam-2027-01-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-01-25",
-     "label": "Loyer",
-     "amount": "1800.00",
-     "direction": "outflow",
-     "original_amount": "1800.00",
-     "currency": "CHF",
-     "kind": "obligation",
-     "ref_id": "loyer-2027-01-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-01-25",
-     "label": "Épargne impôts",
-     "amount": "500.00",
-     "direction": "outflow",
-     "original_amount": "500.00",
-     "currency": "CHF",
-     "kind": "obligation",
-     "ref_id": "épargne-impôts-2027-01-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-01-26",
+     "date": "2027-01-15",
      "label": "Leasing voiture",
      "amount": "500.00",
      "direction": "outflow",
      "original_amount": "500.00",
      "currency": "CHF",
      "kind": "obligation",
-     "ref_id": "leasing-voiture-2027-01-26",
+     "ref_id": "leasing-voiture-2027-01-15",
      "status": "open"
     },
     {
-     "date": "2027-01-27",
+     "date": "2027-01-20",
      "label": "Crèche",
      "amount": "1700.00",
      "direction": "outflow",
      "original_amount": "1700.00",
      "currency": "CHF",
      "kind": "obligation",
-     "ref_id": "crèche-2027-01-27",
+     "ref_id": "crèche-2027-01-20",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "key": "cycle_1",
+   "start": "2027-01-29",
+   "end": "2027-02-25",
+   "total_out": "5300.00",
+   "total_in": "6000.00",
+   "items": [
+    {
+     "date": "2027-01-29",
+     "label": "Salaire Léa",
+     "amount": "4000.00",
+     "direction": "inflow",
+     "original_amount": "4000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-léa-2027-01-29",
+     "status": "open"
+    },
+    {
+     "date": "2027-01-29",
+     "label": "Salaire Sam",
+     "amount": "2000.00",
+     "direction": "inflow",
+     "original_amount": "2000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-sam-2027-01-29",
+     "status": "open"
+    },
+    {
+     "date": "2027-01-29",
+     "label": "Loyer",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "loyer-2027-01-29",
+     "status": "open"
+    },
+    {
+     "date": "2027-01-29",
+     "label": "Épargne impôts",
+     "amount": "500.00",
+     "direction": "outflow",
+     "original_amount": "500.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "épargne-impôts-2027-01-29",
      "status": "open"
     },
     {
@@ -145,80 +146,80 @@
      "kind": "obligation",
      "ref_id": "assurance-maladie-2027-02-01",
      "status": "open"
-    }
-   ]
-  },
-  {
-   "key": "cycle_2",
-   "start": "2027-02-25",
-   "end": "2027-03-04",
-   "total_out": "4500.00",
-   "total_in": "6000.00",
-   "items": [
-    {
-     "date": "2027-02-25",
-     "label": "Salaire Léa",
-     "amount": "4000.00",
-     "direction": "inflow",
-     "original_amount": "4000.00",
-     "currency": "CHF",
-     "kind": "recurrence",
-     "ref_id": "salaire-léa-2027-02-25",
-     "status": "open"
     },
     {
-     "date": "2027-02-25",
-     "label": "Salaire Sam",
-     "amount": "2000.00",
-     "direction": "inflow",
-     "original_amount": "2000.00",
-     "currency": "CHF",
-     "kind": "recurrence",
-     "ref_id": "salaire-sam-2027-02-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-02-25",
-     "label": "Loyer",
-     "amount": "1800.00",
-     "direction": "outflow",
-     "original_amount": "1800.00",
-     "currency": "CHF",
-     "kind": "obligation",
-     "ref_id": "loyer-2027-02-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-02-25",
-     "label": "Épargne impôts",
-     "amount": "500.00",
-     "direction": "outflow",
-     "original_amount": "500.00",
-     "currency": "CHF",
-     "kind": "obligation",
-     "ref_id": "épargne-impôts-2027-02-25",
-     "status": "open"
-    },
-    {
-     "date": "2027-02-26",
+     "date": "2027-02-15",
      "label": "Leasing voiture",
      "amount": "500.00",
      "direction": "outflow",
      "original_amount": "500.00",
      "currency": "CHF",
      "kind": "obligation",
-     "ref_id": "leasing-voiture-2027-02-26",
+     "ref_id": "leasing-voiture-2027-02-15",
      "status": "open"
     },
     {
-     "date": "2027-02-27",
+     "date": "2027-02-20",
      "label": "Crèche",
      "amount": "1700.00",
      "direction": "outflow",
      "original_amount": "1700.00",
      "currency": "CHF",
      "kind": "obligation",
-     "ref_id": "crèche-2027-02-27",
+     "ref_id": "crèche-2027-02-20",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "key": "cycle_2",
+   "start": "2027-02-26",
+   "end": "2027-03-05",
+   "total_out": "2300.00",
+   "total_in": "6000.00",
+   "items": [
+    {
+     "date": "2027-02-26",
+     "label": "Salaire Léa",
+     "amount": "4000.00",
+     "direction": "inflow",
+     "original_amount": "4000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-léa-2027-02-26",
+     "status": "open"
+    },
+    {
+     "date": "2027-02-26",
+     "label": "Salaire Sam",
+     "amount": "2000.00",
+     "direction": "inflow",
+     "original_amount": "2000.00",
+     "currency": "CHF",
+     "kind": "recurrence",
+     "ref_id": "salaire-sam-2027-02-26",
+     "status": "open"
+    },
+    {
+     "date": "2027-02-26",
+     "label": "Loyer",
+     "amount": "1800.00",
+     "direction": "outflow",
+     "original_amount": "1800.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "loyer-2027-02-26",
+     "status": "open"
+    },
+    {
+     "date": "2027-02-26",
+     "label": "Épargne impôts",
+     "amount": "500.00",
+     "direction": "outflow",
+     "original_amount": "500.00",
+     "currency": "CHF",
+     "kind": "obligation",
+     "ref_id": "épargne-impôts-2027-02-26",
      "status": "open"
     }
    ]
@@ -229,428 +230,434 @@
    "date": "2027-01-04",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-05",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-06",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-07",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-08",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-09",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-10",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-11",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-12",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-13",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-14",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "3000.00"
   },
   {
    "date": "2027-01-15",
    "inflows": "0.00",
-   "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "outflows": "500.00",
+   "closing_balance": "2500.00"
   },
   {
    "date": "2027-01-16",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "2500.00"
   },
   {
    "date": "2027-01-17",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "2500.00"
   },
   {
    "date": "2027-01-18",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "2500.00"
   },
   {
    "date": "2027-01-19",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "2500.00"
   },
   {
    "date": "2027-01-20",
    "inflows": "0.00",
-   "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "outflows": "1700.00",
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-21",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-22",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-23",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-24",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2000.00"
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-25",
-   "inflows": "6000.00",
-   "outflows": "2300.00",
-   "closing_balance": "5700.00"
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-26",
    "inflows": "0.00",
-   "outflows": "500.00",
-   "closing_balance": "5200.00"
+   "outflows": "0.00",
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-27",
    "inflows": "0.00",
-   "outflows": "1700.00",
-   "closing_balance": "3500.00"
+   "outflows": "0.00",
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-28",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "3500.00"
+   "closing_balance": "800.00"
   },
   {
    "date": "2027-01-29",
-   "inflows": "0.00",
-   "outflows": "0.00",
-   "closing_balance": "3500.00"
+   "inflows": "6000.00",
+   "outflows": "2300.00",
+   "closing_balance": "4500.00"
   },
   {
    "date": "2027-01-30",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "3500.00"
+   "closing_balance": "4500.00"
   },
   {
    "date": "2027-01-31",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "3500.00"
+   "closing_balance": "4500.00"
   },
   {
    "date": "2027-02-01",
    "inflows": "0.00",
    "outflows": "800.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-02",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-03",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-04",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-05",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-06",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-07",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-08",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-09",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-10",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-11",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-12",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-13",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-14",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3700.00"
   },
   {
    "date": "2027-02-15",
    "inflows": "0.00",
-   "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "outflows": "500.00",
+   "closing_balance": "3200.00"
   },
   {
    "date": "2027-02-16",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3200.00"
   },
   {
    "date": "2027-02-17",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3200.00"
   },
   {
    "date": "2027-02-18",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3200.00"
   },
   {
    "date": "2027-02-19",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "3200.00"
   },
   {
    "date": "2027-02-20",
    "inflows": "0.00",
-   "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "outflows": "1700.00",
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-21",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-22",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-23",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-24",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "2700.00"
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-25",
-   "inflows": "6000.00",
-   "outflows": "2300.00",
-   "closing_balance": "6400.00"
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "1500.00"
   },
   {
    "date": "2027-02-26",
-   "inflows": "0.00",
-   "outflows": "500.00",
-   "closing_balance": "5900.00"
+   "inflows": "6000.00",
+   "outflows": "2300.00",
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-02-27",
    "inflows": "0.00",
-   "outflows": "1700.00",
-   "closing_balance": "4200.00"
+   "outflows": "0.00",
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-02-28",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "4200.00"
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-03-01",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "4200.00"
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-03-02",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "4200.00"
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-03-03",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "4200.00"
+   "closing_balance": "5200.00"
   },
   {
    "date": "2027-03-04",
    "inflows": "0.00",
    "outflows": "0.00",
-   "closing_balance": "4200.00"
+   "closing_balance": "5200.00"
+  },
+  {
+   "date": "2027-03-05",
+   "inflows": "0.00",
+   "outflows": "0.00",
+   "closing_balance": "5200.00"
   }
  ],
  "events": [
   {
-   "date": "2027-01-25",
-   "label": "Salaire Léa",
-   "amount": "4000.00",
-   "direction": "inflow",
-   "original_amount": "4000.00",
-   "currency": "CHF",
-   "kind": "recurrence",
-   "ref_id": "salaire-léa-2027-01-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-01-25",
-   "label": "Salaire Sam",
-   "amount": "2000.00",
-   "direction": "inflow",
-   "original_amount": "2000.00",
-   "currency": "CHF",
-   "kind": "recurrence",
-   "ref_id": "salaire-sam-2027-01-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-01-25",
-   "label": "Loyer",
-   "amount": "1800.00",
-   "direction": "outflow",
-   "original_amount": "1800.00",
-   "currency": "CHF",
-   "kind": "obligation",
-   "ref_id": "loyer-2027-01-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-01-25",
-   "label": "Épargne impôts",
-   "amount": "500.00",
-   "direction": "outflow",
-   "original_amount": "500.00",
-   "currency": "CHF",
-   "kind": "obligation",
-   "ref_id": "épargne-impôts-2027-01-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-01-26",
+   "date": "2027-01-15",
    "label": "Leasing voiture",
    "amount": "500.00",
    "direction": "outflow",
    "original_amount": "500.00",
    "currency": "CHF",
    "kind": "obligation",
-   "ref_id": "leasing-voiture-2027-01-26",
+   "ref_id": "leasing-voiture-2027-01-15",
    "status": "open"
   },
   {
-   "date": "2027-01-27",
+   "date": "2027-01-20",
    "label": "Crèche",
    "amount": "1700.00",
    "direction": "outflow",
    "original_amount": "1700.00",
    "currency": "CHF",
    "kind": "obligation",
-   "ref_id": "crèche-2027-01-27",
+   "ref_id": "crèche-2027-01-20",
+   "status": "open"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Salaire Léa",
+   "amount": "4000.00",
+   "direction": "inflow",
+   "original_amount": "4000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-léa-2027-01-29",
+   "status": "open"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Salaire Sam",
+   "amount": "2000.00",
+   "direction": "inflow",
+   "original_amount": "2000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-sam-2027-01-29",
+   "status": "open"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Loyer",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "loyer-2027-01-29",
+   "status": "open"
+  },
+  {
+   "date": "2027-01-29",
+   "label": "Épargne impôts",
+   "amount": "500.00",
+   "direction": "outflow",
+   "original_amount": "500.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "épargne-impôts-2027-01-29",
    "status": "open"
   },
   {
@@ -665,69 +672,69 @@
    "status": "open"
   },
   {
-   "date": "2027-02-25",
-   "label": "Salaire Léa",
-   "amount": "4000.00",
-   "direction": "inflow",
-   "original_amount": "4000.00",
-   "currency": "CHF",
-   "kind": "recurrence",
-   "ref_id": "salaire-léa-2027-02-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-02-25",
-   "label": "Salaire Sam",
-   "amount": "2000.00",
-   "direction": "inflow",
-   "original_amount": "2000.00",
-   "currency": "CHF",
-   "kind": "recurrence",
-   "ref_id": "salaire-sam-2027-02-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-02-25",
-   "label": "Loyer",
-   "amount": "1800.00",
-   "direction": "outflow",
-   "original_amount": "1800.00",
-   "currency": "CHF",
-   "kind": "obligation",
-   "ref_id": "loyer-2027-02-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-02-25",
-   "label": "Épargne impôts",
-   "amount": "500.00",
-   "direction": "outflow",
-   "original_amount": "500.00",
-   "currency": "CHF",
-   "kind": "obligation",
-   "ref_id": "épargne-impôts-2027-02-25",
-   "status": "open"
-  },
-  {
-   "date": "2027-02-26",
+   "date": "2027-02-15",
    "label": "Leasing voiture",
    "amount": "500.00",
    "direction": "outflow",
    "original_amount": "500.00",
    "currency": "CHF",
    "kind": "obligation",
-   "ref_id": "leasing-voiture-2027-02-26",
+   "ref_id": "leasing-voiture-2027-02-15",
    "status": "open"
   },
   {
-   "date": "2027-02-27",
+   "date": "2027-02-20",
    "label": "Crèche",
    "amount": "1700.00",
    "direction": "outflow",
    "original_amount": "1700.00",
    "currency": "CHF",
    "kind": "obligation",
-   "ref_id": "crèche-2027-02-27",
+   "ref_id": "crèche-2027-02-20",
+   "status": "open"
+  },
+  {
+   "date": "2027-02-26",
+   "label": "Salaire Léa",
+   "amount": "4000.00",
+   "direction": "inflow",
+   "original_amount": "4000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-léa-2027-02-26",
+   "status": "open"
+  },
+  {
+   "date": "2027-02-26",
+   "label": "Salaire Sam",
+   "amount": "2000.00",
+   "direction": "inflow",
+   "original_amount": "2000.00",
+   "currency": "CHF",
+   "kind": "recurrence",
+   "ref_id": "salaire-sam-2027-02-26",
+   "status": "open"
+  },
+  {
+   "date": "2027-02-26",
+   "label": "Loyer",
+   "amount": "1800.00",
+   "direction": "outflow",
+   "original_amount": "1800.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "loyer-2027-02-26",
+   "status": "open"
+  },
+  {
+   "date": "2027-02-26",
+   "label": "Épargne impôts",
+   "amount": "500.00",
+   "direction": "outflow",
+   "original_amount": "500.00",
+   "currency": "CHF",
+   "kind": "obligation",
+   "ref_id": "épargne-impôts-2027-02-26",
    "status": "open"
   }
  ],
@@ -746,8 +753,8 @@
    "account_type": "bank",
    "currency": "CHF",
    "institution": "Banque exemple",
-   "balance": "2000",
-   "balance_base": "2000",
+   "balance": "3000",
+   "balance_base": "3000",
    "observed_at": "2027-01-04T08:00:00+02:00"
   }
  ],
@@ -782,10 +789,34 @@
  "actions": [
   {
    "type": "before_income",
-   "ref_id": "loyer-2027-01-25",
+   "ref_id": "leasing-voiture-2027-01-15",
+   "label": "Leasing voiture",
+   "description": null,
+   "date": "2027-01-15",
+   "amount": "500",
+   "currency": "CHF",
+   "amount_base": "500",
+   "confidence": null,
+   "target": null
+  },
+  {
+   "type": "before_income",
+   "ref_id": "crèche-2027-01-20",
+   "label": "Crèche",
+   "description": null,
+   "date": "2027-01-20",
+   "amount": "1700",
+   "currency": "CHF",
+   "amount_base": "1700",
+   "confidence": null,
+   "target": null
+  },
+  {
+   "type": "before_income",
+   "ref_id": "loyer-2027-01-29",
    "label": "Loyer",
    "description": null,
-   "date": "2027-01-25",
+   "date": "2027-01-29",
    "amount": "1800",
    "currency": "CHF",
    "amount_base": "1800",
@@ -794,39 +825,15 @@
   },
   {
    "type": "before_income",
-   "ref_id": "épargne-impôts-2027-01-25",
+   "ref_id": "épargne-impôts-2027-01-29",
    "label": "Épargne impôts",
    "description": null,
-   "date": "2027-01-25",
+   "date": "2027-01-29",
    "amount": "500",
    "currency": "CHF",
    "amount_base": "500",
    "confidence": null,
    "target": null
-  },
-  {
-   "type": "plan",
-   "ref_id": "leasing-voiture-2027-01-26",
-   "label": "Leasing voiture",
-   "description": null,
-   "date": "2027-01-26",
-   "amount": "500",
-   "currency": "CHF",
-   "amount_base": "500",
-   "confidence": null,
-   "target": "2027-01-25"
-  },
-  {
-   "type": "plan",
-   "ref_id": "crèche-2027-01-27",
-   "label": "Crèche",
-   "description": null,
-   "date": "2027-01-27",
-   "amount": "1700",
-   "currency": "CHF",
-   "amount_base": "1700",
-   "confidence": null,
-   "target": "2027-01-25"
   },
   {
    "type": "plan",
@@ -838,55 +845,55 @@
    "currency": "CHF",
    "amount_base": "800",
    "confidence": null,
-   "target": "2027-01-25"
+   "target": "2027-01-29"
   },
   {
    "type": "plan",
-   "ref_id": "loyer-2027-02-25",
-   "label": "Loyer",
+   "ref_id": "leasing-voiture-2027-02-15",
+   "label": "Leasing voiture",
    "description": null,
-   "date": "2027-02-25",
-   "amount": "1800",
-   "currency": "CHF",
-   "amount_base": "1800",
-   "confidence": null,
-   "target": "2027-01-25"
-  },
-  {
-   "type": "plan",
-   "ref_id": "épargne-impôts-2027-02-25",
-   "label": "Épargne impôts",
-   "description": null,
-   "date": "2027-02-25",
+   "date": "2027-02-15",
    "amount": "500",
    "currency": "CHF",
    "amount_base": "500",
    "confidence": null,
-   "target": "2027-01-25"
+   "target": "2027-01-29"
   },
   {
    "type": "plan",
-   "ref_id": "leasing-voiture-2027-02-26",
-   "label": "Leasing voiture",
+   "ref_id": "crèche-2027-02-20",
+   "label": "Crèche",
+   "description": null,
+   "date": "2027-02-20",
+   "amount": "1700",
+   "currency": "CHF",
+   "amount_base": "1700",
+   "confidence": null,
+   "target": "2027-01-29"
+  },
+  {
+   "type": "plan",
+   "ref_id": "loyer-2027-02-26",
+   "label": "Loyer",
+   "description": null,
+   "date": "2027-02-26",
+   "amount": "1800",
+   "currency": "CHF",
+   "amount_base": "1800",
+   "confidence": null,
+   "target": "2027-01-29"
+  },
+  {
+   "type": "plan",
+   "ref_id": "épargne-impôts-2027-02-26",
+   "label": "Épargne impôts",
    "description": null,
    "date": "2027-02-26",
    "amount": "500",
    "currency": "CHF",
    "amount_base": "500",
    "confidence": null,
-   "target": "2027-01-25"
-  },
-  {
-   "type": "plan",
-   "ref_id": "crèche-2027-02-27",
-   "label": "Crèche",
-   "description": null,
-   "date": "2027-02-27",
-   "amount": "1700",
-   "currency": "CHF",
-   "amount_base": "1700",
-   "confidence": null,
-   "target": "2027-01-25"
+   "target": "2027-01-29"
   }
  ],
  "actual_vs_expected": {
