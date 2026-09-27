@@ -1,10 +1,10 @@
-## Ce que ça change
+## What this changes
 
-<!-- Une phrase : quelle question, quel module, quelle traduction. -->
+<!-- One sentence: which question, which module, which picture or translation. -->
 
-## Vérifications
+## Checks
 
-- [ ] `npm run check` passe en local
-- [ ] Regardé dans la galerie : 5 langues, 2 thèmes, ménages `demo`, `tight`, `empty`
-- [ ] Aucune donnée réelle (captures d’écran comprises)
-- [ ] Commits signés (`git commit -s`)
+- [ ] `npm run check` passes locally
+- [ ] Looked at it in the gallery: 5 languages, 2 themes, households `before`, `after`, `demo`, `empty`
+- [ ] Invented data only (screenshots included)
+- [ ] Commits signed off (`git commit -s`)

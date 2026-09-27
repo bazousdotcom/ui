@@ -1,78 +1,78 @@
-# La matrice des questions
+# The question matrix
 
-**Les questions d’argent que personne ne pense à poser.** Bazous répond, pour un ménage, aux questions que la communauté et des experts ont jugées importantes, avant même qu’on pense à les poser. Le moteur calcule les chiffres ; ce kit les montre, sur [bazous.com](https://bazous.com) comme dans Claude et ChatGPT. Chaque question est un module : une question, une réponse, un dessin.
+**The money questions nobody thinks of asking.** For each household, Bazous answers the questions the community and experts consider important, before anyone thinks of asking them. The engine computes the figures; this kit shows them, on [bazous.com](https://bazous.com) as well as inside Claude and ChatGPT. Every question is a module: one question, one answer, one picture.
 
-[Voir la matrice vivante dans la galerie](https://bazousdotcom.github.io/ui/#view=matrix) · [L’histoire Avant / Après](https://bazousdotcom.github.io/ui/#view=answers&data=before) · [Contribuer](../CONTRIBUTING.md) · [English below](#english)
+[Live matrix in the gallery](https://bazousdotcom.github.io/ui/#view=matrix) · [The before / after story](https://bazousdotcom.github.io/ui/#view=answers&data=before) · [Contributing](../CONTRIBUTING.md) · [Français](matrix.fr.md)
 
-## Le moteur calcule, le kit montre
+## The engine computes, the kit shows
 
 ```
-Moteur Bazous (privé)  ──►  contrat JSON public  ──►  @bazous/ui (MIT)  ──►  bazous.com · Claude · ChatGPT
-prévisions, point bas,      snapshot.schema.json      modules React,          la même réponse,
-meilleur report,            answers.schema.json       dessins SVG,            le même dessin,
-légendes en 5 langues                                 aucun appel réseau      partout
+Bazous engine (private)  ──►  public JSON contract  ──►  @bazous/ui (MIT)  ──►  bazous.com · Claude · ChatGPT
+forecasts, low point,         snapshot.schema.json       React modules,         the same answer,
+best postponement,            answers.schema.json        SVG pictures,          the same picture,
+captions in 5 languages                                  no network call        everywhere
 ```
 
-- **bazous.com** importe le kit : la page « Aujourd’hui » dessine les réponses avec `<AnswerPicture>`.
-- **La carte de Claude et ChatGPT** (MCP App, serveur `https://bazous.com/mcp`) embarque `@bazous/ui/answers` au moment du build ; elle ne charge rien du réseau.
-- Une contribution fusionnée ici arrive donc au même moment sur le site et dans les assistants.
+- **bazous.com** imports the kit: the "Today" page draws the answers with `<AnswerPicture>`.
+- **The Claude and ChatGPT card** (MCP App, server `https://bazous.com/mcp`) bundles `@bazous/ui/answers` at build time; it loads nothing from the network.
+- A contribution merged here therefore reaches the site and the assistants at the same time.
 
-## Les 16 questions
+## The 16 questions
 
-Les réponses citées sont celles de **Léa et Sam**, une famille inventée que la galerie raconte en deux actes :
+The answers quoted are those of **Léa and Sam**, an invented family the gallery tells in two acts:
 
-- **Avant**, le 1er octobre (thème sombre) : 2’200 sur le compte, mais le loyer et l’assurance maladie tombent le jour même et le salaire n’arrive que le 30. Résultat : 58 jours sur 68 sous zéro, un fond à −6’000, des charges fixes à 95 % du revenu, 240 de frais par an (2’400 en 10 ans), une prime maladie qui prend 900 de plus par an. Bazous relève 15 points.
-- **Après**, trois mois plus tard (thème clair) : le loyer payé le jour du salaire, la carte et le prêt soldés, une caisse moins chère, un compte sans frais, 500 par mois de côté pour les impôts. Il reste 4 points ; 9 réponses sont au vert.
+- **Before**, 1 October (dark theme): 2’200 in the account, but the rent and the health insurance fall due that very day and the salary only lands on the 30th. The result: 58 days out of 68 below zero, a low point of −6’000, fixed costs at 95 % of income, 240 a year in fees (2’400 over 10 years), a health premium that costs 900 more a year. Bazous flags 15 points.
+- **After**, three months later (light theme): rent paid on payday, card and loan cleared, a cheaper health insurer, a free bank account, 500 a month set aside for taxes. 4 points are left; 9 answers are all clear.
 
-Les chiffres viennent toujours du moteur ; un module ou un dessin ne les recalcule jamais.
+The figures always come from the engine; a module or a picture never recomputes them.
 
-| id | Question | Source | Ce que Bazous répond (exemple) | Chiffres fournis | Dessin | Dans le kit |
+| id | Question | Source | What Bazous answers (example) | Figures provided | Picture | In the kit |
 | --- | --- | --- | --- | --- | --- | --- |
-| `available-now` | Combien ai-je maintenant ? | communauté | « 2’200.00 CHF disponibles, mais loyer et assurance maladie tombent aujourd’hui. » | `amount`, `accounts_without_balance` | 🎨 à créer | [module](../src/modules/available-now) |
-| `due-before-payday` | Que dois-je payer avant le salaire ? | communauté | « Il te manque 3’800.00 CHF pendant 29 jours, jusqu’au salaire du 30.10. » | `due`, `available`, `gap`, `next_income_date` | `runway` | [module](../src/modules/due-before-payday) |
-| `low-point` | Jusqu’où puis-je descendre ? | communauté | « 58 jours sous zéro dans les 68 prochains jours ; le fond : −6’000.00 CHF le 28.11. » | `balance`, `date`, `days_from_now` | `valley` | [module](../src/modules/low-point) |
-| `margin-after-payday` | Que me restera-t-il ? | communauté | « Il te restera 0.00 CHF au 07.12, et une récurrence sans montant le rendra plus bas. » | `balance`, `date` | `horizon` | [module](../src/modules/margin-after-payday) |
-| `what-if` | Et si je décale un paiement ? | communauté | « Décale Facture dentiste au 30.11 : ton fond remonte de 2’000.00 CHF. » | `label`, `amount`, `from`, `target`, `low_before`, `low_after` | `shift` | [module](../src/modules/what-if) |
-| `next-actions` | Que faire ensuite ? | communauté | « 18 décisions, dont deux aujourd’hui : Loyer (1’800.00 CHF) et Assurance maladie (900.00 CHF). » | `count`, `overdue` | 🎨 à créer | [module](../src/modules/next-actions) |
-| `monthly-structure` | Combien me coûte un mois ? | communauté | « Tes charges fixes prennent 95 % de tes revenus : il reste environ 300.00 CHF par mois. » | `fixed_monthly`, `income_monthly`, `ratio` | 🎨 à créer | [module](../src/modules/monthly-structure) |
-| `pay-cycles` | Qu’est-ce qui tombe à chaque salaire ? | communauté | « Ce cycle laisse un trou de 2’200.00 CHF : 8’200.00 CHF sortent pour 6’000.00 CHF qui entrent. » | `start`, `end`, `total_out`, `total_in` | `balance` | [module](../src/modules/pay-cycles) |
-| `annual-bills` | Quelle grosse dépense de l’année arrive bientôt ? | expert | « Dans 61 jours : Assurance voiture, 1’200.00 CHF. Mettre 600.00 CHF de côté par mois d’ici là suffit. » | `items: label, amount, next_date` | `calendar` | réponse du moteur |
-| `safety-cushion` | Combien de temps tiendrais-je sans revenu ? | expert | « Sans salaire, ton argent paie tes charges fixes 11 jours sur les 90 conseillés. » | `months`, `fixed_monthly`, `target_months`, `gap` | `days` | réponse du moteur |
-| `income-loss` | Et si l’un des revenus manquait ? | expert | « Sans « Salaire Léa », ton point bas passerait de −6’000.00 à −10’000.00 CHF. » | `income`, `low_point_before`, `low_point` | 🎨 à créer | réponse du moteur |
-| `avoidable-fees` | Est-ce que je paie des frais évitables ? | expert | « Ces frais te coûtent 240.00 CHF par an, soit 2’400.00 CHF en 10 ans. » | `per_year`, `items` | `leak` | réponse du moteur |
-| `health-insurance` | Ma prime d’assurance maladie augmente-t-elle, et puis-je changer ? | expert | « Il te reste 60 jours pour changer de caisse ; la hausse te coûte 900.00 CHF par an. » | `deadline`, `monthly_premium`, `next_year_monthly_premium`, `increase_per_year` | `countdown` | réponse du moteur |
-| `tax-provision` | Ai-je mis de côté pour mes impôts ? | expert | « Pour le prochain bordereau (6’000.00 CHF), mets 500.00 CHF de côté chaque mois : 16.44 CHF par jour. » | `last_annual_bill`, `needed_per_month`, `set_aside_per_month` | `jar` | réponse du moteur |
-| `pillar-3a` | Puis-je encore verser sur mon 3e pilier cette année ? | expert | « Il te reste 7’258.00 CHF à verser sur ton 3e pilier d’ici le 31.12, dans 91 jours. » | `left`, `limit`, `year` | `gauge` | réponse du moteur |
-| `contract-notice` | Un contrat doit-il être résilié bientôt ? | expert | « Pour résilier Salle de sport (fin le 31.12), ta lettre doit arriver avant le 31.10. » | `contracts: name, ends_on, deadline` | `deadline` | réponse du moteur |
+| `available-now` | How much do I have now? | community | “2’200.00 CHF available” | `amount`, `accounts_without_balance` | 🎨 wanted | [module](../src/modules/available-now) |
+| `due-before-payday` | What do I owe before payday? | community | “You are 3’800.00 CHF short for 29 day(s), until payday on 30.10.” | `due`, `available`, `gap`, `next_income_date` | `runway` | [module](../src/modules/due-before-payday) |
+| `low-point` | How low might I go? | community | “58 day(s) below zero in the next 68 days; the bottom: −6’000.00 CHF on 28.11.” | `balance`, `date`, `days_from_now` | `valley` | [module](../src/modules/low-point) |
+| `margin-after-payday` | What will be left? | community | “You will have 0.00 CHF left on 07.12, but 1 recurring item(s) without an amount will bring it down.” | `balance`, `date` | `horizon` | [module](../src/modules/margin-after-payday) |
+| `what-if` | What if I move a payment? | community | “Move Facture dentiste to 30.11: your low point rises by 2’000.00 CHF.” | `label`, `amount`, `from`, `target`, `low_before`, `low_after` | `shift` | [module](../src/modules/what-if) |
+| `next-actions` | What next? | community | “18 decision(s): Loyer (1’800.00 CHF) due today; Assurance maladie (900.00 CHF) due today; Carte de crédit (300.00 CHF) to pay by 10.10; and 15 more.” | `count`, `overdue` | 🎨 wanted | [module](../src/modules/next-actions) |
+| `monthly-structure` | What does a month cost me? | community | “Your fixed costs take 95 % of your income: about 300.00 CHF a month is left.” | `fixed_monthly`, `income_monthly`, `ratio` | 🎨 wanted | [module](../src/modules/monthly-structure) |
+| `pay-cycles` | What falls due each pay cycle? | community | “This cycle leaves a 2’200.00 CHF hole: 8’200.00 CHF goes out for 6’000.00 CHF coming in.” | `start`, `end`, `total_out`, `total_in` | `balance` | [module](../src/modules/pay-cycles) |
+| `annual-bills` | Which big yearly expense is coming soon? | expert | “In 61 day(s): Assurance voiture, 1’200.00 CHF. Setting 600.00 CHF aside each month until then is enough.” | `items: label, amount, next_date` | `calendar` | engine answer |
+| `safety-cushion` | How long could I last without income? | expert | “Without a salary, your money pays your fixed costs for 11 day(s) out of the 90 advised.” | `months`, `fixed_monthly`, `target_months`, `gap` | `days` | engine answer |
+| `income-loss` | What if one of the incomes stopped? | expert | “Without “Salaire Léa”, your low point would go from −6’000.00 CHF to −10’000.00 CHF.” | `income`, `low_point_before`, `low_point` | 🎨 wanted | engine answer |
+| `avoidable-fees` | Am I paying avoidable fees? | expert | “These fees cost you 240.00 CHF a year, that is 2’400.00 CHF in 10 years.” | `per_year`, `items` | `leak` | engine answer |
+| `health-insurance` | Is my health insurance premium going up, and can I switch? | expert | “You have 60 day(s) left to switch insurer; the increase costs you 900.00 CHF a year.” | `deadline`, `monthly_premium`, `next_year_monthly_premium`, `increase_per_year` | `countdown` | engine answer |
+| `tax-provision` | Have I set aside enough for my taxes? | expert | “For the next tax bill (6’000.00 CHF), set 500.00 CHF aside every month: 16.44 CHF a day.” | `last_annual_bill`, `needed_per_month`, `set_aside_per_month` | `jar` | engine answer |
+| `pillar-3a` | Can I still pay into my pillar 3a this year? | expert | “You can still pay 7’258.00 CHF into your pillar 3a by 31.12, in 91 day(s).” | `left`, `limit`, `year` | `gauge` | engine answer |
+| `contract-notice` | Does a contract need cancelling soon? | expert | “You have 30 day(s) left for your cancellation of “Salle de sport” to arrive before 31.10; otherwise the contract renews after 31.12.” | `contracts: name, ends_on, deadline` | `deadline` | engine answer |
 
-**Bilan :** 16 questions, 12 dessinées sur bazous.com, dans Claude et dans ChatGPT, 4 ouvertes aux contributions.
+**Status:** 16 questions, 12 drawn on bazous.com, in Claude and in ChatGPT, 4 open for contributions.
 
-## Les 12 dessins
+## The 12 pictures
 
-Tous dans [`src/answers/draw.ts`](../src/answers/draw.ts), contrat dans [`schema/answers.schema.json`](../schema/answers.schema.json).
+All in [`src/answers/draw.ts`](../src/answers/draw.ts), contract in [`schema/answers.schema.json`](../schema/answers.schema.json).
 
-| `kind` | Pour | Données du bloc `visual` |
+| `kind` | For | Data of the `visual` block |
 | --- | --- | --- |
-| `runway` | avant le salaire | `today`, `payday`, `available`, `due`, `gap`, `bills[]`, `short_days` |
-| `valley` | point bas | `series[[date, balance]]`, `low`, `days_below_zero`, `incomes[]` |
-| `shift` | avant / après | `before[]`, `after[]`, `move{label, amount, from, to}`, `low_before`, `low_after` |
-| `days` | coussin de sécurité | `covered`, `target`, `balance` |
-| `balance` | cycle de paie | `in`, `out`, `gap`, `start`, `end` |
-| `countdown` | assurance maladie | `deadline`, `days_left`, `window_days`, `current`, `next`, `increase_per_year` |
-| `horizon` | fin de période | la courbe, la ligne d’arrivée, ce qu’elle vaut en jours de charges fixes |
-| `calendar` | factures annuelles | les 90 prochains jours et les factures qui y tombent |
-| `leak` | frais évitables | ce que les frais coûtent par an et sur 10 ans |
-| `jar` | impôts | douze mois à remplir face au bordereau |
-| `gauge` | 3e pilier | versé, encore possible, jours jusqu’au 31.12 |
-| `deadline` | résiliation | aujourd’hui, le jour où la lettre doit arriver, le renouvellement |
+| `runway` | before payday | `today`, `payday`, `available`, `due`, `gap`, `bills[]`, `short_days` |
+| `valley` | low point | `series[[date, balance]]`, `low`, `days_below_zero`, `incomes[]` |
+| `shift` | before / after | `before[]`, `after[]`, `move{label, amount, from, to}`, `low_before`, `low_after` |
+| `days` | safety cushion | `covered`, `target`, `balance` |
+| `balance` | pay cycle | `in`, `out`, `gap`, `start`, `end` |
+| `countdown` | health insurance | `deadline`, `days_left`, `window_days`, `current`, `next`, `increase_per_year` |
+| `horizon` | end of period | the curve, the finish line, what it is worth in days of fixed costs |
+| `calendar` | yearly bills | the next 90 days and the bills that fall in them |
+| `leak` | avoidable fees | what the fees cost per year and over 10 years |
+| `jar` | taxes | twelve months to fill against the tax bill |
+| `gauge` | pillar 3a | paid, still possible, days until 31.12 |
+| `deadline` | cancellation | today, the day the letter must arrive, the renewal |
 
-Un exemple de réponse avec son dessin :
+An answer with its picture:
 
 ```json
 {
   "id": "safety-cushion",
-  "question": "Combien de temps tiendrais-je sans revenu ?",
-  "answer": "Ton disponible couvre 0.4 mois de charges fixes (5’700.00 CHF par mois). Pour atteindre 3 mois, il manque 14’900.00 CHF, soit 1’241.67 CHF par mois pendant un an.",
+  "question": "How long could I last without income?",
+  "answer": "Your available money covers 0.4 months of fixed costs (5’700.00 CHF a month). Reaching 3 months takes 14’900.00 CHF more, that is 1’241.67 CHF a month for a year.",
   "tone": "risk",
   "source": "expert",
   "figures": {
@@ -86,51 +86,24 @@ Un exemple de réponse avec son dessin :
     "covered": 11,
     "target": 90,
     "balance": "2200.00",
-    "caption": "Sans salaire, ton argent paie tes charges fixes 11 jour(s) sur les 90 conseillés."
+    "caption": "Without a salary, your money pays your fixed costs for 11 day(s) out of the 90 advised."
   }
 }
 ```
 
-## Ajouter un dessin
+## Adding a picture
 
-1. **Choisir une question sans dessin** (🎨 ci-dessus) et ouvrir une [issue](https://github.com/bazousdotcom/ui/issues/new) avec ton angle : ce que la personne comprendra d’un coup d’œil qu’elle ne voyait pas avant.
-   - `available-now` : le disponible, et ce qu’il représente face à la prochaine échéance.
-   - `next-actions` : les décisions du jour, triées par urgence, en une image.
-   - `monthly-structure` : où part chaque franc du revenu, charges fixes et marge.
-   - `income-loss` : la courbe avec et sans ce revenu, le jour où tout bascule.
-2. **Partir des chiffres du contrat.** S’il te manque un chiffre, demande-le dans l’issue : c’est le moteur qui l’ajoutera, jamais le dessin qui le calculera.
-3. **Dessiner en SVG, sans réseau**, dans `src/answers/draw.ts` et `src/answers/contract.ts` : couleurs par jetons `--bz-*`, clair et sombre, lisible de 320 à 390 px, aucun texte sur un autre.
-4. **Passer par la galerie** (`npm run dev`, vues « Réponses » et « Matrice »), avec les ménages fictifs de `fixtures/answers-*.json`, dans les cinq langues et les deux thèmes. `npm run check` doit passer.
+1. **Pick a question without a picture** (🎨 above) and open an [issue](https://github.com/bazousdotcom/ui/issues/new) with your angle: what the person will understand at a glance that they did not see before.
+   - `available-now`: what is available, and what it means against the next bill.
+   - `next-actions`: today's decisions, sorted by urgency, in one picture.
+   - `monthly-structure`: where each franc of income goes, fixed costs and margin.
+   - `income-loss`: the curve with and without that income, the day it tips over.
+2. **Start from the contract's figures.** If a figure is missing, ask for it in the issue: the engine adds it, the picture never computes it.
+3. **Draw in SVG, without network**, in `src/answers/draw.ts` and `src/answers/contract.ts`: colours from the `--bz-*` tokens, light and dark, readable from 320 to 390 px, no text on top of another.
+4. **Check it in the gallery** (`npm run dev`, "Answers" and "Matrix" views), with the invented households of `fixtures/answers-*.json`, in five languages and both themes. `npm run check` must pass.
 
-## Installer
+## Install
 
 ```bash
 npm install @bazous/ui
 ```
-
----
-
-## English
-
-**The money questions nobody thinks of asking.** The examples follow Léa and Sam, an invented family: below zero from 1 October until the salary lands at month end (−6’000 low point, 58 days out of 68 below zero, 15 points to look at), then three months after following the diagnosis (never below zero, 9 answers all clear). For each household, Bazous answers the questions the community and experts consider important, before anyone thinks of asking them. The private engine computes; this MIT kit shows the answer on bazous.com and inside Claude and ChatGPT (MCP server `https://bazous.com/mcp`), from the same code.
-
-| id | Question | Source | Picture |
-| --- | --- | --- | --- |
-| `available-now` | How much do I have now? | community | 🎨 wanted |
-| `due-before-payday` | What do I owe before payday? | community | `runway` |
-| `low-point` | How low might I go? | community | `valley` |
-| `margin-after-payday` | What will be left? | community | `horizon` |
-| `what-if` | What if I move a payment? | community | `shift` |
-| `next-actions` | What next? | community | 🎨 wanted |
-| `monthly-structure` | What does a month cost me? | community | 🎨 wanted |
-| `pay-cycles` | What falls due each pay cycle? | community | `balance` |
-| `annual-bills` | Which big yearly expense is coming soon? | expert | `calendar` |
-| `safety-cushion` | How long could I last without income? | expert | `days` |
-| `income-loss` | What if one of the incomes stopped? | expert | 🎨 wanted |
-| `avoidable-fees` | Am I paying avoidable fees? | expert | `leak` |
-| `health-insurance` | Is my health insurance premium going up, and can I switch? | expert | `countdown` |
-| `tax-provision` | Have I set aside enough for my taxes? | expert | `jar` |
-| `pillar-3a` | Can I still pay into my pillar 3a this year? | expert | `gauge` |
-| `contract-notice` | Does a contract need cancelling soon? | expert | `deadline` |
-
-To add a picture: pick a 🎨 question, open an issue with your angle, draw it in `src/answers/draw.ts` from the figures the engine already provides (ask for a missing figure in the issue; the picture never computes it), check it in the gallery in five languages and both themes, and make `npm run check` pass.

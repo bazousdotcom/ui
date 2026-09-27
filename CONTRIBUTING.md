@@ -1,12 +1,12 @@
-# Contribuer à Bazous UI
+# Contributing to Bazous UI
 
-Merci ! Le moyen le plus utile de contribuer est d’ajouter **une question** : une chose qu’un ménage se demande sur son argent et à laquelle le snapshot sait déjà répondre.
+Thank you! The most useful contribution is **a question**: something a household wonders about its money, which the snapshot can already answer.
 
-## Ajouter un module en cinq étapes
+## Adding a module in five steps
 
-1. **Choisir la question.** Elle doit se répondre avec les champs de `schema/snapshot.schema.json`. S’il manque une donnée, ouvrez d’abord une issue « Nouvelle question » : le contrat évolue côté serveur, pas dans le kit.
-2. **Créer le dossier** `src/modules/<id>/index.tsx`. L’`id` est en kebab-case anglais et devient une API publique : il ne change plus.
-3. **Écrire le module** avec `defineModule` :
+1. **Pick the question.** It must be answerable from the fields of `schema/snapshot.schema.json`. If a figure is missing, open a "New question" issue first: the contract evolves on the server, not in the kit.
+2. **Create the folder** `src/modules/<id>/index.tsx`. The `id` is English kebab-case and becomes public API: it never changes.
+3. **Write the module** with `defineModule`:
 
 ```tsx
 import { Tile } from "../../primitives";
@@ -37,28 +37,40 @@ export default defineModule<Model>({
 });
 ```
 
-4. **L’enregistrer** dans `src/modules/registry.ts` (une ligne, à la place où il doit apparaître dans le cockpit).
-5. **Vérifier** : `npm run check`, puis `npm run dev` et regardez votre module dans les cinq langues, les deux thèmes et les trois ménages (`demo`, `tight`, `empty`).
+4. **Register it** in `src/modules/registry.ts` (one line, where it should appear in the cockpit).
+5. **Check it**: `npm run check`, then `npm run dev` and look at your module in the five languages, both themes and every household (`before`, `after`, `demo`, `empty`).
 
-## Ce que la CI refuse
+## Adding an answer picture
 
-- une clé de traduction absente d’une langue, ou un rendu contenant `⟦clé⟧`, `NaN` ou `undefined` ;
-- un `select` qui modifie le snapshot ou ne rend pas deux fois le même résultat ;
-- `fetch`, `XMLHttpRequest`, `WebSocket`, `localStorage`, `document.cookie`, `eval` ou une URL dans `src/` ;
-- un champ lu (`reads`) qui n’existe pas dans le contrat ;
-- une classe du canevas Capture sans style, ou `schema/canvas.json` désynchronisé.
+1. **Pick a question without a picture** in the [matrix](docs/matrix.md) and open an issue with your angle: what the person will understand at a glance that they did not see before.
+2. **Start from the contract's figures** (`figures` and the `visual` block). If a figure is missing, ask for it in the issue: the engine adds it, the picture never computes it.
+3. **Draw in SVG, without network**, in `src/answers/draw.ts` and `src/answers/contract.ts`: colours from the `--bz-*` tokens, light and dark, readable from 320 to 390 px, no text on top of another.
+4. **Check it in the gallery** (`npm run dev`, "Answers" and "Matrix" views) with the households of `fixtures/answers-*.json`, in five languages and both themes.
+
+## What CI rejects
+
+- a translation key missing in one language, or a render containing `⟦key⟧`, `NaN` or `undefined`;
+- a `select` that mutates the snapshot or does not return the same result twice;
+- `fetch`, `XMLHttpRequest`, `WebSocket`, `localStorage`, `document.cookie`, `eval` or a URL in `src/`;
+- a field in `reads` that does not exist in the contract;
+- a Capture canvas class without a style, or an out-of-date `schema/canvas.json`.
 
 ## Style
 
-- Utilisez les primitives (`Card`, `Tile`, `Row`, `Button`, `CashflowChart`) et les classes `bz-*` ; pas de couleurs en dur, pas d’attribut `style` sauf pour une largeur proportionnelle.
-- Chiffres via `fmt.num` / `fmt.signed` / `fmt.money`, dates via `fmt.shortDate` / `fmt.longDate`.
-- La question du module s’affiche en surtitre ; le titre dit ce qu’on voit, la valeur répond.
-- Un module qui ne peut pas répondre renvoie `null` : l’hôte affiche « pas encore assez de données ».
+- Use the primitives (`Card`, `Tile`, `Row`, `Button`, `CashflowChart`) and the `bz-*` classes; no hard-coded colours, no `style` attribute except for a proportional width.
+- Numbers through `fmt.num` / `fmt.signed` / `fmt.money`, dates through `fmt.shortDate` / `fmt.longDate`.
+- The module's question is the eyebrow; the title says what is shown, the value answers.
+- A module that cannot answer returns `null`: the host shows "not enough data yet".
+- The French, German, Italian and Romansh texts address the person informally (« tu », « du », « tu », « ti »).
 
-## Certificat d’origine (DCO)
+## Developer Certificate of Origin (DCO)
 
-Chaque commit porte une ligne `Signed-off-by` (`git commit -s`), par laquelle vous certifiez avoir le droit de publier ce code sous licence MIT ([developercertificate.org](https://developercertificate.org)).
+Every commit carries a `Signed-off-by` line (`git commit -s`), certifying you have the right to publish the code under the MIT license ([developercertificate.org](https://developercertificate.org)).
 
-## Traductions
+## Invented data only
 
-Les corrections de traduction sont des contributions à part entière. Pour le romanche, indiquez l’idiome si vous n’écrivez pas en Rumantsch Grischun.
+Fixtures, screenshots and examples use invented households only. Never paste real balances, bills, names or bank details, yours or anyone else's.
+
+## Translations
+
+Translation fixes are contributions in their own right. For Romansh, say which idiom you write if it is not Rumantsch Grischun.

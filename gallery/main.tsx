@@ -47,7 +47,7 @@ function read<T extends string>(key: string, allowed: readonly T[], fallback: T)
 }
 
 function Gallery() {
-  const [locale, setLocale] = useState<Locale>(() => read("lang", LOCALES, pickLocale(navigator.languages)));
+  const [locale, setLocale] = useState<Locale>(() => read("lang", LOCALES, pickLocale(navigator.languages, "en")));
   const [fixture, setFixture] = useState<string>(() => read("data", Object.keys(FIXTURES), "before"));
   const [theme, setTheme] = useState<"dark" | "light">(() => read("theme", ["dark", "light"] as const, STORY_THEME[fixture] ?? "dark"));
   const [view, setView] = useState<"cockpit" | "modules" | "answers" | "matrix">(() => read("view", ["cockpit", "modules", "answers", "matrix"] as const, "answers"));
