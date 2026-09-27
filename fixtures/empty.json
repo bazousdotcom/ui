@@ -1,0 +1,440 @@
+{
+  "as_of": "2026-10-01",
+  "horizon_end": "2026-11-30",
+  "next_income_date": null,
+  "second_income_date": null,
+  "opening_balance": "0.00",
+  "due_before_next_income": "0.00",
+  "gap_before_next_income": "0.00",
+  "low_point": {
+    "date": "2026-10-01",
+    "balance": "0.00",
+    "days_from_now": 0
+  },
+  "end_of_horizon": {
+    "date": "2026-11-30",
+    "balance": "0.00"
+  },
+  "main_cycle": {
+    "start": "2026-10-01",
+    "end": "2026-11-30",
+    "total_out": "0.00",
+    "total_in": "0.00",
+    "drivers": []
+  },
+  "cycles": [
+    {
+      "key": "cycle_1",
+      "start": "2026-10-01",
+      "end": "2026-11-30",
+      "total_out": "0.00",
+      "total_in": "0.00",
+      "items": []
+    }
+  ],
+  "points": [
+    {
+      "date": "2026-10-01",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-02",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-03",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-04",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-05",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-06",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-07",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-08",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-09",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-10",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-11",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-12",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-13",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-14",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-15",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-16",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-17",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-18",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-19",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-20",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-21",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-22",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-23",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-24",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-25",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-26",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-27",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-28",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-29",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-30",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-10-31",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-01",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-02",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-03",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-04",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-05",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-06",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-07",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-08",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-09",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-10",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-11",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-12",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-13",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-14",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-15",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-16",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-17",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-18",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-19",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-20",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-21",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-22",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-23",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-24",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-25",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-26",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-27",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-28",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-29",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    },
+    {
+      "date": "2026-11-30",
+      "inflows": "0.00",
+      "outflows": "0.00",
+      "closing_balance": "0.00"
+    }
+  ],
+  "events": [],
+  "household": {
+    "id": "hh-new",
+    "name": "Nouveau ménage"
+  },
+  "base_currency": "CHF",
+  "fx_rates": {
+    "EUR": "0.9452"
+  },
+  "accounts": [],
+  "structure": {
+    "fixed_monthly": "0.00",
+    "income_monthly": "0.00",
+    "fixed_ratio_percent": null,
+    "structural_margin": null,
+    "by_category": []
+  },
+  "debts": {
+    "total_base": "0.00",
+    "items": []
+  },
+  "actions": [],
+  "data_quality": {
+    "last_transaction_date": null,
+    "days_since_last_transaction": null,
+    "accounts_without_balance": [],
+    "fx_missing": [],
+    "rules_without_amount": [],
+    "needs_review_count": 0
+  },
+  "actual_vs_expected": {
+    "period_start": null,
+    "period_end": null,
+    "items": [],
+    "complete": false
+  },
+  "uncategorized": []
+}

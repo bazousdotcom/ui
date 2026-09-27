@@ -1,0 +1,6 @@
+node_modules/
+dist/
+gallery-dist/
+*.log
+.DS_Store
+*.tgz
