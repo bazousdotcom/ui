@@ -1,24 +1,24 @@
-name: Traduction
-description: Corriger ou améliorer une traduction
-labels: ["traduction"]
+name: Translation
+description: Fix or improve a translation
+labels: ["translation"]
 body:
   - type: dropdown
     id: lang
     attributes:
-      label: Langue
+      label: Language
       options: [Français, Deutsch, Italiano, Rumantsch, English]
     validations:
       required: true
   - type: input
     id: key
     attributes:
-      label: Module et clé
+      label: Module and key
       placeholder: "low-point · label"
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Texte actuel et proposition
+      label: Current text and proposal
     validations:
       required: true

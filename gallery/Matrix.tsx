@@ -116,7 +116,7 @@ export function Matrix({ locale, households }: { locale: Locale; households: Rec
               {r.drawn ? (
                 <a href={`${REPO}/blob/main/src/answers/draw.ts`}>{c.picture} ↗</a>
               ) : (
-                <a href={`${REPO}/issues/new?title=${encodeURIComponent(`Picture: ${r.id}`)}`}>{c.propose} ↗</a>
+                <a href={`${REPO}/issues/new?title=${encodeURIComponent(`Picture: ${r.id}`)}&labels=picture`}>{c.propose} ↗</a>
               )}
             </p>
           </article>
