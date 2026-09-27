@@ -22,7 +22,7 @@
     "needs": [],
     "id": "due-before-payday",
     "question": "Que dois-je payer avant le salaire ?",
-    "answer": "5’250.80 CHF à payer avant le salaire du 24.10 : il manque 6’501.20 CHF.",
+    "answer": "5’250.80 CHF à payer avant le salaire du 30.10 : il manque 6’501.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -30,12 +30,12 @@
      "due": "5250.80",
      "available": "-1250.40",
      "gap": "-6501.20",
-     "next_income_date": "2026-10-24"
+     "next_income_date": "2026-10-30"
     },
     "visual": {
      "kind": "runway",
      "today": "2026-09-20",
-     "payday": "2026-10-24",
+     "payday": "2026-10-30",
      "available": "-1250.40",
      "due": "5250.80",
      "gap": "-6501.20",
@@ -61,15 +61,15 @@
        "date": "2026-10-07"
       }
      ],
-     "short_days": 34,
-     "caption": "Il te manque 6’501.20 CHF pendant 34 jour(s), jusqu’au salaire du 24.10."
+     "short_days": 40,
+     "caption": "Il te manque 6’501.20 CHF pendant 40 jour(s), jusqu’au salaire du 30.10."
     }
    },
    {
     "needs": [],
     "id": "low-point",
     "question": "Jusqu’où puis-je descendre ?",
-    "answer": "Point bas −6’501.20 CHF le 07.10 : tu passes sous zéro, 17 jour(s) avant le revenu du 24.10.",
+    "answer": "Point bas −6’501.20 CHF le 07.10 : tu passes sous zéro, 23 jour(s) avant le revenu du 30.10.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -219,27 +219,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -340,30 +340,54 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "low": {
       "date": "2026-10-07",
       "balance": "-6501.20"
      },
-     "days_below_zero": 59,
+     "days_below_zero": 71,
      "incomes": [
-      "2026-10-24"
+      "2026-10-30"
      ],
-     "caption": "59 jour(s) sous zéro dans les 65 prochains jours ; le fond : −6’501.20 CHF le 07.10."
+     "caption": "71 jour(s) sous zéro dans les 71 prochains jours ; le fond : −6’501.20 CHF le 07.10."
     }
    },
    {
     "needs": [],
     "id": "margin-after-payday",
     "question": "Que me restera-t-il ?",
-    "answer": "Il manquera 401.20 CHF au 23.11, après toutes les échéances connues.",
+    "answer": "Il manquera 401.20 CHF au 29.11, après toutes les échéances connues.",
     "source": "kit",
     "tone": "risk",
     "because": null,
     "figures": {
      "balance": "-401.20",
-     "date": "2026-11-23",
+     "date": "2026-11-29",
      "rules_without_amount": []
     },
     "visual": {
@@ -507,27 +531,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -628,21 +652,45 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "end": {
-      "date": "2026-11-23",
+      "date": "2026-11-29",
       "balance": "-401.20"
      },
      "days_of_fixed_costs": 2,
-     "caption": "Au 23.11, il te manquera 401.20 CHF : l’équivalent de 2 jour(s) de charges fixes."
+     "caption": "Au 29.11, il te manquera 401.20 CHF : l’équivalent de 2 jour(s) de charges fixes."
     }
    },
    {
     "needs": [],
     "id": "what-if",
     "question": "Et si je décale un paiement ?",
-    "answer": "Le meilleur geste : reporter Loyer de l’appartement (2’100.00 CHF) du 30.09 au 24.10, jour de paie. Ton point bas passe de −6’501.20 CHF à −4’401.20 CHF.",
+    "answer": "Le meilleur geste : reporter Loyer de l’appartement (2’100.00 CHF) du 30.09 au 30.10, jour de paie. Ton point bas passe de −6’501.20 CHF à −4’401.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": "Reportée après le salaire, cette facture ne pèse plus sur les jours les plus bas, si le créancier accepte ce délai.",
@@ -651,7 +699,7 @@
      "label": "Loyer de l’appartement",
      "amount": "2100.00",
      "from": "2026-09-30",
-     "target": "2026-10-24",
+     "target": "2026-10-30",
      "low_before": "-6501.20",
      "low_after": "-4401.20",
      "low_after_date": "2026-10-07"
@@ -797,27 +845,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -917,6 +965,30 @@
       ],
       [
        "2026-11-23",
+       "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
        "-401.20"
       ]
      ],
@@ -1059,27 +1131,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-30",
@@ -1180,17 +1252,41 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "move": {
       "label": "Loyer de l’appartement",
       "amount": "2100.00",
       "from": "2026-09-30",
-      "to": "2026-10-24"
+      "to": "2026-10-30"
      },
      "low_before": "-6501.20",
      "low_after": "-4401.20",
-     "caption": "Décale Loyer de l’appartement au 24.10 : ton fond remonte de 2’100.00 CHF."
+     "caption": "Décale Loyer de l’appartement au 30.10 : ton fond remonte de 2’100.00 CHF."
     }
    },
    {
@@ -1311,7 +1407,7 @@
     "needs": [],
     "id": "due-before-payday",
     "question": "Was muss ich vor dem Lohn bezahlen?",
-    "answer": "5’250.80 CHF vor dem Lohn vom 24.10 zu bezahlen: Es fehlen 6’501.20 CHF.",
+    "answer": "5’250.80 CHF vor dem Lohn vom 30.10 zu bezahlen: Es fehlen 6’501.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -1319,12 +1415,12 @@
      "due": "5250.80",
      "available": "-1250.40",
      "gap": "-6501.20",
-     "next_income_date": "2026-10-24"
+     "next_income_date": "2026-10-30"
     },
     "visual": {
      "kind": "runway",
      "today": "2026-09-20",
-     "payday": "2026-10-24",
+     "payday": "2026-10-30",
      "available": "-1250.40",
      "due": "5250.80",
      "gap": "-6501.20",
@@ -1350,15 +1446,15 @@
        "date": "2026-10-07"
       }
      ],
-     "short_days": 34,
-     "caption": "Dir fehlen 6’501.20 CHF während 34 Tag(en), bis zum Lohn vom 24.10."
+     "short_days": 40,
+     "caption": "Dir fehlen 6’501.20 CHF während 40 Tag(en), bis zum Lohn vom 30.10."
     }
    },
    {
     "needs": [],
     "id": "low-point",
     "question": "Wie tief sinkt mein Saldo?",
-    "answer": "Tiefpunkt −6’501.20 CHF am 07.10: Du rutschst unter null, 17 Tag(e) vor dem Einkommen vom 24.10.",
+    "answer": "Tiefpunkt −6’501.20 CHF am 07.10: Du rutschst unter null, 23 Tag(e) vor dem Einkommen vom 30.10.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -1508,27 +1604,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -1629,30 +1725,54 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "low": {
       "date": "2026-10-07",
       "balance": "-6501.20"
      },
-     "days_below_zero": 59,
+     "days_below_zero": 71,
      "incomes": [
-      "2026-10-24"
+      "2026-10-30"
      ],
-     "caption": "59 Tag(e) unter null in den nächsten 65 Tagen; der Tiefpunkt: −6’501.20 CHF am 07.10."
+     "caption": "71 Tag(e) unter null in den nächsten 71 Tagen; der Tiefpunkt: −6’501.20 CHF am 07.10."
     }
    },
    {
     "needs": [],
     "id": "margin-after-payday",
     "question": "Was bleibt mir?",
-    "answer": "Am 23.11 fehlen 401.20 CHF, nach allen bekannten Zahlungen.",
+    "answer": "Am 29.11 fehlen 401.20 CHF, nach allen bekannten Zahlungen.",
     "source": "kit",
     "tone": "risk",
     "because": null,
     "figures": {
      "balance": "-401.20",
-     "date": "2026-11-23",
+     "date": "2026-11-29",
      "rules_without_amount": []
     },
     "visual": {
@@ -1796,27 +1916,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -1917,21 +2037,45 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "end": {
-      "date": "2026-11-23",
+      "date": "2026-11-29",
       "balance": "-401.20"
      },
      "days_of_fixed_costs": 2,
-     "caption": "Am 23.11 fehlen dir 401.20 CHF: so viel wie 2 Tag(e) Fixkosten."
+     "caption": "Am 29.11 fehlen dir 401.20 CHF: so viel wie 2 Tag(e) Fixkosten."
     }
    },
    {
     "needs": [],
     "id": "what-if",
     "question": "Und wenn ich eine Zahlung verschiebe?",
-    "answer": "Der beste Schritt: Loyer de l’appartement (2’100.00 CHF) vom 30.09 auf den 24.10, den Zahltag, verschieben. Dein Tiefpunkt steigt von −6’501.20 CHF auf −4’401.20 CHF.",
+    "answer": "Der beste Schritt: Loyer de l’appartement (2’100.00 CHF) vom 30.09 auf den 30.10, den Zahltag, verschieben. Dein Tiefpunkt steigt von −6’501.20 CHF auf −4’401.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": "Nach dem Lohn bezahlt, belastet die Rechnung die tiefsten Tage nicht mehr, sofern der Gläubiger den Aufschub akzeptiert.",
@@ -1940,7 +2084,7 @@
      "label": "Loyer de l’appartement",
      "amount": "2100.00",
      "from": "2026-09-30",
-     "target": "2026-10-24",
+     "target": "2026-10-30",
      "low_before": "-6501.20",
      "low_after": "-4401.20",
      "low_after_date": "2026-10-07"
@@ -2086,27 +2230,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -2206,6 +2350,30 @@
       ],
       [
        "2026-11-23",
+       "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
        "-401.20"
       ]
      ],
@@ -2348,27 +2516,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-30",
@@ -2469,17 +2637,41 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "move": {
       "label": "Loyer de l’appartement",
       "amount": "2100.00",
       "from": "2026-09-30",
-      "to": "2026-10-24"
+      "to": "2026-10-30"
      },
      "low_before": "-6501.20",
      "low_after": "-4401.20",
-     "caption": "Verschieb Loyer de l’appartement auf den 24.10: Dein Tiefpunkt steigt um 2’100.00 CHF."
+     "caption": "Verschieb Loyer de l’appartement auf den 30.10: Dein Tiefpunkt steigt um 2’100.00 CHF."
     }
    },
    {
@@ -2600,7 +2792,7 @@
     "needs": [],
     "id": "due-before-payday",
     "question": "Cosa devo pagare prima dello stipendio?",
-    "answer": "5’250.80 CHF da pagare prima dello stipendio del 24.10: mancano 6’501.20 CHF.",
+    "answer": "5’250.80 CHF da pagare prima dello stipendio del 30.10: mancano 6’501.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -2608,12 +2800,12 @@
      "due": "5250.80",
      "available": "-1250.40",
      "gap": "-6501.20",
-     "next_income_date": "2026-10-24"
+     "next_income_date": "2026-10-30"
     },
     "visual": {
      "kind": "runway",
      "today": "2026-09-20",
-     "payday": "2026-10-24",
+     "payday": "2026-10-30",
      "available": "-1250.40",
      "due": "5250.80",
      "gap": "-6501.20",
@@ -2639,15 +2831,15 @@
        "date": "2026-10-07"
       }
      ],
-     "short_days": 34,
-     "caption": "Ti mancano 6’501.20 CHF per 34 giorno/i, fino allo stipendio del 24.10."
+     "short_days": 40,
+     "caption": "Ti mancano 6’501.20 CHF per 40 giorno/i, fino allo stipendio del 30.10."
     }
    },
    {
     "needs": [],
     "id": "low-point",
     "question": "Quanto scenderà il saldo?",
-    "answer": "Minimo −6’501.20 CHF il 07.10: scendi sotto zero, 17 giorno/i prima del reddito del 24.10.",
+    "answer": "Minimo −6’501.20 CHF il 07.10: scendi sotto zero, 23 giorno/i prima del reddito del 30.10.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -2797,27 +2989,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -2918,30 +3110,54 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "low": {
       "date": "2026-10-07",
       "balance": "-6501.20"
      },
-     "days_below_zero": 59,
+     "days_below_zero": 71,
      "incomes": [
-      "2026-10-24"
+      "2026-10-30"
      ],
-     "caption": "59 giorno/i sotto zero nei prossimi 65 giorni; il fondo: −6’501.20 CHF il 07.10."
+     "caption": "71 giorno/i sotto zero nei prossimi 71 giorni; il fondo: −6’501.20 CHF il 07.10."
     }
    },
    {
     "needs": [],
     "id": "margin-after-payday",
     "question": "Cosa mi resterà?",
-    "answer": "Il 23.11 mancheranno 401.20 CHF, dopo tutte le scadenze note.",
+    "answer": "Il 29.11 mancheranno 401.20 CHF, dopo tutte le scadenze note.",
     "source": "kit",
     "tone": "risk",
     "because": null,
     "figures": {
      "balance": "-401.20",
-     "date": "2026-11-23",
+     "date": "2026-11-29",
      "rules_without_amount": []
     },
     "visual": {
@@ -3085,27 +3301,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -3206,21 +3422,45 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "end": {
-      "date": "2026-11-23",
+      "date": "2026-11-29",
       "balance": "-401.20"
      },
      "days_of_fixed_costs": 2,
-     "caption": "Al 23.11 ti mancheranno 401.20 CHF: l’equivalente di 2 giorno/i di spese fisse."
+     "caption": "Al 29.11 ti mancheranno 401.20 CHF: l’equivalente di 2 giorno/i di spese fisse."
     }
    },
    {
     "needs": [],
     "id": "what-if",
     "question": "E se sposto un pagamento?",
-    "answer": "Il gesto migliore: rinviare Loyer de l’appartement (2’100.00 CHF) dal 30.09 al 24.10, giorno di paga. Il minimo passa da −6’501.20 CHF a −4’401.20 CHF.",
+    "answer": "Il gesto migliore: rinviare Loyer de l’appartement (2’100.00 CHF) dal 30.09 al 30.10, giorno di paga. Il minimo passa da −6’501.20 CHF a −4’401.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": "Pagata dopo lo stipendio, la fattura non pesa più sui giorni più bassi, se il creditore accetta il rinvio.",
@@ -3229,7 +3469,7 @@
      "label": "Loyer de l’appartement",
      "amount": "2100.00",
      "from": "2026-09-30",
-     "target": "2026-10-24",
+     "target": "2026-10-30",
      "low_before": "-6501.20",
      "low_after": "-4401.20",
      "low_after_date": "2026-10-07"
@@ -3375,27 +3615,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -3495,6 +3735,30 @@
       ],
       [
        "2026-11-23",
+       "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
        "-401.20"
       ]
      ],
@@ -3637,27 +3901,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-30",
@@ -3758,17 +4022,41 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "move": {
       "label": "Loyer de l’appartement",
       "amount": "2100.00",
       "from": "2026-09-30",
-      "to": "2026-10-24"
+      "to": "2026-10-30"
      },
      "low_before": "-6501.20",
      "low_after": "-4401.20",
-     "caption": "Sposta Loyer de l’appartement al 24.10: il tuo punto più basso risale di 2’100.00 CHF."
+     "caption": "Sposta Loyer de l’appartement al 30.10: il tuo punto più basso risale di 2’100.00 CHF."
     }
    },
    {
@@ -3889,7 +4177,7 @@
     "needs": [],
     "id": "due-before-payday",
     "question": "Tge stoss jau pajar avant il salari?",
-    "answer": "5’250.80 CHF da pajar avant il salari dals 24.10: i mancan 6’501.20 CHF.",
+    "answer": "5’250.80 CHF da pajar avant il salari dals 30.10: i mancan 6’501.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -3897,12 +4185,12 @@
      "due": "5250.80",
      "available": "-1250.40",
      "gap": "-6501.20",
-     "next_income_date": "2026-10-24"
+     "next_income_date": "2026-10-30"
     },
     "visual": {
      "kind": "runway",
      "today": "2026-09-20",
-     "payday": "2026-10-24",
+     "payday": "2026-10-30",
      "available": "-1250.40",
      "due": "5250.80",
      "gap": "-6501.20",
@@ -3928,15 +4216,15 @@
        "date": "2026-10-07"
       }
      ],
-     "short_days": 34,
-     "caption": "Ta mancan 6’501.20 CHF durant 34 di(s), fin a la paja dals 24.10."
+     "short_days": 40,
+     "caption": "Ta mancan 6’501.20 CHF durant 40 di(s), fin a la paja dals 30.10."
     }
    },
    {
     "needs": [],
     "id": "low-point",
     "question": "Quant bass vegn il saldo?",
-    "answer": "Punct bass −6’501.20 CHF ils 07.10: ti crodas sut nulla, 17 di(s) avant l’entrada dals 24.10.",
+    "answer": "Punct bass −6’501.20 CHF ils 07.10: ti crodas sut nulla, 23 di(s) avant l’entrada dals 30.10.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -4086,27 +4374,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -4207,30 +4495,54 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "low": {
       "date": "2026-10-07",
       "balance": "-6501.20"
      },
-     "days_below_zero": 59,
+     "days_below_zero": 71,
      "incomes": [
-      "2026-10-24"
+      "2026-10-30"
      ],
-     "caption": "59 di(s) sut nulla ils proxims 65 dis; il fund: −6’501.20 CHF ils 07.10."
+     "caption": "71 di(s) sut nulla ils proxims 71 dis; il fund: −6’501.20 CHF ils 07.10."
     }
    },
    {
     "needs": [],
     "id": "margin-after-payday",
     "question": "Tge ma resta?",
-    "answer": "Ils 23.11 mancan 401.20 CHF, suenter tut ils pajaments enconuschents.",
+    "answer": "Ils 29.11 mancan 401.20 CHF, suenter tut ils pajaments enconuschents.",
     "source": "kit",
     "tone": "risk",
     "because": null,
     "figures": {
      "balance": "-401.20",
-     "date": "2026-11-23",
+     "date": "2026-11-29",
      "rules_without_amount": []
     },
     "visual": {
@@ -4374,27 +4686,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -4495,21 +4807,45 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "end": {
-      "date": "2026-11-23",
+      "date": "2026-11-29",
       "balance": "-401.20"
      },
      "days_of_fixed_costs": 2,
-     "caption": "Ils 23.11 ta mancan 401.20 CHF: tant sco 2 di(s) custs fixs."
+     "caption": "Ils 29.11 ta mancan 401.20 CHF: tant sco 2 di(s) custs fixs."
     }
    },
    {
     "needs": [],
     "id": "what-if",
     "question": "E sche jau spustel in pajament?",
-    "answer": "Il meglier pass: spustar Loyer de l’appartement (2’100.00 CHF) dals 30.09 sin ils 24.10, di da paja. Tes punct bass va da −6’501.20 CHF a −4’401.20 CHF.",
+    "answer": "Il meglier pass: spustar Loyer de l’appartement (2’100.00 CHF) dals 30.09 sin ils 30.10, di da paja. Tes punct bass va da −6’501.20 CHF a −4’401.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": "Pajà suenter il salari, na charg’il quint betg pli ils dis ils pli bass, sch’il creditur accepta il termin.",
@@ -4518,7 +4854,7 @@
      "label": "Loyer de l’appartement",
      "amount": "2100.00",
      "from": "2026-09-30",
-     "target": "2026-10-24",
+     "target": "2026-10-30",
      "low_before": "-6501.20",
      "low_after": "-4401.20",
      "low_after_date": "2026-10-07"
@@ -4664,27 +5000,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -4784,6 +5120,30 @@
       ],
       [
        "2026-11-23",
+       "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
        "-401.20"
       ]
      ],
@@ -4926,27 +5286,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-30",
@@ -5047,17 +5407,41 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "move": {
       "label": "Loyer de l’appartement",
       "amount": "2100.00",
       "from": "2026-09-30",
-      "to": "2026-10-24"
+      "to": "2026-10-30"
      },
      "low_before": "-6501.20",
      "low_after": "-4401.20",
-     "caption": "Spustescha Loyer de l’appartement sin ils 24.10: tes punct il pli bass s’auza per 2’100.00 CHF."
+     "caption": "Spustescha Loyer de l’appartement sin ils 30.10: tes punct il pli bass s’auza per 2’100.00 CHF."
     }
    },
    {
@@ -5178,7 +5562,7 @@
     "needs": [],
     "id": "due-before-payday",
     "question": "What do I owe before payday?",
-    "answer": "5’250.80 CHF to pay before the 24.10 payday: 6’501.20 CHF is missing.",
+    "answer": "5’250.80 CHF to pay before the 30.10 payday: 6’501.20 CHF is missing.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -5186,12 +5570,12 @@
      "due": "5250.80",
      "available": "-1250.40",
      "gap": "-6501.20",
-     "next_income_date": "2026-10-24"
+     "next_income_date": "2026-10-30"
     },
     "visual": {
      "kind": "runway",
      "today": "2026-09-20",
-     "payday": "2026-10-24",
+     "payday": "2026-10-30",
      "available": "-1250.40",
      "due": "5250.80",
      "gap": "-6501.20",
@@ -5217,15 +5601,15 @@
        "date": "2026-10-07"
       }
      ],
-     "short_days": 34,
-     "caption": "You are 6’501.20 CHF short for 34 day(s), until payday on 24.10."
+     "short_days": 40,
+     "caption": "You are 6’501.20 CHF short for 40 day(s), until payday on 30.10."
     }
    },
    {
     "needs": [],
     "id": "low-point",
     "question": "How low might I go?",
-    "answer": "Low point −6’501.20 CHF on 07.10: you go below zero, 17 day(s) before the 24.10 income.",
+    "answer": "Low point −6’501.20 CHF on 07.10: you go below zero, 23 day(s) before the 30.10 income.",
     "source": "kit",
     "tone": "risk",
     "because": null,
@@ -5375,27 +5759,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -5496,30 +5880,54 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "low": {
       "date": "2026-10-07",
       "balance": "-6501.20"
      },
-     "days_below_zero": 59,
+     "days_below_zero": 71,
      "incomes": [
-      "2026-10-24"
+      "2026-10-30"
      ],
-     "caption": "59 day(s) below zero in the next 65 days; the bottom: −6’501.20 CHF on 07.10."
+     "caption": "71 day(s) below zero in the next 71 days; the bottom: −6’501.20 CHF on 07.10."
     }
    },
    {
     "needs": [],
     "id": "margin-after-payday",
     "question": "What will be left?",
-    "answer": "401.20 CHF will be missing on 23.11, after every known payment.",
+    "answer": "401.20 CHF will be missing on 29.11, after every known payment.",
     "source": "kit",
     "tone": "risk",
     "because": null,
     "figures": {
      "balance": "-401.20",
-     "date": "2026-11-23",
+     "date": "2026-11-29",
      "rules_without_amount": []
     },
     "visual": {
@@ -5663,27 +6071,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -5784,21 +6192,45 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "end": {
-      "date": "2026-11-23",
+      "date": "2026-11-29",
       "balance": "-401.20"
      },
      "days_of_fixed_costs": 2,
-     "caption": "On 23.11 you will be 401.20 CHF short: as much as 2 day(s) of fixed costs."
+     "caption": "On 29.11 you will be 401.20 CHF short: as much as 2 day(s) of fixed costs."
     }
    },
    {
     "needs": [],
     "id": "what-if",
     "question": "What if I move a payment?",
-    "answer": "The best move: postpone Loyer de l’appartement (2’100.00 CHF) from 30.09 to 24.10, payday. Your low point goes from −6’501.20 CHF to −4’401.20 CHF.",
+    "answer": "The best move: postpone Loyer de l’appartement (2’100.00 CHF) from 30.09 to 30.10, payday. Your low point goes from −6’501.20 CHF to −4’401.20 CHF.",
     "source": "kit",
     "tone": "risk",
     "because": "Paid after payday, the bill no longer weighs on the lowest days, if the creditor accepts the delay.",
@@ -5807,7 +6239,7 @@
      "label": "Loyer de l’appartement",
      "amount": "2100.00",
      "from": "2026-09-30",
-     "target": "2026-10-24",
+     "target": "2026-10-30",
      "low_before": "-6501.20",
      "low_after": "-4401.20",
      "low_after_date": "2026-10-07"
@@ -5953,27 +6385,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-6501.20"
       ],
       [
        "2026-10-30",
@@ -6073,6 +6505,30 @@
       ],
       [
        "2026-11-23",
+       "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
        "-401.20"
       ]
      ],
@@ -6215,27 +6671,27 @@
       ],
       [
        "2026-10-24",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-25",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-26",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-27",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-28",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-29",
-       "1698.80"
+       "-4401.20"
       ],
       [
        "2026-10-30",
@@ -6336,17 +6792,41 @@
       [
        "2026-11-23",
        "-401.20"
+      ],
+      [
+       "2026-11-24",
+       "-401.20"
+      ],
+      [
+       "2026-11-25",
+       "-401.20"
+      ],
+      [
+       "2026-11-26",
+       "-401.20"
+      ],
+      [
+       "2026-11-27",
+       "-401.20"
+      ],
+      [
+       "2026-11-28",
+       "-401.20"
+      ],
+      [
+       "2026-11-29",
+       "-401.20"
       ]
      ],
      "move": {
       "label": "Loyer de l’appartement",
       "amount": "2100.00",
       "from": "2026-09-30",
-      "to": "2026-10-24"
+      "to": "2026-10-30"
      },
      "low_before": "-6501.20",
      "low_after": "-4401.20",
-     "caption": "Move Loyer de l’appartement to 24.10: your low point rises by 2’100.00 CHF."
+     "caption": "Move Loyer de l’appartement to 30.10: your low point rises by 2’100.00 CHF."
     }
    },
    {

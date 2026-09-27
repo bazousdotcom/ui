@@ -54,15 +54,15 @@ describe("answer pictures", () => {
 
   it("figures are written the Swiss way and bills are counted, not piled up", () => {
     const runway = pictures(FIXTURES.before!.fr!).find((v) => v.kind === "runway")!;
-    expect(drawVisual(runway, "fr")!.textContent).toContain("3 factures · 3’000.00");
-    expect(drawVisual(runway, "fr")!.textContent).toContain("manque 3’500.00");
+    expect(drawVisual(runway, "fr")!.textContent).toContain("7 factures · 6’000.00");
+    expect(drawVisual(runway, "fr")!.textContent).toContain("manque 3’800.00");
     const over = pictures(FIXTURES.overdrawn!.fr!).find((v) => v.kind === "runway")!;
     const text = drawVisual(over, "fr")!.textContent;
     expect(text).toContain("4 factures · 5’250.80");
     expect(text).toContain("dispo −1’250.40");
     expect(drawVisual(over, "de")!.textContent).toContain("4 Rechnungen · 5’250.80");
     const days = pictures(FIXTURES.after!.fr!).find((v) => v.kind === "days")!;
-    expect(drawVisual(days, "fr")!.textContent).toContain("12 / 90 jours");
+    expect(drawVisual(days, "fr")!.textContent).toContain("18 / 90 jours");
   });
 
   it("a label is text, never markup, and long labels are shortened", () => {
@@ -111,9 +111,10 @@ describe("the « before » pictures", () => {
     drawVisual(pictures(FIXTURES.before![locale]!).find((v) => v.kind === kind)!, locale)!.textContent;
 
   it("say the engine figures in the kit's words", () => {
-    expect(drawn("valley")).toContain("−6’000.00 · 10.11");
-    expect(drawn("horizon")).toContain("−3’300.00 · 02.12");
-    expect(drawn("horizon")).toContain("= 16 j de charges fixes");
+    expect(drawn("valley")).toContain("−6’000.00 · 28.11");
+    expect(drawn("horizon")).toContain("0.00 · 07.12");
+    const short = pictures(FIXTURES.overdrawn!.fr!).find((v) => v.kind === "horizon")!;
+    expect(drawVisual(short, "fr")!.textContent).toContain("= 2 j de charges fixes");
     expect(drawn("calendar")).toContain("Assurance voiture · 1’200.00");
     expect(drawn("calendar")).toContain("dans 61 j");
     expect(drawn("leak")).toContain("2’400.00");
