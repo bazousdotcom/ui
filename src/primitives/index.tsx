@@ -116,3 +116,5 @@ export function Empty({ children }: { children: ReactNode }) {
 
 /** Proportional bars (drivers, categories) in the kit's four ink shades. */
 export const SHADES = ["bz-shade-1", "bz-shade-2", "bz-shade-3", "bz-shade-4"] as const;
+
+export { clip, useWidth } from "./useWidth";

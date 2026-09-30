@@ -1,10 +1,15 @@
 import availableNow from "./available-now";
+import balanceRiver from "./balance-river";
+import billMap from "./bill-map";
+import costConstellation from "./cost-constellation";
 import duePayday from "./due-before-payday";
 import lowPoint from "./low-point";
 import marginAfterPayday from "./margin-after-payday";
+import monthWall from "./month-wall";
 import monthlyStructure from "./monthly-structure";
 import nextActions from "./next-actions";
 import payCycles from "./pay-cycles";
+import paydayPressure from "./payday-pressure";
 import type { QuestionModule } from "./types";
 import whatIf from "./what-if";
 
@@ -21,6 +26,12 @@ export const MODULES: readonly QuestionModule<any>[] = [
   nextActions,
   monthlyStructure,
   payCycles,
+  // Drawn from the community proposals of September 2026: the same answers, as pictures.
+  paydayPressure,
+  costConstellation,
+  balanceRiver,
+  billMap,
+  monthWall,
 ];
 
 export function findModule(id: string): QuestionModule<any> | undefined {

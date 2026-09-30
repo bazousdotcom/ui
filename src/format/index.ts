@@ -79,6 +79,8 @@ export type Formatters = {
   longDate: (iso: IsoDate) => string;
   /** "jeu.", "Do", "gio"… */
   weekday: (iso: IsoDate) => string;
+  /** "Octobre", "Oktober", "Ottobre"… */
+  month: (iso: IsoDate) => string;
 };
 
 /**
@@ -130,6 +132,7 @@ export function createFormatters(locale: Locale): Formatters {
     dateSpan,
     longDate: (iso) => cap(writeLongDate(locale, parseDate(iso))),
     weekday: (iso) => WEEKDAYS[locale].short[parseDate(iso).getDay()] ?? "",
+    month: (iso) => cap(MONTHS[locale][parseDate(iso).getMonth()] ?? ""),
   };
 }
 
