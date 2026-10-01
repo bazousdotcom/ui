@@ -2,7 +2,7 @@ import { useId } from "react";
 
 /**
  * « Nuit »: the scenes that draw money as light (kit 0.5, from the community's dashboards).
- * A night scene stays dark in both themes, like the emphasis tile: gold is money you have,
+ * In the dark theme a scene glows as night; in the light theme (« Jour », 0.6) it turns to ivory. Gold is money you have,
  * red is what is missing, green is the income that comes. Colours live in bazous.css
  * (`.bz-night` and the `bz-n-*` stop classes); the ids are per drawing, so two scenes on a
  * page never share a gradient.
