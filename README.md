@@ -45,6 +45,15 @@
 
 **Pictures from the community (0.4):** in September 2026 people using Bazous sent five hand-made dashboards ("Cash River", "Deadline Galaxy", "Pressure Shockwave", "Calendar Wall", "Category Constellation"). Their figures were typed in by hand and sometimes contradicted each other; the five modules above keep the drawings and take every number from the engine. Decorative parts (orbits, halos) were left out, and so were the ideas the contract cannot answer yet: a forecast range for variable spending and a delay cost per bill. Both need new fields in the contract first.
 
+**« Nuit » (0.5): money drawn as light, and scenes you can question.** The five pictures become night scenes: gold is money you have, red is what is missing, green is the income that comes. A night scene stays dark in both themes, like the emphasis tile. The scenes share one **focus** (`ctx.focus`), changed with a `focus` intent and kept by `<Dashboard>`:
+
+- **drill down:** a month in `month-wall` lights it in every scene; a star, planet or numbered cause opens that bill, with all its occurrences;
+- **filter:** the category band of `bill-map` and the stars of `cost-constellation` narrow every scene to one category (events carry `category` since 0.5);
+- **roll up:** `bill-map` groups by bill, week, category or month; `balance-river` reads by day or by week;
+- **what-if:** « What if I pay it on 30.10? » moves one occurrence to the next payday; `replayMoves` replays the engine's events (with nothing moved it is the engine's curve), the old river stays as a ghost and the payday core is recomputed from the engine's due amount.
+
+The focus bar above the grid says what is shown and undoes it piece by piece. Nothing is saved, and every intent still reaches the host. Asking in words is the assistant's job: in ChatGPT or Claude, the same answers come from `get_household_answers`.
+
 **Next:** make the answer part of the contract (each module gives a one-sentence verdict with its tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict, and turn `what-if` into "the best move", recommendation first. Contributions on these three modules are welcome.
 
 ## Answers with pictures

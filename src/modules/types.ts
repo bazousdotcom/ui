@@ -15,6 +15,8 @@ export type ModuleAction =
   | { type: "review_obligation"; ref_id: string; decision: "accept" | "cancel" }
   | { type: "open"; target: "recurrences" | "balances" | "import" | "capture" | "obligations" }
   | { type: "set_horizon"; horizon: Horizon }
+  /** Narrow or widen what every module shows, or move a payment in a what-if (merged into the current focus). */
+  | { type: "focus"; focus: Partial<Focus> }
   | {
       type: "save_scenario";
       name: string;
@@ -25,6 +27,23 @@ export type ModuleAction =
 
 export type Horizon = "7" | "30" | "cycles" | "90";
 
+/**
+ * What the person is looking at, shared by every module of a dashboard: one month, one
+ * category, one bill, and the payments they moved in a what-if. Modules read it from
+ * `ctx.focus` and change it with a `focus` intent; nothing is saved.
+ */
+export type Focus = {
+  /** "2026-11" */
+  month: string | null;
+  category: string | null;
+  /** A bill's label: every occurrence of it. */
+  bill: string | null;
+  /** Event key (see `eventKey`) -> the date it is moved to. */
+  moved: Readonly<Record<string, IsoDate>>;
+};
+
+export const NO_FOCUS: Focus = { month: null, category: null, bill: null, moved: {} };
+
 /** Where a module sits in the page grid. */
 export type ModuleSize = "tile" | "narrow" | "wide" | "full";
 
@@ -32,6 +51,8 @@ export type ModuleContext = {
   locale: Locale;
   /** Horizon the snapshot was computed for (the host refetches when it changes). */
   horizon: Horizon;
+  /** What the person is looking at; absent means everything, nothing moved. */
+  focus?: Focus;
 };
 
 export type ViewProps<Model> = {

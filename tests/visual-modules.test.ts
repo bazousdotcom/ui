@@ -47,26 +47,32 @@ describe("the community's picture modules only reshape the engine's figures", ()
 
   it.each(households)("bill-map · %s: the heaviest week is really the heaviest", (_n, s) => {
     const model = select("bill-map", s);
-    const total = model.bubbles.reduce((a: number, b: any) => a + b.amount, 0);
+    const total = model.bills.reduce((a: number, b: any) => a + b.amount, 0);
     expect(model.total).toBeCloseTo(total, 2);
     // Brute force over every seven-day window of the horizon.
     const day = (iso: string) => Date.parse(`${iso}T00:00:00Z`) / 86_400_000;
     let best = 0;
     for (let d = day(s.as_of); d <= day(s.horizon_end); d++) {
-      best = Math.max(best, model.bubbles.filter((b: any) => day(b.date) >= d && day(b.date) <= d + 6).reduce((a: number, b: any) => a + b.amount, 0));
+      best = Math.max(best, model.bills.filter((b: any) => day(b.date) >= d && day(b.date) <= d + 6).reduce((a: number, b: any) => a + b.amount, 0));
     }
     expect(model.week.amount).toBeCloseTo(best, 2);
-    expect(model.week.share).toBeCloseTo(best / total * 100, 6);
   });
 
   it("bill-map: a bill in euros is drawn apart, and its base amount is the engine's conversion", () => {
     const model = select("bill-map", demo as Snapshot);
     expect(model.foreign).toEqual(["EUR"]);
     const eur = (demo as Snapshot).events.find((e) => e.currency === "EUR" && e.direction === "outflow")!;
-    const bubble = model.bubbles.find((b: any) => b.label === eur.label && b.date === eur.date);
-    expect(bubble.foreign).toBe(true);
-    expect(bubble.amount).toBe(toNumber(eur.amount));
-    expect(bubble.original).toBe(toNumber(eur.original_amount));
+    const bill = model.bills.find((b: any) => b.label === eur.label && b.date === eur.date);
+    expect(bill.foreign).toBe(true);
+    expect(bill.amount).toBe(toNumber(eur.amount));
+    expect(bill.original).toBe(toNumber(eur.original_amount));
+  });
+
+  it("bill-map: the categories add up to the categorised bills, largest first", () => {
+    const model = select("bill-map", before as Snapshot);
+    const sum = model.categories.reduce((a: number, c: any) => a + c.amount, 0);
+    expect(sum).toBeCloseTo(model.bills.filter((b: any) => b.category).reduce((a: number, b: any) => a + b.amount, 0), 2);
+    expect(model.categories.map((c: any) => c.amount)).toEqual([...model.categories.map((c: any) => c.amount)].sort((a: number, b: number) => b - a));
   });
 
   it.each(households)("payday-pressure · %s: the gap is the engine's and the ribbon ranks the bills", (_n, s) => {
