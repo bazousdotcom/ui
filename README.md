@@ -45,7 +45,7 @@
 
 **Pictures from the community (0.4):** in September 2026 people using Bazous sent five hand-made dashboards ("Cash River", "Deadline Galaxy", "Pressure Shockwave", "Calendar Wall", "Category Constellation"). Their figures were typed in by hand and sometimes contradicted each other; the five modules above keep the drawings and take every number from the engine. Decorative parts (orbits, halos) were left out, and so were the ideas the contract cannot answer yet: a forecast range for variable spending and a delay cost per bill. Both need new fields in the contract first.
 
-**« Nuit » (0.5): money drawn as light, and scenes you can question.** The five pictures become night scenes: gold is money you have, red is what is missing, green is the income that comes. A night scene stays dark in both themes, like the emphasis tile. The scenes share one **focus** (`ctx.focus`), changed with a `focus` intent and kept by `<Dashboard>`:
+**« Nuit » (0.5): money drawn as light, and scenes you can question.** The five pictures become night scenes: gold is money you have, red is what is missing, green is the income that comes. In the dark theme they glow as night; in the light theme (« Jour », 0.6) the same scenes turn to ivory, with deeper colours and soft shadows instead of glows. The scenes share one **focus** (`ctx.focus`), changed with a `focus` intent and kept by `<Dashboard>`:
 
 - **drill down:** a month in `month-wall` lights it in every scene; a star, planet or numbered cause opens that bill, with all its occurrences;
 - **filter:** the category band of `bill-map` and the stars of `cost-constellation` narrow every scene to one category (events carry `category` since 0.5);
