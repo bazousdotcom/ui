@@ -12,7 +12,11 @@ import { NO_FOCUS, defineModule } from "../types";
  * arc of days between today and the salary, sized by their weight. A what-if move turns a
  * planet green and recomputes the core from the engine's own due amount.
  */
-type Planet = { key: string; date: string; label: string; amount: number; movedTo: string | null; focus: boolean };
+type Planet = { key: string; date: string; label: string; amount: number; movedTo: string | null; focus: boolean; count: number; moved: number };
+
+/** Beyond two bills on one day, the planets would leave the frame: the day becomes one planet. */
+const PER_DAY = 2;
+const cents = (v: number) => Math.round(v * 100) / 100;
 type Model = {
   available: number; due: number; gap: number; baseGap: number; asOf: string; payday: string; days: number;
   planets: Planet[]; currency: string; biggest: string | null;
@@ -30,11 +34,11 @@ export default defineModule<Model>({
   },
   reads: ["as_of", "opening_balance", "due_before_next_income", "gap_before_next_income", "next_income_date", "cycles", "base_currency"],
   messages: {
-    fr: { short: "Il manque {amount} {cur} d’ici au salaire du {date}", covered: "Couvert jusqu’au {date} : il reste {amount} {cur}", missing: "IL MANQUE", left: "IL RESTE", days: "{cur} · {n} jours", today: "Aujourd’hui {date}", available: "Disponible", onAccounts: "sur tes comptes aujourd’hui", due: "Dû avant le {date}", biggest: "la plus lourde : {label}", none: "aucune facture", gapShort: "Manque", gapLeft: "Reste", find: "à trouver ou à décaler", afterAll: "après toutes ces factures", was: "était {amount} avant ton « et si »", movedTo: "→ {date}", open: "Voir {label}", aria: "{state} {amount} {cur} avant le salaire du {date} ; {n} factures sur l’arc des jours." },
-    de: { short: "Bis zum Lohn am {date} fehlen {amount} {cur}", covered: "Bis {date} gedeckt: Es bleiben {amount} {cur}", missing: "ES FEHLEN", left: "ES BLEIBEN", days: "{cur} · {n} Tage", today: "Heute {date}", available: "Verfügbar", onAccounts: "heute auf deinen Konten", due: "Fällig vor dem {date}", biggest: "die schwerste: {label}", none: "keine Rechnung", gapShort: "Fehlt", gapLeft: "Bleibt", find: "zu finden oder zu verschieben", afterAll: "nach all diesen Rechnungen", was: "war {amount} vor deinem «Was wäre, wenn»", movedTo: "→ {date}", open: "{label} ansehen", aria: "{state} {amount} {cur} vor dem Lohn am {date}; {n} Rechnungen auf dem Bogen der Tage." },
-    it: { short: "Mancano {amount} {cur} fino allo stipendio del {date}", covered: "Coperto fino al {date}: restano {amount} {cur}", missing: "MANCANO", left: "RESTANO", days: "{cur} · {n} giorni", today: "Oggi {date}", available: "Disponibile", onAccounts: "sui tuoi conti oggi", due: "Dovuto prima del {date}", biggest: "la più pesante: {label}", none: "nessuna fattura", gapShort: "Manca", gapLeft: "Resta", find: "da trovare o da spostare", afterAll: "dopo tutte queste fatture", was: "era {amount} prima del tuo «e se»", movedTo: "→ {date}", open: "Vedi {label}", aria: "{state} {amount} {cur} prima dello stipendio del {date}; {n} fatture sull’arco dei giorni." },
-    rm: { short: "I mancan {amount} {cur} fin al salari dals {date}", covered: "Cuvrì fin ils {date}: i restan {amount} {cur}", missing: "I MANCAN", left: "I RESTAN", days: "{cur} · {n} dis", today: "Oz {date}", available: "Disponibel", onAccounts: "sin tes contos oz", due: "Debità avant ils {date}", biggest: "il pli grev: {label}", none: "nagin quint", gapShort: "Manca", gapLeft: "Resta", find: "da chattar u da spustar", afterAll: "suenter tut quests quints", was: "era {amount} avant tes «e sche»", movedTo: "→ {date}", open: "Mussar {label}", aria: "{state} {amount} {cur} avant il salari dals {date}; {n} quints sin l’artg dals dis." },
-    en: { short: "You are {amount} {cur} short until the {date} payday", covered: "Covered until {date}: {amount} {cur} left", missing: "SHORT BY", left: "LEFT", days: "{cur} · {n} days", today: "Today {date}", available: "Available", onAccounts: "in your accounts today", due: "Due before {date}", biggest: "the heaviest: {label}", none: "no bill", gapShort: "Short", gapLeft: "Left", find: "to find or to move", afterAll: "after all these bills", was: "was {amount} before your what-if", movedTo: "→ {date}", open: "Open {label}", aria: "{state} {amount} {cur} before the {date} payday; {n} bills on the arc of days." },
+    fr: { several: "{n} factures", openDay: "{n} factures le {date}, la plus lourde : {label}", short: "Il manque {amount} {cur} d’ici au salaire du {date}", covered: "Couvert jusqu’au {date} : il reste {amount} {cur}", missing: "IL MANQUE", left: "IL RESTE", days: "{cur} · {n} jours", today: "Aujourd’hui {date}", available: "Disponible", onAccounts: "sur tes comptes aujourd’hui", due: "Dû avant le {date}", biggest: "la plus lourde : {label}", none: "aucune facture", gapShort: "Manque", gapLeft: "Reste", find: "à trouver ou à décaler", afterAll: "après toutes ces factures", was: "était {amount} avant ton « et si »", movedTo: "→ {date}", open: "Voir {label}", aria: "{state} {amount} {cur} avant le salaire du {date} ; {n} factures sur l’arc des jours." },
+    de: { several: "{n} Rechnungen", openDay: "{n} Rechnungen am {date}, die schwerste: {label}", short: "Bis zum Lohn am {date} fehlen {amount} {cur}", covered: "Bis {date} gedeckt: Es bleiben {amount} {cur}", missing: "ES FEHLEN", left: "ES BLEIBEN", days: "{cur} · {n} Tage", today: "Heute {date}", available: "Verfügbar", onAccounts: "heute auf deinen Konten", due: "Fällig vor dem {date}", biggest: "die schwerste: {label}", none: "keine Rechnung", gapShort: "Fehlt", gapLeft: "Bleibt", find: "zu finden oder zu verschieben", afterAll: "nach all diesen Rechnungen", was: "war {amount} vor deinem «Was wäre, wenn»", movedTo: "→ {date}", open: "{label} ansehen", aria: "{state} {amount} {cur} vor dem Lohn am {date}; {n} Rechnungen auf dem Bogen der Tage." },
+    it: { several: "{n} fatture", openDay: "{n} fatture il {date}, la più pesante: {label}", short: "Mancano {amount} {cur} fino allo stipendio del {date}", covered: "Coperto fino al {date}: restano {amount} {cur}", missing: "MANCANO", left: "RESTANO", days: "{cur} · {n} giorni", today: "Oggi {date}", available: "Disponibile", onAccounts: "sui tuoi conti oggi", due: "Dovuto prima del {date}", biggest: "la più pesante: {label}", none: "nessuna fattura", gapShort: "Manca", gapLeft: "Resta", find: "da trovare o da spostare", afterAll: "dopo tutte queste fatture", was: "era {amount} prima del tuo «e se»", movedTo: "→ {date}", open: "Vedi {label}", aria: "{state} {amount} {cur} prima dello stipendio del {date}; {n} fatture sull’arco dei giorni." },
+    rm: { several: "{n} quints", openDay: "{n} quints ils {date}, il pli grev: {label}", short: "I mancan {amount} {cur} fin al salari dals {date}", covered: "Cuvrì fin ils {date}: i restan {amount} {cur}", missing: "I MANCAN", left: "I RESTAN", days: "{cur} · {n} dis", today: "Oz {date}", available: "Disponibel", onAccounts: "sin tes contos oz", due: "Debità avant ils {date}", biggest: "il pli grev: {label}", none: "nagin quint", gapShort: "Manca", gapLeft: "Resta", find: "da chattar u da spustar", afterAll: "suenter tut quests quints", was: "era {amount} avant tes «e sche»", movedTo: "→ {date}", open: "Mussar {label}", aria: "{state} {amount} {cur} avant il salari dals {date}; {n} quints sin l’artg dals dis." },
+    en: { several: "{n} bills", openDay: "{n} bills on {date}, the heaviest: {label}", short: "You are {amount} {cur} short until the {date} payday", covered: "Covered until {date}: {amount} {cur} left", missing: "SHORT BY", left: "LEFT", days: "{cur} · {n} days", today: "Today {date}", available: "Available", onAccounts: "in your accounts today", due: "Due before {date}", biggest: "the heaviest: {label}", none: "no bill", gapShort: "Short", gapLeft: "Left", find: "to find or to move", afterAll: "after all these bills", was: "was {amount} before your what-if", movedTo: "→ {date}", open: "Open {label}", aria: "{state} {amount} {cur} before the {date} payday; {n} bills on the arc of days." },
   },
   select: (s, ctx) => {
     if (!s.next_income_date) return null;
@@ -46,16 +50,26 @@ export default defineModule<Model>({
     const movedOut = bills.filter((e) => (focus.moved[eventKey(e)] ?? e.date) >= payday).reduce((sum, e) => sum + toNumber(e.amount), 0);
     const due = toNumber(s.due_before_next_income) - movedOut;
     const available = toNumber(s.opening_balance);
-    const planets = bills
+    const single = bills
       .map((e) => ({
         key: eventKey(e), date: e.date, label: e.label, amount: toNumber(e.amount),
         movedTo: focus.moved[eventKey(e)] ?? null,
         focus: (!focus.bill || e.label === focus.bill) && (!focus.category || e.category === focus.category) && (!focus.month || e.date.startsWith(focus.month)),
+        count: 1, moved: focus.moved[eventKey(e)] ? 1 : 0,
       }))
-      .sort((a, b) => a.date.localeCompare(b.date) || b.amount - a.amount);
-    const heaviest = [...planets].filter((p) => !p.movedTo).sort((a, b) => b.amount - a.amount)[0];
+      .sort((a, b) => a.date.localeCompare(b.date) || b.amount - a.amount || a.key.localeCompare(b.key));
+    const planets: Planet[] = [];
+    for (const date of [...new Set(single.map((p) => p.date))]) {
+      const day = single.filter((p) => p.date === date);
+      if (day.length <= PER_DAY) { planets.push(...day); continue; }
+      planets.push({
+        key: `day:${date}`, date, label: day[0]!.label, amount: day.reduce((sum, p) => sum + p.amount, 0), movedTo: null,
+        focus: day.some((p) => p.focus), count: day.length, moved: day.filter((p) => p.movedTo).length,
+      });
+    }
+    const heaviest = [...single].filter((p) => !p.movedTo).sort((a, b) => b.amount - a.amount)[0];
     return {
-      available, due, gap: available - due, baseGap: toNumber(s.gap_before_next_income), asOf: s.as_of, payday,
+      available, due, gap: cents(available - due), baseGap: cents(toNumber(s.gap_before_next_income)), asOf: s.as_of, payday,
       days: Math.max(dayIndex(s.as_of, payday), 1), planets, currency: s.base_currency, biggest: heaviest?.label ?? null,
     };
   },
@@ -120,14 +134,15 @@ export default defineModule<Model>({
               const anchor = Math.cos(a) > 0.25 ? "start" : Math.cos(a) < -0.25 ? "end" : "middle";
               return (
                 <g key={p.key} className={`bz-n-hit bz-n-rise${p.focus ? "" : " bz-n-faded"}`}
-                  role="button" tabIndex={0} aria-label={t("open", { label: p.label })} onClick={() => open(p.label)} onKeyDown={key(p.label)}>
+                  role="button" tabIndex={0} aria-label={p.count > 1 ? t("openDay", { n: p.count, date: fmt.shortDate(p.date), label: p.label }) : t("open", { label: p.label })}
+                  onClick={() => open(p.label)} onKeyDown={key(p.label)}>
                   <circle cx={cx} cy={cy} r={r} fill={`url(#${p.movedTo ? ids.moved : ids.risk})`} filter={`url(#${ids.glow})`} />
                   <circle cx={cx} cy={cy} r={r + 10} className={p.movedTo ? "bz-n-halo-ok" : "bz-n-halo-risk"} />
-                  {p.movedTo && <circle cx={cx} cy={cy} r={r + 4} className="bz-n-moved-ring" />}
+                  {(p.movedTo || p.moved > 0) && <circle cx={cx} cy={cy} r={r + 4} className="bz-n-moved-ring" />}
                   <text x={lx} y={ly - 4} textAnchor={anchor} fontSize={amountSize} fontWeight={700} className={p.movedTo ? "bz-n-ok" : "bz-n-ink"}>
                     {p.movedTo ? t("movedTo", { date: fmt.shortDate(p.movedTo) }) : fmt.num(p.amount)}
                   </text>
-                  {!compact && <text x={lx} y={ly + 17} textAnchor={anchor} fontSize={15} className="bz-n-mut">{clip(p.label, 16)} · {fmt.shortDate(p.date)}</text>}
+                  {!compact && <text x={lx} y={ly + 17} textAnchor={anchor} fontSize={15} className="bz-n-mut">{p.count > 1 ? t("several", { n: p.count }) : clip(p.label, 16)} · {fmt.shortDate(p.date)}</text>}
                 </g>
               );
             })}
@@ -142,7 +157,7 @@ export default defineModule<Model>({
             <div className="bz-n-fact"><span>{t("due", { date: fmt.shortDate(model.payday) })}</span><strong>{fmt.num(model.due)} {cur}</strong><small>{model.biggest ? t("biggest", { label: model.biggest }) : t("none")}</small></div>
             <div className={`bz-n-fact ${short ? "bz-n-is-risk" : "bz-n-is-gold"}`}>
               <span>{short ? t("gapShort") : t("gapLeft")}</span><strong>{fmt.num(Math.abs(model.gap))} {cur}</strong>
-              <small>{model.gap !== model.baseGap ? t("was", { amount: fmt.num(model.baseGap) }) : short ? t("find") : t("afterAll")}</small>
+              <small>{Math.abs(model.gap - model.baseGap) >= 0.005 ? t("was", { amount: fmt.num(model.baseGap) }) : short ? t("find") : t("afterAll")}</small>
             </div>
           </div>
         </div>
