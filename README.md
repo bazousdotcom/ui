@@ -54,6 +54,8 @@
 
 The focus bar above the grid says what is shown and undoes it piece by piece. Nothing is saved, and every intent still reaches the host. Asking in words is the assistant's job: in ChatGPT or Claude, the same answers come from `get_household_answers`.
 
+**The scenes in the assistants (0.7).** The five « Nuit » scenes are React and run on bazous.com; Claude and ChatGPT show a static card. `drawVisual` now draws each of them as a still picture (`orbit`, `constellation`, `river`, `billmap`, `wall`), in the card's light or dark theme. The engine sends them when one of these questions is asked on its own; such an answer may then have the tone `ok`, since it is given in full even when all is fine. Two labels the community saw are fixed as well: the low point of the valley keeps a ring of the card's colour so the curve never crosses it, and a moved bill keeps a name as long as half the picture.
+
 **Next:** make the answer part of the contract (each module gives a one-sentence verdict with its tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict, and turn `what-if` into "the best move", recommendation first. Contributions on these three modules are welcome.
 
 ## Answers with pictures
@@ -74,6 +76,11 @@ Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_h
 | `jar` | Have I set aside enough for my taxes? | Twelve months to fill against the tax bill, and what it means per day |
 | `gauge` | Can I still pay into my pillar 3a? | Paid and still possible up to the limit, and the days until 31.12 |
 | `deadline` | Does a contract need cancelling soon? | Today, the day the letter must arrive, the renewal |
+| `orbit` | How much pressure before payday? (0.7) | The « Nuit » orbit, still: the days to payday circle what you have, one planet a day sized by what falls due |
+| `constellation` | Where does my money go each month? (0.7) | The fixed costs as stars, one a category, sized by its share; the three brightest named |
+| `river` | Why does my balance go down? (0.7) | The balance down to its low point, the largest outflows as numbered beads (same-day beads stacked) |
+| `billmap` | Which bills weigh the most? (0.7) | The bills as a map sized by amount, the heaviest week lit |
+| `wall` | What does each month look like? (0.7) | One column a month down to its lowest balance, the tightest month lit |
 
 ```tsx
 import { AnswerPicture, type Answers } from "@bazous/ui";
