@@ -132,9 +132,9 @@ export default defineModule<Model>({
               );
             })}
             <circle cx={C} cy={C} r={104} fill={`url(#${short ? ids.core : ids.coreOk})`} filter={`url(#${ids.glow})`} className="bz-n-pulse" />
-            <text x={C} y={C - 22} textAnchor="middle" fontSize={13} letterSpacing={3} className="bz-n-ink">{short ? t("missing") : t("left")}</text>
-            <text x={C} y={C + 22} textAnchor="middle" fontSize={46} fontWeight={600} className="bz-n-ink bz-n-serif">{fmt.num(Math.abs(model.gap))}</text>
-            <text x={C} y={C + 48} textAnchor="middle" fontSize={13} className="bz-n-ink">{t("days", { cur, n: model.days })}</text>
+            <text x={C} y={C - 22} textAnchor="middle" fontSize={13} letterSpacing={3} className="bz-n-on-core">{short ? t("missing") : t("left")}</text>
+            <text x={C} y={C + 22} textAnchor="middle" fontSize={46} fontWeight={600} className="bz-n-on-core bz-n-serif">{fmt.num(Math.abs(model.gap))}</text>
+            <text x={C} y={C + 48} textAnchor="middle" fontSize={13} className="bz-n-on-core">{t("days", { cur, n: model.days })}</text>
           </svg>
           </div>
           <div className="bz-n-facts">
