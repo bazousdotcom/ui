@@ -483,3 +483,10 @@
 .bz[data-theme="light"] .bz-constellation-link { stroke: rgba(137, 99, 19, 0.3); }
 .bz[data-theme="light"] .bz-constellation-star { stroke: #ffffff; }
 .bz-n-on-core { fill: #ffffff; }
+
+/* Host-proof heights (0.6.2): hosts often give every bare button a fixed height (bazous.com: 36 px),
+   which squeezed the causes' cards and the category band. Every button of the scenes sets its own. */
+.bz .bz-n-cause { height: auto; min-height: 0; }
+.bz .bz-n-roll button { height: 100%; border-radius: 0; }
+.bz .bz-n-drill button { height: auto; }
+.bz .bz-focus-chip button { height: auto; }
