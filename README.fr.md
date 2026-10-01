@@ -45,6 +45,15 @@
 
 **Les dessins de la communauté (0.4) :** en septembre 2026, des personnes qui utilisent Bazous ont envoyé cinq tableaux faits main (« Cash River », « Deadline Galaxy », « Pressure Shockwave », « Calendar Wall », « Category Constellation »). Leurs chiffres étaient tapés à la main et se contredisaient parfois ; les cinq modules ci-dessus gardent les dessins et prennent chaque chiffre dans le moteur. Les parties décoratives (orbites, halos) sont restées dehors, tout comme les idées auxquelles le contrat ne répond pas encore : une fourchette de prévision pour les dépenses variables et un coût du retard par facture. Les deux demandent d’abord de nouveaux champs dans le contrat.
 
+**« Nuit » (0.5) : l’argent dessiné en lumière, et des scènes qu’on interroge.** Les cinq dessins deviennent des scènes de nuit : l’or, c’est l’argent disponible ; le rouge, ce qui manque ; le vert, la paie qui arrive. Une scène de nuit reste sombre dans les deux thèmes, comme la tuile mise en avant. Les scènes partagent un même **focus** (`ctx.focus`), modifié par une intention `focus` et gardé par `<Dashboard>` :
+
+- **zoom :** un mois dans `month-wall` l’éclaire dans toutes les scènes ; une étoile, une planète ou une cause numérotée ouvre la facture, avec toutes ses échéances ;
+- **filtre :** la bande des catégories de `bill-map` et les étoiles de `cost-constellation` limitent toutes les scènes à une catégorie (les échéances portent `category` depuis la 0.5) ;
+- **regroupement :** `bill-map` regroupe par facture, semaine, catégorie ou mois ; `balance-river` se lit au jour ou à la semaine ;
+- **et si :** « Et si je la paie le 30.10 ? » décale une échéance à la paie suivante ; `replayMoves` rejoue les échéances du moteur (sans décalage, c’est la courbe du moteur), l’ancienne rivière reste en pointillés et le cœur de la paie est recalculé à partir du montant dû du moteur.
+
+La barre de focus au-dessus de la grille dit ce qui est montré et se défait pièce par pièce. Rien n’est enregistré, et chaque intention arrive toujours à l’hôte. Poser la question en mots, c’est le rôle de l’assistant : dans ChatGPT ou Claude, les mêmes réponses viennent de `get_household_answers`.
+
 **Prochaine étape (0.2) :** rendre la réponse obligatoire dans le contrat — chaque module fournira un verdict d’une phrase avec sa tonalité, testé dans les cinq langues — puis donner un verdict à `monthly-structure` et `pay-cycles`, et faire de `what-if` « le meilleur geste », recommandation d’abord. Les contributions sur ces trois modules sont les bienvenues.
 
 ## Les réponses dessinées

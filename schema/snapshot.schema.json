@@ -55,6 +55,13 @@
             "string",
             "null"
           ]
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The category the bill is filed under (the rule's for a recurrence); null when it has none. Added in 0.5."
         }
       },
       "required": [

@@ -3,7 +3,7 @@
   "as_of": "2026-09-20",
   "currency": "CHF",
   "language": "fr",
-  "headline": "8 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "headline": "11 point(s) à regarder aujourd’hui ; le reste est en ordre.",
   "answers": [
    {
     "needs": [],
@@ -1337,6 +1337,99 @@
     }
    },
    {
+    "needs": [],
+    "id": "payday-pressure",
+    "question": "Quelle pression avant le salaire ?",
+    "answer": "Avant le salaire du 30.10, 4 échéance(s) font 5’250.80 CHF : Loyer de l’appartement (2’100.00 CHF, 30.09) ; Remboursement du prêt personnel (1’420.60 CHF, 30.09) ; Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "5250.80",
+     "available": "-1250.40",
+     "gap": "-6501.20",
+     "bills": [
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Pourquoi mon solde descend-il ?",
+    "answer": "D’ici au point bas du 07.10, 5’250.80 CHF sortent ; 4 facture(s) en font 100 % : Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09) ; Loyer de l’appartement (2’100.00 CHF, 30.09) ; Remboursement du prêt personnel (1’420.60 CHF, 30.09) ; Carte de crédit (750.20 CHF, 07.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-10-07",
+     "outflows": "5250.80",
+     "share": "100",
+     "causes": [
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Comment se présente chaque mois ?",
+    "answer": "Octobre est le mois le plus serré : point bas −6’501.20 CHF le 07.10 ; 3 mois sur 3 passent sous zéro.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-10",
+     "low": "-6501.20",
+     "date": "2026-10-07",
+     "months_below_zero": 3,
+     "months": 3
+    }
+   },
+   {
     "needs": [
      "taxes.last_annual_bill"
     ],
@@ -1366,6 +1459,16 @@
     "short": "chaque cycle couvre ses sorties"
    },
    {
+    "id": "cost-constellation",
+    "question": "Où part mon argent chaque mois ?",
+    "short": "charges fixes pas encore classées par catégorie"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quelles échéances pèsent le plus ?",
+    "short": "semaine la plus lourde : du 26.09 au 30.09 (4’500.60 CHF, 61 %)"
+   },
+   {
     "id": "annual-bills",
     "question": "Quelle grosse dépense de l’année arrive bientôt ?",
     "short": "aucune grosse dépense annuelle dans les 90 jours"
@@ -1388,7 +1491,7 @@
   "as_of": "2026-09-20",
   "currency": "CHF",
   "language": "de",
-  "headline": "Heute 8 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "headline": "Heute 11 Punkt(e) zu beachten; der Rest ist in Ordnung.",
   "answers": [
    {
     "needs": [],
@@ -2722,6 +2825,99 @@
     }
    },
    {
+    "needs": [],
+    "id": "payday-pressure",
+    "question": "Wie viel Druck bis zum Lohn?",
+    "answer": "Vor dem Lohn am 30.10 machen 4 Fälligkeit(en) 5’250.80 CHF aus: Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "5250.80",
+     "available": "-1250.40",
+     "gap": "-6501.20",
+     "bills": [
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Warum sinkt mein Saldo?",
+    "answer": "Bis zum Tiefpunkt am 07.10 gehen 5’250.80 CHF weg; 4 Rechnung(en) machen 100 % davon aus: Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09); Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Carte de crédit (750.20 CHF, 07.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-10-07",
+     "outflows": "5250.80",
+     "share": "100",
+     "causes": [
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Wie sieht jeder Monat aus?",
+    "answer": "Oktober ist der knappste Monat: Tiefpunkt −6’501.20 CHF am 07.10; 3 von 3 Monaten fallen unter null.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-10",
+     "low": "-6501.20",
+     "date": "2026-10-07",
+     "months_below_zero": 3,
+     "months": 3
+    }
+   },
+   {
     "needs": [
      "taxes.last_annual_bill"
     ],
@@ -2751,6 +2947,16 @@
     "short": "jede Periode deckt ihre Ausgaben"
    },
    {
+    "id": "cost-constellation",
+    "question": "Wohin geht mein Geld jeden Monat?",
+    "short": "Fixkosten noch nicht nach Kategorie geordnet"
+   },
+   {
+    "id": "bill-map",
+    "question": "Welche Rechnungen wiegen am meisten?",
+    "short": "schwerste Woche: 26.09 bis 30.09 (4’500.60 CHF, 61 %)"
+   },
+   {
     "id": "annual-bills",
     "question": "Welche grosse Jahresausgabe steht bald an?",
     "short": "keine grosse Jahresausgabe in den nächsten 90 Tagen"
@@ -2773,7 +2979,7 @@
   "as_of": "2026-09-20",
   "currency": "CHF",
   "language": "it",
-  "headline": "Oggi 8 punto/i da guardare; il resto è in ordine.",
+  "headline": "Oggi 11 punto/i da guardare; il resto è in ordine.",
   "answers": [
    {
     "needs": [],
@@ -4107,6 +4313,99 @@
     }
    },
    {
+    "needs": [],
+    "id": "payday-pressure",
+    "question": "Quanta pressione prima dello stipendio?",
+    "answer": "Prima dello stipendio del 30.10, 4 scadenza/e pesano 5’250.80 CHF: Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "5250.80",
+     "available": "-1250.40",
+     "gap": "-6501.20",
+     "bills": [
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Perché il mio saldo scende?",
+    "answer": "Fino al minimo del 07.10 escono 5’250.80 CHF; 4 fattura/e ne fanno il 100 %: Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09); Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Carte de crédit (750.20 CHF, 07.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-10-07",
+     "outflows": "5250.80",
+     "share": "100",
+     "causes": [
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Come si presenta ogni mese?",
+    "answer": "Ottobre è il mese più stretto: minimo −6’501.20 CHF il 07.10; 3 mesi su 3 scendono sotto zero.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-10",
+     "low": "-6501.20",
+     "date": "2026-10-07",
+     "months_below_zero": 3,
+     "months": 3
+    }
+   },
+   {
     "needs": [
      "taxes.last_annual_bill"
     ],
@@ -4136,6 +4435,16 @@
     "short": "ogni periodo copre le sue uscite"
    },
    {
+    "id": "cost-constellation",
+    "question": "Dove vanno i miei soldi ogni mese?",
+    "short": "costi fissi non ancora ordinati per categoria"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quali scadenze pesano di più?",
+    "short": "settimana più pesante: dal 26.09 al 30.09 (4’500.60 CHF, 61 %)"
+   },
+   {
     "id": "annual-bills",
     "question": "Quale grande spesa annuale arriva presto?",
     "short": "nessuna grande spesa annuale nei prossimi 90 giorni"
@@ -4158,7 +4467,7 @@
   "as_of": "2026-09-20",
   "currency": "CHF",
   "language": "rm",
-  "headline": "Oz 8 punct(s) da guardar; il rest è en urden.",
+  "headline": "Oz 11 punct(s) da guardar; il rest è en urden.",
   "answers": [
    {
     "needs": [],
@@ -5492,6 +5801,99 @@
     }
    },
    {
+    "needs": [],
+    "id": "payday-pressure",
+    "question": "Quant squitsch avant il salari?",
+    "answer": "Avant il salari dals 30.10 fan 4 termin(s) 5’250.80 CHF: Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "5250.80",
+     "available": "-1250.40",
+     "gap": "-6501.20",
+     "bills": [
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Pertge sa sbassa mes saldo?",
+    "answer": "Fin al punct bass dals 07.10 sortan 5’250.80 CHF; 4 quint(s) fan 100 % da quai: Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09); Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Carte de crédit (750.20 CHF, 07.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-10-07",
+     "outflows": "5250.80",
+     "share": "100",
+     "causes": [
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Co sa preschenta mintga mais?",
+    "answer": "October è il mais il pli stretg: punct bass −6’501.20 CHF ils 07.10; 3 da 3 mais van sut nulla.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-10",
+     "low": "-6501.20",
+     "date": "2026-10-07",
+     "months_below_zero": 3,
+     "months": 3
+    }
+   },
+   {
     "needs": [
      "taxes.last_annual_bill"
     ],
@@ -5521,6 +5923,16 @@
     "short": "mintga perioda cuvra sias sortidas"
    },
    {
+    "id": "cost-constellation",
+    "question": "Nua van mes daners mintga mais?",
+    "short": "custs fixs anc betg ordinads tenor categoria"
+   },
+   {
+    "id": "bill-map",
+    "question": "Tge termins pesan il pli fitg?",
+    "short": "l’emna la pli greva: dals 26.09 fin ils 30.09 (4’500.60 CHF, 61 %)"
+   },
+   {
     "id": "annual-bills",
     "question": "Tge gronda expensa annuala vegn prest?",
     "short": "nagina gronda expensa annuala en ils proxims 90 dis"
@@ -5543,7 +5955,7 @@
   "as_of": "2026-09-20",
   "currency": "CHF",
   "language": "en",
-  "headline": "8 point(s) to look at today; the rest is in order.",
+  "headline": "11 point(s) to look at today; the rest is in order.",
   "answers": [
    {
     "needs": [],
@@ -6877,6 +7289,99 @@
     }
    },
    {
+    "needs": [],
+    "id": "payday-pressure",
+    "question": "How much pressure before payday?",
+    "answer": "Before the 30.10 payday, 4 bill(s) come to 5’250.80 CHF: Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "5250.80",
+     "available": "-1250.40",
+     "gap": "-6501.20",
+     "bills": [
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Why does my balance go down?",
+    "answer": "Down to the low point on 07.10, 5’250.80 CHF goes out; 4 bill(s) make 100% of it: Prime mensuelle d’assurance maladie payée en avance ce mois-ci (980.00 CHF, 26.09); Loyer de l’appartement (2’100.00 CHF, 30.09); Remboursement du prêt personnel (1’420.60 CHF, 30.09); Carte de crédit (750.20 CHF, 07.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-10-07",
+     "outflows": "5250.80",
+     "share": "100",
+     "causes": [
+      {
+       "date": "2026-09-26",
+       "label": "Prime mensuelle d’assurance maladie payée en avance ce mois-ci",
+       "amount": "980.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Loyer de l’appartement",
+       "amount": "2100.00"
+      },
+      {
+       "date": "2026-09-30",
+       "label": "Remboursement du prêt personnel",
+       "amount": "1420.60"
+      },
+      {
+       "date": "2026-10-07",
+       "label": "Carte de crédit",
+       "amount": "750.20"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "What does each month look like?",
+    "answer": "October is the tightest month: low point −6’501.20 CHF on 07.10; 3 of 3 months go below zero.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-10",
+     "low": "-6501.20",
+     "date": "2026-10-07",
+     "months_below_zero": 3,
+     "months": 3
+    }
+   },
+   {
     "needs": [
      "taxes.last_annual_bill"
     ],
@@ -6904,6 +7409,16 @@
     "id": "pay-cycles",
     "question": "What falls due each pay cycle?",
     "short": "every cycle covers its outgoings"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Where does my money go each month?",
+    "short": "fixed costs not sorted by category yet"
+   },
+   {
+    "id": "bill-map",
+    "question": "Which bills weigh the most?",
+    "short": "heaviest week: 26.09 to 30.09 (4’500.60 CHF, 61%)"
    },
    {
     "id": "annual-bills",
