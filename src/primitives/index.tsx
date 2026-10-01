@@ -118,3 +118,4 @@ export function Empty({ children }: { children: ReactNode }) {
 export const SHADES = ["bz-shade-1", "bz-shade-2", "bz-shade-3", "bz-shade-4"] as const;
 
 export { clip, useWidth } from "./useWidth";
+export { NightDefs, dayIndex, useNightIds, type NightIds } from "./night";

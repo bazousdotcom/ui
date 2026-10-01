@@ -3,7 +3,7 @@
   "as_of": "2026-10-01",
   "currency": "CHF",
   "language": "fr",
-  "headline": "15 point(s) à regarder aujourd’hui ; le reste est en ordre.",
+  "headline": "18 point(s) à regarder aujourd’hui ; le reste est en ordre.",
   "answers": [
    {
     "needs": [],
@@ -1660,6 +1660,117 @@
    },
    {
     "needs": [],
+    "id": "payday-pressure",
+    "question": "Quelle pression avant le salaire ?",
+    "answer": "Avant le salaire du 30.10, 7 échéance(s) font 6’000.00 CHF : Loyer (1’800.00 CHF, 01.10) ; Crèche (1’800.00 CHF, 20.10) ; Assurance maladie (900.00 CHF, 01.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "6000.00",
+     "available": "2200.00",
+     "gap": "-3800.00",
+     "bills": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-01",
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-25",
+       "label": "Prêt personnel",
+       "amount": "680.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-15",
+       "label": "Leasing voiture",
+       "amount": "500.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-10",
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-28",
+       "label": "Frais bancaires",
+       "amount": "20.00",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Pourquoi mon solde descend-il ?",
+    "answer": "D’ici au point bas du 28.11, 14’200.00 CHF sortent ; 4 facture(s) en font 52 % : Loyer (1’800.00 CHF, 01.10) ; Crèche (1’800.00 CHF, 20.10) ; Loyer (1’800.00 CHF, 01.11) ; Facture dentiste (2’000.00 CHF, 03.11).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-11-28",
+     "outflows": "14200.00",
+     "share": "52",
+     "causes": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-03",
+       "label": "Facture dentiste",
+       "amount": "2000.00"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Comment se présente chaque mois ?",
+    "answer": "Novembre est le mois le plus serré : point bas −6’000.00 CHF le 28.11 ; 2 mois sur 3 passent sous zéro.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-11",
+     "low": "-6000.00",
+     "date": "2026-11-28",
+     "months_below_zero": 2,
+     "months": 3
+    }
+   },
+   {
+    "needs": [],
     "id": "pillar-3a",
     "question": "Puis-je encore verser sur mon 3e pilier cette année ?",
     "answer": "Il te reste 7’258.00 CHF de versements possibles sur le 3e pilier en 2026 (plafond 7’258.00 CHF par personne, affiliée à une caisse de pension), déductibles de ton revenu imposable. Verse avant le 31.12, souvent plus tôt selon l’établissement.",
@@ -1690,6 +1801,16 @@
     "id": "available-now",
     "question": "Combien ai-je maintenant ?",
     "short": "2’200.00 CHF disponibles"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Où part mon argent chaque mois ?",
+    "short": "Enfants : 32 % des charges fixes"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quelles échéances pèsent le plus ?",
+    "short": "semaine la plus lourde : du 01.11 au 07.11 (4’900.00 CHF, 35 %)"
    }
   ],
   "missing_data": {
@@ -1706,7 +1827,7 @@
   "as_of": "2026-10-01",
   "currency": "CHF",
   "language": "de",
-  "headline": "Heute 15 Punkt(e) zu beachten; der Rest ist in Ordnung.",
+  "headline": "Heute 18 Punkt(e) zu beachten; der Rest ist in Ordnung.",
   "answers": [
    {
     "needs": [],
@@ -3363,6 +3484,117 @@
    },
    {
     "needs": [],
+    "id": "payday-pressure",
+    "question": "Wie viel Druck bis zum Lohn?",
+    "answer": "Vor dem Lohn am 30.10 machen 7 Fälligkeit(en) 6’000.00 CHF aus: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "6000.00",
+     "available": "2200.00",
+     "gap": "-3800.00",
+     "bills": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-01",
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-25",
+       "label": "Prêt personnel",
+       "amount": "680.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-15",
+       "label": "Leasing voiture",
+       "amount": "500.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-10",
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-28",
+       "label": "Frais bancaires",
+       "amount": "20.00",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Warum sinkt mein Saldo?",
+    "answer": "Bis zum Tiefpunkt am 28.11 gehen 14’200.00 CHF weg; 4 Rechnung(en) machen 52 % davon aus: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-11-28",
+     "outflows": "14200.00",
+     "share": "52",
+     "causes": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-03",
+       "label": "Facture dentiste",
+       "amount": "2000.00"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Wie sieht jeder Monat aus?",
+    "answer": "November ist der knappste Monat: Tiefpunkt −6’000.00 CHF am 28.11; 2 von 3 Monaten fallen unter null.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-11",
+     "low": "-6000.00",
+     "date": "2026-11-28",
+     "months_below_zero": 2,
+     "months": 3
+    }
+   },
+   {
+    "needs": [],
     "id": "pillar-3a",
     "question": "Kann ich dieses Jahr noch in die Säule 3a einzahlen?",
     "answer": "Du kannst 2026 noch 7’258.00 CHF in die Säule 3a einzahlen (Höchstbetrag 7’258.00 CHF pro Person mit Pensionskasse), abzugsfähig vom steuerbaren Einkommen. Zahl vor dem 31.12. ein, je nach Anbieter früher.",
@@ -3393,6 +3625,16 @@
     "id": "available-now",
     "question": "Wie viel habe ich jetzt?",
     "short": "2’200.00 CHF verfügbar"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Wohin geht mein Geld jeden Monat?",
+    "short": "Enfants: 32 % der Fixkosten"
+   },
+   {
+    "id": "bill-map",
+    "question": "Welche Rechnungen wiegen am meisten?",
+    "short": "schwerste Woche: 01.11 bis 07.11 (4’900.00 CHF, 35 %)"
    }
   ],
   "missing_data": {
@@ -3409,7 +3651,7 @@
   "as_of": "2026-10-01",
   "currency": "CHF",
   "language": "it",
-  "headline": "Oggi 15 punto/i da guardare; il resto è in ordine.",
+  "headline": "Oggi 18 punto/i da guardare; il resto è in ordine.",
   "answers": [
    {
     "needs": [],
@@ -5066,6 +5308,117 @@
    },
    {
     "needs": [],
+    "id": "payday-pressure",
+    "question": "Quanta pressione prima dello stipendio?",
+    "answer": "Prima dello stipendio del 30.10, 7 scadenza/e pesano 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "6000.00",
+     "available": "2200.00",
+     "gap": "-3800.00",
+     "bills": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-01",
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-25",
+       "label": "Prêt personnel",
+       "amount": "680.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-15",
+       "label": "Leasing voiture",
+       "amount": "500.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-10",
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-28",
+       "label": "Frais bancaires",
+       "amount": "20.00",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Perché il mio saldo scende?",
+    "answer": "Fino al minimo del 28.11 escono 14’200.00 CHF; 4 fattura/e ne fanno il 52 %: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-11-28",
+     "outflows": "14200.00",
+     "share": "52",
+     "causes": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-03",
+       "label": "Facture dentiste",
+       "amount": "2000.00"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Come si presenta ogni mese?",
+    "answer": "Novembre è il mese più stretto: minimo −6’000.00 CHF il 28.11; 2 mesi su 3 scendono sotto zero.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-11",
+     "low": "-6000.00",
+     "date": "2026-11-28",
+     "months_below_zero": 2,
+     "months": 3
+    }
+   },
+   {
+    "needs": [],
     "id": "pillar-3a",
     "question": "Posso ancora versare nel pilastro 3a quest’anno?",
     "answer": "Puoi ancora versare 7’258.00 CHF nel pilastro 3a nel 2026 (massimo 7’258.00 CHF per persona affiliata a una cassa pensione), deducibili dal reddito imponibile. Versa prima del 31.12, spesso prima secondo l’istituto.",
@@ -5096,6 +5449,16 @@
     "id": "available-now",
     "question": "Quanto ho adesso?",
     "short": "2’200.00 CHF disponibili"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Dove vanno i miei soldi ogni mese?",
+    "short": "Enfants: 32 % dei costi fissi"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quali scadenze pesano di più?",
+    "short": "settimana più pesante: dal 01.11 al 07.11 (4’900.00 CHF, 35 %)"
    }
   ],
   "missing_data": {
@@ -5112,7 +5475,7 @@
   "as_of": "2026-10-01",
   "currency": "CHF",
   "language": "rm",
-  "headline": "Oz 15 punct(s) da guardar; il rest è en urden.",
+  "headline": "Oz 18 punct(s) da guardar; il rest è en urden.",
   "answers": [
    {
     "needs": [],
@@ -6769,6 +7132,117 @@
    },
    {
     "needs": [],
+    "id": "payday-pressure",
+    "question": "Quant squitsch avant il salari?",
+    "answer": "Avant il salari dals 30.10 fan 7 termin(s) 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "6000.00",
+     "available": "2200.00",
+     "gap": "-3800.00",
+     "bills": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-01",
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-25",
+       "label": "Prêt personnel",
+       "amount": "680.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-15",
+       "label": "Leasing voiture",
+       "amount": "500.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-10",
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-28",
+       "label": "Frais bancaires",
+       "amount": "20.00",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Pertge sa sbassa mes saldo?",
+    "answer": "Fin al punct bass dals 28.11 sortan 14’200.00 CHF; 4 quint(s) fan 52 % da quai: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-11-28",
+     "outflows": "14200.00",
+     "share": "52",
+     "causes": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-03",
+       "label": "Facture dentiste",
+       "amount": "2000.00"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "Co sa preschenta mintga mais?",
+    "answer": "November è il mais il pli stretg: punct bass −6’000.00 CHF ils 28.11; 2 da 3 mais van sut nulla.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-11",
+     "low": "-6000.00",
+     "date": "2026-11-28",
+     "months_below_zero": 2,
+     "months": 3
+    }
+   },
+   {
+    "needs": [],
     "id": "pillar-3a",
     "question": "Poss jau anc pajar en mia 3. pitga quest onn?",
     "answer": "Ti pos anc pajar 7’258.00 CHF en la 3. pitga dal 2026 (maximum 7’258.00 CHF per persuna cun cassa da pensiun), deducibel da l’entrada taxabla. Paja avant ils 31.12, savens pli baud tenor l’institut.",
@@ -6799,6 +7273,16 @@
     "id": "available-now",
     "question": "Quant hai jau ussa?",
     "short": "2’200.00 CHF disponibel"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Nua van mes daners mintga mais?",
+    "short": "Enfants: 32 % dals custs fixs"
+   },
+   {
+    "id": "bill-map",
+    "question": "Tge termins pesan il pli fitg?",
+    "short": "l’emna la pli greva: dals 01.11 fin ils 07.11 (4’900.00 CHF, 35 %)"
    }
   ],
   "missing_data": {
@@ -6815,7 +7299,7 @@
   "as_of": "2026-10-01",
   "currency": "CHF",
   "language": "en",
-  "headline": "15 point(s) to look at today; the rest is in order.",
+  "headline": "18 point(s) to look at today; the rest is in order.",
   "answers": [
    {
     "needs": [],
@@ -8472,6 +8956,117 @@
    },
    {
     "needs": [],
+    "id": "payday-pressure",
+    "question": "How much pressure before payday?",
+    "answer": "Before the 30.10 payday, 7 bill(s) come to 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "next_income_date": "2026-10-30",
+     "due": "6000.00",
+     "available": "2200.00",
+     "gap": "-3800.00",
+     "bills": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-01",
+       "label": "Assurance maladie",
+       "amount": "900.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-25",
+       "label": "Prêt personnel",
+       "amount": "680.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-15",
+       "label": "Leasing voiture",
+       "amount": "500.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-10",
+       "label": "Carte de crédit",
+       "amount": "300.00",
+       "currency": "CHF"
+      },
+      {
+       "date": "2026-10-28",
+       "label": "Frais bancaires",
+       "amount": "20.00",
+       "currency": "CHF"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "balance-river",
+    "question": "Why does my balance go down?",
+    "answer": "Down to the low point on 28.11, 14’200.00 CHF goes out; 4 bill(s) make 52% of it: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "until": "2026-11-28",
+     "outflows": "14200.00",
+     "share": "52",
+     "causes": [
+      {
+       "date": "2026-10-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-10-20",
+       "label": "Crèche",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-01",
+       "label": "Loyer",
+       "amount": "1800.00"
+      },
+      {
+       "date": "2026-11-03",
+       "label": "Facture dentiste",
+       "amount": "2000.00"
+      }
+     ]
+    }
+   },
+   {
+    "needs": [],
+    "id": "month-wall",
+    "question": "What does each month look like?",
+    "answer": "November is the tightest month: low point −6’000.00 CHF on 28.11; 2 of 3 months go below zero.",
+    "source": "kit",
+    "tone": "info",
+    "because": null,
+    "figures": {
+     "month": "2026-11",
+     "low": "-6000.00",
+     "date": "2026-11-28",
+     "months_below_zero": 2,
+     "months": 3
+    }
+   },
+   {
+    "needs": [],
     "id": "pillar-3a",
     "question": "Can I still pay into my pillar 3a this year?",
     "answer": "You can still pay 7’258.00 CHF into pillar 3a in 2026 (limit 7’258.00 CHF per person with a pension fund), deductible from taxable income. Pay before 31.12, often earlier depending on the provider.",
@@ -8502,6 +9097,16 @@
     "id": "available-now",
     "question": "How much do I have now?",
     "short": "2’200.00 CHF available"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Where does my money go each month?",
+    "short": "Enfants: 32% of fixed costs"
+   },
+   {
+    "id": "bill-map",
+    "question": "Which bills weigh the most?",
+    "short": "heaviest week: 01.11 to 07.11 (4’900.00 CHF, 35%)"
    }
   ],
   "missing_data": {

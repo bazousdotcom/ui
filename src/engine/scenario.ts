@@ -115,6 +115,39 @@ export function computeSeries(snapshot: Snapshot, active: ReadonlySet<string>, l
   return { points, low, end: { date: snapshot.horizon_end, balance } };
 }
 
+/** A stable name for one event: the engine's ref_id, or its label and date when it has none. */
+export function eventKey(e: CashEvent): string {
+  return e.ref_id ?? `${e.label}@${e.date}`;
+}
+
+/** The income dates of the horizon, in order. */
+export function incomeDates(snapshot: Snapshot): IsoDate[] {
+  return [...new Set(snapshot.events.filter((e) => e.direction === "inflow").map((e) => e.date))].sort();
+}
+
+/** The date an event falls on once the person has moved it (what-if), else its own date. */
+export function movedDate(e: CashEvent, moved: Readonly<Record<string, IsoDate>>): IsoDate {
+  return moved[eventKey(e)] ?? e.date;
+}
+
+/**
+ * The engine's events replayed with some of them moved to another date (`moved`: event key ->
+ * new date). Nothing else changes: with no move, it is exactly the engine's curve.
+ */
+export function replayMoves(snapshot: Snapshot, moved: Readonly<Record<string, IsoDate>>): Series {
+  if (Object.keys(moved).length === 0) return baseSeries(snapshot);
+  const active = new Set<string>();
+  const levers: Lever[] = [];
+  for (const e of snapshot.events) {
+    const target = moved[eventKey(e)];
+    if (!target || target === e.date) continue;
+    const id = `defer:${eventKey(e)}`;
+    levers.push({ id, kind: "defer", event: e, target });
+    active.add(id);
+  }
+  return computeSeries(snapshot, active, levers);
+}
+
 /** The engine's own curve, read from `points` (no replay). */
 export function baseSeries(snapshot: Snapshot): Series {
   let prev = toNumber(snapshot.opening_balance);
