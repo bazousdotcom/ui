@@ -54,6 +54,8 @@
 
 La barre de focus au-dessus de la grille dit ce qui est montré et se défait pièce par pièce. Rien n’est enregistré, et chaque intention arrive toujours à l’hôte. Poser la question en mots, c’est le rôle de l’assistant : dans ChatGPT ou Claude, les mêmes réponses viennent de `get_household_answers`.
 
+**Les scènes chez les assistants (0.7).** Les cinq scènes « Nuit » sont en React et tournent sur bazous.com ; Claude et ChatGPT affichent une carte statique. `drawVisual` dessine maintenant chacune en image immobile (`orbit`, `constellation`, `river`, `billmap`, `wall`), dans le thème clair ou sombre de la carte. Le moteur les envoie quand l’une de ces questions est posée seule ; la réponse peut alors avoir le ton `ok`, puisqu’elle est donnée en entier même quand tout va bien. Deux étiquettes relevées par la communauté sont corrigées : le point bas de la vallée garde un anneau de la couleur de la carte, pour que la courbe ne le traverse jamais, et une facture déplacée garde un nom aussi long que la moitié de l’image.
+
 **Prochaine étape (0.2) :** rendre la réponse obligatoire dans le contrat — chaque module fournira un verdict d’une phrase avec sa tonalité, testé dans les cinq langues — puis donner un verdict à `monthly-structure` et `pay-cycles`, et faire de `what-if` « le meilleur geste », recommandation d’abord. Les contributions sur ces trois modules sont les bienvenues.
 
 ## Les réponses dessinées
@@ -74,6 +76,11 @@ Bazous répond aussi en phrases (`GET /api/v1/answers`, et l’outil MCP `get_ho
 | `jar` | Ai-je mis de côté pour mes impôts ? | Douze mois à remplir face au bordereau, ce que cela fait par jour |
 | `gauge` | Puis-je encore verser sur mon 3e pilier ? | Versé et encore possible jusqu’au plafond, et les jours jusqu’au 31.12 |
 | `deadline` | Un contrat doit-il être résilié bientôt ? | Aujourd’hui, le jour où la lettre doit arriver, le renouvellement |
+| `orbit` | Quelle pression avant le salaire ? (0.7) | L’orbite « Nuit », immobile : les jours jusqu’au salaire tournent autour de ce que tu as, une planète par jour, à la taille de ce qui tombe |
+| `constellation` | Où part mon argent chaque mois ? (0.7) | Les charges fixes en étoiles, une par catégorie, à la taille de sa part ; les trois plus brillantes nommées |
+| `river` | Pourquoi mon solde descend-il ? (0.7) | Le solde jusqu’à son point bas, les plus grosses sorties en perles numérotées (empilées le même jour) |
+| `billmap` | Quelles échéances pèsent le plus ? (0.7) | Les factures en carte, à la taille du montant, la semaine la plus lourde éclairée |
+| `wall` | Comment se présente chaque mois ? (0.7) | Une colonne par mois jusqu’à son solde le plus bas, le mois le plus serré éclairé |
 
 ```tsx
 import { AnswerPicture, type Answers } from "@bazous/ui";
