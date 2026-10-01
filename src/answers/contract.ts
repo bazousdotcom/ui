@@ -90,13 +90,61 @@ export type DeadlineVisual = Visual<"deadline", {
   contracts: { name: string; ends_on: IsoDate; cancel_before: IsoDate; days_left: number }[];
 }>;
 
+/*
+ * The five « Nuit » scenes as still pictures (0.7), for the assistants' card: the same questions as
+ * the scenes of bazous.com, drawn without React so they show in Claude and in ChatGPT too.
+ */
+
+/** « Quelle pression avant le salaire ? » — the days before payday orbiting what you have. */
+export type OrbitVisual = Visual<"orbit", {
+  today: IsoDate;
+  payday: IsoDate;
+  available: Decimal;
+  due: Decimal;
+  gap: Decimal;
+  /** One planet a day: what falls due that day, how many bills, and the heaviest one's name. */
+  days: { date: IsoDate; amount: Decimal; count: number; label: string }[];
+}>;
+
+/** « Où part mon argent chaque mois ? » — the fixed costs as stars, one a category, sized by its share. */
+export type ConstellationVisual = Visual<"constellation", {
+  total: Decimal;
+  categories: { category: string; amount: Decimal; share: Decimal }[];
+}>;
+
+/** « Pourquoi mon solde descend-il ? » — the balance down to its low point, the causes as numbered beads. */
+export type RiverVisual = Visual<"river", {
+  series: BalancePoint[];
+  low: { date: IsoDate; balance: Decimal };
+  causes: { date: IsoDate; label: string; amount: Decimal }[];
+}>;
+
+/** « Quelles échéances pèsent le plus ? » — the bills as a map sized by amount, the heaviest week lit. */
+export type BillMapVisual = Visual<"billmap", {
+  from: IsoDate;
+  to: IsoDate;
+  amount: Decimal;
+  outflows: Decimal;
+  bills: { label: string; amount: Decimal; date: IsoDate }[];
+}>;
+
+/** « Comment se présente chaque mois ? » — one column a month, down to its lowest balance. */
+export type WallVisual = Visual<"wall", {
+  months: { month: IsoDate; low: Decimal; date: IsoDate }[];
+  /** The first day of the tightest month. */
+  tightest: IsoDate;
+}>;
+
 export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual
-  | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual;
+  | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual
+  | OrbitVisual | ConstellationVisual | RiverVisual | BillMapVisual | WallVisual;
 export type VisualKind = AnswerVisual["kind"];
 export const VISUAL_KINDS = ["runway", "valley", "shift", "days", "balance", "countdown",
-  "horizon", "calendar", "leak", "jar", "gauge", "deadline"] as const satisfies readonly VisualKind[];
+  "horizon", "calendar", "leak", "jar", "gauge", "deadline",
+  "orbit", "constellation", "river", "billmap", "wall"] as const satisfies readonly VisualKind[];
 
-export type AnswerTone = "risk" | "warn" | "info";
+/** "ok" only for a question asked on its own: its answer is then given in full, picture included. */
+export type AnswerTone = "risk" | "warn" | "info" | "ok";
 
 export type Answer = {
   id: string;

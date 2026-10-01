@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import overdrawn from "../fixtures/answers-overdrawn.json";
 import after from "../fixtures/answers-after.json";
 import before from "../fixtures/answers-before.json";
+import focus from "../fixtures/answers-focus.json";
 import schema from "../schema/answers.schema.json";
 import { VISUAL_KINDS, answerMessages, drawVisual, shorten, type AnswerVisual, type Answers } from "../src/answers";
 import { LOCALES } from "../src/i18n";
@@ -13,7 +14,10 @@ import type { Answer as RootAnswer, AnswerVisual as RootVisual, Answers as RootA
 export type RootTypes = [RootAnswer, RootVisual, RootAnswers];
 
 const validate = new Ajv2020({ allErrors: true, strict: false }).compile(schema);
-const FIXTURES = { before, after, overdrawn } as unknown as Record<string, Record<string, Answers>>;
+// One question asked on its own (as the assistants ask it): { language: { question: answers } }.
+const FOCUS = Object.fromEntries(Object.keys((focus as Record<string, object>).fr!).map((q) =>
+  [`focus ${q}`, Object.fromEntries(Object.entries(focus as unknown as Record<string, Record<string, Answers>>).map(([l, byQ]) => [l, byQ[q]!]))]));
+const FIXTURES = { before, after, overdrawn, ...FOCUS } as unknown as Record<string, Record<string, Answers>>;
 const pictures = (answers: Answers) => answers.answers.filter((a) => a.visual).map((a) => a.visual as AnswerVisual);
 
 describe("answers contract", () => {
@@ -31,8 +35,8 @@ describe("answers contract", () => {
     expect(validate(answers)).toBe(false);
   });
 
-  it("the « before » household alone shows every kind of picture", () => {
-    const kinds = new Set([FIXTURES.before!].flatMap((byLang) => pictures(byLang.fr!).map((v) => v.kind)));
+  it("the « before » household shows every kind of picture (the « Nuit » ones when asked alone)", () => {
+    const kinds = new Set([FIXTURES.before!, ...Object.values(FOCUS)].flatMap((byLang) => pictures(byLang.fr!).map((v) => v.kind)));
     expect([...kinds].sort()).toEqual([...VISUAL_KINDS].sort());
   });
 });
@@ -70,7 +74,7 @@ describe("answer pictures", () => {
     visual.move.label = '<img src=x onerror="alert(1)">';
     const svg = drawVisual(visual, "fr")!;
     expect(svg.querySelector("img")).toBeNull();
-    expect(svg.textContent).toContain("<img src=x oner…");
+    expect(svg.textContent).toContain(shorten(visual.move.label, 24)); // as much of the name as half the picture holds
     expect(shorten("Prime mensuelle d’assurance maladie")).toBe("Prime mensuelle d…");
   });
 
@@ -148,5 +152,75 @@ describe("the fees picture", () => {
         expect(above || below, `« ${label.textContent} » at ${width}px`).toBe(true);
       }
     }
+  });
+});
+
+
+describe("the « Nuit » scenes as still pictures (0.7)", () => {
+  const night = (q: string, locale: "fr" | "de" = "fr") => pictures(FOCUS[`focus ${q}`]![locale]!)[0]!;
+  const box = (el: Element) => ({ x: Number(el.getAttribute("x")), y: Number(el.getAttribute("y")),
+    w: Number(el.getAttribute("width")), h: Number(el.getAttribute("height")) });
+
+  it("each of the five questions asked alone has its picture", () => {
+    expect(Object.keys(FOCUS).map((q) => [q, night(q.slice(6)).kind])).toEqual([
+      ["focus payday-pressure", "orbit"], ["focus cost-constellation", "constellation"], ["focus balance-river", "river"],
+      ["focus bill-map", "billmap"], ["focus month-wall", "wall"]]);
+  });
+
+  it("the orbit counts every bill, and says what is missing", () => {
+    const o = night("payday-pressure") as Extract<AnswerVisual, { kind: "orbit" }>;
+    const text = drawVisual(o, "fr")!.textContent!;
+    expect(text).toContain(`${o.days.reduce((s, d) => s + d.count, 0)} factures`);
+    expect(text).toMatch(/manque|reste/);
+    const busiest = [...o.days].sort((a, b) => Number(b.amount) - Number(a.amount))[0]!;
+    if (busiest.count > 1) expect(text, "a day of several bills is not named after one").toContain(`+${busiest.count - 1} · `);
+  });
+
+  it("the bill map tiles never overlap and stay inside, the heaviest week lit", () => {
+    for (const width of [260, 320]) {
+      const svg = drawVisual(night("bill-map"), "fr", document, { width })!;
+      const tiles = [...svg.querySelectorAll("rect")].map(box);
+      for (const [i, a] of tiles.entries()) {
+        expect(a.x + a.w, "inside").toBeLessThanOrEqual(width - 7);
+        expect(a.y + a.h, "inside").toBeLessThanOrEqual(130 - 7);
+        for (const b of tiles.slice(i + 1))
+          expect(a.x + a.w <= b.x + 0.01 || b.x + b.w <= a.x + 0.01 || a.y + a.h <= b.y + 0.01 || b.y + b.h <= a.y + 0.01).toBe(true);
+      }
+      expect(svg.querySelectorAll('rect[fill="var(--bz-negative)"]').length).toBeGreaterThan(0);
+    }
+  });
+
+  it("river beads on the same day are stacked, never on top of each other", () => {
+    const r = structuredClone(night("balance-river")) as Extract<AnswerVisual, { kind: "river" }>;
+    r.causes = [0, 1, 2].map((i) => ({ date: r.series[3]![0], label: `Facture ${i + 1}`, amount: "100.00" }));
+    const beads = [...drawVisual(r, "fr")!.querySelectorAll('circle[r="7"]')].map((c) => [c.getAttribute("cx"), c.getAttribute("cy")].join());
+    expect(new Set(beads).size).toBe(3);
+  });
+
+  it("the wall lights the tightest month, in the household's language", () => {
+    const w = night("month-wall", "de") as Extract<AnswerVisual, { kind: "wall" }>;
+    const svg = drawVisual(w, "de")!;
+    expect(svg.textContent).toMatch(/Okt|Oktober/);
+    expect(svg.querySelectorAll('rect[fill-opacity="1"]').length).toBe(1);
+  });
+
+  it("the constellation names its brightest category with its share", () => {
+    const c = night("cost-constellation") as Extract<AnswerVisual, { kind: "constellation" }>;
+    expect(drawVisual(c, "fr")!.textContent).toContain(`${c.categories[0]!.category} ${Math.round(Number(c.categories[0]!.share))} %`);
+  });
+});
+
+describe("labels the community saw cut or crossed (0.7)", () => {
+  it("the valley's low point has a ring of the card's colour, so the curve never crosses it", () => {
+    const valley = pictures(FIXTURES.before!.fr!).find((v) => v.kind === "valley")!;
+    const label = [...drawVisual(valley, "fr")!.querySelectorAll("text")].find((t) => t.textContent!.includes("·"))!;
+    expect(label.getAttribute("stroke")).toBe("var(--bz-surface)");
+    expect(label.getAttribute("paint-order")).toBe("stroke");
+  });
+
+  it("the moved bill keeps a 20-letter name whole (« Steueramt Regensdorf »)", () => {
+    const shift = structuredClone(pictures(FIXTURES.before!.fr!).find((v) => v.kind === "shift")!) as Extract<AnswerVisual, { kind: "shift" }>;
+    shift.move.label = "Steueramt Regensdorf";
+    expect(drawVisual(shift, "fr")!.textContent).toContain("Steueramt Regensdorf");
   });
 });
