@@ -1,8 +1,9 @@
-import { num, shortDate } from "../format";
+import { createFormatters, dateSpan, num, shortDate } from "../format";
 import { createT, type Locale, type Translate } from "../i18n";
 import type {
-  AnswerVisual, BalancePoint, BalanceVisual, CalendarVisual, CountdownVisual, DaysVisual, DeadlineVisual, GaugeVisual, HorizonVisual,
-  JarVisual, LeakVisual, RunwayVisual, ShiftVisual, ValleyVisual,
+  AnswerVisual, BalancePoint, BalanceVisual, BillMapVisual, CalendarVisual, ConstellationVisual, CountdownVisual, DaysVisual,
+  DeadlineVisual, GaugeVisual, HorizonVisual, JarVisual, LeakVisual, OrbitVisual, RiverVisual, RunwayVisual, ShiftVisual,
+  ValleyVisual, WallVisual,
 } from "./contract";
 import { answerMessages } from "./messages";
 
@@ -58,9 +59,12 @@ function tools(doc: Document, W: number) {
     node.textContent = value;
     return node;
   };
+  /** A label drawn over a curve keeps a ring of the card's colour, so the curve never runs through it. */
+  const halo = (x: number, y: number, value: string, attrs: Attrs = {}) =>
+    txt(x, y, value, { stroke: C.surface, "stroke-width": 3, "stroke-linejoin": "round", "paint-order": "stroke", ...attrs });
   const frame = (label: string, ...children: Child[]) =>
     sv("svg", { viewBox: `0 0 ${W} ${H}`, class: "bz-answer-visual", role: "img", "aria-label": label }, ...children) as SVGSVGElement;
-  return { sv, txt, frame };
+  return { sv, txt, halo, frame };
 }
 
 type Scale = { n: number; top: number; hi: number; x: (i: number) => number; y: (v: number) => number };
@@ -81,8 +85,8 @@ function scale(list: BalancePoint[][], W: number): Scale {
 const points = (series: BalancePoint[], sc: Scale, f = (b: number) => b) =>
   series.map(([, b], i) => `${sc.x(i).toFixed(1)},${sc.y(f(n(b))).toFixed(1)}`).join(" ");
 
-function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGElement | null {
-  const { sv, txt, frame } = tools(doc, W);
+function draw(v: AnswerVisual, t: Translate, locale: Locale, doc: Document, W: number): SVGSVGElement | null {
+  const { sv, txt, halo, frame } = tools(doc, W);
   const zeroLine = (y: number) => [
     sv("line", { x1: 8, x2: W - 8, y1: y, y2: y, stroke: C.line, "stroke-dasharray": "3 3" }),
     txt(W - 8, y - 4, "0", { "text-anchor": "end" }),
@@ -137,7 +141,8 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
       sv("polyline", { points: points(v2.series, sc), fill: "none", stroke: C.ink, "stroke-width": 2, "stroke-linejoin": "round" }),
       peaks(v2.series, sc),
       sv("circle", { cx: lx, cy: ly, r: 5, fill: C.negative }),
-      txt(lx + (right ? -9 : 9), Math.min(ly + 4, H - 26), `${amount(v2.low.balance)} · ${shortDate(v2.low.date)}`,
+      // Under the dot (the curve is flat at its bottom), or above it when the bottom is too low.
+      halo(lx + (right ? -6 : 6), ly + 17 <= H - 24 ? ly + 17 : ly - 9, `${amount(v2.low.balance)} · ${shortDate(v2.low.date)}`,
         { "text-anchor": right ? "end" : "start", fill: C.negative, "font-weight": 600 }),
       ends(v2.series));
   };
@@ -145,8 +150,8 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
   const shift = (s: ShiftVisual) => {
     const sc = scale([s.before, s.after], W), zero = sc.y(0);
     const at = (iso: string) => { const i = s.before.findIndex(([d]) => d === iso); return sc.x(i < 0 ? sc.n - 1 : i); };
-    const fx = at(s.move.from), tx = at(s.move.to), label = shorten(s.move.label, 16);
-    const tag = Math.min(label.length * 6 + 14, 120);
+    const fx = at(s.move.from), tx = at(s.move.to), label = shorten(s.move.label, Math.floor((W / 2 - 14) / 6));
+    const tag = Math.min(label.length * 6 + 14, W / 2);
     const tagX = Math.max(4, Math.min(fx - tag / 2, tx - tag - 12, W - 4 - tag));
     const arrow = tagX + tag + 8 < tx - 4;
     // The before/after legend goes to the side the target date leaves free; with no room on either side,
@@ -314,6 +319,147 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
       txt(W - 8, H - 8, t("vis.renewal"), { "text-anchor": "end", fill: C.negative }));
   };
 
+
+  // ---- the « Nuit » scenes as still pictures (0.7) ----
+
+  const glow = (cx: number, cy: number, r: number, fill: string) =>
+    [sv("circle", { cx, cy, r: r * 1.7, fill, "fill-opacity": 0.1 }), sv("circle", { cx, cy, r: r * 1.3, fill, "fill-opacity": 0.16 })];
+
+  const orbit = (o: OrbitVisual) => {
+    const gap = n(o.gap), cx = 46, cy = 68, core = 24, short = gap < 0, coreFill = short ? C.negative : C.positive;
+    // The days to payday ride an arc around what you have: today at the top, payday at the bottom,
+    // kept between the two lines of text.
+    const rx = W - cx - 26, ry = 40, a0 = -1.15, a1 = 1.15;
+    const t0 = Date.parse(o.today), span = Math.max(Date.parse(o.payday) - t0, 1);
+    const at = (iso: string) => { const a = a0 + ((Date.parse(iso) - t0) / span) * (a1 - a0); return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)] as const; };
+    const max = Math.max(...o.days.map((d) => n(d.amount)), 1);
+    const size = (v: number) => 4 + 10 * Math.sqrt(v / max);
+    const arc = Array.from({ length: 41 }, (_, i) => { const a = a0 + (i / 40) * (a1 - a0); return `${(cx + rx * Math.cos(a)).toFixed(1)},${(cy + ry * Math.sin(a)).toFixed(1)}`; }).join(" ");
+    const heaviest = [...o.days].sort((a, b) => n(b.amount) - n(a.amount))[0];
+    const [px, py] = at(o.payday);
+    const bills = o.days.reduce((sum, d) => sum + d.count, 0);
+    return frame(o.caption,
+      sv("polyline", { points: arc, fill: "none", stroke: C.line, "stroke-dasharray": "2 4" }),
+      glow(cx, cy, core, coreFill),
+      sv("circle", { cx, cy, r: core, fill: coreFill }),
+      txt(cx, cy + 4, amount(o.available).replace(/\.\d+$/, ""), { "text-anchor": "middle", fill: C.onAccent, "font-weight": 600 }),
+      txt(8, 14, `${t("vis.available")} ${amount(o.available)}`, { fill: C.ink }),
+      o.days.map((d) => { const [x, y] = at(d.date), r = size(n(d.amount)); return [
+        glow(x, y, r, C.negative), sv("circle", { cx: x, cy: y, r, fill: C.negative, stroke: C.surface, "stroke-width": 1 }),
+        d.count > 1 && txt(x, y + 4, String(d.count), { "text-anchor": "middle", fill: C.onAccent, "font-weight": 600, "font-size": 10 }),
+      ]; }),
+      sv("circle", { cx: px, cy: py, r: 6, fill: C.positive }),
+      txt(W - 8, H - 4, `${t("vis.payday")} ${shortDate(o.payday)}`, { "text-anchor": "end", fill: C.positive }),
+      txt(W - 8, 14, t("vis.bills", { n: bills, total: amount(o.due) }), { "text-anchor": "end", fill: C.negative }),
+      // The heaviest day, named beside its planet: « Loyer +1 · 2’700.00 » when two bills fall that day.
+      heaviest && (() => {
+        const [hx, hy] = at(heaviest.date), r = size(n(heaviest.amount)), right = hx < W * 0.55;
+        const more = heaviest.count > 1 ? ` +${heaviest.count - 1}` : "", value = ` · ${amount(heaviest.amount)}`;
+        const room = Math.floor(((right ? W - 8 - hx : hx - 8) - r - 6) / 6.5) - more.length - value.length;
+        return halo(right ? hx + r + 6 : hx - r - 6, hy + 4, `${shorten(heaviest.label, Math.max(room, 4))}${more}${value}`,
+          { "text-anchor": right ? "start" : "end", fill: C.ink });
+      })(),
+      txt(8, H - 4, short ? `${t("vis.short")} ${amount(-gap)}` : `${t("vis.left")} ${amount(gap)}`,
+        { fill: short ? C.negative : C.positive, "font-weight": 600 }));
+  };
+
+  const constellation = (c: ConstellationVisual) => {
+    // The largest category first, left to right on a zigzag; the three brightest named in a legend below,
+    // so no name ever sits on a star.
+    const list = c.categories.slice(0, 8), pitch = (W - 16) / Math.max(list.length, 1), zig = [0.42, 0.68, 0.3, 0.62, 0.36, 0.7, 0.28, 0.58];
+    const stars = list.map((cat, i) => ({ cat, r: Math.min(4 + 18 * Math.sqrt(n(cat.share) / 100), pitch * 0.45),
+      x: 8 + pitch * (i + 0.5), y: 24 + zig[i]! * (H - 58) }));
+    const colour = (i: number) => (i ? C.warning : C.accent);
+    const slot = (W - 16) / 3, chars = Math.max(Math.floor((slot - 18) / 6.5) - 5, 4);
+    return frame(c.caption,
+      stars.slice(1).map((s, i) => sv("line", { x1: stars[i]!.x, y1: stars[i]!.y, x2: s.x, y2: s.y, stroke: C.line, "stroke-width": 0.8 })),
+      stars.map((s, i) => [glow(s.x, s.y, s.r, colour(i)), sv("circle", { cx: s.x, cy: s.y, r: s.r, fill: colour(i) })]),
+      txt(W - 8, 14, `${amount(c.total)} ${t("vis.perMonth")}`, { "text-anchor": "end", fill: C.ink }),
+      stars.slice(0, 3).map((s, i) => [
+        sv("circle", { cx: 8 + i * slot + 4, cy: H - 10, r: 4, fill: colour(i) }),
+        txt(8 + i * slot + 12, H - 6, `${shorten(s.cat.category, chars)} ${num(s.cat.share, 0)} %`,
+          { fill: i ? C.muted : C.ink, "font-weight": i ? 400 : 600 }),
+      ]));
+  };
+
+  const river = (r: RiverVisual) => {
+    const sc = scale([r.series], W), zero = sc.y(0);
+    const index = (iso: string) => Math.max(0, r.series.findIndex(([d]) => d === iso));
+    const stack = new Map<number, number>();
+    // Causes on the same day are stacked above the curve instead of hiding each other.
+    const beads = r.causes.map((c, i) => {
+      const k = index(c.date), level = stack.get(k) ?? 0;
+      stack.set(k, level + 1);
+      return { i, c, x: sc.x(k), y: Math.max(sc.y(n(r.series[k]![1])) - 9 - level * 15, 9) };
+    });
+    const top = [...r.causes].map((c, i) => ({ c, i })).sort((a, b) => n(b.c.amount) - n(a.c.amount))[0];
+    const li = index(r.low.date), lx = sc.x(li), ly = sc.y(n(r.low.balance));
+    return frame(r.caption,
+      zeroLine(zero),
+      sv("polyline", { points: points(r.series, sc), fill: "none", stroke: C.accent, "stroke-width": 6, "stroke-opacity": 0.18, "stroke-linejoin": "round" }),
+      sv("polyline", { points: points(r.series, sc), fill: "none", stroke: C.accent, "stroke-width": 2, "stroke-linejoin": "round" }),
+      sv("circle", { cx: lx, cy: ly, r: 4, fill: C.negative }),
+      beads.map((b) => [
+        sv("circle", { cx: b.x, cy: b.y, r: 7, fill: C.negative, stroke: C.surface, "stroke-width": 1.5 }),
+        txt(b.x, b.y + 3.5, String(b.i + 1), { "text-anchor": "middle", fill: C.onAccent, "font-size": 9, "font-weight": 600 }),
+      ]),
+      // The heaviest cause, named between the two end dates.
+      top && txt(W / 2, H - 6, `${top.i + 1} · ${shorten(top.c.label, Math.max(Math.floor((W - 110) / 6.5) - 10, 4))} ${amount(top.c.amount)}`,
+        { "text-anchor": "middle", fill: C.ink }),
+      ends(r.series));
+  };
+
+  const billmap = (m: BillMapVisual) => {
+    // A treemap: the bills split in two halves of about the same weight, across then down, until each has its tile.
+    const bills = [...m.bills].sort((a, b) => n(b.amount) - n(a.amount)).slice(0, 12);
+    type Tile = { b: (typeof bills)[number]; x: number; y: number; w: number; h: number };
+    const tiles: Tile[] = [];
+    const split = (list: typeof bills, x: number, y: number, w: number, h: number) => {
+      if (list.length === 1) { tiles.push({ b: list[0]!, x, y, w, h }); return; }
+      const total = list.reduce((s, b) => s + n(b.amount), 0) || 1;
+      let k = 1, acc = n(list[0]!.amount);
+      while (k < list.length - 1 && acc + n(list[k]!.amount) <= total / 2) acc += n(list[k++]!.amount);
+      const f = acc / total;
+      if (w >= h * 1.4) { split(list.slice(0, k), x, y, w * f, h); split(list.slice(k), x + w * f, y, w * (1 - f), h); }
+      else { split(list.slice(0, k), x, y, w, h * f); split(list.slice(k), x, y + h * f, w, h * (1 - f)); }
+    };
+    if (bills.length) split(bills, 8, 22, W - 16, H - 30);
+    const heavy = (b: (typeof bills)[number]) => b.date >= m.from && b.date <= m.to;
+    return frame(m.caption,
+      txt(8, 14, `${t("vis.heaviest")} ${dateSpan(m.from, m.to)}`, { fill: C.negative, "font-weight": 600 }),
+      txt(W - 8, 14, amount(m.amount), { "text-anchor": "end", fill: C.negative, "font-weight": 600 }),
+      tiles.map(({ b, x, y, w, h }) => [
+        sv("rect", { x: x + 1, y: y + 1, width: Math.max(w - 2, 0), height: Math.max(h - 2, 0), rx: 3,
+          fill: heavy(b) ? C.negative : C.muted, "fill-opacity": heavy(b) ? 0.78 : 0.22 }),
+        w > 46 && h > 18 && txt(x + 6, y + 14, shorten(b.label, Math.max(Math.floor((w - 10) / 6.5), 3)),
+          { fill: heavy(b) ? C.onAccent : C.ink, "font-size": 10 }),
+        w > 46 && h > 32 && txt(x + 6, y + 27, amount(b.amount), { fill: heavy(b) ? C.onAccent : C.muted, "font-size": 10 }),
+      ]));
+  };
+
+  const wall = (w: WallVisual) => {
+    const months = w.months.slice(0, 6), fmt = createFormatters(locale);
+    const lows = months.map((m) => n(m.low)), lo = Math.min(0, ...lows), hi = Math.max(0, ...lows);
+    const top = 22, bottom = H - 24, y = (v: number) => top + ((hi - v) * (bottom - top)) / (hi - lo || 1), zero = y(0);
+    const pitch = (W - 16) / Math.max(months.length, 1), bw = Math.min(pitch * 0.62, 56);
+    const name = (iso: string) => { const full = fmt.month(iso); return pitch > 70 ? full : full.slice(0, 3); };
+    return frame(w.caption,
+      sv("line", { x1: 8, x2: W - 8, y1: zero, y2: zero, stroke: C.line, "stroke-dasharray": "3 3" }),
+      months.map((m, i) => {
+        const v = n(m.low), x = 8 + i * pitch + (pitch - bw) / 2, tight = m.month === w.tightest, below = v < 0;
+        const color = below ? C.negative : C.positive;
+        const y0 = Math.min(zero, y(v)), hgt = Math.max(Math.abs(y(v) - zero), 2);
+        return [
+          tight && sv("rect", { x: x - 4, y: y0 - 4, width: bw + 8, height: hgt + 8, rx: 5, fill: color, "fill-opacity": 0.14 }),
+          sv("rect", { x, y: y0, width: bw, height: hgt, rx: 3, fill: color, "fill-opacity": tight ? 1 : 0.45 }),
+          txt(x + bw / 2, H - 6, name(m.month), { "text-anchor": "middle", fill: tight ? C.ink : C.muted, "font-weight": tight ? 600 : 400 }),
+          // The amount sits on the free side of the zero line: above it for a month below zero.
+          tight && halo(Math.min(Math.max(x + bw / 2, 40), W - 40), below ? Math.max(zero - 6, 12) : Math.max(y(v) - 6, 12),
+            amount(m.low), { "text-anchor": "middle", fill: color, "font-weight": 600 }),
+        ];
+      }));
+  };
+
   switch (v.kind) {
     case "runway": return runway(v);
     case "valley": return valley(v);
@@ -327,6 +473,11 @@ function draw(v: AnswerVisual, t: Translate, doc: Document, W: number): SVGSVGEl
     case "jar": return jar(v);
     case "gauge": return gauge(v);
     case "deadline": return deadline(v);
+    case "orbit": return orbit(v);
+    case "constellation": return constellation(v);
+    case "river": return river(v);
+    case "billmap": return billmap(v);
+    case "wall": return wall(v);
     default: return null;
   }
 }
@@ -342,7 +493,7 @@ export function drawVisual(visual: AnswerVisual | null | undefined, locale: Loca
   if (!visual) return null;
   const width = Math.round(Math.min(Math.max(options.width ?? MAX_WIDTH, MIN_WIDTH), MAX_WIDTH));
   try {
-    return draw(visual, createT(locale, answerMessages), doc, width);
+    return draw(visual, createT(locale, answerMessages), locale, doc, width);
   } catch {
     return null; // a picture never breaks the answer
   }

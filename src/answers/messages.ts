@@ -10,7 +10,7 @@ export const answerMessages: Catalog = {
     "vis.bills.one": "{n} facture · {total}", "vis.bills.other": "{n} factures · {total}",
     "vis.fixedDays": "= {days} j de charges fixes", "vis.inDays": "dans {days} j", "vis.perYear": "/ an", "vis.years.one": "{n} an", "vis.years.other": "{n} ans",
     "vis.bill": "bordereau", "vis.perDay": "/ jour", "vis.paid": "versé", "vis.limit": "plafond", "vis.letter": "lettre avant le", "vis.ends": "fin",
-    "vis.renewal": "renouvellement", "vis.more": "+{n}", "vis.months": "12 mois",
+    "vis.renewal": "renouvellement", "vis.more": "+{n}", "vis.months": "12 mois", "vis.heaviest": "la semaine la plus lourde",
   },
   de: {
     "vis.today": "heute", "vis.payday": "Lohn", "vis.available": "verfügbar", "vis.short": "fehlt", "vis.left": "bleibt",
@@ -20,7 +20,7 @@ export const answerMessages: Catalog = {
     "vis.bills.one": "{n} Rechnung · {total}", "vis.bills.other": "{n} Rechnungen · {total}",
     "vis.fixedDays": "= {days} T Fixkosten", "vis.inDays": "in {days} T", "vis.perYear": "/ Jahr", "vis.years.one": "{n} Jahr", "vis.years.other": "{n} Jahre",
     "vis.bill": "Steuerrechnung", "vis.perDay": "/ Tag", "vis.paid": "eingezahlt", "vis.limit": "Maximum", "vis.letter": "Brief vor dem", "vis.ends": "Ende",
-    "vis.renewal": "Verlängerung", "vis.more": "+{n}", "vis.months": "12 Monate",
+    "vis.renewal": "Verlängerung", "vis.more": "+{n}", "vis.months": "12 Monate", "vis.heaviest": "die schwerste Woche",
   },
   it: {
     "vis.today": "oggi", "vis.payday": "stipendio", "vis.available": "disponibile", "vis.short": "manca", "vis.left": "resta",
@@ -30,7 +30,7 @@ export const answerMessages: Catalog = {
     "vis.bills.one": "{n} fattura · {total}", "vis.bills.other": "{n} fatture · {total}",
     "vis.fixedDays": "= {days} g di spese fisse", "vis.inDays": "tra {days} g", "vis.perYear": "/ anno", "vis.years.one": "{n} anno", "vis.years.other": "{n} anni",
     "vis.bill": "notifica", "vis.perDay": "/ giorno", "vis.paid": "versato", "vis.limit": "massimo", "vis.letter": "lettera prima del", "vis.ends": "fine",
-    "vis.renewal": "rinnovo", "vis.more": "+{n}", "vis.months": "12 mesi",
+    "vis.renewal": "rinnovo", "vis.more": "+{n}", "vis.months": "12 mesi", "vis.heaviest": "la settimana più pesante",
   },
   rm: {
     "vis.today": "oz", "vis.payday": "paja", "vis.available": "disponibel", "vis.short": "manca", "vis.left": "resta",
@@ -40,7 +40,7 @@ export const answerMessages: Catalog = {
     "vis.bills.one": "{n} quint · {total}", "vis.bills.other": "{n} quints · {total}",
     "vis.fixedDays": "= {days} d custs fixs", "vis.inDays": "en {days} d", "vis.perYear": "/ onn", "vis.years.one": "{n} onn", "vis.years.other": "{n} onns",
     "vis.bill": "quint da taglia", "vis.perDay": "/ di", "vis.paid": "pajà", "vis.limit": "maximum", "vis.letter": "brev avant ils", "vis.ends": "fin",
-    "vis.renewal": "renovaziun", "vis.more": "+{n}", "vis.months": "12 mais",
+    "vis.renewal": "renovaziun", "vis.more": "+{n}", "vis.months": "12 mais", "vis.heaviest": "l’emna la pli greva",
   },
   en: {
     "vis.today": "today", "vis.payday": "payday", "vis.available": "available", "vis.short": "short", "vis.left": "left",
@@ -50,6 +50,6 @@ export const answerMessages: Catalog = {
     "vis.bills.one": "{n} bill · {total}", "vis.bills.other": "{n} bills · {total}",
     "vis.fixedDays": "= {days} d of fixed costs", "vis.inDays": "in {days} d", "vis.perYear": "/ year", "vis.years.one": "{n} year", "vis.years.other": "{n} years",
     "vis.bill": "tax bill", "vis.perDay": "/ day", "vis.paid": "paid", "vis.limit": "limit", "vis.letter": "letter before", "vis.ends": "ends",
-    "vis.renewal": "renewal", "vis.more": "+{n}", "vis.months": "12 months",
+    "vis.renewal": "renewal", "vis.more": "+{n}", "vis.months": "12 months", "vis.heaviest": "the heaviest week",
   },
 };

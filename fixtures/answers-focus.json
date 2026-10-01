@@ -1,0 +1,3737 @@
+{
+ "fr": {
+  "payday-pressure": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Quelle pression avant le salaire ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "payday-pressure",
+     "question": "Quelle pression avant le salaire ?",
+     "answer": "Avant le salaire du 30.10, 7 échéance(s) font 6’000.00 CHF : Loyer (1’800.00 CHF, 01.10) ; Crèche (1’800.00 CHF, 20.10) ; Assurance maladie (900.00 CHF, 01.10).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "next_income_date": "2026-10-30",
+      "due": "6000.00",
+      "available": "2200.00",
+      "gap": "-3800.00",
+      "bills": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-01",
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-25",
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-15",
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-10",
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-28",
+        "label": "Frais bancaires",
+        "amount": "20.00",
+        "currency": "CHF"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "orbit",
+      "today": "2026-10-01",
+      "payday": "2026-10-30",
+      "available": "2200.00",
+      "due": "6000.00",
+      "gap": "-3800.00",
+      "days": [
+       {
+        "date": "2026-10-01",
+        "amount": "2700.00",
+        "count": 2,
+        "label": "Loyer"
+       },
+       {
+        "date": "2026-10-10",
+        "amount": "300.00",
+        "count": 1,
+        "label": "Carte de crédit"
+       },
+       {
+        "date": "2026-10-15",
+        "amount": "500.00",
+        "count": 1,
+        "label": "Leasing voiture"
+       },
+       {
+        "date": "2026-10-20",
+        "amount": "1800.00",
+        "count": 1,
+        "label": "Crèche"
+       },
+       {
+        "date": "2026-10-25",
+        "amount": "680.00",
+        "count": 1,
+        "label": "Prêt personnel"
+       },
+       {
+        "date": "2026-10-28",
+        "amount": "20.00",
+        "count": 1,
+        "label": "Frais bancaires"
+       }
+      ],
+      "caption": "7 facture(s) tournent autour de tes 2’200.00 CHF avant le salaire du 30.10 ; la plus lourde : Loyer, 1’800.00 CHF."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "payday-pressure"
+  },
+  "cost-constellation": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Où part mon argent chaque mois ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "cost-constellation",
+     "question": "Où part mon argent chaque mois ?",
+     "answer": "Enfants prend 32 % de tes charges fixes (1’800.00 CHF sur 5’700.00 CHF par mois).",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "constellation",
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ],
+      "caption": "Enfants brille le plus : 32 % de tes 5’700.00 CHF de charges fixes par mois."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "cost-constellation"
+  },
+  "balance-river": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Pourquoi mon solde descend-il ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "balance-river",
+     "question": "Pourquoi mon solde descend-il ?",
+     "answer": "D’ici au point bas du 28.11, 14’200.00 CHF sortent ; 4 facture(s) en font 52 % : Loyer (1’800.00 CHF, 01.10) ; Crèche (1’800.00 CHF, 20.10) ; Loyer (1’800.00 CHF, 01.11) ; Facture dentiste (2’000.00 CHF, 03.11).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "until": "2026-11-28",
+      "outflows": "14200.00",
+      "share": "52",
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "river",
+      "series": [
+       [
+        "2026-10-01",
+        "-500.00"
+       ],
+       [
+        "2026-10-02",
+        "-500.00"
+       ],
+       [
+        "2026-10-03",
+        "-500.00"
+       ],
+       [
+        "2026-10-04",
+        "-500.00"
+       ],
+       [
+        "2026-10-05",
+        "-500.00"
+       ],
+       [
+        "2026-10-06",
+        "-500.00"
+       ],
+       [
+        "2026-10-07",
+        "-500.00"
+       ],
+       [
+        "2026-10-08",
+        "-500.00"
+       ],
+       [
+        "2026-10-09",
+        "-500.00"
+       ],
+       [
+        "2026-10-10",
+        "-800.00"
+       ],
+       [
+        "2026-10-11",
+        "-800.00"
+       ],
+       [
+        "2026-10-12",
+        "-800.00"
+       ],
+       [
+        "2026-10-13",
+        "-800.00"
+       ],
+       [
+        "2026-10-14",
+        "-800.00"
+       ],
+       [
+        "2026-10-15",
+        "-1300.00"
+       ],
+       [
+        "2026-10-16",
+        "-1300.00"
+       ],
+       [
+        "2026-10-17",
+        "-1300.00"
+       ],
+       [
+        "2026-10-18",
+        "-1300.00"
+       ],
+       [
+        "2026-10-19",
+        "-1300.00"
+       ],
+       [
+        "2026-10-20",
+        "-3100.00"
+       ],
+       [
+        "2026-10-21",
+        "-3100.00"
+       ],
+       [
+        "2026-10-22",
+        "-3100.00"
+       ],
+       [
+        "2026-10-23",
+        "-3100.00"
+       ],
+       [
+        "2026-10-24",
+        "-3100.00"
+       ],
+       [
+        "2026-10-25",
+        "-3780.00"
+       ],
+       [
+        "2026-10-26",
+        "-3780.00"
+       ],
+       [
+        "2026-10-27",
+        "-3780.00"
+       ],
+       [
+        "2026-10-28",
+        "-3800.00"
+       ],
+       [
+        "2026-10-29",
+        "-3800.00"
+       ],
+       [
+        "2026-10-30",
+        "2200.00"
+       ],
+       [
+        "2026-10-31",
+        "2200.00"
+       ],
+       [
+        "2026-11-01",
+        "-500.00"
+       ],
+       [
+        "2026-11-02",
+        "-500.00"
+       ],
+       [
+        "2026-11-03",
+        "-2500.00"
+       ],
+       [
+        "2026-11-04",
+        "-2500.00"
+       ],
+       [
+        "2026-11-05",
+        "-2500.00"
+       ],
+       [
+        "2026-11-06",
+        "-2500.00"
+       ],
+       [
+        "2026-11-07",
+        "-2700.00"
+       ],
+       [
+        "2026-11-08",
+        "-2700.00"
+       ],
+       [
+        "2026-11-09",
+        "-2700.00"
+       ],
+       [
+        "2026-11-10",
+        "-3000.00"
+       ],
+       [
+        "2026-11-11",
+        "-3000.00"
+       ],
+       [
+        "2026-11-12",
+        "-3000.00"
+       ],
+       [
+        "2026-11-13",
+        "-3000.00"
+       ],
+       [
+        "2026-11-14",
+        "-3000.00"
+       ],
+       [
+        "2026-11-15",
+        "-3500.00"
+       ],
+       [
+        "2026-11-16",
+        "-3500.00"
+       ],
+       [
+        "2026-11-17",
+        "-3500.00"
+       ],
+       [
+        "2026-11-18",
+        "-3500.00"
+       ],
+       [
+        "2026-11-19",
+        "-3500.00"
+       ],
+       [
+        "2026-11-20",
+        "-5300.00"
+       ],
+       [
+        "2026-11-21",
+        "-5300.00"
+       ],
+       [
+        "2026-11-22",
+        "-5300.00"
+       ],
+       [
+        "2026-11-23",
+        "-5300.00"
+       ],
+       [
+        "2026-11-24",
+        "-5300.00"
+       ],
+       [
+        "2026-11-25",
+        "-5980.00"
+       ],
+       [
+        "2026-11-26",
+        "-5980.00"
+       ],
+       [
+        "2026-11-27",
+        "-5980.00"
+       ],
+       [
+        "2026-11-28",
+        "-6000.00"
+       ],
+       [
+        "2026-11-29",
+        "-6000.00"
+       ],
+       [
+        "2026-11-30",
+        "0.00"
+       ],
+       [
+        "2026-12-01",
+        "0.00"
+       ],
+       [
+        "2026-12-02",
+        "0.00"
+       ],
+       [
+        "2026-12-03",
+        "0.00"
+       ],
+       [
+        "2026-12-04",
+        "0.00"
+       ],
+       [
+        "2026-12-05",
+        "0.00"
+       ],
+       [
+        "2026-12-06",
+        "0.00"
+       ],
+       [
+        "2026-12-07",
+        "0.00"
+       ]
+      ],
+      "low": {
+       "date": "2026-11-28",
+       "balance": "-6000.00"
+      },
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ],
+      "caption": "Jusqu’au point bas du 28.11 (−6’000.00 CHF), 4 facture(s) font 52 % de ce qui sort."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "balance-river"
+  },
+  "bill-map": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Quelles échéances pèsent le plus ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "bill-map",
+     "question": "Quelles échéances pèsent le plus ?",
+     "answer": "Du 01.11 au 07.11, 4’900.00 CHF sortent : 35 % des sorties d’ici au 07.12.",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00"
+     },
+     "visual": {
+      "kind": "billmap",
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00",
+      "bills": [
+       {
+        "label": "Facture dentiste",
+        "amount": "2000.00",
+        "date": "2026-11-03"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-10-20"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-11-20"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-10-25"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-11-25"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-10-15"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-11-15"
+       },
+       {
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "date": "2026-10-10"
+       }
+      ],
+      "caption": "Du 01.11 au 07.11, 4’900.00 CHF sortent : 35 % de tout ce qui sort d’ici au 07.12."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "bill-map"
+  },
+  "month-wall": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Comment se présente chaque mois ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "month-wall",
+     "question": "Comment se présente chaque mois ?",
+     "answer": "Novembre est le mois le plus serré : point bas −6’000.00 CHF le 28.11 ; 2 mois sur 3 passent sous zéro.",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "month": "2026-11",
+      "low": "-6000.00",
+      "date": "2026-11-28",
+      "months_below_zero": 2,
+      "months": 3
+     },
+     "visual": {
+      "kind": "wall",
+      "tightest": "2026-11-01",
+      "months": [
+       {
+        "month": "2026-10-01",
+        "low": "-3800.00",
+        "date": "2026-10-28"
+       },
+       {
+        "month": "2026-11-01",
+        "low": "-6000.00",
+        "date": "2026-11-28"
+       },
+       {
+        "month": "2026-12-01",
+        "low": "0.00",
+        "date": "2026-12-01"
+       }
+      ],
+      "caption": "Novembre est le mois le plus serré : −6’000.00 CHF le 28.11."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "month-wall"
+  }
+ },
+ "de": {
+  "payday-pressure": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Wie viel Druck bis zum Lohn?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "payday-pressure",
+     "question": "Wie viel Druck bis zum Lohn?",
+     "answer": "Vor dem Lohn am 30.10 machen 7 Fälligkeit(en) 6’000.00 CHF aus: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "next_income_date": "2026-10-30",
+      "due": "6000.00",
+      "available": "2200.00",
+      "gap": "-3800.00",
+      "bills": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-01",
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-25",
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-15",
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-10",
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-28",
+        "label": "Frais bancaires",
+        "amount": "20.00",
+        "currency": "CHF"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "orbit",
+      "today": "2026-10-01",
+      "payday": "2026-10-30",
+      "available": "2200.00",
+      "due": "6000.00",
+      "gap": "-3800.00",
+      "days": [
+       {
+        "date": "2026-10-01",
+        "amount": "2700.00",
+        "count": 2,
+        "label": "Loyer"
+       },
+       {
+        "date": "2026-10-10",
+        "amount": "300.00",
+        "count": 1,
+        "label": "Carte de crédit"
+       },
+       {
+        "date": "2026-10-15",
+        "amount": "500.00",
+        "count": 1,
+        "label": "Leasing voiture"
+       },
+       {
+        "date": "2026-10-20",
+        "amount": "1800.00",
+        "count": 1,
+        "label": "Crèche"
+       },
+       {
+        "date": "2026-10-25",
+        "amount": "680.00",
+        "count": 1,
+        "label": "Prêt personnel"
+       },
+       {
+        "date": "2026-10-28",
+        "amount": "20.00",
+        "count": 1,
+        "label": "Frais bancaires"
+       }
+      ],
+      "caption": "7 Rechnung(en) kreisen vor dem Lohn vom 30.10 um deine 2’200.00 CHF; die schwerste: Loyer, 1’800.00 CHF."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "payday-pressure"
+  },
+  "cost-constellation": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Wohin geht mein Geld jeden Monat?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "cost-constellation",
+     "question": "Wohin geht mein Geld jeden Monat?",
+     "answer": "Enfants nimmt 32 % deiner Fixkosten ein (1’800.00 CHF von 5’700.00 CHF pro Monat).",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "constellation",
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ],
+      "caption": "Enfants leuchtet am hellsten: 32 % deiner 5’700.00 CHF Fixkosten pro Monat."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "cost-constellation"
+  },
+  "balance-river": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Warum sinkt mein Saldo?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "balance-river",
+     "question": "Warum sinkt mein Saldo?",
+     "answer": "Bis zum Tiefpunkt am 28.11 gehen 14’200.00 CHF weg; 4 Rechnung(en) machen 52 % davon aus: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "until": "2026-11-28",
+      "outflows": "14200.00",
+      "share": "52",
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "river",
+      "series": [
+       [
+        "2026-10-01",
+        "-500.00"
+       ],
+       [
+        "2026-10-02",
+        "-500.00"
+       ],
+       [
+        "2026-10-03",
+        "-500.00"
+       ],
+       [
+        "2026-10-04",
+        "-500.00"
+       ],
+       [
+        "2026-10-05",
+        "-500.00"
+       ],
+       [
+        "2026-10-06",
+        "-500.00"
+       ],
+       [
+        "2026-10-07",
+        "-500.00"
+       ],
+       [
+        "2026-10-08",
+        "-500.00"
+       ],
+       [
+        "2026-10-09",
+        "-500.00"
+       ],
+       [
+        "2026-10-10",
+        "-800.00"
+       ],
+       [
+        "2026-10-11",
+        "-800.00"
+       ],
+       [
+        "2026-10-12",
+        "-800.00"
+       ],
+       [
+        "2026-10-13",
+        "-800.00"
+       ],
+       [
+        "2026-10-14",
+        "-800.00"
+       ],
+       [
+        "2026-10-15",
+        "-1300.00"
+       ],
+       [
+        "2026-10-16",
+        "-1300.00"
+       ],
+       [
+        "2026-10-17",
+        "-1300.00"
+       ],
+       [
+        "2026-10-18",
+        "-1300.00"
+       ],
+       [
+        "2026-10-19",
+        "-1300.00"
+       ],
+       [
+        "2026-10-20",
+        "-3100.00"
+       ],
+       [
+        "2026-10-21",
+        "-3100.00"
+       ],
+       [
+        "2026-10-22",
+        "-3100.00"
+       ],
+       [
+        "2026-10-23",
+        "-3100.00"
+       ],
+       [
+        "2026-10-24",
+        "-3100.00"
+       ],
+       [
+        "2026-10-25",
+        "-3780.00"
+       ],
+       [
+        "2026-10-26",
+        "-3780.00"
+       ],
+       [
+        "2026-10-27",
+        "-3780.00"
+       ],
+       [
+        "2026-10-28",
+        "-3800.00"
+       ],
+       [
+        "2026-10-29",
+        "-3800.00"
+       ],
+       [
+        "2026-10-30",
+        "2200.00"
+       ],
+       [
+        "2026-10-31",
+        "2200.00"
+       ],
+       [
+        "2026-11-01",
+        "-500.00"
+       ],
+       [
+        "2026-11-02",
+        "-500.00"
+       ],
+       [
+        "2026-11-03",
+        "-2500.00"
+       ],
+       [
+        "2026-11-04",
+        "-2500.00"
+       ],
+       [
+        "2026-11-05",
+        "-2500.00"
+       ],
+       [
+        "2026-11-06",
+        "-2500.00"
+       ],
+       [
+        "2026-11-07",
+        "-2700.00"
+       ],
+       [
+        "2026-11-08",
+        "-2700.00"
+       ],
+       [
+        "2026-11-09",
+        "-2700.00"
+       ],
+       [
+        "2026-11-10",
+        "-3000.00"
+       ],
+       [
+        "2026-11-11",
+        "-3000.00"
+       ],
+       [
+        "2026-11-12",
+        "-3000.00"
+       ],
+       [
+        "2026-11-13",
+        "-3000.00"
+       ],
+       [
+        "2026-11-14",
+        "-3000.00"
+       ],
+       [
+        "2026-11-15",
+        "-3500.00"
+       ],
+       [
+        "2026-11-16",
+        "-3500.00"
+       ],
+       [
+        "2026-11-17",
+        "-3500.00"
+       ],
+       [
+        "2026-11-18",
+        "-3500.00"
+       ],
+       [
+        "2026-11-19",
+        "-3500.00"
+       ],
+       [
+        "2026-11-20",
+        "-5300.00"
+       ],
+       [
+        "2026-11-21",
+        "-5300.00"
+       ],
+       [
+        "2026-11-22",
+        "-5300.00"
+       ],
+       [
+        "2026-11-23",
+        "-5300.00"
+       ],
+       [
+        "2026-11-24",
+        "-5300.00"
+       ],
+       [
+        "2026-11-25",
+        "-5980.00"
+       ],
+       [
+        "2026-11-26",
+        "-5980.00"
+       ],
+       [
+        "2026-11-27",
+        "-5980.00"
+       ],
+       [
+        "2026-11-28",
+        "-6000.00"
+       ],
+       [
+        "2026-11-29",
+        "-6000.00"
+       ],
+       [
+        "2026-11-30",
+        "0.00"
+       ],
+       [
+        "2026-12-01",
+        "0.00"
+       ],
+       [
+        "2026-12-02",
+        "0.00"
+       ],
+       [
+        "2026-12-03",
+        "0.00"
+       ],
+       [
+        "2026-12-04",
+        "0.00"
+       ],
+       [
+        "2026-12-05",
+        "0.00"
+       ],
+       [
+        "2026-12-06",
+        "0.00"
+       ],
+       [
+        "2026-12-07",
+        "0.00"
+       ]
+      ],
+      "low": {
+       "date": "2026-11-28",
+       "balance": "-6000.00"
+      },
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ],
+      "caption": "Bis zum Tiefpunkt am 28.11 (−6’000.00 CHF) machen 4 Rechnung(en) 52 % der Ausgaben aus."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "balance-river"
+  },
+  "bill-map": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Welche Rechnungen wiegen am meisten?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "bill-map",
+     "question": "Welche Rechnungen wiegen am meisten?",
+     "answer": "Vom 01.11 bis 07.11 gehen 4’900.00 CHF weg: 35 % der Ausgaben bis 07.12.",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00"
+     },
+     "visual": {
+      "kind": "billmap",
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00",
+      "bills": [
+       {
+        "label": "Facture dentiste",
+        "amount": "2000.00",
+        "date": "2026-11-03"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-10-20"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-11-20"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-10-25"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-11-25"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-10-15"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-11-15"
+       },
+       {
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "date": "2026-10-10"
+       }
+      ],
+      "caption": "Vom 01.11 bis 07.11 gehen 4’900.00 CHF raus: 35 % von allem, was bis 07.12 rausgeht."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "bill-map"
+  },
+  "month-wall": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Wie sieht jeder Monat aus?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "month-wall",
+     "question": "Wie sieht jeder Monat aus?",
+     "answer": "November ist der knappste Monat: Tiefpunkt −6’000.00 CHF am 28.11; 2 von 3 Monaten fallen unter null.",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "month": "2026-11",
+      "low": "-6000.00",
+      "date": "2026-11-28",
+      "months_below_zero": 2,
+      "months": 3
+     },
+     "visual": {
+      "kind": "wall",
+      "tightest": "2026-11-01",
+      "months": [
+       {
+        "month": "2026-10-01",
+        "low": "-3800.00",
+        "date": "2026-10-28"
+       },
+       {
+        "month": "2026-11-01",
+        "low": "-6000.00",
+        "date": "2026-11-28"
+       },
+       {
+        "month": "2026-12-01",
+        "low": "0.00",
+        "date": "2026-12-01"
+       }
+      ],
+      "caption": "November ist der engste Monat: −6’000.00 CHF am 28.11."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "month-wall"
+  }
+ },
+ "it": {
+  "payday-pressure": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Quanta pressione prima dello stipendio?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "payday-pressure",
+     "question": "Quanta pressione prima dello stipendio?",
+     "answer": "Prima dello stipendio del 30.10, 7 scadenza/e pesano 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "next_income_date": "2026-10-30",
+      "due": "6000.00",
+      "available": "2200.00",
+      "gap": "-3800.00",
+      "bills": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-01",
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-25",
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-15",
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-10",
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-28",
+        "label": "Frais bancaires",
+        "amount": "20.00",
+        "currency": "CHF"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "orbit",
+      "today": "2026-10-01",
+      "payday": "2026-10-30",
+      "available": "2200.00",
+      "due": "6000.00",
+      "gap": "-3800.00",
+      "days": [
+       {
+        "date": "2026-10-01",
+        "amount": "2700.00",
+        "count": 2,
+        "label": "Loyer"
+       },
+       {
+        "date": "2026-10-10",
+        "amount": "300.00",
+        "count": 1,
+        "label": "Carte de crédit"
+       },
+       {
+        "date": "2026-10-15",
+        "amount": "500.00",
+        "count": 1,
+        "label": "Leasing voiture"
+       },
+       {
+        "date": "2026-10-20",
+        "amount": "1800.00",
+        "count": 1,
+        "label": "Crèche"
+       },
+       {
+        "date": "2026-10-25",
+        "amount": "680.00",
+        "count": 1,
+        "label": "Prêt personnel"
+       },
+       {
+        "date": "2026-10-28",
+        "amount": "20.00",
+        "count": 1,
+        "label": "Frais bancaires"
+       }
+      ],
+      "caption": "7 fattura/e girano attorno ai tuoi 2’200.00 CHF prima dello stipendio del 30.10; la più pesante: Loyer, 1’800.00 CHF."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "payday-pressure"
+  },
+  "cost-constellation": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Dove vanno i miei soldi ogni mese?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "cost-constellation",
+     "question": "Dove vanno i miei soldi ogni mese?",
+     "answer": "Enfants prende il 32 % dei tuoi costi fissi (1’800.00 CHF su 5’700.00 CHF al mese).",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "constellation",
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ],
+      "caption": "Enfants brilla di più: il 32 % dei tuoi 5’700.00 CHF di spese fisse al mese."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "cost-constellation"
+  },
+  "balance-river": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Perché il mio saldo scende?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "balance-river",
+     "question": "Perché il mio saldo scende?",
+     "answer": "Fino al minimo del 28.11 escono 14’200.00 CHF; 4 fattura/e ne fanno il 52 %: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "until": "2026-11-28",
+      "outflows": "14200.00",
+      "share": "52",
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "river",
+      "series": [
+       [
+        "2026-10-01",
+        "-500.00"
+       ],
+       [
+        "2026-10-02",
+        "-500.00"
+       ],
+       [
+        "2026-10-03",
+        "-500.00"
+       ],
+       [
+        "2026-10-04",
+        "-500.00"
+       ],
+       [
+        "2026-10-05",
+        "-500.00"
+       ],
+       [
+        "2026-10-06",
+        "-500.00"
+       ],
+       [
+        "2026-10-07",
+        "-500.00"
+       ],
+       [
+        "2026-10-08",
+        "-500.00"
+       ],
+       [
+        "2026-10-09",
+        "-500.00"
+       ],
+       [
+        "2026-10-10",
+        "-800.00"
+       ],
+       [
+        "2026-10-11",
+        "-800.00"
+       ],
+       [
+        "2026-10-12",
+        "-800.00"
+       ],
+       [
+        "2026-10-13",
+        "-800.00"
+       ],
+       [
+        "2026-10-14",
+        "-800.00"
+       ],
+       [
+        "2026-10-15",
+        "-1300.00"
+       ],
+       [
+        "2026-10-16",
+        "-1300.00"
+       ],
+       [
+        "2026-10-17",
+        "-1300.00"
+       ],
+       [
+        "2026-10-18",
+        "-1300.00"
+       ],
+       [
+        "2026-10-19",
+        "-1300.00"
+       ],
+       [
+        "2026-10-20",
+        "-3100.00"
+       ],
+       [
+        "2026-10-21",
+        "-3100.00"
+       ],
+       [
+        "2026-10-22",
+        "-3100.00"
+       ],
+       [
+        "2026-10-23",
+        "-3100.00"
+       ],
+       [
+        "2026-10-24",
+        "-3100.00"
+       ],
+       [
+        "2026-10-25",
+        "-3780.00"
+       ],
+       [
+        "2026-10-26",
+        "-3780.00"
+       ],
+       [
+        "2026-10-27",
+        "-3780.00"
+       ],
+       [
+        "2026-10-28",
+        "-3800.00"
+       ],
+       [
+        "2026-10-29",
+        "-3800.00"
+       ],
+       [
+        "2026-10-30",
+        "2200.00"
+       ],
+       [
+        "2026-10-31",
+        "2200.00"
+       ],
+       [
+        "2026-11-01",
+        "-500.00"
+       ],
+       [
+        "2026-11-02",
+        "-500.00"
+       ],
+       [
+        "2026-11-03",
+        "-2500.00"
+       ],
+       [
+        "2026-11-04",
+        "-2500.00"
+       ],
+       [
+        "2026-11-05",
+        "-2500.00"
+       ],
+       [
+        "2026-11-06",
+        "-2500.00"
+       ],
+       [
+        "2026-11-07",
+        "-2700.00"
+       ],
+       [
+        "2026-11-08",
+        "-2700.00"
+       ],
+       [
+        "2026-11-09",
+        "-2700.00"
+       ],
+       [
+        "2026-11-10",
+        "-3000.00"
+       ],
+       [
+        "2026-11-11",
+        "-3000.00"
+       ],
+       [
+        "2026-11-12",
+        "-3000.00"
+       ],
+       [
+        "2026-11-13",
+        "-3000.00"
+       ],
+       [
+        "2026-11-14",
+        "-3000.00"
+       ],
+       [
+        "2026-11-15",
+        "-3500.00"
+       ],
+       [
+        "2026-11-16",
+        "-3500.00"
+       ],
+       [
+        "2026-11-17",
+        "-3500.00"
+       ],
+       [
+        "2026-11-18",
+        "-3500.00"
+       ],
+       [
+        "2026-11-19",
+        "-3500.00"
+       ],
+       [
+        "2026-11-20",
+        "-5300.00"
+       ],
+       [
+        "2026-11-21",
+        "-5300.00"
+       ],
+       [
+        "2026-11-22",
+        "-5300.00"
+       ],
+       [
+        "2026-11-23",
+        "-5300.00"
+       ],
+       [
+        "2026-11-24",
+        "-5300.00"
+       ],
+       [
+        "2026-11-25",
+        "-5980.00"
+       ],
+       [
+        "2026-11-26",
+        "-5980.00"
+       ],
+       [
+        "2026-11-27",
+        "-5980.00"
+       ],
+       [
+        "2026-11-28",
+        "-6000.00"
+       ],
+       [
+        "2026-11-29",
+        "-6000.00"
+       ],
+       [
+        "2026-11-30",
+        "0.00"
+       ],
+       [
+        "2026-12-01",
+        "0.00"
+       ],
+       [
+        "2026-12-02",
+        "0.00"
+       ],
+       [
+        "2026-12-03",
+        "0.00"
+       ],
+       [
+        "2026-12-04",
+        "0.00"
+       ],
+       [
+        "2026-12-05",
+        "0.00"
+       ],
+       [
+        "2026-12-06",
+        "0.00"
+       ],
+       [
+        "2026-12-07",
+        "0.00"
+       ]
+      ],
+      "low": {
+       "date": "2026-11-28",
+       "balance": "-6000.00"
+      },
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ],
+      "caption": "Fino al punto più basso del 28.11 (−6’000.00 CHF), 4 fattura/e fanno il 52 % delle uscite."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "balance-river"
+  },
+  "bill-map": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Quali scadenze pesano di più?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "bill-map",
+     "question": "Quali scadenze pesano di più?",
+     "answer": "Dal 01.11 al 07.11 escono 4’900.00 CHF: il 35 % delle uscite fino al 07.12.",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00"
+     },
+     "visual": {
+      "kind": "billmap",
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00",
+      "bills": [
+       {
+        "label": "Facture dentiste",
+        "amount": "2000.00",
+        "date": "2026-11-03"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-10-20"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-11-20"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-10-25"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-11-25"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-10-15"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-11-15"
+       },
+       {
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "date": "2026-10-10"
+       }
+      ],
+      "caption": "Dal 01.11 al 07.11 escono 4’900.00 CHF: il 35 % di tutto ciò che esce fino al 07.12."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "bill-map"
+  },
+  "month-wall": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Come si presenta ogni mese?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "month-wall",
+     "question": "Come si presenta ogni mese?",
+     "answer": "Novembre è il mese più stretto: minimo −6’000.00 CHF il 28.11; 2 mesi su 3 scendono sotto zero.",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "month": "2026-11",
+      "low": "-6000.00",
+      "date": "2026-11-28",
+      "months_below_zero": 2,
+      "months": 3
+     },
+     "visual": {
+      "kind": "wall",
+      "tightest": "2026-11-01",
+      "months": [
+       {
+        "month": "2026-10-01",
+        "low": "-3800.00",
+        "date": "2026-10-28"
+       },
+       {
+        "month": "2026-11-01",
+        "low": "-6000.00",
+        "date": "2026-11-28"
+       },
+       {
+        "month": "2026-12-01",
+        "low": "0.00",
+        "date": "2026-12-01"
+       }
+      ],
+      "caption": "Novembre è il mese più stretto: −6’000.00 CHF il 28.11."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "month-wall"
+  }
+ },
+ "rm": {
+  "payday-pressure": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "Quant squitsch avant il salari?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "payday-pressure",
+     "question": "Quant squitsch avant il salari?",
+     "answer": "Avant il salari dals 30.10 fan 7 termin(s) 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "next_income_date": "2026-10-30",
+      "due": "6000.00",
+      "available": "2200.00",
+      "gap": "-3800.00",
+      "bills": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-01",
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-25",
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-15",
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-10",
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-28",
+        "label": "Frais bancaires",
+        "amount": "20.00",
+        "currency": "CHF"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "orbit",
+      "today": "2026-10-01",
+      "payday": "2026-10-30",
+      "available": "2200.00",
+      "due": "6000.00",
+      "gap": "-3800.00",
+      "days": [
+       {
+        "date": "2026-10-01",
+        "amount": "2700.00",
+        "count": 2,
+        "label": "Loyer"
+       },
+       {
+        "date": "2026-10-10",
+        "amount": "300.00",
+        "count": 1,
+        "label": "Carte de crédit"
+       },
+       {
+        "date": "2026-10-15",
+        "amount": "500.00",
+        "count": 1,
+        "label": "Leasing voiture"
+       },
+       {
+        "date": "2026-10-20",
+        "amount": "1800.00",
+        "count": 1,
+        "label": "Crèche"
+       },
+       {
+        "date": "2026-10-25",
+        "amount": "680.00",
+        "count": 1,
+        "label": "Prêt personnel"
+       },
+       {
+        "date": "2026-10-28",
+        "amount": "20.00",
+        "count": 1,
+        "label": "Frais bancaires"
+       }
+      ],
+      "caption": "7 quint(s) giran enturn tes 2’200.00 CHF avant la paja dals 30.10; il pli grev: Loyer, 1’800.00 CHF."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "payday-pressure"
+  },
+  "cost-constellation": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "Nua van mes daners mintga mais?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "cost-constellation",
+     "question": "Nua van mes daners mintga mais?",
+     "answer": "Enfants prenda 32 % da tes custs fixs (1’800.00 CHF da 5’700.00 CHF per mais).",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "constellation",
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ],
+      "caption": "Enfants glischa il pli fitg: 32 % da tes 5’700.00 CHF custs fixs per mais."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "cost-constellation"
+  },
+  "balance-river": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "Pertge sa sbassa mes saldo?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "balance-river",
+     "question": "Pertge sa sbassa mes saldo?",
+     "answer": "Fin al punct bass dals 28.11 sortan 14’200.00 CHF; 4 quint(s) fan 52 % da quai: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "until": "2026-11-28",
+      "outflows": "14200.00",
+      "share": "52",
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "river",
+      "series": [
+       [
+        "2026-10-01",
+        "-500.00"
+       ],
+       [
+        "2026-10-02",
+        "-500.00"
+       ],
+       [
+        "2026-10-03",
+        "-500.00"
+       ],
+       [
+        "2026-10-04",
+        "-500.00"
+       ],
+       [
+        "2026-10-05",
+        "-500.00"
+       ],
+       [
+        "2026-10-06",
+        "-500.00"
+       ],
+       [
+        "2026-10-07",
+        "-500.00"
+       ],
+       [
+        "2026-10-08",
+        "-500.00"
+       ],
+       [
+        "2026-10-09",
+        "-500.00"
+       ],
+       [
+        "2026-10-10",
+        "-800.00"
+       ],
+       [
+        "2026-10-11",
+        "-800.00"
+       ],
+       [
+        "2026-10-12",
+        "-800.00"
+       ],
+       [
+        "2026-10-13",
+        "-800.00"
+       ],
+       [
+        "2026-10-14",
+        "-800.00"
+       ],
+       [
+        "2026-10-15",
+        "-1300.00"
+       ],
+       [
+        "2026-10-16",
+        "-1300.00"
+       ],
+       [
+        "2026-10-17",
+        "-1300.00"
+       ],
+       [
+        "2026-10-18",
+        "-1300.00"
+       ],
+       [
+        "2026-10-19",
+        "-1300.00"
+       ],
+       [
+        "2026-10-20",
+        "-3100.00"
+       ],
+       [
+        "2026-10-21",
+        "-3100.00"
+       ],
+       [
+        "2026-10-22",
+        "-3100.00"
+       ],
+       [
+        "2026-10-23",
+        "-3100.00"
+       ],
+       [
+        "2026-10-24",
+        "-3100.00"
+       ],
+       [
+        "2026-10-25",
+        "-3780.00"
+       ],
+       [
+        "2026-10-26",
+        "-3780.00"
+       ],
+       [
+        "2026-10-27",
+        "-3780.00"
+       ],
+       [
+        "2026-10-28",
+        "-3800.00"
+       ],
+       [
+        "2026-10-29",
+        "-3800.00"
+       ],
+       [
+        "2026-10-30",
+        "2200.00"
+       ],
+       [
+        "2026-10-31",
+        "2200.00"
+       ],
+       [
+        "2026-11-01",
+        "-500.00"
+       ],
+       [
+        "2026-11-02",
+        "-500.00"
+       ],
+       [
+        "2026-11-03",
+        "-2500.00"
+       ],
+       [
+        "2026-11-04",
+        "-2500.00"
+       ],
+       [
+        "2026-11-05",
+        "-2500.00"
+       ],
+       [
+        "2026-11-06",
+        "-2500.00"
+       ],
+       [
+        "2026-11-07",
+        "-2700.00"
+       ],
+       [
+        "2026-11-08",
+        "-2700.00"
+       ],
+       [
+        "2026-11-09",
+        "-2700.00"
+       ],
+       [
+        "2026-11-10",
+        "-3000.00"
+       ],
+       [
+        "2026-11-11",
+        "-3000.00"
+       ],
+       [
+        "2026-11-12",
+        "-3000.00"
+       ],
+       [
+        "2026-11-13",
+        "-3000.00"
+       ],
+       [
+        "2026-11-14",
+        "-3000.00"
+       ],
+       [
+        "2026-11-15",
+        "-3500.00"
+       ],
+       [
+        "2026-11-16",
+        "-3500.00"
+       ],
+       [
+        "2026-11-17",
+        "-3500.00"
+       ],
+       [
+        "2026-11-18",
+        "-3500.00"
+       ],
+       [
+        "2026-11-19",
+        "-3500.00"
+       ],
+       [
+        "2026-11-20",
+        "-5300.00"
+       ],
+       [
+        "2026-11-21",
+        "-5300.00"
+       ],
+       [
+        "2026-11-22",
+        "-5300.00"
+       ],
+       [
+        "2026-11-23",
+        "-5300.00"
+       ],
+       [
+        "2026-11-24",
+        "-5300.00"
+       ],
+       [
+        "2026-11-25",
+        "-5980.00"
+       ],
+       [
+        "2026-11-26",
+        "-5980.00"
+       ],
+       [
+        "2026-11-27",
+        "-5980.00"
+       ],
+       [
+        "2026-11-28",
+        "-6000.00"
+       ],
+       [
+        "2026-11-29",
+        "-6000.00"
+       ],
+       [
+        "2026-11-30",
+        "0.00"
+       ],
+       [
+        "2026-12-01",
+        "0.00"
+       ],
+       [
+        "2026-12-02",
+        "0.00"
+       ],
+       [
+        "2026-12-03",
+        "0.00"
+       ],
+       [
+        "2026-12-04",
+        "0.00"
+       ],
+       [
+        "2026-12-05",
+        "0.00"
+       ],
+       [
+        "2026-12-06",
+        "0.00"
+       ],
+       [
+        "2026-12-07",
+        "0.00"
+       ]
+      ],
+      "low": {
+       "date": "2026-11-28",
+       "balance": "-6000.00"
+      },
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ],
+      "caption": "Fin al punct il pli bass dals 28.11 (−6’000.00 CHF) fan 4 quint(s) 52 % da las sortidas."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "balance-river"
+  },
+  "bill-map": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "Tge termins pesan il pli fitg?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "bill-map",
+     "question": "Tge termins pesan il pli fitg?",
+     "answer": "Dals 01.11 fin ils 07.11 sortan 4’900.00 CHF: 35 % da las sortidas fin ils 07.12.",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00"
+     },
+     "visual": {
+      "kind": "billmap",
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00",
+      "bills": [
+       {
+        "label": "Facture dentiste",
+        "amount": "2000.00",
+        "date": "2026-11-03"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-10-20"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-11-20"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-10-25"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-11-25"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-10-15"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-11-15"
+       },
+       {
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "date": "2026-10-10"
+       }
+      ],
+      "caption": "Dals 01.11 fin ils 07.11 van ora 4’900.00 CHF: 35 % da tut quai che va ora fin ils 07.12."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "bill-map"
+  },
+  "month-wall": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "Co sa preschenta mintga mais?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "month-wall",
+     "question": "Co sa preschenta mintga mais?",
+     "answer": "November è il mais il pli stretg: punct bass −6’000.00 CHF ils 28.11; 2 da 3 mais van sut nulla.",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "month": "2026-11",
+      "low": "-6000.00",
+      "date": "2026-11-28",
+      "months_below_zero": 2,
+      "months": 3
+     },
+     "visual": {
+      "kind": "wall",
+      "tightest": "2026-11-01",
+      "months": [
+       {
+        "month": "2026-10-01",
+        "low": "-3800.00",
+        "date": "2026-10-28"
+       },
+       {
+        "month": "2026-11-01",
+        "low": "-6000.00",
+        "date": "2026-11-28"
+       },
+       {
+        "month": "2026-12-01",
+        "low": "0.00",
+        "date": "2026-12-01"
+       }
+      ],
+      "caption": "November è il mais il pli stretg: −6’000.00 CHF ils 28.11."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "month-wall"
+  }
+ },
+ "en": {
+  "payday-pressure": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "How much pressure before payday?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "payday-pressure",
+     "question": "How much pressure before payday?",
+     "answer": "Before the 30.10 payday, 7 bill(s) come to 6’000.00 CHF: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Assurance maladie (900.00 CHF, 01.10).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "next_income_date": "2026-10-30",
+      "due": "6000.00",
+      "available": "2200.00",
+      "gap": "-3800.00",
+      "bills": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-01",
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-25",
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-15",
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-10",
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "currency": "CHF"
+       },
+       {
+        "date": "2026-10-28",
+        "label": "Frais bancaires",
+        "amount": "20.00",
+        "currency": "CHF"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "orbit",
+      "today": "2026-10-01",
+      "payday": "2026-10-30",
+      "available": "2200.00",
+      "due": "6000.00",
+      "gap": "-3800.00",
+      "days": [
+       {
+        "date": "2026-10-01",
+        "amount": "2700.00",
+        "count": 2,
+        "label": "Loyer"
+       },
+       {
+        "date": "2026-10-10",
+        "amount": "300.00",
+        "count": 1,
+        "label": "Carte de crédit"
+       },
+       {
+        "date": "2026-10-15",
+        "amount": "500.00",
+        "count": 1,
+        "label": "Leasing voiture"
+       },
+       {
+        "date": "2026-10-20",
+        "amount": "1800.00",
+        "count": 1,
+        "label": "Crèche"
+       },
+       {
+        "date": "2026-10-25",
+        "amount": "680.00",
+        "count": 1,
+        "label": "Prêt personnel"
+       },
+       {
+        "date": "2026-10-28",
+        "amount": "20.00",
+        "count": 1,
+        "label": "Frais bancaires"
+       }
+      ],
+      "caption": "7 bill(s) circle your 2’200.00 CHF before payday on 30.10; the heaviest: Loyer, 1’800.00 CHF."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "payday-pressure"
+  },
+  "cost-constellation": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "Where does my money go each month?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "cost-constellation",
+     "question": "Where does my money go each month?",
+     "answer": "Enfants takes 32% of your fixed costs (1’800.00 CHF of 5’700.00 CHF a month).",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "constellation",
+      "total": "5700",
+      "categories": [
+       {
+        "category": "Enfants",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Logement",
+        "amount": "1800",
+        "share": "31.6"
+       },
+       {
+        "category": "Santé",
+        "amount": "900",
+        "share": "15.8"
+       },
+       {
+        "category": "Dettes",
+        "amount": "680",
+        "share": "11.9"
+       },
+       {
+        "category": "Transport",
+        "amount": "500",
+        "share": "8.8"
+       },
+       {
+        "category": "Frais bancaires",
+        "amount": "20",
+        "share": "0.4"
+       }
+      ],
+      "caption": "Enfants shines brightest: 32 % of your 5’700.00 CHF of fixed costs a month."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "cost-constellation"
+  },
+  "balance-river": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "Why does my balance go down?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "balance-river",
+     "question": "Why does my balance go down?",
+     "answer": "Down to the low point on 28.11, 14’200.00 CHF goes out; 4 bill(s) make 52% of it: Loyer (1’800.00 CHF, 01.10); Crèche (1’800.00 CHF, 20.10); Loyer (1’800.00 CHF, 01.11); Facture dentiste (2’000.00 CHF, 03.11).",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "until": "2026-11-28",
+      "outflows": "14200.00",
+      "share": "52",
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "river",
+      "series": [
+       [
+        "2026-10-01",
+        "-500.00"
+       ],
+       [
+        "2026-10-02",
+        "-500.00"
+       ],
+       [
+        "2026-10-03",
+        "-500.00"
+       ],
+       [
+        "2026-10-04",
+        "-500.00"
+       ],
+       [
+        "2026-10-05",
+        "-500.00"
+       ],
+       [
+        "2026-10-06",
+        "-500.00"
+       ],
+       [
+        "2026-10-07",
+        "-500.00"
+       ],
+       [
+        "2026-10-08",
+        "-500.00"
+       ],
+       [
+        "2026-10-09",
+        "-500.00"
+       ],
+       [
+        "2026-10-10",
+        "-800.00"
+       ],
+       [
+        "2026-10-11",
+        "-800.00"
+       ],
+       [
+        "2026-10-12",
+        "-800.00"
+       ],
+       [
+        "2026-10-13",
+        "-800.00"
+       ],
+       [
+        "2026-10-14",
+        "-800.00"
+       ],
+       [
+        "2026-10-15",
+        "-1300.00"
+       ],
+       [
+        "2026-10-16",
+        "-1300.00"
+       ],
+       [
+        "2026-10-17",
+        "-1300.00"
+       ],
+       [
+        "2026-10-18",
+        "-1300.00"
+       ],
+       [
+        "2026-10-19",
+        "-1300.00"
+       ],
+       [
+        "2026-10-20",
+        "-3100.00"
+       ],
+       [
+        "2026-10-21",
+        "-3100.00"
+       ],
+       [
+        "2026-10-22",
+        "-3100.00"
+       ],
+       [
+        "2026-10-23",
+        "-3100.00"
+       ],
+       [
+        "2026-10-24",
+        "-3100.00"
+       ],
+       [
+        "2026-10-25",
+        "-3780.00"
+       ],
+       [
+        "2026-10-26",
+        "-3780.00"
+       ],
+       [
+        "2026-10-27",
+        "-3780.00"
+       ],
+       [
+        "2026-10-28",
+        "-3800.00"
+       ],
+       [
+        "2026-10-29",
+        "-3800.00"
+       ],
+       [
+        "2026-10-30",
+        "2200.00"
+       ],
+       [
+        "2026-10-31",
+        "2200.00"
+       ],
+       [
+        "2026-11-01",
+        "-500.00"
+       ],
+       [
+        "2026-11-02",
+        "-500.00"
+       ],
+       [
+        "2026-11-03",
+        "-2500.00"
+       ],
+       [
+        "2026-11-04",
+        "-2500.00"
+       ],
+       [
+        "2026-11-05",
+        "-2500.00"
+       ],
+       [
+        "2026-11-06",
+        "-2500.00"
+       ],
+       [
+        "2026-11-07",
+        "-2700.00"
+       ],
+       [
+        "2026-11-08",
+        "-2700.00"
+       ],
+       [
+        "2026-11-09",
+        "-2700.00"
+       ],
+       [
+        "2026-11-10",
+        "-3000.00"
+       ],
+       [
+        "2026-11-11",
+        "-3000.00"
+       ],
+       [
+        "2026-11-12",
+        "-3000.00"
+       ],
+       [
+        "2026-11-13",
+        "-3000.00"
+       ],
+       [
+        "2026-11-14",
+        "-3000.00"
+       ],
+       [
+        "2026-11-15",
+        "-3500.00"
+       ],
+       [
+        "2026-11-16",
+        "-3500.00"
+       ],
+       [
+        "2026-11-17",
+        "-3500.00"
+       ],
+       [
+        "2026-11-18",
+        "-3500.00"
+       ],
+       [
+        "2026-11-19",
+        "-3500.00"
+       ],
+       [
+        "2026-11-20",
+        "-5300.00"
+       ],
+       [
+        "2026-11-21",
+        "-5300.00"
+       ],
+       [
+        "2026-11-22",
+        "-5300.00"
+       ],
+       [
+        "2026-11-23",
+        "-5300.00"
+       ],
+       [
+        "2026-11-24",
+        "-5300.00"
+       ],
+       [
+        "2026-11-25",
+        "-5980.00"
+       ],
+       [
+        "2026-11-26",
+        "-5980.00"
+       ],
+       [
+        "2026-11-27",
+        "-5980.00"
+       ],
+       [
+        "2026-11-28",
+        "-6000.00"
+       ],
+       [
+        "2026-11-29",
+        "-6000.00"
+       ],
+       [
+        "2026-11-30",
+        "0.00"
+       ],
+       [
+        "2026-12-01",
+        "0.00"
+       ],
+       [
+        "2026-12-02",
+        "0.00"
+       ],
+       [
+        "2026-12-03",
+        "0.00"
+       ],
+       [
+        "2026-12-04",
+        "0.00"
+       ],
+       [
+        "2026-12-05",
+        "0.00"
+       ],
+       [
+        "2026-12-06",
+        "0.00"
+       ],
+       [
+        "2026-12-07",
+        "0.00"
+       ]
+      ],
+      "low": {
+       "date": "2026-11-28",
+       "balance": "-6000.00"
+      },
+      "causes": [
+       {
+        "date": "2026-10-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-10-20",
+        "label": "Crèche",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-01",
+        "label": "Loyer",
+        "amount": "1800.00"
+       },
+       {
+        "date": "2026-11-03",
+        "label": "Facture dentiste",
+        "amount": "2000.00"
+       }
+      ],
+      "caption": "Down to the low point on 28.11 (−6’000.00 CHF), 4 bill(s) make 52 % of what goes out."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "balance-river"
+  },
+  "bill-map": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "Which bills weigh the most?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "bill-map",
+     "question": "Which bills weigh the most?",
+     "answer": "From 01.11 to 07.11, 4’900.00 CHF goes out: 35% of the outflows to 07.12.",
+     "source": "kit",
+     "tone": "ok",
+     "because": null,
+     "figures": {
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00"
+     },
+     "visual": {
+      "kind": "billmap",
+      "from": "2026-11-01",
+      "to": "2026-11-07",
+      "amount": "4900.00",
+      "outflows": "14200.00",
+      "bills": [
+       {
+        "label": "Facture dentiste",
+        "amount": "2000.00",
+        "date": "2026-11-03"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-10-20"
+       },
+       {
+        "label": "Loyer",
+        "amount": "1800.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Crèche",
+        "amount": "1800.00",
+        "date": "2026-11-20"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-10-01"
+       },
+       {
+        "label": "Assurance maladie",
+        "amount": "900.00",
+        "date": "2026-11-01"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-10-25"
+       },
+       {
+        "label": "Prêt personnel",
+        "amount": "680.00",
+        "date": "2026-11-25"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-10-15"
+       },
+       {
+        "label": "Leasing voiture",
+        "amount": "500.00",
+        "date": "2026-11-15"
+       },
+       {
+        "label": "Carte de crédit",
+        "amount": "300.00",
+        "date": "2026-10-10"
+       }
+      ],
+      "caption": "From 01.11 to 07.11, 4’900.00 CHF goes out: 35 % of everything going out until 07.12."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "bill-map"
+  },
+  "month-wall": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "What does each month look like?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "month-wall",
+     "question": "What does each month look like?",
+     "answer": "November is the tightest month: low point −6’000.00 CHF on 28.11; 2 of 3 months go below zero.",
+     "source": "kit",
+     "tone": "info",
+     "because": null,
+     "figures": {
+      "month": "2026-11",
+      "low": "-6000.00",
+      "date": "2026-11-28",
+      "months_below_zero": 2,
+      "months": 3
+     },
+     "visual": {
+      "kind": "wall",
+      "tightest": "2026-11-01",
+      "months": [
+       {
+        "month": "2026-10-01",
+        "low": "-3800.00",
+        "date": "2026-10-28"
+       },
+       {
+        "month": "2026-11-01",
+        "low": "-6000.00",
+        "date": "2026-11-28"
+       },
+       {
+        "month": "2026-12-01",
+        "low": "0.00",
+        "date": "2026-12-01"
+       }
+      ],
+      "caption": "November is the tightest month: −6’000.00 CHF on 28.11."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "month-wall"
+  }
+ }
+}
