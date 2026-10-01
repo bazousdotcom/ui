@@ -23,6 +23,8 @@ export type CashEvent = {
   kind: "obligation" | "recurrence" | string;
   ref_id: string | null;
   status: string | null;
+  /** The category the bill is filed under (its rule's for a recurrence); null or absent when it has none. */
+  category?: string | null;
 };
 
 export type DailyPoint = {

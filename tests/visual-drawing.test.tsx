@@ -17,18 +17,21 @@ function circles(container: HTMLElement, selector: string) {
 describe("bubbles stay readable", () => {
   it.each(households)("bill-map · %s: every bill is inside the frame and none covers another", (_n, s) => {
     const { container } = render(<div className="bz"><Question module={findModule("bill-map")!} snapshot={s} locale="fr" /></div>);
-    const svg = container.querySelector(".bz-chart")!;
+    const svg = container.querySelector(".bz-night svg")!;
     const [, , W, H] = svg.getAttribute("viewBox")!.split(" ").map(Number) as [number, number, number, number];
-    const bubbles = circles(container, ".bz-map-bubble");
-    expect(bubbles.length).toBe(s.events.filter((e) => e.direction === "outflow" && e.date >= s.as_of && e.date <= s.horizon_end && Number(e.amount) > 0).length);
-    for (const b of bubbles) {
+    const stars = [...svg.querySelectorAll<SVGGElement>("g.bz-n-hit")].map((g) => {
+      const c = g.querySelector("circle")!;
+      return { x: Number(c.getAttribute("cx")), y: Number(c.getAttribute("cy")), r: Number(c.getAttribute("r")) };
+    });
+    expect(stars.length).toBe(s.events.filter((e) => e.direction === "outflow" && e.date >= s.as_of && e.date <= s.horizon_end && Number(e.amount) > 0).length);
+    for (const b of stars) {
       expect(b.x - b.r).toBeGreaterThanOrEqual(0);
       expect(b.x + b.r).toBeLessThanOrEqual(W);
-      expect(b.y - b.r).toBeGreaterThanOrEqual(26 - 0.01);
-      expect(b.y + b.r).toBeLessThanOrEqual(H - 28 + 0.01);
+      expect(b.y - b.r).toBeGreaterThanOrEqual(40 - 0.01);
+      expect(b.y + b.r).toBeLessThanOrEqual(H - 30 + 0.01);
     }
-    for (let i = 0; i < bubbles.length; i++) for (let j = i + 1; j < bubbles.length; j++) {
-      const [a, b] = [bubbles[i]!, bubbles[j]!];
+    for (let i = 0; i < stars.length; i++) for (let j = i + 1; j < stars.length; j++) {
+      const [a, b] = [stars[i]!, stars[j]!];
       expect(Math.hypot(a.x - b.x, a.y - b.y)).toBeGreaterThanOrEqual(a.r + b.r);
     }
   });

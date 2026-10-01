@@ -70,7 +70,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "leasing-voiture-2027-01-15",
-     "status": "open"
+     "status": "open",
+     "category": "Transport"
     },
     {
      "date": "2027-01-20",
@@ -81,7 +82,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "crèche-2027-01-20",
-     "status": "open"
+     "status": "open",
+     "category": "Enfants"
     }
    ]
   },
@@ -101,7 +103,8 @@
      "currency": "CHF",
      "kind": "recurrence",
      "ref_id": "salaire-léa-2027-01-29",
-     "status": "open"
+     "status": "open",
+     "category": "Revenus"
     },
     {
      "date": "2027-01-29",
@@ -112,7 +115,8 @@
      "currency": "CHF",
      "kind": "recurrence",
      "ref_id": "salaire-sam-2027-01-29",
-     "status": "open"
+     "status": "open",
+     "category": "Revenus"
     },
     {
      "date": "2027-01-29",
@@ -123,7 +127,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "loyer-2027-01-29",
-     "status": "open"
+     "status": "open",
+     "category": "Logement"
     },
     {
      "date": "2027-01-29",
@@ -134,7 +139,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "épargne-impôts-2027-01-29",
-     "status": "open"
+     "status": "open",
+     "category": "Impôts"
     },
     {
      "date": "2027-02-01",
@@ -145,7 +151,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "assurance-maladie-2027-02-01",
-     "status": "open"
+     "status": "open",
+     "category": "Santé"
     },
     {
      "date": "2027-02-15",
@@ -156,7 +163,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "leasing-voiture-2027-02-15",
-     "status": "open"
+     "status": "open",
+     "category": "Transport"
     },
     {
      "date": "2027-02-20",
@@ -167,7 +175,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "crèche-2027-02-20",
-     "status": "open"
+     "status": "open",
+     "category": "Enfants"
     }
    ]
   },
@@ -187,7 +196,8 @@
      "currency": "CHF",
      "kind": "recurrence",
      "ref_id": "salaire-léa-2027-02-26",
-     "status": "open"
+     "status": "open",
+     "category": "Revenus"
     },
     {
      "date": "2027-02-26",
@@ -198,7 +208,8 @@
      "currency": "CHF",
      "kind": "recurrence",
      "ref_id": "salaire-sam-2027-02-26",
-     "status": "open"
+     "status": "open",
+     "category": "Revenus"
     },
     {
      "date": "2027-02-26",
@@ -209,7 +220,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "loyer-2027-02-26",
-     "status": "open"
+     "status": "open",
+     "category": "Logement"
     },
     {
      "date": "2027-02-26",
@@ -220,7 +232,8 @@
      "currency": "CHF",
      "kind": "obligation",
      "ref_id": "épargne-impôts-2027-02-26",
-     "status": "open"
+     "status": "open",
+     "category": "Impôts"
     }
    ]
   }
@@ -603,7 +616,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "leasing-voiture-2027-01-15",
-   "status": "open"
+   "status": "open",
+   "category": "Transport"
   },
   {
    "date": "2027-01-20",
@@ -614,7 +628,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "crèche-2027-01-20",
-   "status": "open"
+   "status": "open",
+   "category": "Enfants"
   },
   {
    "date": "2027-01-29",
@@ -625,7 +640,8 @@
    "currency": "CHF",
    "kind": "recurrence",
    "ref_id": "salaire-léa-2027-01-29",
-   "status": "open"
+   "status": "open",
+   "category": "Revenus"
   },
   {
    "date": "2027-01-29",
@@ -636,7 +652,8 @@
    "currency": "CHF",
    "kind": "recurrence",
    "ref_id": "salaire-sam-2027-01-29",
-   "status": "open"
+   "status": "open",
+   "category": "Revenus"
   },
   {
    "date": "2027-01-29",
@@ -647,7 +664,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "loyer-2027-01-29",
-   "status": "open"
+   "status": "open",
+   "category": "Logement"
   },
   {
    "date": "2027-01-29",
@@ -658,7 +676,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "épargne-impôts-2027-01-29",
-   "status": "open"
+   "status": "open",
+   "category": "Impôts"
   },
   {
    "date": "2027-02-01",
@@ -669,7 +688,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "assurance-maladie-2027-02-01",
-   "status": "open"
+   "status": "open",
+   "category": "Santé"
   },
   {
    "date": "2027-02-15",
@@ -680,7 +700,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "leasing-voiture-2027-02-15",
-   "status": "open"
+   "status": "open",
+   "category": "Transport"
   },
   {
    "date": "2027-02-20",
@@ -691,7 +712,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "crèche-2027-02-20",
-   "status": "open"
+   "status": "open",
+   "category": "Enfants"
   },
   {
    "date": "2027-02-26",
@@ -702,7 +724,8 @@
    "currency": "CHF",
    "kind": "recurrence",
    "ref_id": "salaire-léa-2027-02-26",
-   "status": "open"
+   "status": "open",
+   "category": "Revenus"
   },
   {
    "date": "2027-02-26",
@@ -713,7 +736,8 @@
    "currency": "CHF",
    "kind": "recurrence",
    "ref_id": "salaire-sam-2027-02-26",
-   "status": "open"
+   "status": "open",
+   "category": "Revenus"
   },
   {
    "date": "2027-02-26",
@@ -724,7 +748,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "loyer-2027-02-26",
-   "status": "open"
+   "status": "open",
+   "category": "Logement"
   },
   {
    "date": "2027-02-26",
@@ -735,7 +760,8 @@
    "currency": "CHF",
    "kind": "obligation",
    "ref_id": "épargne-impôts-2027-02-26",
-   "status": "open"
+   "status": "open",
+   "category": "Impôts"
   }
  ],
  "base_currency": "CHF",

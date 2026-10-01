@@ -189,6 +189,31 @@
     "short": "chaque cycle couvre ses sorties"
    },
    {
+    "id": "payday-pressure",
+    "question": "Quelle pression avant le salaire ?",
+    "short": "2 échéance(s) avant le 29.01, la plus lourde : Crèche (1’700.00 CHF, 20.01)"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Où part mon argent chaque mois ?",
+    "short": "Logement : 38 % des charges fixes"
+   },
+   {
+    "id": "balance-river",
+    "question": "Pourquoi mon solde descend-il ?",
+    "short": "2 facture(s) font 100 % des sorties jusqu’au 20.01"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quelles échéances pèsent le plus ?",
+    "short": "semaine la plus lourde : du 20.02 au 26.02 (4’000.00 CHF, 41 %)"
+   },
+   {
+    "id": "month-wall",
+    "question": "Comment se présente chaque mois ?",
+    "short": "chaque mois reste au-dessus de zéro, le plus bas en Janvier (800.00 CHF)"
+   },
+   {
     "id": "annual-bills",
     "question": "Quelle grosse dépense de l’année arrive bientôt ?",
     "short": "aucune grosse dépense annuelle dans les 90 jours"
@@ -400,6 +425,31 @@
     "id": "pay-cycles",
     "question": "Was fällt in jeder Lohnperiode an?",
     "short": "jede Periode deckt ihre Ausgaben"
+   },
+   {
+    "id": "payday-pressure",
+    "question": "Wie viel Druck bis zum Lohn?",
+    "short": "2 Fälligkeit(en) vor dem 29.01, die schwerste: Crèche (1’700.00 CHF, 20.01)"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Wohin geht mein Geld jeden Monat?",
+    "short": "Logement: 38 % der Fixkosten"
+   },
+   {
+    "id": "balance-river",
+    "question": "Warum sinkt mein Saldo?",
+    "short": "2 Rechnung(en) machen 100 % der Ausgaben bis 20.01 aus"
+   },
+   {
+    "id": "bill-map",
+    "question": "Welche Rechnungen wiegen am meisten?",
+    "short": "schwerste Woche: 20.02 bis 26.02 (4’000.00 CHF, 41 %)"
+   },
+   {
+    "id": "month-wall",
+    "question": "Wie sieht jeder Monat aus?",
+    "short": "jeder Monat bleibt über null, am tiefsten im Januar (800.00 CHF)"
    },
    {
     "id": "annual-bills",
@@ -615,6 +665,31 @@
     "short": "ogni periodo copre le sue uscite"
    },
    {
+    "id": "payday-pressure",
+    "question": "Quanta pressione prima dello stipendio?",
+    "short": "2 scadenza/e prima del 29.01, la più pesante: Crèche (1’700.00 CHF, 20.01)"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Dove vanno i miei soldi ogni mese?",
+    "short": "Logement: 38 % dei costi fissi"
+   },
+   {
+    "id": "balance-river",
+    "question": "Perché il mio saldo scende?",
+    "short": "2 fattura/e fanno il 100 % delle uscite fino al 20.01"
+   },
+   {
+    "id": "bill-map",
+    "question": "Quali scadenze pesano di più?",
+    "short": "settimana più pesante: dal 20.02 al 26.02 (4’000.00 CHF, 41 %)"
+   },
+   {
+    "id": "month-wall",
+    "question": "Come si presenta ogni mese?",
+    "short": "ogni mese resta sopra lo zero, il più basso a Gennaio (800.00 CHF)"
+   },
+   {
     "id": "annual-bills",
     "question": "Quale grande spesa annuale arriva presto?",
     "short": "nessuna grande spesa annuale nei prossimi 90 giorni"
@@ -828,6 +903,31 @@
     "short": "mintga perioda cuvra sias sortidas"
    },
    {
+    "id": "payday-pressure",
+    "question": "Quant squitsch avant il salari?",
+    "short": "2 termin(s) avant ils 29.01, il pli grev: Crèche (1’700.00 CHF, 20.01)"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Nua van mes daners mintga mais?",
+    "short": "Logement: 38 % dals custs fixs"
+   },
+   {
+    "id": "balance-river",
+    "question": "Pertge sa sbassa mes saldo?",
+    "short": "2 quint(s) fan 100 % da las sortidas fin ils 20.01"
+   },
+   {
+    "id": "bill-map",
+    "question": "Tge termins pesan il pli fitg?",
+    "short": "l’emna la pli greva: dals 20.02 fin ils 26.02 (4’000.00 CHF, 41 %)"
+   },
+   {
+    "id": "month-wall",
+    "question": "Co sa preschenta mintga mais?",
+    "short": "mintga mais resta sur nulla, il pli bass en Schaner (800.00 CHF)"
+   },
+   {
     "id": "annual-bills",
     "question": "Tge gronda expensa annuala vegn prest?",
     "short": "nagina gronda expensa annuala en ils proxims 90 dis"
@@ -1039,6 +1139,31 @@
     "id": "pay-cycles",
     "question": "What falls due each pay cycle?",
     "short": "every cycle covers its outgoings"
+   },
+   {
+    "id": "payday-pressure",
+    "question": "How much pressure before payday?",
+    "short": "2 bill(s) before 29.01, the heaviest: Crèche (1’700.00 CHF, 20.01)"
+   },
+   {
+    "id": "cost-constellation",
+    "question": "Where does my money go each month?",
+    "short": "Logement: 38% of fixed costs"
+   },
+   {
+    "id": "balance-river",
+    "question": "Why does my balance go down?",
+    "short": "2 bill(s) make 100% of the outflows to 20.01"
+   },
+   {
+    "id": "bill-map",
+    "question": "Which bills weigh the most?",
+    "short": "heaviest week: 20.02 to 26.02 (4’000.00 CHF, 41%)"
+   },
+   {
+    "id": "month-wall",
+    "question": "What does each month look like?",
+    "short": "every month stays above zero, lowest in January (800.00 CHF)"
    },
    {
     "id": "annual-bills",
