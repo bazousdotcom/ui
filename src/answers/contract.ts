@@ -135,13 +135,32 @@ export type WallVisual = Visual<"wall", {
   tightest: IsoDate;
 }>;
 
+/**
+ * « Mon bien locatif est-il rentable ? » (0.8) — the year's rent falling step by step to what is left:
+ * owner costs, loan interest, local tax, then the net gain; with the capital repaid, the cash it costs.
+ * Amounts are in the property's own currency (often not the household's). Labels come from the engine.
+ */
+export type WaterfallVisual = Visual<"waterfall", {
+  name: string;
+  currency: string;
+  year: number | null;
+  /** The rent first (positive), then each deduction (negative); zero deductions are left out. */
+  steps: { key: "rent" | "costs" | "interest" | "local_tax"; label: string; amount: Decimal }[];
+  /** The sum of the steps: what is left after costs, interest and local tax (negative: a loss). */
+  result: { key: "net_gain"; label: string; amount: Decimal };
+  /** When the loan capital repaid is known: the net gain minus that capital, per year. */
+  cash_flow: { key: "cash_flow"; label: string; amount: Decimal; principal: Decimal; principal_label: string } | null;
+  /** In percent, one decimal: rent / value, (rent − costs) / value, net gain / equity, interest / debt. */
+  yields: { gross: Decimal | null; net: Decimal | null; return_on_equity: Decimal | null; debt_rate: Decimal | null };
+}>;
+
 export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual
   | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual
-  | OrbitVisual | ConstellationVisual | RiverVisual | BillMapVisual | WallVisual;
+  | OrbitVisual | ConstellationVisual | RiverVisual | BillMapVisual | WallVisual | WaterfallVisual;
 export type VisualKind = AnswerVisual["kind"];
 export const VISUAL_KINDS = ["runway", "valley", "shift", "days", "balance", "countdown",
   "horizon", "calendar", "leak", "jar", "gauge", "deadline",
-  "orbit", "constellation", "river", "billmap", "wall"] as const satisfies readonly VisualKind[];
+  "orbit", "constellation", "river", "billmap", "wall", "waterfall"] as const satisfies readonly VisualKind[];
 
 /** "ok" only for a question asked on its own: its answer is then given in full, picture included. */
 export type AnswerTone = "risk" | "warn" | "info" | "ok";

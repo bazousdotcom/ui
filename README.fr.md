@@ -19,7 +19,7 @@
 | `src/answers/` | Les dessins des réponses : une fonction `drawVisual()` sans React, et le composant `<AnswerPicture>`. |
 | `schema/answers.schema.json` | Le contrat des réponses et de leur bloc `visual`. |
 | `gallery/` | La galerie publique : tous les modules, les réponses dessinées et la matrice, cinq langues, deux thèmes. |
-| `docs/matrix.md` | La matrice : les 16 questions, leur module, leur dessin, et celles qui attendent le leur. |
+| `docs/matrix.md` | La matrice : les 17 questions, leur module, leur dessin, et celles qui attendent le leur. |
 
 ## Les modules
 
@@ -59,6 +59,8 @@ La barre de focus au-dessus de la grille dit ce qui est montré et se défait pi
 
 **Le revenu en rivière (0.7.1).** Une sixième image venue de la communauté : `money-flow` dessine le revenu mensuel qui se divise en un ruban par catégorie de charges fixes et un pour ce qui reste, chacun aussi épais que son montant ; quand les charges dépassent le revenu, la part manquante entre en rouge. Il ne lit que `structure`. Les revenus par source et les dépenses variables attendent de nouveaux champs dans le contrat.
 
+**Un bien que l’on loue (0.8).** La communauté a demandé « Mon bien locatif est-il rentable ? ». Un propriétaire connaît le loyer et la mensualité, rarement ce qui reste une fois payés les charges, les intérêts et l’impôt local, ni ce que cela représente sur l’argent vraiment mis. Le moteur y répond à partir d’une année de chiffres que le ménage donne une fois (valeur, loyers, charges, crédit, impôt local), dans la devise du bien, et envoie un `waterfall` : le loyer de l’année en une barre, découpée par ce que chaque déduction prend, le gain net en vert (une perte dépasse le loyer, en pointillé), ce que le bien coûte en trésorerie une fois le capital remboursé, et les rendements brut, net et sur l’apport. Les impôts suisses et la plus-value sont laissés de côté, et la réponse le dit.
+
 **Prochaine étape (0.2) :** rendre la réponse obligatoire dans le contrat — chaque module fournira un verdict d’une phrase avec sa tonalité, testé dans les cinq langues — puis donner un verdict à `monthly-structure` et `pay-cycles`, et faire de `what-if` « le meilleur geste », recommandation d’abord. Les contributions sur ces trois modules sont les bienvenues.
 
 ## Les réponses dessinées
@@ -84,6 +86,7 @@ Bazous répond aussi en phrases (`GET /api/v1/answers`, et l’outil MCP `get_ho
 | `river` | Pourquoi mon solde descend-il ? (0.7) | Le solde jusqu’à son point bas, les plus grosses sorties en perles numérotées (empilées le même jour) |
 | `billmap` | Quelles échéances pèsent le plus ? (0.7) | Les factures en carte, à la taille du montant, la semaine la plus lourde éclairée |
 | `wall` | Comment se présente chaque mois ? (0.7) | Une colonne par mois jusqu’à son solde le plus bas, le mois le plus serré éclairé |
+| `waterfall` | Mon bien locatif est-il rentable ? (0.8) | Le loyer de l’année découpé en charges, intérêts et impôt local, le gain net qui reste, la trésorerie, les rendements |
 
 ```tsx
 import { AnswerPicture, type Answers } from "@bazous/ui";

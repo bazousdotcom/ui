@@ -161,10 +161,10 @@ describe("the « Nuit » scenes as still pictures (0.7)", () => {
   const box = (el: Element) => ({ x: Number(el.getAttribute("x")), y: Number(el.getAttribute("y")),
     w: Number(el.getAttribute("width")), h: Number(el.getAttribute("height")) });
 
-  it("each of the five questions asked alone has its picture", () => {
+  it("each question asked alone has its picture", () => {
     expect(Object.keys(FOCUS).map((q) => [q, night(q.slice(6)).kind])).toEqual([
       ["focus payday-pressure", "orbit"], ["focus cost-constellation", "constellation"], ["focus balance-river", "river"],
-      ["focus bill-map", "billmap"], ["focus month-wall", "wall"]]);
+      ["focus bill-map", "billmap"], ["focus month-wall", "wall"], ["focus rental-yield", "waterfall"]]);
   });
 
   it("the orbit counts every bill, and says what is missing", () => {
@@ -222,5 +222,57 @@ describe("labels the community saw cut or crossed (0.7)", () => {
     const shift = structuredClone(pictures(FIXTURES.before!.fr!).find((v) => v.kind === "shift")!) as Extract<AnswerVisual, { kind: "shift" }>;
     shift.move.label = "Steueramt Regensdorf";
     expect(drawVisual(shift, "fr")!.textContent).toContain("Steueramt Regensdorf");
+  });
+});
+
+
+describe("the rental property as a waterfall (0.8)", () => {
+  type Waterfall = Extract<AnswerVisual, { kind: "waterfall" }>;
+  const studio = (locale: "fr" | "de" | "en" = "fr") =>
+    pictures(FOCUS["focus rental-yield"]![locale]!)[0]! as Waterfall;
+
+  it("the steps add up to the net gain, in the property's currency", () => {
+    const w = studio();
+    expect(w.currency).toBe("EUR");
+    expect(w.steps.map((s) => s.key)).toEqual(["rent", "costs", "interest", "local_tax"]);
+    expect(w.steps.reduce((sum, s) => sum + Number(s.amount), 0)).toBeCloseTo(Number(w.result.amount), 2);
+  });
+
+  it("says the gain, the cash it costs and the yields, the Swiss way", () => {
+    const text = drawVisual(studio(), "fr")!.textContent!;
+    expect(text).toContain("Studio Annecy · 2025");
+    expect(text).toContain("9’600.00 EUR");
+    expect(text).toContain("Gain net 3’100.00");
+    expect(text).toContain("Trésorerie −2’900.00 / an");
+    expect(text).toContain("brut 5.3 % · net 4.0 % · sur l’apport 5.2 %");
+    expect(drawVisual(studio("de"), "de")!.textContent).toContain("Nettogewinn 3’100.00");
+    // On a phone the cents go, so names stay whole and the bottom line's two figures never meet.
+    const narrow = drawVisual(studio(), "fr", document, { width: 260 })!.textContent!;
+    expect(narrow).toContain("Impôt local 1’700");
+    expect(narrow).toContain("Gain net 3’100Trésorerie −2’900 / an");
+  });
+
+  it("no label sits on the bar, at any width", () => {
+    for (const width of [260, 320, 390]) {
+      const svg = drawVisual(studio(), "fr", document, { width })!;
+      for (const label of svg.querySelectorAll("text")) {
+        const baseline = Number(label.getAttribute("y")), size = Number(label.getAttribute("font-size"));
+        expect(baseline <= 22 || baseline - size >= 50, `« ${label.textContent} » at ${width}px`).toBe(true);
+      }
+    }
+  });
+
+  it("a loss runs past the rent, dashed, and is said in red; without a loan, no cash line", () => {
+    const w = structuredClone(studio());
+    w.steps = [w.steps[0]!, { key: "costs", label: "Charges", amount: "-11000.00" }];
+    w.result = { ...w.result, amount: "-1400.00" };
+    w.cash_flow = null;
+    const svg = drawVisual(w, "fr")!;
+    expect(svg.querySelector("rect[stroke-dasharray]")).not.toBeNull();
+    expect(svg.textContent).toContain("Gain net −1’400.00");
+    expect(svg.textContent).not.toContain("Trésorerie");
+    const answers = structuredClone(FOCUS["focus rental-yield"]!.fr!);
+    (answers.answers[0]!.visual as Waterfall).cash_flow = null;
+    expect(validate(answers)).toBe(true);
   });
 });

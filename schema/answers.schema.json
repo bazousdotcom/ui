@@ -981,6 +981,180 @@
               "$ref": "#/$defs/date"
             }
           }
+        },
+        {
+          "type": "object",
+          "description": "« Mon bien locatif est-il rentable ? » (0.8): the rent falling step by step to the net gain, in the property's currency.",
+          "required": [
+            "kind",
+            "caption",
+            "name",
+            "currency",
+            "year",
+            "steps",
+            "result",
+            "cash_flow",
+            "yields"
+          ],
+          "properties": {
+            "kind": {
+              "const": "waterfall"
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "currency": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$"
+            },
+            "year": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "steps": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "key",
+                  "label",
+                  "amount"
+                ],
+                "properties": {
+                  "key": {
+                    "enum": [
+                      "rent",
+                      "costs",
+                      "interest",
+                      "local_tax"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "amount": {
+                    "$ref": "#/$defs/decimal"
+                  }
+                }
+              }
+            },
+            "result": {
+              "type": "object",
+              "required": [
+                "key",
+                "label",
+                "amount"
+              ],
+              "properties": {
+                "key": {
+                  "const": "net_gain"
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "amount": {
+                  "$ref": "#/$defs/decimal"
+                }
+              }
+            },
+            "cash_flow": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "label",
+                    "amount",
+                    "principal",
+                    "principal_label"
+                  ],
+                  "properties": {
+                    "key": {
+                      "const": "cash_flow"
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "amount": {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    "principal": {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    "principal_label": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              ]
+            },
+            "yields": {
+              "type": "object",
+              "required": [
+                "gross",
+                "net",
+                "return_on_equity",
+                "debt_rate"
+              ],
+              "properties": {
+                "gross": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "net": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "return_on_equity": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "debt_rate": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/$defs/decimal"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
         }
       ]
     }

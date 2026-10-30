@@ -19,7 +19,7 @@
 | `src/answers/` | The answer pictures: a `drawVisual()` function without React, and the `<AnswerPicture>` component. |
 | `schema/answers.schema.json` | The contract of the answers and their `visual` block. |
 | `gallery/` | The public gallery: every module, the drawn answers and the matrix, in five languages and two themes. |
-| `docs/matrix.md` | The matrix: the 16 questions, their module, their picture, and the ones still waiting for one. |
+| `docs/matrix.md` | The matrix: the 17 questions, their module, their picture, and the ones still waiting for one. |
 
 ## The modules
 
@@ -59,6 +59,8 @@ The focus bar above the grid says what is shown and undoes it piece by piece. No
 
 **The income as a river (0.7.1).** A sixth picture from the community: `money-flow` draws the monthly income splitting into one ribbon per category of fixed costs and one for what is left, each as thick as its amount; when the costs exceed the income, the missing part enters in red. It reads `structure` only. Income by source and variable spending wait for new fields in the contract.
 
+**A property you let (0.8).** The community asked « Mon bien locatif est-il rentable ? » (*is my rental property worth it?*). An owner knows the rent and the loan payment, rarely what is left once the owner costs, the interest and the local tax are paid, nor what that is on the money actually put in. The engine answers it from one year of figures the household gives once (value, rents, costs, loan, local tax), in the property's own currency, and sends a `waterfall`: the year's rent as one bar, cut into what each deduction takes, the net gain in green (a loss runs past the rent, dashed), the cash it costs once the loan capital is repaid, and the gross, net and on-equity yields. Swiss taxes and capital gains are left out, and said so in the answer.
+
 **Next:** make the answer part of the contract (each module gives a one-sentence verdict with its tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict, and turn `what-if` into "the best move", recommendation first. Contributions on these three modules are welcome.
 
 ## Answers with pictures
@@ -84,6 +86,7 @@ Bazous also answers in sentences (`GET /api/v1/answers`, and the MCP tool `get_h
 | `river` | Why does my balance go down? (0.7) | The balance down to its low point, the largest outflows as numbered beads (same-day beads stacked) |
 | `billmap` | Which bills weigh the most? (0.7) | The bills as a map sized by amount, the heaviest week lit |
 | `wall` | What does each month look like? (0.7) | One column a month down to its lowest balance, the tightest month lit |
+| `waterfall` | Is my rental property worth it? (0.8) | The year's rent cut into costs, interest and local tax, the net gain left, the cash it costs, the yields |
 
 ```tsx
 import { AnswerPicture, type Answers } from "@bazous/ui";

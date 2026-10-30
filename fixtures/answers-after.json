@@ -235,6 +235,12 @@
    "missing_exchange_rates": [],
    "no_fixed_costs_recorded": false
   },
+  "computed": {
+   "by": "Bazous engine",
+   "on": "2027-01-04",
+   "precision": "exact to the cent",
+   "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+  },
   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
  },
  "de": {
@@ -472,6 +478,12 @@
    "recurring_items_without_amount": [],
    "missing_exchange_rates": [],
    "no_fixed_costs_recorded": false
+  },
+  "computed": {
+   "by": "Bazous engine",
+   "on": "2027-01-04",
+   "precision": "exact to the cent",
+   "from": "the balances, income and scheduled bills recorded in Bazous on that date"
   },
   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
  },
@@ -711,6 +723,12 @@
    "missing_exchange_rates": [],
    "no_fixed_costs_recorded": false
   },
+  "computed": {
+   "by": "Bazous engine",
+   "on": "2027-01-04",
+   "precision": "exact to the cent",
+   "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+  },
   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
  },
  "rm": {
@@ -949,6 +967,12 @@
    "missing_exchange_rates": [],
    "no_fixed_costs_recorded": false
   },
+  "computed": {
+   "by": "Bazous engine",
+   "on": "2027-01-04",
+   "precision": "exact to the cent",
+   "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+  },
   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
  },
  "en": {
@@ -1186,6 +1210,12 @@
    "recurring_items_without_amount": [],
    "missing_exchange_rates": [],
    "no_fixed_costs_recorded": false
+  },
+  "computed": {
+   "by": "Bazous engine",
+   "on": "2027-01-04",
+   "precision": "exact to the cent",
+   "from": "the balances, income and scheduled bills recorded in Bazous on that date"
   },
   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice."
  }

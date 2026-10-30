@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import after from "../fixtures/after.json";
 import answersAfter from "../fixtures/answers-after.json";
 import answersBefore from "../fixtures/answers-before.json";
+import answersFocus from "../fixtures/answers-focus.json";
 import answersOverdrawn from "../fixtures/answers-overdrawn.json";
 import before from "../fixtures/before.json";
 import demo from "../fixtures/demo.json";
@@ -30,6 +31,9 @@ import { Matrix } from "./Matrix";
 // One invented family told in two acts, computed by the Bazous engine: « Avant », overdrawn on 1 October,
 // and « Après », three months after following the diagnosis. The dark theme tells the first act, the light one the second.
 const ANSWERS = { before: answersBefore, after: answersAfter, overdrawn: answersOverdrawn } as unknown as Record<string, Record<Locale, Answers>>;
+// The questions asked on their own, as the assistants ask them: here, the studio Léa and Sam let (0.8).
+const FOCUS = answersFocus as unknown as Record<Locale, Record<string, Answers>>;
+const RENTAL = Object.fromEntries(LOCALES.map((l) => [l, FOCUS[l]["rental-yield"]!])) as Record<Locale, Answers>;
 const FIXTURES: Record<string, Snapshot> = { before: before as Snapshot, after: after as Snapshot, demo: demo as Snapshot, empty: empty as Snapshot };
 const STORY_THEME: Record<string, "dark" | "light"> = { before: "dark", after: "light" };
 
@@ -112,7 +116,7 @@ function Gallery() {
       </section>
 
       {view === "matrix" ? (
-        <Matrix locale={locale} households={Object.values(ANSWERS)} />
+        <Matrix locale={locale} households={[...Object.values(ANSWERS), RENTAL]} />
       ) : view === "answers" ? (
         <div className="g-answers">
           <p className="bz-body">{ui.answersIntro}</p>

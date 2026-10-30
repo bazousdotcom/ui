@@ -17,7 +17,7 @@ légendes en 5 langues                                 aucun appel réseau      
 - **La carte de Claude et ChatGPT** (MCP App, serveur `https://bazous.com/mcp`) embarque `@bazous/ui/answers` au moment du build ; elle ne charge rien du réseau.
 - Une contribution fusionnée ici arrive donc au même moment sur le site et dans les assistants.
 
-## Les 16 questions
+## Les 17 questions
 
 Les réponses citées sont celles de **Léa et Sam**, une famille inventée que la galerie raconte en deux actes :
 
@@ -44,10 +44,11 @@ Les chiffres viennent toujours du moteur ; un module ou un dessin ne les recalcu
 | `tax-provision` | Ai-je mis de côté pour mes impôts ? | expert | « Pour le prochain bordereau (6’000.00 CHF), mets 500.00 CHF de côté chaque mois : 16.44 CHF par jour. » | `last_annual_bill`, `needed_per_month`, `set_aside_per_month` | `jar` | réponse du moteur |
 | `pillar-3a` | Puis-je encore verser sur mon 3e pilier cette année ? | expert | « Il te reste 7’258.00 CHF à verser sur ton 3e pilier d’ici le 31.12, dans 91 jours. » | `left`, `limit`, `year` | `gauge` | réponse du moteur |
 | `contract-notice` | Un contrat doit-il être résilié bientôt ? | expert | « Pour résilier Salle de sport (fin le 31.12), ta lettre doit arriver avant le 31.10. » | `contracts: name, ends_on, deadline` | `deadline` | réponse du moteur |
+| `rental-yield` | Mon bien locatif est-il rentable ? | communauté → expert | « Studio Annecy en 2025 : sur 9’600.00 EUR de loyers, il te reste 3’100.00 EUR après charges, intérêts et impôt local, soit 5.2 % par an sur ton apport. » (posée seule) | `properties[] : net_gain, rendements brut / net / sur l’apport / taux du crédit, cash_flow_per_year…` | `waterfall` | réponse du moteur |
 
-**Bilan :** 16 questions, 12 dessinées sur bazous.com, dans Claude et dans ChatGPT, 4 ouvertes aux contributions.
+**Bilan :** 17 questions, 13 dessinées sur bazous.com, dans Claude et dans ChatGPT, 4 ouvertes aux contributions.
 
-## Les 12 dessins
+## Les 13 dessins
 
 Tous dans [`src/answers/draw.ts`](../src/answers/draw.ts), contrat dans [`schema/answers.schema.json`](../schema/answers.schema.json).
 
@@ -65,6 +66,7 @@ Tous dans [`src/answers/draw.ts`](../src/answers/draw.ts), contrat dans [`schema
 | `jar` | impôts | douze mois à remplir face au bordereau |
 | `gauge` | 3e pilier | versé, encore possible, jours jusqu’au 31.12 |
 | `deadline` | résiliation | aujourd’hui, le jour où la lettre doit arriver, le renouvellement |
+| `waterfall` | bien locatif | `name`, `currency`, `year`, `steps[{key, label, amount}]`, `result`, `cash_flow`, `yields` |
 
 Un exemple de réponse avec son dessin :
 

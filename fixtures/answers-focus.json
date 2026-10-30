@@ -122,6 +122,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "payday-pressure"
   },
@@ -221,6 +227,12 @@
     ],
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
    },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "cost-constellation"
@@ -581,6 +593,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "balance-river"
   },
@@ -685,6 +703,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "bill-map"
   },
@@ -742,8 +766,123 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "month-wall"
+  },
+  "rental-yield": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "fr",
+   "headline": "Mon bien locatif est-il rentable ?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "rental-yield",
+     "question": "Mon bien locatif est-il rentable ?",
+     "answer": "Studio Annecy en 2025 : sur 9’600.00 EUR de loyers, il te reste 3’100.00 EUR après charges, intérêts et impôt local, soit 5.2 % par an sur ton apport (rendement brut 5.3 %, net 4.0 %). Avec le capital remboursé (6’000.00 EUR par an), il te coûte 241.67 EUR par mois de trésorerie : c’est de l’épargne forcée, pas une perte.",
+     "source": "expert",
+     "tone": "warn",
+     "because": "Le rendement sur ton apport compare ce qui te reste à ce que tu as vraiment dans le bien (sa valeur moins la dette). Plus-value et impôts suisses non compris.",
+     "figures": {
+      "properties": [
+       {
+        "name": "Studio Annecy",
+        "currency": "EUR",
+        "year": 2025,
+        "value": "180000.00",
+        "rent_per_year": "9600.00",
+        "costs_per_year": "2400.00",
+        "interest_per_year": "2400.00",
+        "local_tax_per_year": "1700.00",
+        "loan_balance": "120000.00",
+        "operating_income": "7200.00",
+        "net_gain": "3100.00",
+        "equity": "60000.00",
+        "gross_yield_percent": "5.3",
+        "net_yield_percent": "4.0",
+        "return_on_equity_percent": "5.2",
+        "costs_ratio_percent": "25.0",
+        "debt_rate_percent": "2.0",
+        "principal_per_year": "6000.00",
+        "cash_flow_per_year": "-2900.00",
+        "cash_flow_per_month": "-241.67",
+        "tone": "warn",
+        "reason": "cashflow"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "waterfall",
+      "name": "Studio Annecy",
+      "currency": "EUR",
+      "year": 2025,
+      "steps": [
+       {
+        "key": "rent",
+        "label": "Loyers",
+        "amount": "9600.00"
+       },
+       {
+        "key": "costs",
+        "label": "Charges",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "interest",
+        "label": "Intérêts",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "local_tax",
+        "label": "Impôt local",
+        "amount": "-1700.00"
+       }
+      ],
+      "result": {
+       "key": "net_gain",
+       "label": "Gain net",
+       "amount": "3100.00"
+      },
+      "cash_flow": {
+       "key": "cash_flow",
+       "label": "Trésorerie",
+       "amount": "-2900.00",
+       "principal": "6000.00",
+       "principal_label": "Capital remboursé"
+      },
+      "yields": {
+       "gross": "5.3",
+       "net": "4.0",
+       "return_on_equity": "5.2",
+       "debt_rate": "2.0"
+      },
+      "caption": "Sur 100 de loyer, 25 partent en charges, 25 en intérêts et 18 en impôt local : il t’en reste 32."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "rental-yield"
   }
  },
  "de": {
@@ -869,6 +1008,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "payday-pressure"
   },
@@ -968,6 +1113,12 @@
     ],
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
    },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "cost-constellation"
@@ -1328,6 +1479,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "balance-river"
   },
@@ -1432,6 +1589,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "bill-map"
   },
@@ -1489,8 +1652,123 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "month-wall"
+  },
+  "rental-yield": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "de",
+   "headline": "Lohnt sich meine vermietete Liegenschaft?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "rental-yield",
+     "question": "Lohnt sich meine vermietete Liegenschaft?",
+     "answer": "Studio Annecy 2025: Von 9’600.00 EUR Mieten bleiben dir nach Kosten, Zinsen und lokaler Steuer 3’100.00 EUR, also 5.2 % pro Jahr auf dein Eigenkapital (Bruttorendite 5.3 %, Nettorendite 4.0 %). Mit der Amortisation (6’000.00 EUR pro Jahr) kostet sie dich 241.67 EUR pro Monat an Liquidität: Das ist Zwangssparen, kein Verlust.",
+     "source": "expert",
+     "tone": "warn",
+     "because": "Die Rendite auf dein Eigenkapital vergleicht, was dir bleibt, mit dem, was du wirklich in der Liegenschaft hast (Wert minus Schuld). Ohne Wertzuwachs und ohne Schweizer Steuern.",
+     "figures": {
+      "properties": [
+       {
+        "name": "Studio Annecy",
+        "currency": "EUR",
+        "year": 2025,
+        "value": "180000.00",
+        "rent_per_year": "9600.00",
+        "costs_per_year": "2400.00",
+        "interest_per_year": "2400.00",
+        "local_tax_per_year": "1700.00",
+        "loan_balance": "120000.00",
+        "operating_income": "7200.00",
+        "net_gain": "3100.00",
+        "equity": "60000.00",
+        "gross_yield_percent": "5.3",
+        "net_yield_percent": "4.0",
+        "return_on_equity_percent": "5.2",
+        "costs_ratio_percent": "25.0",
+        "debt_rate_percent": "2.0",
+        "principal_per_year": "6000.00",
+        "cash_flow_per_year": "-2900.00",
+        "cash_flow_per_month": "-241.67",
+        "tone": "warn",
+        "reason": "cashflow"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "waterfall",
+      "name": "Studio Annecy",
+      "currency": "EUR",
+      "year": 2025,
+      "steps": [
+       {
+        "key": "rent",
+        "label": "Mieten",
+        "amount": "9600.00"
+       },
+       {
+        "key": "costs",
+        "label": "Kosten",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "interest",
+        "label": "Zinsen",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "local_tax",
+        "label": "Lokale Steuer",
+        "amount": "-1700.00"
+       }
+      ],
+      "result": {
+       "key": "net_gain",
+       "label": "Nettogewinn",
+       "amount": "3100.00"
+      },
+      "cash_flow": {
+       "key": "cash_flow",
+       "label": "Liquidität",
+       "amount": "-2900.00",
+       "principal": "6000.00",
+       "principal_label": "Amortisation"
+      },
+      "yields": {
+       "gross": "5.3",
+       "net": "4.0",
+       "return_on_equity": "5.2",
+       "debt_rate": "2.0"
+      },
+      "caption": "Von 100 Miete gehen 25 an Kosten, 25 an Zinsen und 18 an lokale Steuer: Dir bleiben 32."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "rental-yield"
   }
  },
  "it": {
@@ -1616,6 +1894,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "payday-pressure"
   },
@@ -1715,6 +1999,12 @@
     ],
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
    },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "cost-constellation"
@@ -2075,6 +2365,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "balance-river"
   },
@@ -2179,6 +2475,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "bill-map"
   },
@@ -2236,8 +2538,123 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "month-wall"
+  },
+  "rental-yield": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "it",
+   "headline": "Il mio immobile in affitto è redditizio?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "rental-yield",
+     "question": "Il mio immobile in affitto è redditizio?",
+     "answer": "Studio Annecy nel 2025: su 9’600.00 EUR di affitti ti restano 3’100.00 EUR dopo spese, interessi e imposta locale, cioè il 5.2 % all’anno sul tuo capitale proprio (rendimento lordo 5.3 %, netto 4.0 %). Con il capitale rimborsato (6’000.00 EUR all’anno) ti costa 241.67 EUR al mese di liquidità: è risparmio forzato, non una perdita.",
+     "source": "expert",
+     "tone": "warn",
+     "because": "Il rendimento sul capitale proprio confronta ciò che ti resta con ciò che hai davvero nell’immobile (valore meno debito). Plusvalenza e imposte svizzere escluse.",
+     "figures": {
+      "properties": [
+       {
+        "name": "Studio Annecy",
+        "currency": "EUR",
+        "year": 2025,
+        "value": "180000.00",
+        "rent_per_year": "9600.00",
+        "costs_per_year": "2400.00",
+        "interest_per_year": "2400.00",
+        "local_tax_per_year": "1700.00",
+        "loan_balance": "120000.00",
+        "operating_income": "7200.00",
+        "net_gain": "3100.00",
+        "equity": "60000.00",
+        "gross_yield_percent": "5.3",
+        "net_yield_percent": "4.0",
+        "return_on_equity_percent": "5.2",
+        "costs_ratio_percent": "25.0",
+        "debt_rate_percent": "2.0",
+        "principal_per_year": "6000.00",
+        "cash_flow_per_year": "-2900.00",
+        "cash_flow_per_month": "-241.67",
+        "tone": "warn",
+        "reason": "cashflow"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "waterfall",
+      "name": "Studio Annecy",
+      "currency": "EUR",
+      "year": 2025,
+      "steps": [
+       {
+        "key": "rent",
+        "label": "Affitti",
+        "amount": "9600.00"
+       },
+       {
+        "key": "costs",
+        "label": "Spese",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "interest",
+        "label": "Interessi",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "local_tax",
+        "label": "Imposta locale",
+        "amount": "-1700.00"
+       }
+      ],
+      "result": {
+       "key": "net_gain",
+       "label": "Guadagno netto",
+       "amount": "3100.00"
+      },
+      "cash_flow": {
+       "key": "cash_flow",
+       "label": "Liquidità",
+       "amount": "-2900.00",
+       "principal": "6000.00",
+       "principal_label": "Capitale rimborsato"
+      },
+      "yields": {
+       "gross": "5.3",
+       "net": "4.0",
+       "return_on_equity": "5.2",
+       "debt_rate": "2.0"
+      },
+      "caption": "Su 100 di affitto, 25 vanno in spese, 25 in interessi e 18 in imposta locale: te ne restano 32."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "rental-yield"
   }
  },
  "rm": {
@@ -2363,6 +2780,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "payday-pressure"
   },
@@ -2462,6 +2885,12 @@
     ],
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
    },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "cost-constellation"
@@ -2822,6 +3251,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "balance-river"
   },
@@ -2926,6 +3361,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "bill-map"
   },
@@ -2983,8 +3424,123 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "month-wall"
+  },
+  "rental-yield": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "rm",
+   "headline": "È mes bain locativ rentabel?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "rental-yield",
+     "question": "È mes bain locativ rentabel?",
+     "answer": "Studio Annecy il 2025: da 9’600.00 EUR fitgs ta restan 3’100.00 EUR suenter custs, tschains e taglia locala, quai èn 5.2 % per onn sin tes chapital agen (rendita bruta 5.3 %, netta 4.0 %). Cun il chapital restituì (6’000.00 EUR per onn) ta custa el 241.67 EUR per mais da liquiditad: quai è spargn sfurzà, betg ina perdita.",
+     "source": "expert",
+     "tone": "warn",
+     "because": "La rendita sin tes chapital agen cumpareglia quai che ta resta cun quai che ti has propi en il bain (sia valur main il debit). Senza plivalur e senza taglias svizras.",
+     "figures": {
+      "properties": [
+       {
+        "name": "Studio Annecy",
+        "currency": "EUR",
+        "year": 2025,
+        "value": "180000.00",
+        "rent_per_year": "9600.00",
+        "costs_per_year": "2400.00",
+        "interest_per_year": "2400.00",
+        "local_tax_per_year": "1700.00",
+        "loan_balance": "120000.00",
+        "operating_income": "7200.00",
+        "net_gain": "3100.00",
+        "equity": "60000.00",
+        "gross_yield_percent": "5.3",
+        "net_yield_percent": "4.0",
+        "return_on_equity_percent": "5.2",
+        "costs_ratio_percent": "25.0",
+        "debt_rate_percent": "2.0",
+        "principal_per_year": "6000.00",
+        "cash_flow_per_year": "-2900.00",
+        "cash_flow_per_month": "-241.67",
+        "tone": "warn",
+        "reason": "cashflow"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "waterfall",
+      "name": "Studio Annecy",
+      "currency": "EUR",
+      "year": 2025,
+      "steps": [
+       {
+        "key": "rent",
+        "label": "Fitgs",
+        "amount": "9600.00"
+       },
+       {
+        "key": "costs",
+        "label": "Custs",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "interest",
+        "label": "Tschains",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "local_tax",
+        "label": "Taglia locala",
+        "amount": "-1700.00"
+       }
+      ],
+      "result": {
+       "key": "net_gain",
+       "label": "Gudogn net",
+       "amount": "3100.00"
+      },
+      "cash_flow": {
+       "key": "cash_flow",
+       "label": "Liquiditad",
+       "amount": "-2900.00",
+       "principal": "6000.00",
+       "principal_label": "Chapital restituì"
+      },
+      "yields": {
+       "gross": "5.3",
+       "net": "4.0",
+       "return_on_equity": "5.2",
+       "debt_rate": "2.0"
+      },
+      "caption": "Da 100 fitg van 25 per custs, 25 per tschains e 18 per la taglia locala: i ta restan 32."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "rental-yield"
   }
  },
  "en": {
@@ -3110,6 +3666,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "payday-pressure"
   },
@@ -3209,6 +3771,12 @@
     ],
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
    },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "cost-constellation"
@@ -3569,6 +4137,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "balance-river"
   },
@@ -3673,6 +4247,12 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "bill-map"
   },
@@ -3730,8 +4310,123 @@
     "missing_exchange_rates": [],
     "no_fixed_costs_recorded": false
    },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
    "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
    "focus": "month-wall"
+  },
+  "rental-yield": {
+   "as_of": "2026-10-01",
+   "currency": "CHF",
+   "language": "en",
+   "headline": "Is my rental property worth it?",
+   "answers": [
+    {
+     "needs": [],
+     "id": "rental-yield",
+     "question": "Is my rental property worth it?",
+     "answer": "Studio Annecy in 2025: out of 9’600.00 EUR in rent, 3’100.00 EUR is left after costs, interest and local tax, that is 5.2% a year on your equity (gross yield 5.3%, net 4.0%). With the capital repaid (6’000.00 EUR a year), it costs you 241.67 EUR a month in cash: that is forced saving, not a loss.",
+     "source": "expert",
+     "tone": "warn",
+     "because": "The return on equity compares what is left with what you really have in the property (its value minus the debt). Capital gains and Swiss taxes not included.",
+     "figures": {
+      "properties": [
+       {
+        "name": "Studio Annecy",
+        "currency": "EUR",
+        "year": 2025,
+        "value": "180000.00",
+        "rent_per_year": "9600.00",
+        "costs_per_year": "2400.00",
+        "interest_per_year": "2400.00",
+        "local_tax_per_year": "1700.00",
+        "loan_balance": "120000.00",
+        "operating_income": "7200.00",
+        "net_gain": "3100.00",
+        "equity": "60000.00",
+        "gross_yield_percent": "5.3",
+        "net_yield_percent": "4.0",
+        "return_on_equity_percent": "5.2",
+        "costs_ratio_percent": "25.0",
+        "debt_rate_percent": "2.0",
+        "principal_per_year": "6000.00",
+        "cash_flow_per_year": "-2900.00",
+        "cash_flow_per_month": "-241.67",
+        "tone": "warn",
+        "reason": "cashflow"
+       }
+      ]
+     },
+     "visual": {
+      "kind": "waterfall",
+      "name": "Studio Annecy",
+      "currency": "EUR",
+      "year": 2025,
+      "steps": [
+       {
+        "key": "rent",
+        "label": "Rents",
+        "amount": "9600.00"
+       },
+       {
+        "key": "costs",
+        "label": "Costs",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "interest",
+        "label": "Interest",
+        "amount": "-2400.00"
+       },
+       {
+        "key": "local_tax",
+        "label": "Local tax",
+        "amount": "-1700.00"
+       }
+      ],
+      "result": {
+       "key": "net_gain",
+       "label": "Net gain",
+       "amount": "3100.00"
+      },
+      "cash_flow": {
+       "key": "cash_flow",
+       "label": "Cash flow",
+       "amount": "-2900.00",
+       "principal": "6000.00",
+       "principal_label": "Capital repaid"
+      },
+      "yields": {
+       "gross": "5.3",
+       "net": "4.0",
+       "return_on_equity": "5.2",
+       "debt_rate": "2.0"
+      },
+      "caption": "Out of 100 in rent, 25 goes to costs, 25 to interest and 18 to local tax: 32 is left."
+     }
+    }
+   ],
+   "all_clear": [],
+   "missing_data": {
+    "accounts_without_balance": [],
+    "recurring_items_without_amount": [
+     "Électricité"
+    ],
+    "missing_exchange_rates": [],
+    "no_fixed_costs_recorded": false
+   },
+   "computed": {
+    "by": "Bazous engine",
+    "on": "2026-10-01",
+    "precision": "exact to the cent",
+    "from": "the balances, income and scheduled bills recorded in Bazous on that date"
+   },
+   "basis": "Questions from the public Bazous kit (github.com/bazousdotcom/ui); figures computed by the Bazous engine from recorded balances and scheduled payments. No bank connection, no guarantee of a future balance, no investment advice.",
+   "focus": "rental-yield"
   }
  }
 }
