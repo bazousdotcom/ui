@@ -61,6 +61,14 @@ The focus bar above the grid says what is shown and undoes it piece by piece. No
 
 **A property you let (0.8).** The community asked « Mon bien locatif est-il rentable ? » (*is my rental property worth it?*). An owner knows the rent and the loan payment, rarely what is left once the owner costs, the interest and the local tax are paid, nor what that is on the money actually put in. The engine answers it from one year of figures the household gives once (value, rents, costs, loan, local tax), in the property's own currency, and sends a `waterfall`: the year's rent as one bar, cut into what each deduction takes, the net gain in green (a loss runs past the rent, dashed), the cash it costs once the loan capital is repaid, and the gross, net and on-equity yields. Swiss taxes and capital gains are left out, and said so in the answer.
 
+On bazous.com the same answer is a « Nuit » scene you can question, `<RentalScene>`: the year's rent flows as light into costs, interest, local tax and the net gain, particles running along each ribbon. **Drill down** from all the properties to one, then to its costs line by line; the breadcrumb **rolls back up**. Roll the unit up too: per year, per month, per 100 of rent. **What if**: rent +5 %, costs −10 %, rate −0.5 point, one empty month; every combination comes computed by the engine (`outcomes`), the flow morphs to it, figures count to their new value, and the real year stays as a dashed ghost with its amounts. Properties in different currencies are never added up: they become planets to open. Motion follows `prefers-reduced-motion`.
+
+```tsx
+import { RentalScene } from "@bazous/ui";
+
+<RentalScene answer={answer} locale="fr" onEdit={() => openProfile("rental_properties")} />
+```
+
 **Next:** make the answer part of the contract (each module gives a one-sentence verdict with its tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict, and turn `what-if` into "the best move", recommendation first. Contributions on these three modules are welcome.
 
 ## Answers with pictures

@@ -152,7 +152,37 @@ export type WaterfallVisual = Visual<"waterfall", {
   cash_flow: { key: "cash_flow"; label: string; amount: Decimal; principal: Decimal; principal_label: string } | null;
   /** In percent, one decimal: rent / value, (rent − costs) / value, net gain / equity, interest / debt. */
   yields: { gross: Decimal | null; net: Decimal | null; return_on_equity: Decimal | null; debt_rate: Decimal | null };
+  /** For the interactive scene (`<RentalScene>`): every property, the worst first. */
+  properties?: RentalProperty[];
+  /** All properties added up, when they share a currency (null otherwise, or with one property). */
+  total?: RentalTotal | null;
 }>;
+
+/** What happens to the year when some levers are pulled: computed by the engine for every combination. */
+export type RentalOutcome = {
+  rent_per_year: Decimal; costs_per_year: Decimal; interest_per_year: Decimal; local_tax_per_year: Decimal;
+  net_gain: Decimal; cash_flow_per_year: Decimal | null; net_yield_percent: Decimal | null; return_on_equity_percent: Decimal | null;
+};
+
+export type RentalLeverKey = "rent_up" | "costs_down" | "rate_down" | "vacancy";
+
+/** One property as the scene shows it: the static picture's figures, plus its detail and its what-ifs. */
+export type RentalProperty = Omit<WaterfallVisual, "kind" | "caption" | "properties" | "total"> & {
+  tone: "risk" | "warn" | "ok";
+  value: Decimal;
+  loan_balance: Decimal;
+  equity: Decimal;
+  cost_lines: { label: string; amount: Decimal }[];
+  levers: { key: RentalLeverKey; label: string }[];
+  /** Keyed by the pulled levers, in the order of `levers`, joined with "+" ("" = none pulled). */
+  outcomes: Record<string, RentalOutcome>;
+};
+
+export type RentalTotal = {
+  name: string; currency: string;
+  rent: Decimal; costs: Decimal; interest: Decimal; local_tax: Decimal; net_gain: Decimal;
+  value: Decimal; loan_balance: Decimal; cash_flow: Decimal | null; return_on_equity: Decimal | null;
+};
 
 export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual
   | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual
