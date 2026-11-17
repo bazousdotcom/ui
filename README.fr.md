@@ -57,6 +57,8 @@ La barre de focus au-dessus de la grille dit ce qui est montré et se défait pi
 
 **Les scènes chez les assistants (0.7).** Les cinq scènes « Nuit » sont en React et tournent sur bazous.com ; Claude et ChatGPT affichent une carte statique. `drawVisual` dessine maintenant chacune en image immobile (`orbit`, `constellation`, `river`, `billmap`, `wall`), dans le thème clair ou sombre de la carte. Le moteur les envoie quand l’une de ces questions est posée seule ; la réponse peut alors avoir le ton `ok`, puisqu’elle est donnée en entier même quand tout va bien. Deux étiquettes relevées par la communauté sont corrigées : le point bas de la vallée garde un anneau de la couleur de la carte, pour que la courbe ne le traverse jamais, et une facture déplacée garde un nom aussi long que la moitié de l’image.
 
+**Le revenu en rivière (0.7.1).** Une sixième image venue de la communauté : `money-flow` dessine le revenu mensuel qui se divise en un ruban par catégorie de charges fixes et un pour ce qui reste, chacun aussi épais que son montant ; quand les charges dépassent le revenu, la part manquante entre en rouge. Il ne lit que `structure`. Les revenus par source et les dépenses variables attendent de nouveaux champs dans le contrat.
+
 **Prochaine étape (0.2) :** rendre la réponse obligatoire dans le contrat — chaque module fournira un verdict d’une phrase avec sa tonalité, testé dans les cinq langues — puis donner un verdict à `monthly-structure` et `pay-cycles`, et faire de `what-if` « le meilleur geste », recommandation d’abord. Les contributions sur ces trois modules sont les bienvenues.
 
 ## Les réponses dessinées

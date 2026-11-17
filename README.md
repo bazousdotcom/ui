@@ -57,6 +57,8 @@ The focus bar above the grid says what is shown and undoes it piece by piece. No
 
 **The scenes in the assistants (0.7).** The five « Nuit » scenes are React and run on bazous.com; Claude and ChatGPT show a static card. `drawVisual` now draws each of them as a still picture (`orbit`, `constellation`, `river`, `billmap`, `wall`), in the card's light or dark theme. The engine sends them when one of these questions is asked on its own; such an answer may then have the tone `ok`, since it is given in full even when all is fine. Two labels the community saw are fixed as well: the low point of the valley keeps a ring of the card's colour so the curve never crosses it, and a moved bill keeps a name as long as half the picture.
 
+**The income as a river (0.7.1).** A sixth picture from the community: `money-flow` draws the monthly income splitting into one ribbon per category of fixed costs and one for what is left, each as thick as its amount; when the costs exceed the income, the missing part enters in red. It reads `structure` only. Income by source and variable spending wait for new fields in the contract.
+
 **Next:** make the answer part of the contract (each module gives a one-sentence verdict with its tone, tested in all five languages), then give `monthly-structure` and `pay-cycles` a verdict, and turn `what-if` into "the best move", recommendation first. Contributions on these three modules are welcome.
 
 ## Answers with pictures
