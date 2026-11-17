@@ -6,6 +6,7 @@ import duePayday from "./due-before-payday";
 import lowPoint from "./low-point";
 import marginAfterPayday from "./margin-after-payday";
 import monthWall from "./month-wall";
+import moneyFlow from "./money-flow";
 import monthlyStructure from "./monthly-structure";
 import nextActions from "./next-actions";
 import payCycles from "./pay-cycles";
@@ -29,6 +30,8 @@ export const MODULES: readonly QuestionModule<any>[] = [
   // Drawn from the community proposals of September 2026: the same answers, as pictures.
   paydayPressure,
   costConstellation,
+  // Community proposal of November 2026: the month's income as a river that splits.
+  moneyFlow,
   balanceRiver,
   billMap,
   monthWall,

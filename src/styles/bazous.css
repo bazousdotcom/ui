@@ -297,6 +297,12 @@
 .bz-constellation-star { stroke: rgba(5, 5, 6, 0.6); stroke-width: 2; }
 .bz-constellation-share { font-size: 11px; font-weight: 700; fill: #1d1503; }
 
+/* money flow (community proposal "income flow"): the income splits into ribbons as thick as their amounts */
+.bz-flow { padding: 6px 0; }
+.bz-flow-band { opacity: 0.34; }
+.bz-flow-target.bz-n-hit:hover .bz-flow-band, .bz-flow-target[aria-pressed="true"] .bz-flow-band { opacity: 0.6; }
+.bz-flow-target.bz-n-hit:focus-visible > :first-child { stroke-width: 2; }
+
 /* « Nuit » (0.5): money drawn as light. A night scene stays dark in both themes, like the emphasis tile. */
 .bz-night {
   --n-ink: #f5f3ed; --n-mut: #a8a397; --n-faint: #6f6a5f; --n-line: rgba(218, 175, 55, 0.18);
@@ -480,6 +486,7 @@
 .bz[data-theme="light"] .bz-n-state.bz-n-under, .bz[data-theme="light"] .bz-n-state.bz-n-tight, .bz[data-theme="light"] .bz-n-state.bz-n-breathe { background: none; box-shadow: none; }
 .bz[data-theme="light"] .bz-n-act.bz-n-sel { background: rgba(218, 175, 55, 0.12); }
 .bz[data-theme="light"] .bz-n-spark-under { filter: none; } .bz[data-theme="light"] .bz-n-spark-tight { filter: none; } .bz[data-theme="light"] .bz-n-spark-breathe { filter: none; }
+.bz[data-theme="light"] .bz-flow-band { opacity: 0.42; }
 .bz[data-theme="light"] .bz-constellation-link { stroke: rgba(137, 99, 19, 0.3); }
 .bz[data-theme="light"] .bz-constellation-star { stroke: #ffffff; }
 .bz-n-on-core { fill: #ffffff; }

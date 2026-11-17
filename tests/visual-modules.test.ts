@@ -89,7 +89,35 @@ describe("the community's picture modules only reshape the engine's figures", ()
     expect(model.total).toBeCloseTo(s.structure.by_category.reduce((a, c) => a + Math.max(0, toNumber(c.amount)), 0), 2);
   });
 
-  it.each(["balance-river", "bill-map", "payday-pressure", "cost-constellation", "month-wall"])("%s answers “not enough data” for an empty household", (id) => {
+  it.each(households)("money-flow · %s: the ribbons carry the whole income, and what is left is the engine's margin", (_n, s) => {
+    const model = select("money-flow", s);
+    const sum = (kinds: string[]) => model.targets.filter((x: any) => kinds.includes(x.kind)).reduce((a: number, x: any) => a + x.amount, 0);
+    expect(sum(["category", "other", "left"])).toBeCloseTo(model.income + model.short, 2);
+    expect(sum(["category", "other"])).toBeCloseTo(toNumber(s.structure.fixed_monthly), 2);
+    expect(model.income).toBe(toNumber(s.structure.income_monthly));
+    expect(model.left - model.short).toBeCloseTo(toNumber(s.structure.structural_margin), 2);
+    expect(model.targets.reduce((a: number, x: any) => a + x.share, 0)).toBeCloseTo(100, 6);
+    expect(model.targets.filter((x: any) => x.kind === "category").length).toBeLessThanOrEqual(7);
+  });
+
+  it("money-flow: a month whose fixed costs exceed the income shows what is missing, and nothing left", () => {
+    const short = { ...(demo as Snapshot), structure: { ...(demo as Snapshot).structure, income_monthly: "3000.00", structural_margin: "-460.00" } };
+    const model = select("money-flow", short);
+    expect(model.short).toBeCloseTo(460, 2);
+    expect(model.left).toBe(0);
+    expect(model.targets.some((x: any) => x.kind === "left")).toBe(false);
+    expect(model.targets.reduce((a: number, x: any) => a + x.amount, 0)).toBeCloseTo(3460, 2);
+  });
+
+  it("money-flow: beyond seven categories the smallest are grouped, and none is lost", () => {
+    const by_category = Array.from({ length: 11 }, (_, i) => ({ category: `C${i}`, amount: String(100 + i) }));
+    const many = { ...(demo as Snapshot), structure: { ...(demo as Snapshot).structure, by_category, fixed_monthly: "1155.00" } };
+    const model = select("money-flow", many);
+    expect(model.targets.map((x: any) => x.kind)).toEqual([...Array(6).fill("category"), "other", "left"]);
+    expect(model.targets.filter((x: any) => x.kind !== "left").reduce((a: number, x: any) => a + x.amount, 0)).toBeCloseTo(1155, 2);
+  });
+
+  it.each(["balance-river", "bill-map", "payday-pressure", "cost-constellation", "money-flow", "month-wall"])("%s answers “not enough data” for an empty household", (id) => {
     expect(select(id, empty as Snapshot)).toBeNull();
   });
 });
