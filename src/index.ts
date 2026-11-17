@@ -20,3 +20,5 @@ export type * from "./answers/contract";
 export * from "./answers";
 export { AnswerPicture } from "./answers/AnswerPicture";
 export type { AnswerPictureProps } from "./answers/AnswerPicture";
+export { RentalScene, buildScene, outcomeKey, pour, rentalMessages } from "./scenes/RentalScene";
+export type { RentalLevel, RentalSceneProps } from "./scenes/RentalScene";

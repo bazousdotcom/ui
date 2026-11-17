@@ -11,7 +11,7 @@ type Answer = Answers["answers"][number];
  */
 const ROWS: readonly { id: string; source: "kit" | "expert" }[] = [
   ...MODULES.map((m) => ({ id: m.id, source: "kit" as const })),
-  ...["annual-bills", "safety-cushion", "income-loss", "avoidable-fees", "health-insurance", "tax-provision", "pillar-3a", "contract-notice"].map((id) => ({ id, source: "expert" as const })),
+  ...["annual-bills", "safety-cushion", "income-loss", "avoidable-fees", "health-insurance", "tax-provision", "pillar-3a", "contract-notice", "rental-yield"].map((id) => ({ id, source: "expert" as const })),
 ];
 
 // A question no fictional household answers yet (the engine only asks it with two incomes).

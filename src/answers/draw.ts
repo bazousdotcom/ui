@@ -3,7 +3,7 @@ import { createT, type Locale, type Translate } from "../i18n";
 import type {
   AnswerVisual, BalancePoint, BalanceVisual, BillMapVisual, CalendarVisual, ConstellationVisual, CountdownVisual, DaysVisual,
   DeadlineVisual, GaugeVisual, HorizonVisual, JarVisual, LeakVisual, OrbitVisual, RiverVisual, RunwayVisual, ShiftVisual,
-  ValleyVisual, WallVisual,
+  ValleyVisual, WallVisual, WaterfallVisual,
 } from "./contract";
 import { answerMessages } from "./messages";
 
@@ -460,6 +460,48 @@ function draw(v: AnswerVisual, t: Translate, locale: Locale, doc: Document, W: n
       }));
   };
 
+  // ---- rental property (0.8) ----
+
+  const waterfall = (f: WaterfallVisual) => {
+    // One bar for the year's rent, cut into what each deduction takes; what is left lights up in green.
+    // A loss runs past the rent, dashed: the deductions are longer than the rent itself.
+    const rent = n(f.steps.find((s) => s.key === "rent")?.amount), cuts = f.steps.filter((s) => s.key !== "rent");
+    const gain = n(f.result.amount), out = cuts.reduce((sum, s) => sum - n(s.amount), 0);
+    const L = 8, R = W - 8, max = Math.max(rent, out) || 1, len = (v: number) => (Math.max(v, 0) * (R - L)) / max;
+    const colour: Record<string, string> = { costs: C.negative, interest: C.warning, local_tax: C.muted };
+    let x = L;
+    const segments = cuts.map((s) => { const w = len(-n(s.amount)), seg = { s, x, w }; x += w; return seg; });
+    const title = `${shorten(f.name, 22)}${f.year ? ` · ${f.year}` : ""}`;
+    const pct = (v: string | null, label: string) => (v == null ? null : `${label} ${num(v, 1)} %`);
+    const yields = [pct(f.yields.gross, t("vis.gross")), pct(f.yields.net, t("vis.net")), pct(f.yields.return_on_equity, t("vis.onEquity"))]
+      .filter(Boolean).join(" · ");
+    // Below 300px the legend and the bottom line drop the cents, so names stay whole and the two
+    // figures of the bottom line never meet (about 6px a character at 11px).
+    const fig = W < 300 ? (v: string | number) => num(v, 0) : amount;
+    const half = (W - 16) / 2;
+    const legend = (label: string, value: number) =>
+      `${shorten(label, Math.max(Math.floor((half - 14) / 6) - fig(value).length - 1, 4))} ${fig(value)}`;
+    const lost = gain < 0, cash = f.cash_flow, cashOut = cash != null && n(cash.amount) < 0;
+    return frame(f.caption,
+      txt(L, 14, title, { fill: C.ink, "font-weight": 600 }),
+      txt(R, 14, `${amount(rent)} ${f.currency}`, { "text-anchor": "end", fill: C.ink }),
+      // The rent, then the deductions drawn over it from the left; what they leave is the gain.
+      sv("rect", { x: L, y: 24, width: len(rent), height: 24, rx: 4, fill: C.positive }),
+      segments.map(({ s, x: sx, w }) => sv("rect", { x: sx, y: 24, width: w, height: 24, fill: colour[s.key] ?? C.muted,
+        "fill-opacity": s.key === "local_tax" ? 0.7 : 0.9, stroke: C.surface, "stroke-width": 1 })),
+      lost && sv("rect", { x: L + len(rent), y: 22, width: len(out - rent), height: 28, rx: 3, fill: "none",
+        stroke: C.negative, "stroke-dasharray": "4 3" }),
+      // The legend: two columns, each deduction with its amount, so no label sits on the bar.
+      segments.map(({ s }, i) => [
+        sv("rect", { x: L + (i % 2) * half, y: 58 + Math.floor(i / 2) * 16, width: 9, height: 9, rx: 2, fill: colour[s.key] ?? C.muted }),
+        txt(L + (i % 2) * half + 14, 66 + Math.floor(i / 2) * 16, legend(s.label, -n(s.amount))),
+      ]),
+      txt(L, 106, `${f.result.label} ${fig(gain)}`, { fill: lost ? C.negative : C.positive, "font-weight": 600, "font-size": 12 }),
+      cash && txt(R, 106, `${cash.label} ${fig(cash.amount)} ${t("vis.perYear")}`,
+        { "text-anchor": "end", fill: cashOut ? C.warning : C.positive }),
+      yields.length > 0 && txt(L, H - 6, yields));
+  };
+
   switch (v.kind) {
     case "runway": return runway(v);
     case "valley": return valley(v);
@@ -478,6 +520,7 @@ function draw(v: AnswerVisual, t: Translate, locale: Locale, doc: Document, W: n
     case "river": return river(v);
     case "billmap": return billmap(v);
     case "wall": return wall(v);
+    case "waterfall": return waterfall(v);
     default: return null;
   }
 }

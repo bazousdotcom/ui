@@ -135,13 +135,62 @@ export type WallVisual = Visual<"wall", {
   tightest: IsoDate;
 }>;
 
+/**
+ * « Mon bien locatif est-il rentable ? » (0.8) — the year's rent falling step by step to what is left:
+ * owner costs, loan interest, local tax, then the net gain; with the capital repaid, the cash it costs.
+ * Amounts are in the property's own currency (often not the household's). Labels come from the engine.
+ */
+export type WaterfallVisual = Visual<"waterfall", {
+  name: string;
+  currency: string;
+  year: number | null;
+  /** The rent first (positive), then each deduction (negative); zero deductions are left out. */
+  steps: { key: "rent" | "costs" | "interest" | "local_tax"; label: string; amount: Decimal }[];
+  /** The sum of the steps: what is left after costs, interest and local tax (negative: a loss). */
+  result: { key: "net_gain"; label: string; amount: Decimal };
+  /** When the loan capital repaid is known: the net gain minus that capital, per year. */
+  cash_flow: { key: "cash_flow"; label: string; amount: Decimal; principal: Decimal; principal_label: string } | null;
+  /** In percent, one decimal: rent / value, (rent − costs) / value, net gain / equity, interest / debt. */
+  yields: { gross: Decimal | null; net: Decimal | null; return_on_equity: Decimal | null; debt_rate: Decimal | null };
+  /** For the interactive scene (`<RentalScene>`): every property, the worst first. */
+  properties?: RentalProperty[];
+  /** All properties added up, when they share a currency (null otherwise, or with one property). */
+  total?: RentalTotal | null;
+}>;
+
+/** What happens to the year when some levers are pulled: computed by the engine for every combination. */
+export type RentalOutcome = {
+  rent_per_year: Decimal; costs_per_year: Decimal; interest_per_year: Decimal; local_tax_per_year: Decimal;
+  net_gain: Decimal; cash_flow_per_year: Decimal | null; net_yield_percent: Decimal | null; return_on_equity_percent: Decimal | null;
+};
+
+export type RentalLeverKey = "rent_up" | "costs_down" | "rate_down" | "vacancy";
+
+/** One property as the scene shows it: the static picture's figures, plus its detail and its what-ifs. */
+export type RentalProperty = Omit<WaterfallVisual, "kind" | "caption" | "properties" | "total"> & {
+  tone: "risk" | "warn" | "ok";
+  value: Decimal;
+  loan_balance: Decimal;
+  equity: Decimal;
+  cost_lines: { label: string; amount: Decimal }[];
+  levers: { key: RentalLeverKey; label: string }[];
+  /** Keyed by the pulled levers, in the order of `levers`, joined with "+" ("" = none pulled). */
+  outcomes: Record<string, RentalOutcome>;
+};
+
+export type RentalTotal = {
+  name: string; currency: string;
+  rent: Decimal; costs: Decimal; interest: Decimal; local_tax: Decimal; net_gain: Decimal;
+  value: Decimal; loan_balance: Decimal; cash_flow: Decimal | null; return_on_equity: Decimal | null;
+};
+
 export type AnswerVisual = RunwayVisual | ValleyVisual | ShiftVisual | DaysVisual | BalanceVisual | CountdownVisual
   | HorizonVisual | CalendarVisual | LeakVisual | JarVisual | GaugeVisual | DeadlineVisual
-  | OrbitVisual | ConstellationVisual | RiverVisual | BillMapVisual | WallVisual;
+  | OrbitVisual | ConstellationVisual | RiverVisual | BillMapVisual | WallVisual | WaterfallVisual;
 export type VisualKind = AnswerVisual["kind"];
 export const VISUAL_KINDS = ["runway", "valley", "shift", "days", "balance", "countdown",
   "horizon", "calendar", "leak", "jar", "gauge", "deadline",
-  "orbit", "constellation", "river", "billmap", "wall"] as const satisfies readonly VisualKind[];
+  "orbit", "constellation", "river", "billmap", "wall", "waterfall"] as const satisfies readonly VisualKind[];
 
 /** "ok" only for a question asked on its own: its answer is then given in full, picture included. */
 export type AnswerTone = "risk" | "warn" | "info" | "ok";

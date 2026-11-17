@@ -17,7 +17,7 @@ captions in 5 languages                                  no network call        
 - **The Claude and ChatGPT card** (MCP App, server `https://bazous.com/mcp`) bundles `@bazous/ui/answers` at build time; it loads nothing from the network.
 - A contribution merged here therefore reaches the site and the assistants at the same time.
 
-## The 16 questions
+## The 17 questions
 
 The answers quoted are those of **Léa and Sam**, an invented family the gallery tells in two acts:
 
@@ -44,10 +44,11 @@ The figures always come from the engine; a module or a picture never recomputes 
 | `tax-provision` | Have I set aside enough for my taxes? | expert | “For the next tax bill (6’000.00 CHF), set 500.00 CHF aside every month: 16.44 CHF a day.” | `last_annual_bill`, `needed_per_month`, `set_aside_per_month` | `jar` | engine answer |
 | `pillar-3a` | Can I still pay into my pillar 3a this year? | expert | “You can still pay 7’258.00 CHF into your pillar 3a by 31.12, in 91 day(s).” | `left`, `limit`, `year` | `gauge` | engine answer |
 | `contract-notice` | Does a contract need cancelling soon? | expert | “You have 30 day(s) left for your cancellation of “Salle de sport” to arrive before 31.10; otherwise the contract renews after 31.12.” | `contracts: name, ends_on, deadline` | `deadline` | engine answer |
+| `rental-yield` | Is my rental property worth it? | community → expert | “Studio Annecy in 2025: out of 9’600.00 EUR in rent, 3’100.00 EUR is left after costs, interest and local tax, that is 5.2% a year on your equity.” (asked on its own) | `properties[]: net_gain, gross / net / return_on_equity / debt_rate yields, cash_flow_per_year…` | `waterfall` | engine answer |
 
-**Status:** 16 questions, 12 drawn on bazous.com, in Claude and in ChatGPT, 4 open for contributions.
+**Status:** 17 questions, 13 drawn on bazous.com, in Claude and in ChatGPT, 4 open for contributions.
 
-## The 12 pictures
+## The 13 pictures
 
 All in [`src/answers/draw.ts`](../src/answers/draw.ts), contract in [`schema/answers.schema.json`](../schema/answers.schema.json).
 
@@ -65,6 +66,7 @@ All in [`src/answers/draw.ts`](../src/answers/draw.ts), contract in [`schema/ans
 | `jar` | taxes | twelve months to fill against the tax bill |
 | `gauge` | pillar 3a | paid, still possible, days until 31.12 |
 | `deadline` | cancellation | today, the day the letter must arrive, the renewal |
+| `waterfall` | rental property | `name`, `currency`, `year`, `steps[{key, label, amount}]`, `result`, `cash_flow`, `yields` |
 
 An answer with its picture:
 
