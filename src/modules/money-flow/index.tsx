@@ -24,6 +24,7 @@ type Model = {
 };
 
 const MAX_CATEGORIES = 7;
+const CATCH_ALL = new Set(["autre", "autres", "other", "others", "übrige", "andere", "altro", "auters", ""]);
 /** Height of the drawing given to the amounts, in px, before the room each label needs. */
 const AMOUNTS = 260;
 /** A target never gets less than the two lines of its label. */
@@ -103,8 +104,11 @@ export default defineModule<Model>({
     const left = Math.max(0, income - fixed);
     const short = Math.max(0, fixed - income);
     const whole = income + short;
-    const head = cats.length <= MAX_CATEGORIES ? cats : cats.slice(0, MAX_CATEGORIES - 1);
-    const rest = cats.slice(head.length).reduce((sum, c) => sum + c.amount, 0);
+    // The engine's catch-all category (« Autre ») joins the grouped rest, so « Autre » and « Autres » never stand side
+    // by side when there are too many categories to draw.
+    const named = cats.length <= MAX_CATEGORIES ? cats : cats.filter((c) => !CATCH_ALL.has(c.category.trim().toLowerCase()));
+    const head = named.length <= MAX_CATEGORIES ? named : named.slice(0, MAX_CATEGORIES - 1);
+    const rest = cats.filter((c) => !head.includes(c)).reduce((sum, c) => sum + c.amount, 0);
     const share = (amount: number) => (amount / whole) * 100;
     const targets: Target[] = head.map((c) => ({ key: c.category, category: c.category, amount: c.amount, share: share(c.amount), kind: "category" }));
     if (rest > 0) targets.push({ key: "·other", category: "", amount: rest, share: share(rest), kind: "other" });

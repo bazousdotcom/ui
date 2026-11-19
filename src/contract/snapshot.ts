@@ -117,7 +117,7 @@ export type Snapshot = {
   };
   debts: {
     total_base: Decimal;
-    items: { id: string; name: string; principal: Decimal; currency: string; due_day: number | null }[];
+    items: { id: string; name: string; principal: Decimal | null; currency: string; due_day: number | null }[];
   };
   actions: Action[];
   /** Last full month of imported transactions, by category. */
