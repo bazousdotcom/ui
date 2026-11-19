@@ -176,6 +176,32 @@ export type RentalProperty = Omit<WaterfallVisual, "kind" | "caption" | "propert
   levers: { key: RentalLeverKey; label: string }[];
   /** Keyed by the pulled levers, in the order of `levers`, joined with "+" ("" = none pulled). */
   outcomes: Record<string, RentalOutcome>;
+  /** The property's months (kit 0.9), when the host asks for them: the scene's month and rent cursors. */
+  calendar?: RentalCalendar;
+};
+
+/** One line paid in a month (or the average month): a cost or a local tax, as given or estimated. */
+export type RentalCalendarLine = { key: string; group: "costs" | "tax"; label: string; amount: Decimal; estimated: boolean };
+
+/**
+ * A property's next months as the engine computed them, every amount monthly in the property's currency. The scene
+ * picks a month and a rent level; it never adds: each level's cash, month by month, and its running total are here.
+ */
+export type RentalCalendar = {
+  /** The first month, "YYYY-MM". */
+  start: string;
+  /** Today's rent excluding charges, and the tenant's provisions for charges. */
+  rent: Decimal; provisions: Decimal;
+  interest: Decimal; capital: Decimal;
+  /** The average month (every line spread over the year); `vacant` = the cash with no tenant (negative). */
+  average: { lines: RentalCalendarLine[]; vacant: Decimal };
+  months: { month: string; lines: RentalCalendarLine[]; vacant: Decimal; equity: Decimal }[];
+  /** Rent levels (excluding charges), today's included, each with its average cash and its cash month by month. */
+  grid: { rent: Decimal; average: Decimal; cash: Decimal[]; cumulative: Decimal[] }[];
+  /** The rent excluding charges at which the property pays for itself, loan included. */
+  breakeven_rent: Decimal;
+  /** The household's monthly cash target for this property, and the rent that reaches it. */
+  target: Decimal | null; target_rent: Decimal | null;
 };
 
 export type RentalTotal = {

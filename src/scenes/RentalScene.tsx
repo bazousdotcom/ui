@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 
-import type { Answer, RentalLeverKey, RentalOutcome, RentalProperty, WaterfallVisual } from "../answers/contract";
+import type { Answer, RentalCalendar, RentalLeverKey, RentalOutcome, RentalProperty, WaterfallVisual } from "../answers/contract";
 import { toNumber } from "../contract/snapshot";
 import { createFormatters, type Formatters } from "../format";
-import { createT, type Catalog, type Locale, type Translate } from "../i18n";
+import { LOCALE_TAGS, createT, type Catalog, type Locale, type Translate } from "../i18n";
 import { Card, NightDefs, Segmented, useNightIds, useWidth } from "../primitives";
 
 /**
@@ -14,6 +14,11 @@ import { Card, NightDefs, Segmented, useNightIds, useWidth } from "../primitives
  * - roll up the unit: per year, per month, or per 100 of rent;
  * - pull « what if » levers (rent +5 %, costs −10 %, rate −0.5 pt, one empty month): the flow morphs to the
  *   engine's figures for that combination, the year as it was stays as a dashed ghost.
+ *
+ * With the property's calendar (kit 0.9), the same flow becomes a month: a month cursor (and its play button) walks
+ * the next 24 months, each line in the month it is paid (hatched when estimated); a rent cursor snaps to the
+ * engine's rent levels, with the breakeven and the target marked on it; « no tenant » empties the rent. What the
+ * rent does not cover comes in from the left, from the salary; what is left goes out on the right, into the pocket.
  *
  * The engine computes every figure, including every combination of levers; the scene only picks and draws
  * (the unit is a change of scale, like the river's weeks). No network, no storage. Motion follows
@@ -31,9 +36,10 @@ export type RentalSceneProps = {
 type Unit = "year" | "month" | "per100";
 export type RentalLevel = { kind: "portfolio" } | { kind: "property"; i: number } | { kind: "costs"; i: number };
 type Sink = "costs" | "interest" | "capital" | "local_tax" | "gain";
-type FlowNode = { key: string; label: string; value: number; cls: string; drill?: RentalLevel };
+type FlowNode = { key: string; label: string; value: number; cls: string; drill?: RentalLevel; estimated?: boolean; note?: string };
 export type Flow = { from: string; to: string; value: number; cls: string };
-type Scene = { left: FlowNode[]; right: FlowNode[]; flows: Flow[]; base: number };
+/** `keep`: every node stays, even at zero, so a month or a rent level glides into the next (kit 0.9). */
+type Scene = { left: FlowNode[]; right: FlowNode[]; flows: Flow[]; base: number; keep?: boolean; rows?: number; scale?: number };
 
 const SINKS: Sink[] = ["costs", "interest", "capital", "local_tax", "gain"];
 const MORPH_MS = 650;
@@ -52,6 +58,14 @@ export const rentalMessages: Catalog = {
     "lever.none": "Sans crédit sur ce bien", share: "{p} % du loyer reste", ghost: "l’année réelle", open: "Ouvrir {name}",
     edit: "Corriger les chiffres", "costs.hint": "Donne le détail de tes charges dans ton profil pour les voir ligne par ligne.",
     note: "Chiffres du moteur Bazous, en {cur}. Dans les « et si », l’impôt local est gardé tel quel.",
+    "cal.rent": "Loyer hors charges", "cal.provisions": "Provisions du locataire", "cal.outside": "vient de ton salaire", "cal.inPocket": "Dans ta poche",
+    "cal.title.loss": "{name}, {when} : {amount} {cur} sortent de ta poche, crédit compris", "cal.title.gain": "{name}, {when} : {amount} {cur} dans ta poche, crédit compris",
+    "cal.average": "un mois moyen", "cal.vacantWhen": "{when}, sans locataire", "cal.month": "Mois", "cal.play": "Faire défiler les mois", "cal.pause": "Mettre en pause",
+    "cal.vacancy": "Sans locataire", "cal.rentLabel": "Loyer hors charges", "cal.today": "Loyer actuel", "cal.breakeven": "point mort", "cal.target": "objectif",
+    "cal.kpi.month": "Ce mois-là", "cal.kpi.average": "Mois moyen", "cal.kpi.cumulative": "Cumul sur {n} mois", "cal.kpi.rented": "{from} → {to}, loué à ce loyer",
+    "cal.kpi.equity": "Ton coffre", "cal.kpi.equityAt": "valeur moins dette, fin {when}", "cal.kpi.breakeven": "Point mort", "cal.kpi.breakevenSub": "loyer hors charges pour ne rien sortir de ta poche",
+    "cal.kpi.target": "objectif {target} / mois : {rent}", "cal.note": "Chiffres du moteur Bazous, en {cur}, par mois. Hachuré : estimé ; un paiement sans mois connu est réparti sur l’année.",
+    "cal.aria": "{when} : {rent} {cur} de loyer hors charges, {provisions} de provisions, {cash} de trésorerie, crédit compris.",
     aria: "Flux de l’année : {rent} {cur} de loyers, {costs} de charges, {interest} d’intérêts, {tax} d’impôt local, {gain} de gain net.",
   },
   de: {
@@ -67,6 +81,14 @@ export const rentalMessages: Catalog = {
     "lever.none": "Kein Kredit auf dieser Liegenschaft", share: "{p} % der Miete bleiben", ghost: "das echte Jahr", open: "{name} öffnen",
     edit: "Zahlen korrigieren", "costs.hint": "Gib die Kosten im Profil im Detail an, um sie Zeile für Zeile zu sehen.",
     note: "Zahlen des Bazous-Rechenkerns, in {cur}. Im «Was wäre, wenn» bleibt die lokale Steuer unverändert.",
+    "cal.rent": "Miete ohne Nebenkosten", "cal.provisions": "Nebenkosten des Mieters", "cal.outside": "kommt aus deinem Lohn", "cal.inPocket": "In deiner Tasche",
+    "cal.title.loss": "{name}, {when}: {amount} {cur} kommen aus deiner Tasche, Kredit eingerechnet", "cal.title.gain": "{name}, {when}: {amount} {cur} in deiner Tasche, Kredit eingerechnet",
+    "cal.average": "ein durchschnittlicher Monat", "cal.vacantWhen": "{when}, ohne Mieter", "cal.month": "Monat", "cal.play": "Monate abspielen", "cal.pause": "Pause",
+    "cal.vacancy": "Ohne Mieter", "cal.rentLabel": "Miete ohne Nebenkosten", "cal.today": "Heutige Miete", "cal.breakeven": "Gewinnschwelle", "cal.target": "Ziel",
+    "cal.kpi.month": "In diesem Monat", "cal.kpi.average": "Durchschnittsmonat", "cal.kpi.cumulative": "Summe über {n} Monate", "cal.kpi.rented": "{from} → {to}, vermietet zu dieser Miete",
+    "cal.kpi.equity": "Dein Tresor", "cal.kpi.equityAt": "Wert minus Schuld, Ende {when}", "cal.kpi.breakeven": "Gewinnschwelle", "cal.kpi.breakevenSub": "Miete ohne Nebenkosten, bei der nichts aus deiner Tasche kommt",
+    "cal.kpi.target": "Ziel {target} / Monat: {rent}", "cal.note": "Zahlen des Bazous-Rechenkerns, in {cur}, pro Monat. Schraffiert: geschätzt; eine Zahlung ohne bekannten Monat wird aufs Jahr verteilt.",
+    "cal.aria": "{when}: {rent} {cur} Miete ohne Nebenkosten, {provisions} Nebenkosten, {cash} Liquidität, Kredit eingerechnet.",
     aria: "Fluss des Jahres: {rent} {cur} Mieten, {costs} Kosten, {interest} Zinsen, {tax} lokale Steuer, {gain} Nettogewinn.",
   },
   it: {
@@ -82,6 +104,14 @@ export const rentalMessages: Catalog = {
     "lever.none": "Nessun credito su questo immobile", share: "resta il {p} % dell’affitto", ghost: "l’anno reale", open: "Apri {name}",
     edit: "Correggi le cifre", "costs.hint": "Indica il dettaglio delle spese nel profilo per vederle riga per riga.",
     note: "Cifre del motore Bazous, in {cur}. Negli «e se» l’imposta locale resta invariata.",
+    "cal.rent": "Affitto senza spese", "cal.provisions": "Acconti spese dell’inquilino", "cal.outside": "viene dal tuo stipendio", "cal.inPocket": "In tasca tua",
+    "cal.title.loss": "{name}, {when}: {amount} {cur} escono di tasca tua, credito compreso", "cal.title.gain": "{name}, {when}: {amount} {cur} in tasca tua, credito compreso",
+    "cal.average": "un mese medio", "cal.vacantWhen": "{when}, senza inquilino", "cal.month": "Mese", "cal.play": "Scorri i mesi", "cal.pause": "Pausa",
+    "cal.vacancy": "Senza inquilino", "cal.rentLabel": "Affitto senza spese", "cal.today": "Affitto attuale", "cal.breakeven": "pareggio", "cal.target": "obiettivo",
+    "cal.kpi.month": "Quel mese", "cal.kpi.average": "Mese medio", "cal.kpi.cumulative": "Totale su {n} mesi", "cal.kpi.rented": "{from} → {to}, affittato a questo affitto",
+    "cal.kpi.equity": "La tua cassaforte", "cal.kpi.equityAt": "valore meno debito, fine {when}", "cal.kpi.breakeven": "Pareggio", "cal.kpi.breakevenSub": "affitto senza spese per non tirare fuori nulla",
+    "cal.kpi.target": "obiettivo {target} / mese: {rent}", "cal.note": "Cifre del motore Bazous, in {cur}, al mese. Tratteggiato: stimato; un pagamento senza mese noto è ripartito sull’anno.",
+    "cal.aria": "{when}: {rent} {cur} di affitto senza spese, {provisions} di acconti, {cash} di liquidità, credito compreso.",
     aria: "Flusso dell’anno: {rent} {cur} di affitti, {costs} di spese, {interest} di interessi, {tax} di imposta locale, {gain} di guadagno netto.",
   },
   rm: {
@@ -97,6 +127,14 @@ export const rentalMessages: Catalog = {
     "lever.none": "Nagin credit sin quest bain", share: "{p} % dal fitg resta", ghost: "l’onn real", open: "Avrir {name}",
     edit: "Curreger las cifras", "costs.hint": "Inditgescha il detagl dals custs en tes profil per als vesair lingia per lingia.",
     note: "Cifras dal motor Bazous, en {cur}. En ils «e sche» resta la taglia locala sco ella è.",
+    "cal.rent": "Fitg senza custs accessorics", "cal.provisions": "Acontos dal fittadin", "cal.outside": "vegn da tia paga", "cal.inPocket": "En tia giaglioffa",
+    "cal.title.loss": "{name}, {when}: {amount} {cur} vegnan da tia giaglioffa, credit inclus", "cal.title.gain": "{name}, {when}: {amount} {cur} en tia giaglioffa, credit inclus",
+    "cal.average": "in mais mesaun", "cal.vacantWhen": "{when}, senza fittadin", "cal.month": "Mais", "cal.play": "Far passar ils mais", "cal.pause": "Pausa",
+    "cal.vacancy": "Senza fittadin", "cal.rentLabel": "Fitg senza custs accessorics", "cal.today": "Fitg actual", "cal.breakeven": "pitg da rentabilitad", "cal.target": "finamira",
+    "cal.kpi.month": "Quel mais", "cal.kpi.average": "Mais mesaun", "cal.kpi.cumulative": "Total sur {n} mais", "cal.kpi.rented": "{from} → {to}, fittà a quest fitg",
+    "cal.kpi.equity": "Tia tresoraria", "cal.kpi.equityAt": "valur main debit, fin {when}", "cal.kpi.breakeven": "Pitg da rentabilitad", "cal.kpi.breakevenSub": "fitg senza custs accessorics per betg pajar da tia giaglioffa",
+    "cal.kpi.target": "finamira {target} / mais: {rent}", "cal.note": "Cifras dal motor Bazous, en {cur}, per mais. Striblà: stimà; in pajament senza mais enconuschent vegn repartì sin l’onn.",
+    "cal.aria": "{when}: {rent} {cur} fitg senza custs accessorics, {provisions} acontos, {cash} liquiditad, credit inclus.",
     aria: "Flux da l’onn: {rent} {cur} fitgs, {costs} custs, {interest} tschains, {tax} taglia locala, {gain} gudogn net.",
   },
   en: {
@@ -112,6 +150,14 @@ export const rentalMessages: Catalog = {
     "lever.none": "No loan on this property", share: "{p}% of the rent is left", ghost: "the real year", open: "Open {name}",
     edit: "Correct the figures", "costs.hint": "Give your costs line by line in your profile to see them here.",
     note: "Figures from the Bazous engine, in {cur}. In the what-ifs, the local tax is kept as it was.",
+    "cal.rent": "Rent excluding charges", "cal.provisions": "Tenant’s charge advances", "cal.outside": "comes from your salary", "cal.inPocket": "In your pocket",
+    "cal.title.loss": "{name}, {when}: {amount} {cur} come out of your pocket, loan included", "cal.title.gain": "{name}, {when}: {amount} {cur} in your pocket, loan included",
+    "cal.average": "an average month", "cal.vacantWhen": "{when}, with no tenant", "cal.month": "Month", "cal.play": "Play the months", "cal.pause": "Pause",
+    "cal.vacancy": "No tenant", "cal.rentLabel": "Rent excluding charges", "cal.today": "Today’s rent", "cal.breakeven": "breakeven", "cal.target": "target",
+    "cal.kpi.month": "That month", "cal.kpi.average": "Average month", "cal.kpi.cumulative": "Total over {n} months", "cal.kpi.rented": "{from} → {to}, let at this rent",
+    "cal.kpi.equity": "Your vault", "cal.kpi.equityAt": "value less debt, end of {when}", "cal.kpi.breakeven": "Breakeven", "cal.kpi.breakevenSub": "rent excluding charges at which nothing comes out of your pocket",
+    "cal.kpi.target": "target {target} / month: {rent}", "cal.note": "Figures from the Bazous engine, in {cur}, per month. Hatched: estimated; a payment with no known month is spread over the year.",
+    "cal.aria": "{when}: {rent} {cur} of rent excluding charges, {provisions} of charge advances, {cash} of cash, loan included.",
     aria: "The year's flow: {rent} {cur} of rent, {costs} of costs, {interest} of interest, {tax} of local tax, {gain} of net gain.",
   },
 };
@@ -147,6 +193,52 @@ export function remainder(o: RentalOutcome): { capital: number; left: number; ca
   if (o.cash_flow_per_year == null) return { capital: 0, left: gain, cash: false };
   const cash = toNumber(o.cash_flow_per_year);
   return { capital: Math.max(gain - cash, 0), left: cash, cash: true };
+}
+
+/** Where the time cursors stand: `month` 0 is the average month, 1..24 the months from the calendar's start;
+ *  `rent` is an index into the engine's rent levels; `vacant` empties the rent and the provisions. */
+export type TimeView = { month: number; rent: number; vacant: boolean };
+
+/** Today's rent among the engine's levels (it is always one of them). */
+export function todayLevel(cal: RentalCalendar): number {
+  const i = cal.grid.findIndex((g) => toNumber(g.rent) === toNumber(cal.rent));
+  if (i >= 0) return i;
+  const r = toNumber(cal.rent);
+  return cal.grid.reduce((best, g, j) => (Math.abs(toNumber(g.rent) - r) < Math.abs(toNumber(cal.grid[best]!.rent) - r) ? j : best), 0);
+}
+
+/** The month's cash, loan included, as the engine computed it for that rent level (or with no tenant). */
+export function monthCash(cal: RentalCalendar, view: TimeView): number {
+  if (view.vacant) return toNumber(view.month ? cal.months[view.month - 1]!.vacant : cal.average.vacant);
+  const g = cal.grid[view.rent]!;
+  return toNumber(view.month ? g.cash[view.month - 1]! : g.average);
+}
+
+/** A month of the property as a flow: rent and provisions (and the pocket, when they do not cover the month) on the
+ *  left; every line paid that month, the interest and the capital (and the pocket, when something is left) on the
+ *  right. Every node stays, at zero when it is not paid that month, so the months glide into each other. */
+export function buildTimeScene(cal: RentalCalendar, view: TimeView, t: Translate): Scene {
+  const lines = view.month ? cal.months[view.month - 1]!.lines : cal.average.lines;
+  const cash = monthCash(cal, view);
+  const g = cal.grid[view.rent]!;
+  const left: FlowNode[] = [
+    { key: "rent", label: t("cal.rent"), value: view.vacant ? 0 : toNumber(g.rent), cls: "bz-rs-rent" },
+    { key: "provisions", label: t("cal.provisions"), value: view.vacant ? 0 : toNumber(cal.provisions), cls: "bz-rs-provisions" },
+    { key: "pocket", label: t("pocket"), value: Math.max(-cash, 0), cls: "bz-rs-pocket bz-rs-outside", note: t("cal.outside") },
+  ];
+  const right: FlowNode[] = [
+    ...lines.map((l) => ({ key: l.key, label: l.label, value: toNumber(l.amount), cls: l.group === "tax" ? "bz-rs-local_tax" : "bz-rs-costs", estimated: l.estimated })),
+    { key: "interest", label: t("interest"), value: toNumber(cal.interest), cls: "bz-rs-interest" },
+    { key: "capital", label: t("capital"), value: toNumber(cal.capital), cls: "bz-rs-capital" },
+    { key: "gain", label: t("cal.inPocket"), value: Math.max(cash, 0), cls: "bz-rs-gain" },
+  ];
+  const on = (n: FlowNode) => n.value > 0;
+  // The drawing keeps one height for every month: room for the busiest month's lines, plus interest, capital, pocket.
+  const busiest = Math.max(...cal.months.map((m) => m.lines.filter((l) => toNumber(l.amount) > 0).length), cal.average.lines.length);
+  // And one scale: the heaviest month's flow at this rent, so the rent keeps its size while the months go by.
+  const income = toNumber(g.rent) + toNumber(cal.provisions);
+  const scale = Math.max(income, ...g.cash.map((c) => income - toNumber(c)), income - toNumber(g.average));
+  return { left, right, flows: pour(left.filter(on), right.filter(on)), base: income, keep: true, rows: busiest + 3, scale };
 }
 
 function propertyFlow(p: RentalProperty, o: RentalOutcome, t: Translate, prefix = "") {
@@ -201,8 +293,9 @@ export function buildScene(v: WaterfallVisual, level: RentalLevel, pulled: Reado
  * Values that glide from one state to the next (a lever, a unit), or jump when motion is reduced or when the
  * drawing itself changes (a drill: other nodes, other ribbons; the new level enters with its own fade).
  */
-function useMorph(target: Record<string, number>, still: boolean): Record<string, number> {
-  const shape = Object.keys(target).sort().join("|");
+function useMorph(target: Record<string, number>, still: boolean, glide = false): Record<string, number> {
+  // Gliding (a calendar month), a node that appears or leaves grows from zero or shrinks to it instead of jumping.
+  const shape = glide ? "glide" : Object.keys(target).sort().join("|");
   const [state, setState] = useState({ shape, shown: target });
   const from = useRef(target);
   const key = JSON.stringify(target);
@@ -252,13 +345,36 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
   const [level, setLevel] = useState<RentalLevel>(props.length > 1 ? { kind: "portfolio" } : { kind: "property", i: 0 });
   const [unit, setUnit] = useState<Unit>("year");
   const [pulled, setPulled] = useState<ReadonlySet<RentalLeverKey>>(new Set());
+  const [time, setTime] = useState<(TimeView & { i: number }) | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const at = level.kind === "portfolio" ? null : props[level.i] ?? null;
+  const cal = level.kind === "property" ? at?.calendar : undefined;
+  const view: TimeView | null = cal
+    ? time && time.i === (level as { i: number }).i ? time : { month: 0, rent: todayLevel(cal), vacant: false }
+    : null;
+  const months = cal?.months.length ?? 0;
+  const setView = (next: Partial<TimeView>) => setTime({ ...view!, ...next, i: (level as { i: number }).i });
+  // Play: one month after the other, then stop on the last one.
+  useEffect(() => {
+    if (!playing || !view) return;
+    if (view.month >= months) { setPlaying(false); return; }
+    const timer = setTimeout(() => setTime({ ...view, month: view.month + 1, i: (level as { i: number }).i }), view.month === 0 ? 300 : 1100);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playing, view?.month]);
+  useEffect(() => { if (!cal) setPlaying(false); }, [cal]);
   if (props.length === 0) return null;
-  const at = level.kind === "portfolio" ? null : props[level.i]!;
   const cur = at?.currency ?? v.total?.currency ?? v.currency;
   const go = (next: RentalLevel) => {
     if (next.kind === "portfolio" || (at && next.kind === "property" && props[next.i] !== at)) setPulled(new Set());
     setLevel(next);
   };
+  const play = () => {
+    if (playing) { setPlaying(false); return; }
+    if (view && view.month >= months) setView({ month: 0 });
+    setPlaying(true);
+  };
+  const shownUnit: Unit = cal && unit === "year" ? "month" : unit;
   const toggle = (k: RentalLeverKey) => setPulled((s) => { const n = new Set(s); if (n.has(k)) n.delete(k); else n.add(k); return n; });
   const o = at ? at.outcomes[outcomeKey(at.levers, pulled)] ?? at.outcomes[""]! : null;
   const whatIf = pulled.size > 0 && level.kind === "property";
@@ -266,7 +382,13 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
   let title: string;
   if (level.kind === "costs") title = t("title.costs", { amount: fmt.num(at!.outcomes[""]!.costs_per_year), cur, name: at!.name });
   else if (level.kind === "portfolio") title = v.total ? t("title.all", { n: props.length, amount: fmt.num(v.total.net_gain), cur }) : t("all");
-  else {
+  else if (cal && view) {
+    // The month (or the average month) the cursor stands on, and what it does to the household's cash, loan included.
+    const cash = monthCash(cal, view);
+    const base = view.month ? monthName(cal.months[view.month - 1]!.month, locale) : t("cal.average");
+    const when = view.vacant ? t("cal.vacantWhen", { when: base }) : base;
+    title = t(cash < 0 ? "cal.title.loss" : "cal.title.gain", { name: at!.name, when, amount: fmt.num(Math.abs(cash)), cur });
+  } else {
     // With the loan payments known, the title says what the property does to the household's cash, loan included.
     const r = remainder(o!);
     const key = whatIf ? (r.left < 0 ? "title.whatif.loss" : "title.whatif") : r.left < 0 ? "title.loss" : "title.gain";
@@ -292,13 +414,20 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
               </span>
             ))}
           </nav>
-          <Segmented label={t("unit")} value={unit} onChange={setUnit}
-            options={[{ key: "year", label: t("year") }, { key: "month", label: t("month") }, { key: "per100", label: t("per100") }]} />
+          <Segmented label={t("unit")} value={shownUnit} onChange={setUnit}
+            options={[...(cal ? [] : [{ key: "year" as Unit, label: t("year") }]), { key: "month", label: t("month") }, { key: "per100", label: t("per100") }]} />
         </div>
         {level.kind === "portfolio" && !v.total
           ? <Planets props={props} t={t} fmt={fmt} open={(i) => go({ kind: "property", i })} />
-          : <Flowing v={v} level={level} pulled={pulled} unit={unit} t={t} fmt={fmt} cur={cur} reduced={reduced} go={go} />}
-        {at && level.kind === "property" && at.levers.length > 0 && (
+          : cal && view
+            ? <Flowing v={v} level={level} pulled={pulled} unit={shownUnit} t={t} fmt={fmt} cur={cur} reduced={reduced} go={go}
+                fixed={buildTimeScene(cal, view, t)} aria={timeAria(cal, view, t, fmt, cur, locale)} />
+            : <Flowing v={v} level={level} pulled={pulled} unit={unit} t={t} fmt={fmt} cur={cur} reduced={reduced} go={go} />}
+        {cal && view && (
+          <TimeControls cal={cal} view={view} set={(next) => { if ("month" in next) setPlaying(false); setView(next); }} playing={playing} play={play}
+            t={t} fmt={fmt} cur={cur} locale={locale} />
+        )}
+        {at && !cal && level.kind === "property" && at.levers.length > 0 && (
           <div className="bz-rs-levers" role="group" aria-label={t("levers")}>
             <span className="bz-rs-levers-label">{t("levers")}</span>
             {at.levers.map((l) => (
@@ -308,11 +437,12 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
             {pulled.size > 0 && <button type="button" className="bz-rs-reset" onClick={() => setPulled(new Set())}>{t("reset")}</button>}
           </div>
         )}
-        {at && o && level.kind !== "costs" && <Facts p={at} o={o} t={t} fmt={fmt} cur={cur} still={reduced} />}
+        {cal && view && <TimeFacts cal={cal} view={view} t={t} fmt={fmt} cur={cur} locale={locale} still={reduced} />}
+        {at && o && !cal && level.kind !== "costs" && <Facts p={at} o={o} t={t} fmt={fmt} cur={cur} still={reduced} />}
         {level.kind === "portfolio" && v.total && <TotalFacts v={v} t={t} fmt={fmt} />}
         {level.kind === "costs" && at && at.cost_lines.length === 0 && <p className="bz-rs-note">{t("costs.hint")}</p>}
         <footer className="bz-rs-foot">
-          <span>{t("note", { cur })}</span>
+          <span>{t(cal ? "cal.note" : "note", { cur })}</span>
           {onEdit && <button type="button" className="bz-rs-crumb" onClick={onEdit}>{t("edit")}</button>}
         </footer>
       </div>
@@ -320,42 +450,55 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
   );
 }
 
-function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go }: {
+function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go, fixed, aria }: {
   v: WaterfallVisual; level: RentalLevel; pulled: ReadonlySet<RentalLeverKey>; unit: Unit; t: Translate; fmt: Formatters; cur: string;
   reduced: boolean; go: (l: RentalLevel) => void;
+  /** A scene computed by the caller (a month of the calendar), in monthly amounts; and its own description. */
+  fixed?: Scene; aria?: string;
 }) {
   const ids = useNightIds();
+  const hatch = `${ids.glow}-hatch`, arrow = `${ids.glow}-arrow`;
   const [ref, W] = useWidth<HTMLDivElement>();
-  const scene = buildScene(v, level, pulled, t)!;
-  const ghost = level.kind === "property" && pulled.size > 0 ? buildScene(v, level, new Set(), t) : null;
+  const scene = fixed ?? buildScene(v, level, pulled, t)!;
+  const keep = !!scene.keep;
+  const ghost = !fixed && level.kind === "property" && pulled.size > 0 ? buildScene(v, level, new Set(), t) : null;
   // What glides: every node and ribbon value, keyed, so a lever or a drill morphs instead of jumping.
   const target: Record<string, number> = {};
   for (const n of [...scene.left, ...scene.right]) target[`n:${n.key}`] = n.value;
-  for (const f of scene.flows) target[`f:${f.from}>${f.to}`] = (target[`f:${f.from}>${f.to}`] ?? 0) + f.value;
-  const shown = useMorph(target, reduced);
+  if (!keep) for (const f of scene.flows) target[`f:${f.from}>${f.to}`] = (target[`f:${f.from}>${f.to}`] ?? 0) + f.value;
+  const shown = useMorph(target, reduced, keep);
   const val = (k: string) => Math.max(shown[k] ?? 0, 0);
-  const factor = unit === "year" ? 1 : unit === "month" ? 1 / 12 : 100 / (scene.base || 1);
+  // A calendar scene is already monthly; the year's scene is scaled down to a month or to 100 of rent.
+  const factor = unit === "per100" ? 100 / (scene.base || 1) : fixed ? 1 : unit === "year" ? 1 : 1 / 12;
   const show = (x: number) => fmt.num(x * factor, unit === "per100" ? 1 : 0);
 
   const compact = W < 560;
   const side = compact ? 106 : 170, gap = 30, nodeW = 14, top = 22;
-  const rows = Math.max(scene.left.length, scene.right.length);
+  const rows = scene.rows ?? Math.max(scene.left.length, scene.right.length);
   const H = Math.max(compact ? 300 : 340, rows * 54 + 50);
   const avail = H - top - 28 - gap * (rows - 1);
   const sumOf = (nodes: FlowNode[]) => nodes.reduce((s, n) => s + val(`n:${n.key}`), 0);
-  const k = avail / Math.max(sumOf(scene.left), sumOf(scene.right), 1);
+  const k = avail / Math.max(scene.scale ?? 0, sumOf(scene.left), sumOf(scene.right), 1);
   const x0 = side, x1 = W - side - nodeW;
+  // A node at zero (a line not paid this month) folds away with its gap and its label, smoothly, as it shrinks.
+  const weight = (n: FlowNode) => (keep ? Math.min(Math.max((val(`n:${n.key}`) * k) / 1.5, 0), 1) : 1);
   const stack = (nodes: FlowNode[]) => {
-    const used = nodes.reduce((s, n) => s + Math.max(val(`n:${n.key}`) * k, 2), 0) + gap * (nodes.length - 1);
+    const size = (n: FlowNode) => Math.max(val(`n:${n.key}`) * k, 2 * weight(n));
+    const gaps = nodes.reduce((s, n, j) => s + (j ? gap * weight(n) : 0), 0);
+    const used = nodes.reduce((s, n) => s + size(n), 0) + gaps;
     let y = top + Math.max(0, (H - top - 28 - used) / 2);
-    return nodes.map((n) => { const h = Math.max(val(`n:${n.key}`) * k, 2); const box = { n, y, h }; y += h + gap; return box; });
+    return nodes.map((n, j) => { if (j) y += gap * weight(n); const h = size(n); const box = { n, y, h, w: weight(n) }; y += h; return box; });
   };
   const L = stack(scene.left), R = stack(scene.right);
   const outAt = new Map(L.map((b) => [b.n.key, b.y])), inAt = new Map(R.map((b) => [b.n.key, b.y]));
   const seen = new Set<string>();
   const cx = (x0 + nodeW + x1) / 2;
-  const ribbons = scene.flows.filter((f) => { const id = `${f.from}>${f.to}`; if (seen.has(id)) return false; seen.add(id); return true; }).map((f) => {
-    const th = val(`f:${f.from}>${f.to}`) * k;
+  // A calendar month pours the gliding values themselves, so the ribbons always meet the nodes as they move.
+  const flows = keep
+    ? pour(scene.left.map((n) => ({ key: n.key, value: val(`n:${n.key}`) })), scene.right.map((n) => ({ key: n.key, value: val(`n:${n.key}`), cls: n.cls })))
+    : scene.flows;
+  const ribbons = flows.filter((f) => { const id = `${f.from}>${f.to}`; if (seen.has(id)) return false; seen.add(id); return true; }).map((f) => {
+    const th = (keep ? f.value : val(`f:${f.from}>${f.to}`)) * k;
     const ya = outAt.get(f.from)!, yb = inAt.get(f.to)!;
     outAt.set(f.from, ya + th); inAt.set(f.to, yb + th);
     const d = `M${x0 + nodeW},${ya} C${cx},${ya} ${cx},${yb} ${x1},${yb} L${x1},${yb + th} C${cx},${yb + th} ${cx},${ya + th} ${x0 + nodeW},${ya + th} Z`;
@@ -368,8 +511,8 @@ function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go }: {
   const ghostBoxes = ghost ? R.filter((b) => real.has(b.n.key)).map((b) => ({ key: b.n.key, y: b.y, h: Math.max(real.get(b.n.key)! * k, 2) })) : [];
   const onKey = (to: RentalLevel) => (e: KeyboardEvent) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(to); } };
   const max = compact ? 13 : 22;
-  const label = (x: number, b: { n: FlowNode; y: number; h: number }, anchor: "start" | "end") => (
-    <g className="bz-rs-label" pointerEvents="none">
+  const label = (x: number, b: { n: FlowNode; y: number; h: number; w: number }, anchor: "start" | "end") => (
+    <g className="bz-rs-label" pointerEvents="none" opacity={b.w < 1 ? Math.max(b.w * 1.6 - 0.6, 0) : undefined}>
       <text x={x} y={b.y + b.h / 2 - 3} textAnchor={anchor} fontSize={compact ? 11 : 12} fontWeight={700} className="bz-n-ink">
         {b.n.label.length > max ? `${b.n.label.slice(0, max - 1).trimEnd()}…` : b.n.label}
       </text>
@@ -381,13 +524,22 @@ function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go }: {
           {t("was", { amount: unit === "per100" ? fmt.num((real.get(b.n.key)! * 100) / (ghost.base || 1), 1) : fmt.num(real.get(b.n.key)! * factor) })}
         </text>
       )}
+      {b.n.note && (
+        <>
+          <text x={x} y={b.y + b.h / 2 + 26} textAnchor={anchor} fontSize={10.5} className="bz-n-mut bz-rs-note-line">{b.n.note}</text>
+          {/* From outside the rent: a dashed arrow from the edge of the drawing into the pocket. */}
+          <path d={`M4,${b.y + b.h / 2 + 34} H${x0 - 6}`} className="bz-rs-outside-arrow" markerEnd={`url(#${arrow})`} />
+        </>
+      )}
     </g>
   );
-  const node = (b: { n: FlowNode; y: number; h: number }, x: number, anchor: "start" | "end") => {
+  const node = (b: { n: FlowNode; y: number; h: number; w: number }, x: number, anchor: "start" | "end") => {
     const drill = b.n.drill;
+    if (keep && b.w <= 0) return null;
     const body = (
       <>
         <rect x={x} y={b.y} width={nodeW} height={b.h} rx={4} className={`bz-rs-node ${b.n.cls}`} filter={`url(#${ids.glow})`} />
+        {b.n.estimated && <rect x={x} y={b.y} width={nodeW} height={b.h} rx={4} fill={`url(#${hatch})`} className="bz-rs-hatch" />}
         {label(anchor === "end" ? x - 8 : x + nodeW + 8, b, anchor)}
       </>
     );
@@ -407,12 +559,23 @@ function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go }: {
   return (
     <div ref={ref} className="bz-chart-box">
       <svg key={JSON.stringify(level)} viewBox={`0 0 ${W} ${H}`} height={H} role="img" className="bz-rs-flow"
-        aria-label={t("aria", { rent: fmt.num(totalIn), cur, costs: fmt.num(sums.costs ?? 0), interest: fmt.num(sums.interest ?? 0),
+        aria-label={aria ?? t("aria", { rent: fmt.num(totalIn), cur, costs: fmt.num(sums.costs ?? 0), interest: fmt.num(sums.interest ?? 0),
           tax: fmt.num(sums.local_tax ?? 0), gain: fmt.num(sums.gain ?? 0) })}>
         <NightDefs ids={ids} glow={4} />
+        <defs>
+          <pattern id={hatch} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="6" height="6" className="bz-rs-hatch-bg" /><line x1="0" y1="0" x2="0" y2="6" className="bz-rs-hatch-line" />
+          </pattern>
+          <marker id={arrow} viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" className="bz-rs-outside-head" />
+          </marker>
+        </defs>
         {ribbons.map(({ f, d, sink }) => (
-          <path key={`${f.from}>${f.to}`} d={d} className={`bz-rs-ribbon ${f.cls}${sink.drill ? " bz-n-hit" : ""}`}
-            onClick={sink.drill ? () => go(sink.drill!) : undefined} />
+          <g key={`${f.from}>${f.to}`}>
+            <path d={d} className={`bz-rs-ribbon ${f.cls}${sink.drill ? " bz-n-hit" : ""}`}
+              onClick={sink.drill ? () => go(sink.drill!) : undefined} />
+            {sink.estimated && <path d={d} fill={`url(#${hatch})`} className="bz-rs-hatch bz-rs-hatch-ribbon" pointerEvents="none" />}
+          </g>
         ))}
         {!reduced && ribbons.map(({ f, th, mid }, r) => {
           // Evenly spaced along the ribbon, one speed per ribbon: a steady stream, never a clump.
@@ -531,6 +694,117 @@ function Planets({ props, t, fmt, open }: { props: RentalProperty[]; t: Translat
           </button>
         );
       })}
+    </div>
+  );
+}
+
+/** "2026-12" as the locale writes a month: « décembre 2026 », "December 2026". */
+export function monthName(month: string, locale: Locale): string {
+  const [y, m] = month.split("-").map(Number);
+  const when = new Date(Date.UTC(y!, m! - 1, 1));
+  try {
+    return new Intl.DateTimeFormat(LOCALE_TAGS[locale], { month: "long", year: "numeric", timeZone: "UTC" }).format(when);
+  } catch {
+    return month;
+  }
+}
+
+function timeAria(cal: RentalCalendar, view: TimeView, t: Translate, fmt: Formatters, cur: string, locale: Locale): string {
+  const base = view.month ? monthName(cal.months[view.month - 1]!.month, locale) : t("cal.average");
+  return t("cal.aria", {
+    when: view.vacant ? t("cal.vacantWhen", { when: base }) : base, cur,
+    rent: fmt.num(view.vacant ? 0 : cal.grid[view.rent]!.rent), provisions: fmt.num(view.vacant ? 0 : cal.provisions), cash: fmt.num(monthCash(cal, view)),
+  });
+}
+
+/** The month cursor (with its play button and « no tenant »), and the rent cursor with the breakeven and the target. */
+function TimeControls({ cal, view, set, playing, play, t, fmt, cur, locale }: {
+  cal: RentalCalendar; view: TimeView; set: (next: Partial<TimeView>) => void; playing: boolean; play: () => void;
+  t: Translate; fmt: Formatters; cur: string; locale: Locale;
+}) {
+  const when = view.month ? monthName(cal.months[view.month - 1]!.month, locale) : t("cal.average");
+  const levels = cal.grid.map((g) => toNumber(g.rent));
+  const lo = levels[0]!, hi = levels[levels.length - 1]!;
+  const at = (x: number) => (hi > lo ? ((x - lo) / (hi - lo)) * 100 : 0);
+  const today = todayLevel(cal);
+  const marks = [
+    { key: "breakeven", label: t("cal.breakeven"), rent: toNumber(cal.breakeven_rent) },
+    ...(cal.target_rent != null ? [{ key: "target", label: t("cal.target"), rent: toNumber(cal.target_rent) }] : []),
+  ].filter((m) => m.rent >= lo && m.rent <= hi);
+  return (
+    <div className="bz-rs-time">
+      <div className="bz-rs-time-row">
+        <button type="button" className={`bz-rs-play${playing ? " bz-on" : ""}`} onClick={play} aria-label={t(playing ? "cal.pause" : "cal.play")}
+          aria-pressed={playing}>
+          <svg viewBox="0 0 12 12" aria-hidden="true" width="12" height="12">
+            {playing ? <path d="M2,1h3v10h-3zM7,1h3v10h-3z" /> : <path d="M2,1 L11,6 L2,11 Z" />}
+          </svg>
+        </button>
+        <label className="bz-rs-slider">
+          <span>{t("cal.month")}</span>
+          <input type="range" min={0} max={cal.months.length} step={1} value={view.month} aria-valuetext={when} aria-label={t("cal.month")}
+            onChange={(e) => set({ month: Number(e.currentTarget.value) })} />
+        </label>
+        <output className="bz-rs-time-value">{when}</output>
+        <button type="button" className={`bz-rs-lever bz-rs-lever-vacancy${view.vacant ? " bz-on" : ""}`} aria-pressed={view.vacant}
+          onClick={() => set({ vacant: !view.vacant })}>{t("cal.vacancy")}</button>
+      </div>
+      <div className="bz-rs-time-row">
+        <span className="bz-rs-play-room" aria-hidden="true" />
+        <label className="bz-rs-slider">
+          <span>{t("cal.rentLabel")}</span>
+          <span className="bz-rs-track">
+            <input type="range" min={0} max={levels.length - 1} step={1} value={view.rent} disabled={view.vacant} aria-label={t("cal.rentLabel")}
+              aria-valuetext={`${fmt.num(levels[view.rent]!)} ${cur}`} onChange={(e) => set({ rent: Number(e.currentTarget.value) })} />
+            {marks.map((m) => (
+              <span key={m.key} className={`bz-rs-mark bz-rs-mark-${m.key}`} style={{ left: `${at(m.rent)}%` }} title={`${m.label} ${fmt.num(m.rent)} ${cur}`}>
+                <small>{m.label}</small>
+              </span>
+            ))}
+          </span>
+        </label>
+        <output className="bz-rs-time-value">{fmt.num(levels[view.rent]!)} {cur}</output>
+        {view.rent !== today
+          ? <button type="button" className="bz-rs-reset" onClick={() => set({ rent: today })}>{t("cal.today")}</button>
+          : <span className="bz-rs-reset-room" aria-hidden="true" />}
+      </div>
+    </div>
+  );
+}
+
+/** The month's cash, the running total at this rent, the vault, and the breakeven — all the engine's. */
+function TimeFacts({ cal, view, t, fmt, cur, locale, still }: {
+  cal: RentalCalendar; view: TimeView; t: Translate; fmt: Formatters; cur: string; locale: Locale; still: boolean;
+}) {
+  const cash = monthCash(cal, view);
+  const n = view.month || cal.months.length;
+  const total = toNumber(cal.grid[view.rent]!.cumulative[n - 1]!);
+  const vault = cal.months[(view.month || Math.min(12, cal.months.length)) - 1]!;
+  const tone = (x: number) => (x < 0 ? "bz-rs-is-warn" : "bz-rs-is-ok");
+  return (
+    <div className="bz-rs-facts">
+      <div className={`bz-n-fact ${tone(cash)}`}>
+        <span>{t(view.month ? "cal.kpi.month" : "cal.kpi.average")}</span>
+        <strong><Count value={cash} still={still} render={(x) => `${fmt.num(x, 2)} ${cur}`} /></strong>
+        <small>{view.month ? monthName(cal.months[view.month - 1]!.month, locale) : t("cal.average")}</small>
+      </div>
+      <div className={`bz-n-fact ${tone(total)}`}>
+        <span>{t("cal.kpi.cumulative", { n })}</span>
+        <strong><Count value={total} still={still} render={(x) => `${fmt.num(x, 2)} ${cur}`} /></strong>
+        <small>{t("cal.kpi.rented", { from: monthName(cal.months[0]!.month, locale), to: monthName(cal.months[n - 1]!.month, locale) })}</small>
+      </div>
+      <div className="bz-n-fact bz-n-is-gold">
+        <span>{t("cal.kpi.equity")}</span>
+        <strong><Count value={toNumber(vault.equity)} still={still} render={(x) => `${fmt.num(x)} ${cur}`} /></strong>
+        <small>{t("cal.kpi.equityAt", { when: monthName(vault.month, locale) })}</small>
+      </div>
+      <div className="bz-n-fact">
+        <span>{t("cal.kpi.breakeven")}</span>
+        <strong>{fmt.num(cal.breakeven_rent, 2)} {cur}</strong>
+        <small>{cal.target != null && cal.target_rent != null
+          ? t("cal.kpi.target", { target: fmt.num(cal.target), rent: `${fmt.num(cal.target_rent, 2)} ${cur}` })
+          : t("cal.kpi.breakevenSub")}</small>
+      </div>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import answersAfter from "../fixtures/answers-after.json";
 import answersBefore from "../fixtures/answers-before.json";
 import answersFocus from "../fixtures/answers-focus.json";
 import answersOverdrawn from "../fixtures/answers-overdrawn.json";
+import rentalCalendar from "../fixtures/rental-calendar.json";
 import before from "../fixtures/before.json";
 import demo from "../fixtures/demo.json";
 import empty from "../fixtures/empty.json";
@@ -25,6 +26,7 @@ import {
   type Answers,
   type Snapshot,
   RentalScene,
+  type RentalCalendar,
 } from "../src";
 import "./gallery.css";
 import { Community } from "./Community";
@@ -36,6 +38,12 @@ const ANSWERS = { before: answersBefore, after: answersAfter, overdrawn: answers
 // The questions asked on their own, as the assistants ask them: here, the studio Léa and Sam let (0.8).
 const FOCUS = answersFocus as unknown as Record<Locale, Record<string, Answers>>;
 const RENTAL = Object.fromEntries(LOCALES.map((l) => [l, FOCUS[l]["rental-yield"]!])) as Record<Locale, Answers>;
+/** The studio alone with its next 24 months (kit 0.9): the month and rent cursors. */
+const rentalMonths = (l: Locale) => {
+  const a = structuredClone(RENTAL[l].answers[0]!) as Parameters<typeof RentalScene>[0]["answer"];
+  const studio = { ...a.visual.properties![0]!, calendar: rentalCalendar as unknown as RentalCalendar };
+  return { ...a, visual: { ...a.visual, properties: [studio], total: null } };
+};
 const FIXTURES: Record<string, Snapshot> = { before: before as Snapshot, after: after as Snapshot, demo: demo as Snapshot, empty: empty as Snapshot };
 const STORY_THEME: Record<string, "dark" | "light"> = { before: "dark", after: "light" };
 
@@ -125,6 +133,7 @@ function Gallery() {
         <div className="g-answers g-rental">
           <p className="bz-body">{ui.rentalIntro}</p>
           <RentalScene key={locale} answer={RENTAL[locale].answers[0]! as Parameters<typeof RentalScene>[0]["answer"]} locale={locale} />
+          <RentalScene key={`${locale}-months`} answer={rentalMonths(locale)} locale={locale} />
         </div>
       ) : view === "matrix" ? (
         <Matrix locale={locale} households={[...Object.values(ANSWERS), RENTAL]} />
