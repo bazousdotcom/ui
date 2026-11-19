@@ -1,7 +1,10 @@
 name: New question
-description: Suggest a money question Bazous should answer
+description: Suggest a money question Bazous should answer (others vote with 👍; the most asked becomes a module each quarter)
 labels: ["module"]
 body:
+  - type: markdown
+    attributes:
+      value: "One question per issue. Vote for the questions you want with 👍: the ranking is on the gallery's Community page."
   - type: input
     id: question
     attributes:
@@ -21,3 +24,8 @@ body:
     attributes:
       label: What the answer looks like
       description: A figure, a list, a curve, a picture? Invented data only.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What a household would decide differently with this answer.

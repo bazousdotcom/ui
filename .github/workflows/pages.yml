@@ -2,10 +2,14 @@ name: Gallery
 on:
   push:
     branches: [main]
+  # The Community page ranks the open questions, rules and offers by their 👍: read again each day.
+  schedule:
+    - cron: "17 5 * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: read
   pages: write
   id-token: write
 
@@ -23,6 +27,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node scripts/rank-questions.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: npm run build:gallery
         env:
           GALLERY_BASE: /ui/
