@@ -30,17 +30,17 @@ export type RentalSceneProps = {
 
 type Unit = "year" | "month" | "per100";
 export type RentalLevel = { kind: "portfolio" } | { kind: "property"; i: number } | { kind: "costs"; i: number };
-type Sink = "costs" | "interest" | "local_tax" | "gain";
+type Sink = "costs" | "interest" | "capital" | "local_tax" | "gain";
 type FlowNode = { key: string; label: string; value: number; cls: string; drill?: RentalLevel };
 export type Flow = { from: string; to: string; value: number; cls: string };
 type Scene = { left: FlowNode[]; right: FlowNode[]; flows: Flow[]; base: number };
 
-const SINKS: Sink[] = ["costs", "interest", "local_tax", "gain"];
+const SINKS: Sink[] = ["costs", "interest", "capital", "local_tax", "gain"];
 const MORPH_MS = 650;
 
 export const rentalMessages: Catalog = {
   fr: {
-    was: "réel {amount}", all: "Tous les biens", rent: "Loyers", costs: "Charges", interest: "Intérêts", local_tax: "Impôt local", gain: "Gain net",
+    was: "réel {amount}", all: "Tous les biens", rent: "Loyers", costs: "Charges", interest: "Intérêts", local_tax: "Impôt local", gain: "Gain net", capital: "Capital remboursé", cashLeft: "Trésorerie", "title.gain.cash": "{name} : {amount} {cur} de trésorerie par an, crédit compris", "title.loss.cash": "{name} : te coûte {amount} {cur} par an, crédit compris", "title.whatif.cash": "Avec tes « et si » : {amount} {cur} de trésorerie par an, crédit compris", "title.whatif.loss.cash": "Avec tes « et si » : te coûte {amount} {cur} par an, crédit compris",
     pocket: "Ta poche", undetailed: "Charges non détaillées", "title.gain": "{name} : {amount} {cur} de gain net par an", "title.loss": "{name} : te coûte {amount} {cur} par an",
     "title.whatif": "Avec tes « et si » : {amount} {cur} de gain net par an", "title.whatif.loss": "Avec tes « et si » : te coûte {amount} {cur} par an",
     "title.costs": "Où partent les {amount} {cur} de charges de {name}", "title.all": "{n} biens : {amount} {cur} de gain net par an",
@@ -55,7 +55,7 @@ export const rentalMessages: Catalog = {
     aria: "Flux de l’année : {rent} {cur} de loyers, {costs} de charges, {interest} d’intérêts, {tax} d’impôt local, {gain} de gain net.",
   },
   de: {
-    was: "echt {amount}", all: "Alle Liegenschaften", rent: "Mieten", costs: "Kosten", interest: "Zinsen", local_tax: "Lokale Steuer", gain: "Nettogewinn",
+    was: "echt {amount}", all: "Alle Liegenschaften", rent: "Mieten", costs: "Kosten", interest: "Zinsen", local_tax: "Lokale Steuer", gain: "Nettogewinn", capital: "Getilgtes Kapital", cashLeft: "Liquidität", "title.gain.cash": "{name}: {amount} {cur} Liquidität pro Jahr, Kredit eingerechnet", "title.loss.cash": "{name}: kostet dich {amount} {cur} pro Jahr, Kredit eingerechnet", "title.whatif.cash": "Mit deinem «Was wäre, wenn»: {amount} {cur} Liquidität pro Jahr, Kredit eingerechnet", "title.whatif.loss.cash": "Mit deinem «Was wäre, wenn»: kostet dich {amount} {cur} pro Jahr, Kredit eingerechnet",
     pocket: "Deine Tasche", undetailed: "Kosten ohne Detail", "title.gain": "{name}: {amount} {cur} Nettogewinn pro Jahr", "title.loss": "{name}: kostet dich {amount} {cur} pro Jahr",
     "title.whatif": "Mit deinem «Was wäre, wenn»: {amount} {cur} Nettogewinn pro Jahr", "title.whatif.loss": "Mit deinem «Was wäre, wenn»: kostet dich {amount} {cur} pro Jahr",
     "title.costs": "Wohin die {amount} {cur} Kosten von {name} gehen", "title.all": "{n} Liegenschaften: {amount} {cur} Nettogewinn pro Jahr",
@@ -70,7 +70,7 @@ export const rentalMessages: Catalog = {
     aria: "Fluss des Jahres: {rent} {cur} Mieten, {costs} Kosten, {interest} Zinsen, {tax} lokale Steuer, {gain} Nettogewinn.",
   },
   it: {
-    was: "reale {amount}", all: "Tutti gli immobili", rent: "Affitti", costs: "Spese", interest: "Interessi", local_tax: "Imposta locale", gain: "Guadagno netto",
+    was: "reale {amount}", all: "Tutti gli immobili", rent: "Affitti", costs: "Spese", interest: "Interessi", local_tax: "Imposta locale", gain: "Guadagno netto", capital: "Capitale rimborsato", cashLeft: "Liquidità", "title.gain.cash": "{name}: {amount} {cur} di liquidità all’anno, credito compreso", "title.loss.cash": "{name}: ti costa {amount} {cur} all’anno, credito compreso", "title.whatif.cash": "Con i tuoi «e se»: {amount} {cur} di liquidità all’anno, credito compreso", "title.whatif.loss.cash": "Con i tuoi «e se»: ti costa {amount} {cur} all’anno, credito compreso",
     pocket: "Di tasca tua", undetailed: "Spese non dettagliate", "title.gain": "{name}: {amount} {cur} di guadagno netto all’anno", "title.loss": "{name}: ti costa {amount} {cur} all’anno",
     "title.whatif": "Con i tuoi «e se»: {amount} {cur} di guadagno netto all’anno", "title.whatif.loss": "Con i tuoi «e se»: ti costa {amount} {cur} all’anno",
     "title.costs": "Dove vanno i {amount} {cur} di spese di {name}", "title.all": "{n} immobili: {amount} {cur} di guadagno netto all’anno",
@@ -85,7 +85,7 @@ export const rentalMessages: Catalog = {
     aria: "Flusso dell’anno: {rent} {cur} di affitti, {costs} di spese, {interest} di interessi, {tax} di imposta locale, {gain} di guadagno netto.",
   },
   rm: {
-    was: "real {amount}", all: "Tut ils bains", rent: "Fitgs", costs: "Custs", interest: "Tschains", local_tax: "Taglia locala", gain: "Gudogn net",
+    was: "real {amount}", all: "Tut ils bains", rent: "Fitgs", costs: "Custs", interest: "Tschains", local_tax: "Taglia locala", gain: "Gudogn net", capital: "Chapital restituì", cashLeft: "Liquiditad", "title.gain.cash": "{name}: {amount} {cur} liquiditad per onn, credit inclus", "title.loss.cash": "{name}: ta custa {amount} {cur} per onn, credit inclus", "title.whatif.cash": "Cun tes «e sche»: {amount} {cur} liquiditad per onn, credit inclus", "title.whatif.loss.cash": "Cun tes «e sche»: ta custa {amount} {cur} per onn, credit inclus",
     pocket: "Tia giaglioffa", undetailed: "Custs senza detagl", "title.gain": "{name}: {amount} {cur} gudogn net per onn", "title.loss": "{name}: ta custa {amount} {cur} per onn",
     "title.whatif": "Cun tes «e sche»: {amount} {cur} gudogn net per onn", "title.whatif.loss": "Cun tes «e sche»: ta custa {amount} {cur} per onn",
     "title.costs": "Nua che van ils {amount} {cur} custs da {name}", "title.all": "{n} bains: {amount} {cur} gudogn net per onn",
@@ -100,7 +100,7 @@ export const rentalMessages: Catalog = {
     aria: "Flux da l’onn: {rent} {cur} fitgs, {costs} custs, {interest} tschains, {tax} taglia locala, {gain} gudogn net.",
   },
   en: {
-    was: "real {amount}", all: "All properties", rent: "Rents", costs: "Costs", interest: "Interest", local_tax: "Local tax", gain: "Net gain",
+    was: "real {amount}", all: "All properties", rent: "Rents", costs: "Costs", interest: "Interest", local_tax: "Local tax", gain: "Net gain", capital: "Capital repaid", cashLeft: "Cash flow", "title.gain.cash": "{name}: {amount} {cur} of cash a year, loan included", "title.loss.cash": "{name}: costs you {amount} {cur} a year, loan included", "title.whatif.cash": "With your what-ifs: {amount} {cur} of cash a year, loan included", "title.whatif.loss.cash": "With your what-ifs: costs you {amount} {cur} a year, loan included",
     pocket: "Your pocket", undetailed: "Costs not detailed", "title.gain": "{name}: {amount} {cur} net gain a year", "title.loss": "{name}: costs you {amount} {cur} a year",
     "title.whatif": "With your what-ifs: {amount} {cur} net gain a year", "title.whatif.loss": "With your what-ifs: costs you {amount} {cur} a year",
     "title.costs": "Where the {amount} {cur} of costs of {name} go", "title.all": "{n} properties: {amount} {cur} net gain a year",
@@ -140,15 +140,26 @@ export function pour(sources: { key: string; value: number }[], sinks: { key: st
   return flows;
 }
 
+/** When the engine knows the loan payments (cash flow), the capital they repay flows out too, and what is left, or
+ *  what comes out of the pocket, is the year's cash; otherwise the flow ends on the net gain, as before. */
+export function remainder(o: RentalOutcome): { capital: number; left: number; cash: boolean } {
+  const gain = toNumber(o.net_gain);
+  if (o.cash_flow_per_year == null) return { capital: 0, left: gain, cash: false };
+  const cash = toNumber(o.cash_flow_per_year);
+  return { capital: Math.max(gain - cash, 0), left: cash, cash: true };
+}
+
 function propertyFlow(p: RentalProperty, o: RentalOutcome, t: Translate, prefix = "") {
+  const r = remainder(o);
   const take: Record<Sink, number> = {
-    costs: toNumber(o.costs_per_year), interest: toNumber(o.interest_per_year), local_tax: toNumber(o.local_tax_per_year),
-    gain: Math.max(toNumber(o.net_gain), 0),
+    costs: toNumber(o.costs_per_year), interest: toNumber(o.interest_per_year), capital: r.capital,
+    local_tax: toNumber(o.local_tax_per_year), gain: Math.max(r.left, 0),
   };
-  const pocket = Math.max(-toNumber(o.net_gain), 0);
+  const pocket = Math.max(-r.left, 0);
   const left: FlowNode[] = [{ key: `${prefix}rent`, label: prefix ? p.name : t("rent"), value: toNumber(o.rent_per_year), cls: "bz-rs-rent" }];
   if (pocket > 0) left.push({ key: `${prefix}pocket`, label: t("pocket"), value: pocket, cls: "bz-rs-pocket" });
-  const right: FlowNode[] = SINKS.filter((k) => take[k] > 0).map((k) => ({ key: k, label: t(k), value: take[k], cls: `bz-rs-${k}` }));
+  const right: FlowNode[] = SINKS.filter((k) => take[k] > 0)
+    .map((k) => ({ key: k, label: k === "gain" && r.cash ? t("cashLeft") : t(k), value: take[k], cls: `bz-rs-${k}` }));
   return { left, right, flows: pour(left, right) };
 }
 
@@ -256,9 +267,10 @@ export function RentalScene({ answer, locale, onEdit }: RentalSceneProps) {
   if (level.kind === "costs") title = t("title.costs", { amount: fmt.num(at!.outcomes[""]!.costs_per_year), cur, name: at!.name });
   else if (level.kind === "portfolio") title = v.total ? t("title.all", { n: props.length, amount: fmt.num(v.total.net_gain), cur }) : t("all");
   else {
-    const gain = toNumber(o!.net_gain);
-    const key = whatIf ? (gain < 0 ? "title.whatif.loss" : "title.whatif") : gain < 0 ? "title.loss" : "title.gain";
-    title = t(key, { name: at!.name, amount: fmt.num(Math.abs(gain)), cur });
+    // With the loan payments known, the title says what the property does to the household's cash, loan included.
+    const r = remainder(o!);
+    const key = whatIf ? (r.left < 0 ? "title.whatif.loss" : "title.whatif") : r.left < 0 ? "title.loss" : "title.gain";
+    title = t(`${key}${r.cash ? ".cash" : ""}`, { name: at!.name, amount: fmt.num(Math.abs(r.left)), cur });
   }
 
   const crumbs: { label: string; to: RentalLevel }[] = [];
@@ -423,7 +435,8 @@ function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go }: {
         ))}
         {L.map((b) => node(b, x0, "end"))}
         {R.map((b) => node(b, x1, "start"))}
-        {level.kind !== "costs" && totalIn > 0 && (
+        {/* What is left of the rent; nothing to say when the year takes money from the pocket instead. */}
+        {level.kind !== "costs" && totalIn > 0 && (sums.gain ?? 0) > 0 && (
           <text x={W / 2} y={H - 8} textAnchor="middle" fontSize={11} className="bz-n-mut">
             {t("share", { p: fmt.num(((sums.gain ?? 0) / (totalIn || 1)) * 100) })}
           </text>
