@@ -43,6 +43,7 @@ type Scene = { left: FlowNode[]; right: FlowNode[]; flows: Flow[]; base: number;
 
 const SINKS: Sink[] = ["costs", "interest", "capital", "local_tax", "gain"];
 const MORPH_MS = 650;
+const LABEL_PITCH = 38;   // px between the centres of two labelled nodes (a label is two lines)
 
 export const rentalMessages: Catalog = {
   fr: {
@@ -487,7 +488,15 @@ function Flowing({ v, level, pulled, unit, t, fmt, cur, reduced, go, fixed, aria
     const gaps = nodes.reduce((s, n, j) => s + (j ? gap * weight(n) : 0), 0);
     const used = nodes.reduce((s, n) => s + size(n), 0) + gaps;
     let y = top + Math.max(0, (H - top - 28 - used) / 2);
-    return nodes.map((n, j) => { if (j) y += gap * weight(n); const h = size(n); const box = { n, y, h, w: weight(n) }; y += h; return box; });
+    // Two small lines side by side (16 and 8 a month) still need room for their two-line labels.
+    let last = -Infinity;
+    return nodes.map((n, j) => {
+      if (j) y += gap * weight(n);
+      const h = size(n);
+      if (keep && weight(n) > 0.5 && y + h / 2 < last + LABEL_PITCH) y = last + LABEL_PITCH - h / 2;
+      if (weight(n) > 0.5) last = y + h / 2;
+      const box = { n, y, h, w: weight(n) }; y += h; return box;
+    });
   };
   const L = stack(scene.left), R = stack(scene.right);
   const outAt = new Map(L.map((b) => [b.n.key, b.y])), inAt = new Map(R.map((b) => [b.n.key, b.y]));
