@@ -499,11 +499,12 @@
 .bz .bz-focus-chip button { height: auto; }
 
 /* ---- « Nuit » — a property you let, as a flow of light (0.8, RentalScene) ---- */
-.bz-rs { --rs-rent: #ffd76e; --rs-costs: #ff6b7d; --rs-interest: #f2b45a; --rs-tax: #c9b8ff; --rs-gain: #6fd6a4; --rs-pocket: #ff3d5a; }
-.bz[data-theme="light"] .bz-rs { --rs-rent: #a87a12; --rs-costs: #b33535; --rs-interest: #9a5b0c; --rs-tax: #5b4a9a; --rs-gain: #1b704a; --rs-pocket: #8f2034; }
+.bz-rs { --rs-rent: #ffd76e; --rs-costs: #ff6b7d; --rs-interest: #f2b45a; --rs-tax: #c9b8ff; --rs-gain: #6fd6a4; --rs-pocket: #ff3d5a; --rs-capital: #ff9f6b; }
+.bz[data-theme="light"] .bz-rs { --rs-rent: #a87a12; --rs-costs: #b33535; --rs-interest: #9a5b0c; --rs-tax: #5b4a9a; --rs-gain: #1b704a; --rs-pocket: #8f2034; --rs-capital: #a4511f; }
 .bz-rs .bz-rs-rent { --rs: var(--rs-rent); }
 .bz-rs .bz-rs-costs { --rs: var(--rs-costs); }
 .bz-rs .bz-rs-interest { --rs: var(--rs-interest); }
+.bz-rs .bz-rs-capital { --rs: var(--rs-capital); }
 .bz-rs .bz-rs-local_tax { --rs: var(--rs-tax); }
 .bz-rs .bz-rs-gain { --rs: var(--rs-gain); }
 .bz-rs .bz-rs-pocket { --rs: var(--rs-pocket); }
