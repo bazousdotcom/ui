@@ -282,7 +282,8 @@ function draw(v: AnswerVisual, t: Translate, locale: Locale, doc: Document, W: n
     });
     return frame(j.caption, jars,
       txt(L, 20, `${t("vis.bill")} ${amount(j.bill)}`, { fill: C.ink, "font-weight": 600 }),
-      txt(R, 20, `${t("vis.months")} × ${amount(j.needed_per_month)}`, { "text-anchor": "end", fill: C.accent }),
+      // What it takes each month (the tightest deadline decides), never « 12 months × », which would not add up.
+      txt(R, 20, t("vis.months", { amount: amount(j.needed_per_month) }), { "text-anchor": "end", fill: C.accent }),
       txt(L, H - 8, `${amount(j.set_aside_per_month)} ${t("vis.perMonth")}`, { fill: ratio < 1 ? C.negative : C.positive }),
       txt(R, H - 8, `${amount(j.per_day)} ${t("vis.perDay")}`, { "text-anchor": "end" }));
   };

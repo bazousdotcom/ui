@@ -1,0 +1,43 @@
+name: Market offer
+description: Report a published offer (insurance, bank card, telecom…) for « cheaper alternatives »
+labels: ["offer"]
+body:
+  - type: markdown
+    attributes:
+      value: "Bazous compares a household's charges with published offers only, each with its source and date. No referral links: Bazous takes no commission. Vote with 👍."
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of charge
+      options: ["Health insurance", "Bank account or card", "Telecom or internet", "Car insurance", "Home insurance", "Other"]
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider and offer name
+    validations:
+      required: true
+  - type: input
+    id: price
+    attributes:
+      label: Price, currency and period
+      placeholder: "CHF 0 per month"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (the provider's public page)
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date you read the price (YYYY-MM-DD)
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Conditions (region, age, minimum balance, contract length…)

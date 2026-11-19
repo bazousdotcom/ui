@@ -40,6 +40,7 @@ export default defineModule<Model>({
       cats.length <= 4
         ? cats
         : [...cats.slice(0, 3), { category: "", amount: cats.slice(3).reduce((sum, c) => sum + c.amount, 0), others: cats.slice(3).map((c) => c.category) }];
+    const known = s.debts.items.filter((d) => d.principal != null);
     return {
       fixed: s.structure.fixed_monthly,
       income: s.structure.income_monthly,
@@ -48,7 +49,8 @@ export default defineModule<Model>({
       slices,
       currency: s.base_currency,
       missing: s.data_quality.rules_without_amount.length,
-      debts: s.debts.items.length ? { total: s.debts.total_base, items: s.debts.items.map((d) => ({ name: d.name, principal: d.principal })) } : null,
+      // A loan whose remaining principal is not recorded is not a zero debt: it is left out of the figure.
+      debts: known.length ? { total: s.debts.total_base, items: known.map((d) => ({ name: d.name, principal: d.principal as string })) } : null,
       target: s.second_income_date,
     };
   },

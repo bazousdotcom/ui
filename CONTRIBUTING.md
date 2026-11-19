@@ -2,6 +2,19 @@
 
 Thank you! The most useful contribution is **a question**: something a household wonders about its money, which the snapshot can already answer.
 
+## The community loop
+
+Bazous gets better by what households ask, in four channels, each with one rule that keeps the figures exact:
+
+| Channel | How | The rule |
+| --- | --- | --- |
+| **Questions** | « New question » issue, others vote with 👍 | The most asked becomes a module each quarter; it reads only snapshot fields. |
+| **Expert rules** | « Expert rule » issue, with a public source | Reviewed by the maintainers before the engine uses it; the answer names its source. |
+| **Market offers** | « Market offer » issue, with the provider's page and the date | Compared only with its source and date; no referral link, no commission. |
+| **Pictures and scenes** | A pull request, with the checklist | The picture draws the engine's figures; it never computes one. |
+
+The ranking of the three issue channels is on the gallery's **Community** page, read again each day.
+
 ## Adding a module in five steps
 
 1. **Pick the question.** It must be answerable from the fields of `schema/snapshot.schema.json`. If a figure is missing, open a "New question" issue first: the contract evolves on the server, not in the kit.

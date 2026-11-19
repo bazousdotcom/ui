@@ -4,3 +4,4 @@ gallery-dist/
 *.log
 .DS_Store
 *.tgz
+gallery/public/community.json

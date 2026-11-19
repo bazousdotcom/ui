@@ -34,3 +34,11 @@ body[data-theme="light"] { background: #f5f3ed; }
 .g-clear ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .g-clear li { font-size: 14px; line-height: 1.45; }
 .g-clear li span { color: var(--bz-positive); font-weight: 700; }
+.g-community-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 16px; }
+.g-community-col { display: flex; flex-direction: column; gap: 12px; }
+.g-community-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.g-community-list li { display: flex; gap: 10px; align-items: baseline; }
+.g-community-list a { color: var(--bz-text); }
+.g-votes { min-width: 2.2em; text-align: right; color: var(--bz-accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+.g-muted { color: var(--bz-muted); }
+.g-community-col .bz-button { align-self: flex-start; margin-top: auto; }
