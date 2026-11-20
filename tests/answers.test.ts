@@ -123,7 +123,7 @@ describe("the « before » pictures", () => {
     expect(drawn("calendar")).toContain("dans 61 j");
     expect(drawn("leak")).toContain("2’400.00");
     expect(drawn("leak")).toContain("10 ans");
-    expect(drawn("jar")).toContain("bordereau 6’000.00");
+    expect(drawn("jar")).toContain("à mettre de côté 6’000.00");
     expect(drawn("jar")).toContain("16.44 / jour");
     expect(drawn("gauge")).toContain("reste 7’258.00");
     expect(drawn("gauge")).toContain("91 j → 31.12");
